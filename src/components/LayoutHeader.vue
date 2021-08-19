@@ -44,6 +44,10 @@
             <GithubIcon size="1.5x" />
           </a>
 
+          <div style = "width:50px; height:50px; text-aling:center; line-height:50px; font-weight:700;">
+            <a href = "https://intro.msaez.io">English</a>
+          </div>
+
           <ToggleDarkMode class="ml-2 sm:ml-8">
             <template slot="default" slot-scope="{ dark }">
               <MoonIcon v-if="dark" size="1.5x" />
