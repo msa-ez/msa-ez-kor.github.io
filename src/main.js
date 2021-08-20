@@ -11,6 +11,11 @@ export default function (Vue, { router, head, isClient }) {
     content: "oB0o3U6khwkYrh-W15uMb7kob6NYYAqjEVeXdPsVjyE"
   })
 
+  head.meta.push({
+    name: "robots",
+    content: "Remote Event Storming,EventStorming,Microservices,이벤트스토밍,마이크로서비스,MSA,CNA,클라우드 네이티브,Code generator,intromsaez"
+  })
+
   router.beforeEach((to, _from, next) => {
     head.meta.push({
       key: 'og:url',
