@@ -6,6 +6,8 @@ export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
 
+  require('./global-style.css');
+
   head.meta.push({
     name: 'google-site-verification',
     content: "oB0o3U6khwkYrh-W15uMb7kob6NYYAqjEVeXdPsVjyE"
