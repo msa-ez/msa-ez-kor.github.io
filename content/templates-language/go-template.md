@@ -38,6 +38,7 @@ EventStorming 된 화면에서 우측 상단의 code를 클릭하고 언어를 g
 go mod init [프로젝트 명]
 go mod tidy 
 ```
+
 3. main.go가 있는 위치에서 아래와 같은 명령어를 수행하여 binary 파일 생성 
 ```bash
 go build main.go
