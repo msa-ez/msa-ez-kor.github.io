@@ -74,17 +74,21 @@ Kubernetes 오브젝트 팔레트 영역으로 쿠버네티스 객체 목록을 
 Deploy 버튼 클릭시 나오는 팝업창. 배포할 클러스터 정보를 확인하고 Deploy 버튼을 누르면 캔버스에 모델링된 객체들이 배포됩니다.
 <img src="https://user-images.githubusercontent.com/48265118/93038974-5249be00-f681-11ea-82f7-2d6db2ada4b0.png">
 
-3) Code Preview : Code Preview, Download Archive 두가지 메뉴가 있으며 Code Preview 클릭시 캔버스에 모델링한 객체의 Yaml 파일을 Template에 따라 미리볼 수 있습니다. Download Archive 클릭시 선택한 Template에 따른 Yaml 파일이 다운로드 됩니다.
+3) Code Preview : Code Preview, Download Archive 두가지 메뉴가 있으며 Code Preview 클릭시 캔버스에 모델링한 객체의 Yaml 파일을 Template에 따라 미리볼 수 있습니다.<br>
+Download Archive 클릭시 선택한 Template에 따른 Yaml 파일이 다운로드 됩니다.
 
 Code Preview를 클릭하여 Template에서 Separate File per kind를 선택한 화면
 <img src="https://user-images.githubusercontent.com/48265118/93039528-b456f300-f682-11ea-93bd-bc7337a55ec1.png" width="70%">
+<br><br>
 
 원하는 Template별로 모델링 객체의 Yaml을 확인할 수 있습니다.
 <img src="https://user-images.githubusercontent.com/48265118/93039704-2596a600-f683-11ea-9b6b-becc8bc6fa07.png">
+<br><br>
 
 Download Archive를 클릭하여 호출된 팝업창. 원하는 Template을 골라 Yaml 파일을 다운로드 할 수 있습니다.
 <img src="https://user-images.githubusercontent.com/48265118/93040235-78bd2880-f684-11ea-9222-90d82f82cb71.png">
 <img src="https://user-images.githubusercontent.com/48265118/93040379-d6ea0b80-f684-11ea-9874-6dc782d6dc81.png">
+<br><br>
 
 
 ***
@@ -93,7 +97,8 @@ Download Archive를 클릭하여 호출된 팝업창. 원하는 Template을 골�
 
 <h3>3. 커맨드 영역</h3>
 
-Kubernetes CLI 명령어를 출력하는 Shell 영역으로 캔버스 상에 객체를 정의하고, 객체의 컨텍스트 메뉴에서 명령어를 클릭시 Shell 영역에 해당 커맨드가 출력됩니다.<br>
+Kubernetes CLI 명령어를 출력하는 Shell 영역으로 캔버스 상에 객체를 정의하고,<br>
+객체의 컨텍스트 메뉴에서 명령어를 클릭시 Shell 영역에 해당 커맨드가 출력됩니다.<br>
 **오브젝트의 context menu에서 터미널 오픈**
 <P>
 <img src="https://user-images.githubusercontent.com/48265118/92882374-d5cd9a00-f44a-11ea-853b-939a6b3ebec9.png">
@@ -113,7 +118,8 @@ Kubernetes CLI 명령어를 출력하는 Shell 영역으로 캔버스 상에 객
 
 <h3>4. 캔버스 영역</h3>
 오브젝트 팔레트에서 선택한 객체가 구현되는 영역으로 오브젝트를 더블클릭시,<br>
-해당 객체의 프로퍼티를 수정할 수 있는 편집창이 나와 추가적인 정의를 할 수 있습니다.
+해당 객체의 프로퍼티를 수정할 수 있는 편집창이 나와 추가적인 정의를 할 수 있습니다.<br>
+<br>
 
 **UI 편집창을 통한 프로퍼티 정의**
 <img src="https://user-images.githubusercontent.com/48265118/92881114-a5393080-f449-11ea-9433-6526941ab124.png">
