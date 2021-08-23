@@ -1,5 +1,5 @@
 const c1 = () => import(/* webpackChunkName: "page--src--templates--markdown-page-vue" */ "/Users/kibum0405/Desktop/msa-ez-kor.github.io/src/templates/MarkdownPage.vue")
-const c2 = () => import(/* webpackChunkName: "page--src--pages--404-vue" */ "/Users/kibum0405/Desktop/msa-ez-kor.github.io/src/pages/404.vue")
+const c2 = () => import(/* webpackChunkName: "page--node-modules--gridsome--app--pages--404-vue" */ "/Users/kibum0405/Desktop/msa-ez-kor.github.io/node_modules/gridsome/app/pages/404.vue")
 const c3 = () => import(/* webpackChunkName: "page--src--pages--index-vue" */ "/Users/kibum0405/Desktop/msa-ez-kor.github.io/src/pages/Index.vue")
 
 export default [
@@ -17,6 +17,10 @@ export default [
   },
   {
     path: "/templates-language/go-template/",
+    component: c1
+  },
+  {
+    path: "/docs/writing-content/",
     component: c1
   },
   {
@@ -44,6 +48,14 @@ export default [
     component: c1
   },
   {
+    path: "/docs/settings/",
+    component: c1
+  },
+  {
+    path: "/docs/sidebar/",
+    component: c1
+  },
+  {
     path: "/example-scenario/online-lecture/",
     component: c1
   },
@@ -52,7 +64,15 @@ export default [
     component: c1
   },
   {
+    path: "/docs/installation/",
+    component: c1
+  },
+  {
     path: "/example-scenario/food-delivery/",
+    component: c1
+  },
+  {
+    path: "/docs/deploying/",
     component: c1
   },
   {
@@ -65,6 +85,10 @@ export default [
   },
   {
     path: "/started/",
+    component: c1
+  },
+  {
+    path: "/docs/",
     component: c1
   },
   {

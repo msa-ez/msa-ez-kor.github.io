@@ -9,10 +9,13 @@
             class="flex items-center text-ui-primary"
             title="Home"
           >
-            <g-image src = "~/img/logo.png" width="120" class="text-ui-primary" />
+            <Logo :width="40" class="text-ui-primary" />
+            <span class="hidden ml-2 text-xl font-black tracking-tighter uppercase sm:block">
+              {{ meta.siteName }}
+            </span>
           </g-link>
 
-          <!-- <div v-if="settings.nav.links.length > 0" class="hidden ml-2 mr-5 sm:block sm:ml-8">
+          <div v-if="settings.nav.links.length > 0" class="hidden ml-2 mr-5 sm:block sm:ml-8">
             <g-link
               v-for="link in settings.nav.links"
               :key="link.path"
@@ -21,7 +24,7 @@
             >
               {{ link.title }}
             </g-link>
-          </div> -->
+          </div>
         </div>
 
         <div class="w-full px-2 sm:px-4 max-w-screen-xs">
@@ -43,10 +46,6 @@
           <a v-if="settings.github" :href="settings.github" class="sm:ml-3" target="_blank" rel="noopener noreferrer" title="Github" name="Github">
             <GithubIcon size="1.5x" />
           </a>
-
-          <div style = "width:50px; height:50px; text-aling:center; line-height:50px; font-weight:700;">
-            <a href = "https://intro.msaez.io">English</a>
-          </div>
 
           <ToggleDarkMode class="ml-2 sm:ml-8">
             <template slot="default" slot-scope="{ dark }">
