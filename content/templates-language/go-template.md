@@ -83,6 +83,7 @@ Spring-boot와 Go의 비교는 아래와 같다.
 |DB | | DB.go | 
 |utility | | Util.go | 
 
+```
 ## Model 별 Template 설명 
 
 - 현 섹션에는 eventstorming을 통해 나온 model들을 기반으로 model driven 하게 generate 되는 code들에 대한 설명이다. 

@@ -136,9 +136,13 @@ code {
   @apply px-1 py-1 text-ui-typo bg-ui-sidebar font-mono border-b border-r border-ui-border text-sm rounded;
 }
 
-
 pre[class*="language-"] {
   @apply max-w-full overflow-x-auto rounded;
+  overflow: auto;
+  position: relative;
+  margin: 0.5em 0;
+  padding: 1.25em 1em;
+  background-color:red;
 
   & + p {
     @apply mt-4;
