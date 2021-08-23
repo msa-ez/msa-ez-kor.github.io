@@ -7,6 +7,7 @@ export default function (Vue, { router, head, isClient }) {
   Vue.component('Layout', DefaultLayout)
 
   require('./global-style.scss');
+  require('./global-style.css');
 
   head.meta.push({
     name: 'google-site-verification',
