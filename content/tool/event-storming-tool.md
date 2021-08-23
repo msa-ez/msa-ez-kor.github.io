@@ -395,7 +395,7 @@ GCB 트리거 생성은 아래와 같은 순서대로 진행을
 
 * cloudBuild.yaml 파일의 option 부분에 클러스터 Zone 과 이름이 일치하는지 확인 합니다.
 
-<pre class="language-yaml">
+<pre class=" language-yaml">
 
 options :  
     env:  
@@ -404,26 +404,3 @@ options :
     - CLOUDSDK_CONTAINER_CLUSTER=standard-cluster-1
     
 </pre>
-
-<style>
-  code {
-  @apply px-1 py-1 text-ui-typo bg-ui-sidebar font-mono border-b border-r border-ui-border text-sm rounded;
-}
-
-pre[class*="language-"] {
-  @apply max-w-full overflow-x-auto rounded;
-
-  & + p {
-    @apply mt-4;
-  }
-
-  & > code[class*="language-"] {
-    @apply border-none leading-relaxed;
-  }
-}
-
-pre[class*="language-"],
-  code[class*="language-"] {
-    @apply bg-ui-border;
-  }
-</style>
