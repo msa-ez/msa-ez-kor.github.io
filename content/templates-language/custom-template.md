@@ -28,7 +28,7 @@ Value값을 가지고 오는 엔진이다.
 1.  HelloWorld.py 파일을 아래와 같이 생성한다.
 
 
-<pre class=" language-python">
+<pre class="javascript">
 
 forEach: BoundedContext ----- 1
 fileName: HelloWorld.py ----- 2

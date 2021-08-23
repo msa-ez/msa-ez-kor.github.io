@@ -143,22 +143,6 @@ html[lights-out] {
   pre[class*="language-"],
   code[class*="language-"] {
     @apply bg-ui-border;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-    word-wrap: normal;
-    color: #c3cee3;
-    background: #263238;
-    font-family: Roboto Mono, monospace;
-    font-size: 1em;
-    line-height: 1.5em;
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
-    -webkit-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
   }
 }
 
@@ -277,23 +261,10 @@ blockquote {
 
 code {
   @apply px-1 py-1 text-ui-typo bg-ui-sidebar font-mono border-b border-r border-ui-border text-sm rounded;
-    padding: .25rem;
-    color: #4a5568;
-    color: var(--color-ui-typo);
-    font-family: Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
-    border-bottom-width: 1px;
-    border-right-width: 1px;
-    font-size: .875rem;
-    border-radius: .25rem;
 }
 
 pre[class*="language-"] {
   @apply max-w-full overflow-x-auto rounded;
-    overflow: auto;
-    position: relative;
-    margin: 0.5em 0;
-    padding: 1.25em 1em;
-
 
   & + p {
     @apply mt-4;
@@ -301,22 +272,6 @@ pre[class*="language-"] {
 
   & > code[class*="language-"] {
     @apply border-none leading-relaxed;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-    word-wrap: normal;
-    color: #c3cee3;
-    background: #263238;
-    font-family: Roboto Mono, monospace;
-    font-size: 1em;
-    line-height: 1.5em;
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
-    -webkit-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
   }
 }
 
