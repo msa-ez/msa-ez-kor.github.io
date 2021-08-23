@@ -143,7 +143,7 @@ html[lights-out] {
   pre[class*="language-"],
   code[class*="language-"] {
     @apply bg-ui-border;
-        text-align: left;
+    text-align: left;
     white-space: pre;
     word-spacing: normal;
     word-break: normal;
@@ -277,6 +277,14 @@ blockquote {
 
 code {
   @apply px-1 py-1 text-ui-typo bg-ui-sidebar font-mono border-b border-r border-ui-border text-sm rounded;
+    padding: .25rem;
+    color: #4a5568;
+    color: var(--color-ui-typo);
+    font-family: Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+    border-bottom-width: 1px;
+    border-right-width: 1px;
+    font-size: .875rem;
+    border-radius: .25rem;
 }
 
 pre[class*="language-"] {
