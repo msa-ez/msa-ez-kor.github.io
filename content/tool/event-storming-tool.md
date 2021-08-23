@@ -395,12 +395,10 @@ GCB 트리거 생성은 아래와 같은 순서대로 진행을
 
 * cloudBuild.yaml 파일의 option 부분에 클러스터 Zone 과 이름이 일치하는지 확인 합니다.
 
-<pre class=" language-yaml">
-
+```css
 options :  
     env:  
     ## location/name of GKE cluster (used by all kubectl commands)  
     - CLOUDSDK_COMPUTE_ZONE=asia-northeast1-a  
     - CLOUDSDK_CONTAINER_CLUSTER=standard-cluster-1
-    
-</pre>
+```
