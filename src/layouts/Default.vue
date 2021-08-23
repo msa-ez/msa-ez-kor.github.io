@@ -143,6 +143,22 @@ html[lights-out] {
   pre[class*="language-"],
   code[class*="language-"] {
     @apply bg-ui-border;
+        text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    color: #c3cee3;
+    background: #263238;
+    font-family: Roboto Mono, monospace;
+    font-size: 1em;
+    line-height: 1.5em;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
   }
 }
 
@@ -265,6 +281,11 @@ code {
 
 pre[class*="language-"] {
   @apply max-w-full overflow-x-auto rounded;
+    overflow: auto;
+    position: relative;
+    margin: 0.5em 0;
+    padding: 1.25em 1em;
+
 
   & + p {
     @apply mt-4;
