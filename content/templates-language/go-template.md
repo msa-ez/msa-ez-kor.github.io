@@ -2,7 +2,7 @@
 description: ''
 sidebar: 'started'
 ---
-# Go Template 만들기12456
+# Go Template 만들기
 
 ## Go DDD tutorial 
 

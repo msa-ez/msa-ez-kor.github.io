@@ -3,70 +3,65 @@
     <div class="pt-8 md:pt-16">
       <div class="flex flex-col items-center">
         <div class="flex flex-col items-center mb-2 text-ui-primary">
-          <Logo :width="80" />
           <h2 class="text-3xl text-6xl font-black tracking-tighter border-none">
-            DOCC
+            MSA Easy
           </h2>
         </div>
-        <h1 class="text-4xl text-center lg:text-5xl">
-          Great Documentation starts here.
+        <h1 class=" text-center">
+          The fastest way to build event-driven microservices
         </h1>
-        <p class="text-xl font-medium text-center">
-          Perfect Lighthouse score out of the box. Easy to set-up. Dark mode included.
-          <br>
-          <strong class="text-ui-primary">Got a minute?</strong>
-        </p>
-
-        <div class="py-4">
-          <code class="block px-4 py-1 select-all bg-ui-border text-ui-typo">gridsome create your-project https://github.com/mrcrmn/docc</code>
-        </div>
 
         <div class="flex justify-center mt-8">
           <g-link
-            to="/docs/"
+            to="/started/"
             class="flex items-center px-6 py-4 ml-auto text-2xl font-bold leading-none text-white border rounded-lg shadow-lg bg-ui-primary border-ui-primary transition-all duration-200 ease-out transform hover:shadow-xl hover:-translate-y-1"
           >
             Get started
             <ArrowRightCircleIcon class="ml-4" size="1x" />
           </g-link>
         </div>
-
-        <p class="mt-8 text-center">
-          Open Source. MIT License. <span class="border-b border-dashed border-ui-primary text-ui-primary">Make it your own</span>.
-        </p>
-
       </div>
 
-      <div class="pt-8 mx-auto mt-8 border-t md:mt-16 md:pt-16 border-top border-ui-border max-w-screen-sm"></div>
+      <div class=" mx-auto mt-8 md:mt-16 max-w-screen-sm"></div>
 
       <div class="flex flex-wrap justify-center -mx-4">
         <div class="flex flex-col items-center w-full px-4 mb-8 text-center md:w-1/3">
-          <ZapIcon size="3x" class="mb-6 text-ui-primary" />
           <h3 class="font-bold tracking-wide uppercase text-ui-primary">
-            Incredibly Fast
+            Collective EventStorming
           </h3>
+          <g-image style = "width:100%;" src="~/img/img_1.png"  />
           <p class="text-lg text-left">
-            Powered by Gridsome. Built on Vue. Outputs static files. It wont't get any faster than this. <span class="border-b border-dashed border-ui-primary text-ui-primary">No seriously</span>.
+            <br>
+            MSA Easy는 마이크로서비스 구축에서 운영에 필요한 분석, 설계, 구현 및 모니터링을 지원하는 도구로써,
+            이벤트스토밍 기반 협업을 통해 도메인을 분석/설계하고, 설계된 도메인 모델에서 MSA 소스코드를 자동으로 생성해 줍니다.
+            분석/ 설계단계에서는 MSA Easy를 사용해 대상 도메인의 경계를 식별하고 Contract(계약)을 정의합니다.
           </p>
         </div>
 
         <div class="flex flex-col items-center w-full px-4 mb-8 text-center md:w-1/3">
-          <SearchIcon size="3x" class="mb-6 text-ui-primary" />
+          
           <h3 class="font-bold tracking-wide uppercase text-ui-primary">
-            Instant Search
+            Model 2 Code 2 Cloud
           </h3>
+          <g-image style = "width:100%;" src="~/img/img_2.png"  />
           <p class="text-lg text-left">
-            All headlines are indexed. Instant search powered by Fuse.js. Find what you are looking for in the <span class="border-b border-dashed border-ui-primary text-ui-primary">blink of an eye</span>.
+            <br>
+            설계된 모델은 MDD(Model-driven Design) 패턴에 따라 MSA 코드로 변환됩니다.
+            MSA 코드이외에 컨트랙트 테스트 Code,
+            도커 이미지 생성 스크립트 및 클라우드(GCP, AWS, Azure 등)에 즉시 배포 가능한 CI/CD 파이프라인 스크립트를 자동 생성해 줍니다.
           </p>
         </div>
 
         <div class="flex flex-col items-center w-full px-4 mb-8 text-center md:w-1/3">
-          <MoonIcon size="3x" class="mb-6 text-ui-primary" />
           <h3 class="font-bold tracking-wide uppercase text-ui-primary">
-            Lights out
+            Polyglot & Custom Template
           </h3>
+          <g-image style = "width:100%;" src="~/img/img_3.png"  />
           <p class="text-lg text-left">
-            Working late at night again? Enable dark mode with the click of a button.
+            <br>
+            MSA의 최대 장점 중 하나는 서비스별 최적의 기술 적용이 가능한 폴리글랏 아키텍처입니다.
+            ES2CD는 이벤트스토밍 결과, 식별된 마이크로서비스별 코드 생성이 가능하며,
+            ‘사용자 정의 템플릿’을 통해, 다양한 언어 및 정보공학 노테이션(Notation)으로의 확장을 지원합니다.
           </p>
         </div>
       </div>
@@ -90,7 +85,7 @@ export default {
   },
 
   metaInfo() {
-    const title = 'Great Documentation starts here';
+    const title = 'msaeasy-intro';
     const description = 'DOCC is a starter theme with instant search and dark mode for writing great technical documentation. Based on Gridsome!';
 
     return {
