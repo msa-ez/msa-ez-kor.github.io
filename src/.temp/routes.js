@@ -28,11 +28,11 @@ export default [
     component: () => import(/* webpackChunkName: "page--src--templates--markdown-page-vue" */ "/Users/kibum0405/Desktop/msa-ez-kor.github.io/src/templates/MarkdownPage.vue")
   },
   {
-    path: "/tool/cloud-ide-tool/",
+    path: "/tool/development-practice/",
     component: () => import(/* webpackChunkName: "page--src--templates--markdown-page-vue" */ "/Users/kibum0405/Desktop/msa-ez-kor.github.io/src/templates/MarkdownPage.vue")
   },
   {
-    path: "/tool/development-practice/",
+    path: "/tool/cloud-ide-tool/",
     component: () => import(/* webpackChunkName: "page--src--templates--markdown-page-vue" */ "/Users/kibum0405/Desktop/msa-ez-kor.github.io/src/templates/MarkdownPage.vue")
   },
   {
