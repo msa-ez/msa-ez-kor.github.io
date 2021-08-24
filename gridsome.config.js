@@ -5,41 +5,61 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Docc',
+  siteName: '',
   icon: {
     favicon: './src/assets/favicon.png',
     touchicon: './src/assets/favicon.png'
   },
-  siteUrl: (process.env.SITE_URL ? process.env.SITE_URL : 'https://example.com'),
+  siteUrl: (process.env.SITE_URL ? process.env.SITE_URL : 'https://msa-ez-kor.github.io'),
   settings: {
     web: process.env.URL_WEB || false,
     twitter: process.env.URL_TWITTER || false,
     github: process.env.URL_GITHUB || false,
     nav: {
       links: [
-        { path: '/docs/', title: 'Docs' }
+        { path: '/started/', title: 'Docs' }
       ]
     },
     sidebar: [
       {
-        name: 'docs',
+        name: 'started',
         sections: [
           {
-            title: 'Getting Started',
+            title: '시작하기',
             items: [
-              '/docs/',
-              '/docs/installation/',
-              '/docs/writing-content/',
-              '/docs/deploying/',
+              '/started/',
+              '/started/domain-driven/',
+              '/started/event-storming-learning/',
             ]
           },
           {
-            title: 'Configuration',
+            title: '도구 사용법',
             items: [
-              '/docs/settings/',
-              '/docs/sidebar/',
+              '/tool/event-storming-tool/',
+              '/tool/cloud-ide-tool/',
+              '/tool/infrastructure-modeling/',
+              '/tool/development-practice/'
             ]
-          }
+          },
+          {
+            title: '언어별 템플릿',
+            items: [
+              '/templates-language/python-template/',
+              '/templates-language/springboot-java-template/',
+              '/templates-language/custom-template/',
+              '/templates-language/go-template/',
+            ]
+          },
+          {
+            title: '예제 시나리오',
+            items: [
+              '/example-scenario/accommodation-reservation/',
+              '/example-scenario/food-delivery/',
+              '/example-scenario/library-system/',
+              '/example-scenario/animal-hospital/',
+              '/example-scenario/online-lecture/',
+            ]
+          },
         ]
       }
     ]
