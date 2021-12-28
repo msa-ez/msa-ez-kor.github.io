@@ -51,10 +51,18 @@ query ($id: ID!) {
 import OnThisPage from '@/components/OnThisPage.vue';
 import NextPrevLinks from '@/components/NextPrevLinks.vue';
 
+
 export default {
   components: {
     OnThisPage,
     NextPrevLinks
+  },
+  metaInfo: {
+    title: 'msaez',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+    ],
   },
   
   watch: {

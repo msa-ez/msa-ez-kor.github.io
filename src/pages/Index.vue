@@ -68,7 +68,6 @@
         </div>
       </div>
     </Layout>
-    <Footer></Footer>
   </div>
 </template>
 
@@ -89,8 +88,9 @@ export default {
   },
 
   metaInfo() {
-    const title = 'msaeasy-intro';
-    const description = 'DOCC is a starter theme with instant search and dark mode for writing great technical documentation. Based on Gridsome!';
+    const title = 'msaeasy';
+    const description = ['이벤트 스토밍', 'EventStorming', 'msaeasy'];
+    
 
     return {
       title: title,

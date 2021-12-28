@@ -70,6 +70,7 @@ export default {
     return {
       headerHeight: 0,
       sidebarOpen: false,
+      homeFooterNone: false,
     }
   },
   watch: {
@@ -82,7 +83,7 @@ export default {
       this.$nextTick(() => {
         this.headerHeight = this.$refs.header.offsetHeight;
       });
-    }
+    },
   },
   computed: {
     sidebarStyle() {
