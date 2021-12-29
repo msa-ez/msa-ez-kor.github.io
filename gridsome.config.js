@@ -63,7 +63,7 @@ module.exports = {
           {
             title: '문의사항',
             items: [
-              '/connect/question/'
+              '/contact/question/'
             ]
           },
         ]

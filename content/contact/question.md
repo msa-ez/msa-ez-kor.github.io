@@ -5,7 +5,7 @@ prev: ''
 next: ''
 ---
 
-# CONNECT
+# CONTACT
 
 **문의**
 - 이메일: help@uengine.org
