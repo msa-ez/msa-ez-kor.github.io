@@ -13,6 +13,7 @@ Vue.use(Meta, {
   tagIDKeyName: 'vmid',  // 변화시키는 구분 값
   refreshOnceOnNavigation: true
 })
+require('./global.css');
 
 
 
