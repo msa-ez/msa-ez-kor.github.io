@@ -60,6 +60,12 @@ module.exports = {
               '/example-scenario/online-lecture/',
             ]
           },
+          {
+            title: '문의사항',
+            items: [
+              '/connect/question/'
+            ]
+          },
         ]
       }
     ]

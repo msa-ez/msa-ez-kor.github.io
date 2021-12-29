@@ -54,7 +54,6 @@
               <SunIcon v-else size="1.5x" />
             </template>
           </ToggleDarkMode>
-
         </div>
       </div>
     </div>

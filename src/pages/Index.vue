@@ -88,8 +88,8 @@ export default {
   },
 
   metaInfo() {
-    const title = 'msaeasy';
-    const description = ['이벤트 스토밍', 'EventStorming', 'msaeasy'];
+    const title = ['이벤트 스토밍', 'EventStorming', 'msaeasy', '설계', '교육', '강의', 'MSA', 'CNA', '마이크로서비스', '스프링부트', '쿠버네티스', '컨테이너', 'intromsaez'];
+    const description = ['이벤트 스토밍', 'EventStorming', 'msaeasy', '설계', '교육', '강의', 'MSA', 'CNA', '마이크로서비스', '스프링부트', '쿠버네티스', '컨테이너'];
     
 
     return {
