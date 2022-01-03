@@ -24,15 +24,15 @@ export default [
     component: () => import(/* webpackChunkName: "page--src--templates--markdown-page-vue" */ "/Users/kibum0405/Desktop/uengine project/msa-ez-kor.github.io/src/templates/MarkdownPage.vue")
   },
   {
+    path: "/templates-language/custom-template/",
+    component: () => import(/* webpackChunkName: "page--src--templates--markdown-page-vue" */ "/Users/kibum0405/Desktop/uengine project/msa-ez-kor.github.io/src/templates/MarkdownPage.vue")
+  },
+  {
     path: "/tool/cloud-ide-tool/",
     component: () => import(/* webpackChunkName: "page--src--templates--markdown-page-vue" */ "/Users/kibum0405/Desktop/uengine project/msa-ez-kor.github.io/src/templates/MarkdownPage.vue")
   },
   {
     path: "/tool/development-practice/",
-    component: () => import(/* webpackChunkName: "page--src--templates--markdown-page-vue" */ "/Users/kibum0405/Desktop/uengine project/msa-ez-kor.github.io/src/templates/MarkdownPage.vue")
-  },
-  {
-    path: "/templates-language/custom-template/",
     component: () => import(/* webpackChunkName: "page--src--templates--markdown-page-vue" */ "/Users/kibum0405/Desktop/uengine project/msa-ez-kor.github.io/src/templates/MarkdownPage.vue")
   },
   {
@@ -56,11 +56,11 @@ export default [
     component: () => import(/* webpackChunkName: "page--src--templates--markdown-page-vue" */ "/Users/kibum0405/Desktop/uengine project/msa-ez-kor.github.io/src/templates/MarkdownPage.vue")
   },
   {
-    path: "/example-scenario/animal-hospital/",
+    path: "/example-scenario/accommodation-reservation/",
     component: () => import(/* webpackChunkName: "page--src--templates--markdown-page-vue" */ "/Users/kibum0405/Desktop/uengine project/msa-ez-kor.github.io/src/templates/MarkdownPage.vue")
   },
   {
-    path: "/example-scenario/accommodation-reservation/",
+    path: "/example-scenario/animal-hospital/",
     component: () => import(/* webpackChunkName: "page--src--templates--markdown-page-vue" */ "/Users/kibum0405/Desktop/uengine project/msa-ez-kor.github.io/src/templates/MarkdownPage.vue")
   },
   {

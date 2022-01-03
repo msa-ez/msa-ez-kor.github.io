@@ -15,7 +15,7 @@ sidebar: 'started'
 
 **[강의 생성](http://www.msaez.io/#/courses) 클릭 -> 강의 생성 탭으로 이동**
 
- ![](../../src/img/lecture-development/image1.png)
+![](../../src/img/lecture-development/image1.png)
 
 | 번호 | 이름                | 기능 설명                                                                 |
 | ---- | ------------------- | ------------------------------------------------------------------------- |
