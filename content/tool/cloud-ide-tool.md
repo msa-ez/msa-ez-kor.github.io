@@ -2,7 +2,7 @@
 description: ''
 sidebar: 'started'
 ---
-# 클라우드 IDE(준비중)
+# 클라우드 IDE
 
 ## 화면 구성 및 메뉴
 
@@ -317,8 +317,24 @@ mvn spring-boot:run
 
 - order서비스에 접근이 가능한지 확인 해보기 위해서 새로운 터미널에서 확인해보겠습니다.
 - http를 이용해 아래 명령어를 적용하여 order 서비스에 정상적으로 접근을 할 수 있습니다.
+- src/main/java/project/orderRepository.java의 path가 orders이고 order 서비스가 port8081로 떠있기 때문에 localhost:8081/orders로 접근하였습니다.
 ```javascript
 http localhost:8081/orders
 ```
 
 ![](../../src/img/cloud-ide-tool/32.png)
+
+<br>
+
+- orders에 customerId=1, qty=3, productId=1들의 값을 넣으면 localhost:8081/orders에 정상적으로 값이 담긴 것을 확인할 수 있습니다.
+```javascript
+http localhost:8081/orders customerId=1 qty=3 productId=1
+```
+
+![](../../src/img/cloud-ide-tool/33.png)
+
+<br>
+
+- 주문을 넣게 되면 topic 명령어를 실행했던 곳에서 토픽이 추가된 것을 확인할 수 있습니다.
+
+![](../../src/img/cloud-ide-tool/34.png)
