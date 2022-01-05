@@ -119,6 +119,11 @@ export default {
           name: 'twitter:description',
           content: description,
         },
+        {
+          key: 'keyword',
+          name: 'keyword',
+          content: 'intromsaez,이벤트 스토밍,EventStorming,msaeasy,MSA설계,교육,MSA강의,MSA교육,CNA,마이크로서비스,스프링부트,SpringBoot,이벤트 스토밍 강의,이벤트 스토밍 교육,쿠버네티스,컨테이너,이벤트 스토밍 설계,마이크로서비스 교육,쿠버네티스 강의,쿠버네티스 교육,스프링부트 강의,스프링부트 교육,CNA강의,CNA 강의,CNA교육,CNA 교육,객체지향 강의,객체지향 교육,CNA 구현,CNA구현,kubernetes,kubernetes 강의,kubernetes 교육'
+        },
       ]
     }
   }
