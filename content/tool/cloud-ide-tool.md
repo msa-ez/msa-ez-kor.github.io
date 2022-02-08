@@ -63,9 +63,9 @@ sidebar: 'started'
 
 <br>
 
-### Sleection
+### Selection
 
-- Sleection의 메뉴 구성은 다음과 같습니다.
+- Selection의 메뉴 구성은 다음과 같습니다.
   - Select All: 모두 선택
   - Expand Selection: 선택 영역 확장
   - Shrink Selection: 선택 축소
