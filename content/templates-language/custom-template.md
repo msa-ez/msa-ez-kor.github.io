@@ -145,63 +145,58 @@ print("policy: {{name}}");
 
 ### · Aggregate 변수
 
-<table>
-<thead>
-<tr class="header">
-<th>변수명</th>
-<th>변수 역할</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>aggregateRoot. fieldDescriptors</td>
-<td>Aggregate의 Entity 목록</td>
-</tr>
-<tr class="even">
-<td>aggregateRoot. keyFieldDescriptors</td>
-<td>Aggregate의 Key값</td>
-</tr>
-<tr class="odd">
-<td>events</td>
-<td><p>Aggregate에 속해있는 event 목록</p>
-<p>하단에 작성되는 Event의 변수 사용 가능)</p></td>
-</tr>
-<tr class="even">
-<td>commands</td>
-<td><p>Aggregate에 속해있는 command 목록</p>
-<p>하단에 작성되는 Command의 변수 사용 가능)</p></td>
-</tr>
-<tr class="odd">
-<td>policies</td>
-<td><p>Aggregate에 속해있는 policy 목록</p>
-<p>하단에 작성되는 Policy의 변수 사용 가능)</p></td>
-</tr>
-</tbody>
-</table>
+| 변수명            | 변수 역할                     | 변수 타입 |
+| ---------------- | -------------------------- | ------- |
+| aggregateRoot.fieldDescriptors | Aggregate의 attribute 목록 | Object list |
+| aggregateRoot.isKey              | Aggregate attribute의 key | boolean |
+| events                           | Aggregate에 속해 있는 event 정보 (하단 event 변수 사용 가능) | Object list|
+| commands                          | Aggregate에 속해 있는 commands 정보 (하단 commands 변수 사용 가능) | Object list|
+| policyList                          | Aggregate에 속해 있는 policy 정보 (하단 policy 변수 사용 가능)  | Object List |
+| aggregateRules                    | Aggregate에 해당하는 rule 정보 (하단 Rule 변수 사용 가능) | Object List |
+
+### · Rules 변수
+
+| 변수명            | 변수 역할                     | 변수 타입 |
+| ---------------- | ---------------------------- | ------ |
+| givenAtt         | 외부 BC에서 들어오는 event (하단 event 변수 사용 가능) | Object |
+| WhenAtt          | givenAtt event와 연결되어 있는 policy (하단 policy 변수 사용 가능) | Object |
+| thenAtt          | 내부 BC에서 Policy와 연결되어 있는 event (하단 event 변수 사용 가능) | Object | 
+| attributes.aggregateAtt.attKey| rule의 example에 해당하는 aggregate attribute에 mapping 되는 변수 명 | String | 
+| attributes.aggregateAtt.attValue| rule의 example에 해당하는 aggregate attribute에 mapping 되는 변수 값 | String | 
+| attributes.givenAtt.attKey| rule의 example에 해당하는 given attribute에 mapping 되는 변수 명 | String | 
+| attributes.givenAtt.attValue| rule의 example에 해당하는 given attribute에 mapping 되는 변수 값 | String | 
+| attributes.thenAtt.attKey| rule의 example에 해당하는 then attribute에 mapping 되는 변수 명 | String | 
+| attributes.thenAtt.attKey| rule의 example에 해당하는 given attribute에 mapping 되는 변수 값 | String | 
+
 
 ### · Event 변수
 
-| 변수명           | 변수 역할                       |
-| ---------------- | ----------------------          |
-| aggregate        | 자신이 속해있는 Aggregate 정보  |
-| fieldDescriptors | Event Entity 목록               |
-| eventToPolicy    | Policy에 Event를 전달할 방식    |
-| trigger          | Event 전달방식에 관한 Trigger   |
+| 변수명           | 변수 역할                       | 변수 타입 | 
+| ---------------- | ----------------------          | ---- |
+| aggregate        | 자신이 속해있는 Aggregate 정보  | Object | 
+| fieldDescriptors | Event Entity 목록               | Object |
+| trigger          | Event 전달방식에 관한 Trigger   | String |
+| relaionCommandInfo | 동기 통신으로 연결되어 있는 외부 command 객체 정보 | Object |
 
 ### · Command 변수
 
-| 변수명         | 변수 역할                 |
-| ----------- | --------------------- |
-| aggregate   | 자신이 속해있는 Aggregate 정보 |
-| restfulType | RestAPI 중 어떠한 방식인지.   |
+| 변수명         | 변수 역할                 | 변수 타입 |
+| ----------- | --------------------- | ------- |
+| aggregate   | 자신이 속해있는 Aggregate 정보 | Ojbect | 
+| isRestRepository | RestAPI 중 어떠한 방식인지.   | boolean | 
+| controllerInfo.apiPath | api 경로             | String |
+| controllerInfo.method | api method            | String |
+| relationEventInfo | 동기 통신으로 연결되어 있는 외부 event 객체 정보 | Object |
+| triggerByCommand | 해당 command가 triggering 하는 내부 event 객체 정보 | Object List | 
 
 ### · Policy 변수
 
-| 변수명               | 변수 역할                  |
-| ----------------- | ---------------------- |
-| aggregate         | 자신이 속해있는 Aggregate 정보  |
-| eventToPolicy     | Policy가 Event를 전달받는 방식 |
-| relationEventInfo | 연결된 Event에 대한 정보       |
+| 변수명               | 변수 역할                  | 변수 타입 | 
+| ----------------- | ---------------------- | ---------- |
+| aggregateList         | 자신이 속해있는 Aggregate 정보  | Object List | 
+| relationAggregateInfo | 연결된 외부 Aggregate 정보 | Object List | 
+| relationEventInfo | 연결된 Event에 대한 정보       | Object List | 
+| relationExampleInfo | policy와 연결된 내부 event 정보 | Object List | 
 
 ### · View 변수
 

@@ -51,6 +51,12 @@ module.exports = {
             ]
           },
           {
+            title: '커스텀 템플릿',
+            items:[
+              '/custom-template/tutorial/',
+            ]
+          },
+          {
             title: '예제 시나리오',
             items: [
               '/example-scenario/accommodation-reservation/',
