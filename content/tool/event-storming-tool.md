@@ -23,21 +23,24 @@ MSAEZ 도구의 전체 화면 레이아웃은 다음과 같습니다.
 > ![](../../src/img/image30.png)
 > <p align="center"> 그림 1 도구 전체 레이아웃 </p>
 
-| 번호 | 이름                | 기능 설명                                                        |
-|------|---------------------|----------------------------------------------------------------- |
+| 번호 | 이름                | 기능 설명                                                              |
+|------|---------------------|----------------------------------------------------------------------- |
 | 1    &nbsp;| Zoom Panel          | 캔버스에 작성된 화면을 확대 및 축소 기능                         |
 | 2    &nbsp;| Project Name        | 프로젝트 명 입력 (Java의 경우 Package명)                         |
-| 3    &nbsp;| Replay              | 모델링 히스토리 정보를 확인하는 기능                             |
-| 4    &nbsp;| Code                | 모델링 한 code 확인 기능                                         |
-|ㆍ4-1 &nbsp;| Code Preview        | 모델링 한 code 다운로드 기능                                     |
-|ㆍ4-2 &nbsp;| Download Archive    | 모델링 한 code 실습하는 기능                                     |
-|ㆍ4-3 &nbsp;| Project IDE         | 모델링 한 code 확인, 다운로드, 실습하는 기능                     |
-| 5    &nbsp;| Save                | Draw된 EventStorming파일을 Json파일로 저장함                     |
-|ㆍ5-1 &nbsp;| Save to Server      | 모델링 한 sticker 정보를 서버에 저장하는 기능                    |
-|ㆍ5-2 &nbsp;| Download model File | 모델링 한 sticker 정보를 내 pc에 저장 하는 기능                  |
-|ㆍ5-3 &nbsp;| Duplicate           | 모델링 한 sticker 정보를 서버에 복제하는 기능                    |
-| 6    &nbsp;| Share               | 유저 간 모델링 공유를 통한 동시편집 기능                         |
-| 7    &nbsp;| Sticker Palette     | EventStorming을 위한 Sticky note를 선택할 수 있는 Palette        |
+| 3    &nbsp;| Cluster             | 쿠버네티스의 클러스터를 설정하는 기능                            |
+| 4    &nbsp;| Hexagonal           | 모델링 ui를 헥사고날 ui로 변경하는 기능                          |
+| 5    &nbsp;| Replay              | 모델링 이력을 다시보는 기능                                      |
+| 6    &nbsp;| Save                | Draw된 EventStorming파일을 Json파일로 저장함                     |
+|ㆍ6-1 &nbsp;| Save to Serxver      | 모델링 한 sticker 정보를 서버에 저장하는 기능                    |
+|ㆍ6-2 &nbsp;| Download model File | 모델링 한 sticker 정보를 내 pc에 저장 하는 기능                  |
+|ㆍ6-3 &nbsp;| Duplicate           | 모델링 한 sticker 정보를 서버에 복제하는 기능                    |
+| 7    &nbsp;| Share               | 유저 간 모델링 공유를 통한 동시편집 기능                         |
+| 8    &nbsp;| Code                | 모델링 한 code 확인 기능                                         |
+|ㆍ8-1 &nbsp;| Code Preview        | 모델링 한 code 다운로드 기능                                     |
+|ㆍ8-2 &nbsp;| Download Archive    | 모델링 한 code 실습하는 기능                                     |
+|ㆍ8-3 &nbsp;| Project IDE         | 모델링 한 code 확인, 다운로드, 실습하는 기능                     |
+|ㆍ8-4 &nbsp;| Reset Config        | IDE의 쿠버네티스를 초기화하는 기능                               |
+| 9    &nbsp;| Sticker Palette     | EventStorming을 위한 Sticky note를 선택할 수 있는 Palette        |
 
 
 ### ·	Event Sticker
@@ -112,8 +115,11 @@ Command는 스티커 팔레트에서 파란색 아이콘이 지칭합니다.
 | 번호 | 이름                       | 기능 설명                         |
 | ---- | -------------------------- | --------------------------------- |
 | 1    | Command Name               | Command Sticky note에 작성될 이름 |
-| 2    | Restful Type               | Restful API 의 CRUD Type을 선택   |
-| 3    | Associated Aggregate       | Command와 연결 될 Aggregate 선택  |
+| 2    | Description                | Command Sticky의 설명             |
+| 3    | Restful Type               | Restful API 의 CRUD Type을 선택   |
+| 4    | Associated Aggregate       | Command와 연결 될 Aggregate 선택  |
+| 5    | Httpie command usages      | httpie에서 자주 사용 될 명령어    |
+
 
 해당 이벤트가 발생될 때의 업무에 따라서, 아래와 같이 기입합니다.
 
@@ -137,7 +143,8 @@ Aggregate는 스티커 팔레트에서 노란색 아이콘이 지칭합니다.
 | 번호 | 이름              | 기능 설명                                      |
 | ---- | ----------------- | ---------------------------------------------- |
 | 1    | Aggregate Name    | Aggregate Sticky note에 작성될 이름            |
-| 2    | Attributes        | Aggregate Entity (Domain Entity)를 정의합니다. |
+| 2    | Description       | Aggregate Sticky의 설명                        |
+| 3    | Attributes        | Aggregate Entity (Domain Entity)를 정의합니다. |
 
 주문 서비스의 Aggregate(Domain Entity)를 정의하기 위해, 아래와 같이 기입합니다.
 
@@ -164,9 +171,11 @@ Bounded Context는 스티커 팔레트에서 점선 모양의 아이콘이 지�
 
 > ![](../../src/img/image46.png)
 
-| 번호 | 이름                   | 기능 설명                       |
-| ---- | ------------------------ | ----------------------------- |
-| 1    | Bounded Context Name     | Bounded Context에 작성될 이름 |
+| 번호 | 이름                            | 기능 설명                     |
+| ---- | ------------------------------- | ----------------------------- |
+| 1    | Bounded Context Name            | Bounded Context에 작성될 이름 |
+| 2    | Bounded Context Description     | Bounded Context의 설명 작성   |
+| 3    | Bounded Context Authority       | Bounded Context의 권한을 부여할 유저 선택과 권한 부여 |
 
 주문 서비스의 Bounded Context와 배송 서비스의 Bounded Context를 그린 후,
 <br />각각의 서비스에 맞게 EventStorming의 Sticky Note들을
@@ -217,8 +226,13 @@ Code Preview를 선택하면 EventStorming 된 결과를 Code Preview를 통하�
 | 번호 | 이름               | 기능 설명                                                                            |
 | -- | -------------------- | ------------------------------------------------------------------------------------ |
 | 1  | Code List            | 선택된 Template에 따라서 생성된 폴더 구조와 파일들을 보여줌                          |
-| 2  | Select<br />Template | Template 중에서 어떤 Template을 사용하여<br />코드 생성 및 코드 확인 할 것인지 선택  |
-| 3  | Code View            | 선택된 파일의 Code를 표시해 줌                                                       |
+| 2  | Code View            | 선택된 파일의 Code를 표시해 줌                                                       |
+| 3  | Topping              | Java/Spring Version, Security - Token based Authentication,<br> Kubernetes/Service Mesh등 설정   |
+| 4  | ![](../../src/img/image72.png) | Code List를 접었다 폈다 하는 기능             |
+| 5  | ![](../../src/img/image73.png) | 자동으로 모델링을 맞춰주는 기능을 껐다 켰다 하는 기능                |
+| 6  | ![](../../src/img/image74.png) | 변경된 파일을 끄는 기능                      |
+| 7  | ![](../../src/img/image75.png) | Code View의 스타일을 다크 모드로 변환하는 기능 |
+
 
 ### ·	Download Archive
 
