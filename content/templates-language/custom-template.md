@@ -148,7 +148,7 @@ print("policy: {{name}}");
 | 속성            |   설명                   | 타입 |
 | ---------------- | -------------------------- | ------- |
 | aggregateRoot.fieldDescriptors | Aggregate의 attribute 목록 | Object list |
-| aggregateRoot.keyFieldDescriptor | Key Field Descriptor | FieldDescriptor |
+| keyFieldDescriptor | Key Field Descriptor | FieldDescriptor |
 | aggregateRoot.isKey              | Aggregate attribute의 key | boolean |
 | events                           | Aggregate에 속해 있는 event 정보 (하단 event 변수 사용 가능) | Object list|
 | commands                          | Aggregate에 속해 있는 commands 정보 (하단 commands 변수 사용 가능) | Object list|
