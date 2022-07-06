@@ -104,9 +104,9 @@ print("policy: {{name}}");
     HelloWorld.py안에 각각의 BoundedContext, Aggreagte, Event, Command,
     Policy들의 이름이 출력 되는 것을 확인 할 수 있다.
 
-## 템플릿 작성 변수
+## 템플릿 객체
 
-### · 공통 변수 (BoundedContext 제외)
+### · 공통 속성 (BoundedContext 제외)
 
 | 변수명                 | 변수 역할                                               |
 | ------------------- | --------------------------------------------------- |
@@ -117,13 +117,13 @@ print("policy: {{name}}");
 | options.package     | 패키지 명 (ProjectName)                                 |
 | options.packagePath | 패키지 경로 ( java의 경우 src/main/java/{{ projectName }} ) |
 
-### · BoundedContext 변수
+### · BoundedContext 객체
 
 <table>
 <thead>
 <tr class="header">
-<th>변수명</th>
-<th>변수 역할</th>
+<th>속성</th>
+<th>설명</th>
 </tr>
 </thead>
 <tbody>
@@ -143,20 +143,21 @@ print("policy: {{name}}");
 </tbody>
 </table>
 
-### · Aggregate 변수
+### · Aggregate 객체
 
-| 변수명            | 변수 역할                     | 변수 타입 |
+| 속성            |   설명                   | 타입 |
 | ---------------- | -------------------------- | ------- |
 | aggregateRoot.fieldDescriptors | Aggregate의 attribute 목록 | Object list |
+| aggregateRoot.keyFieldDescriptor | Key Field Descriptor | FieldDescriptor |
 | aggregateRoot.isKey              | Aggregate attribute의 key | boolean |
 | events                           | Aggregate에 속해 있는 event 정보 (하단 event 변수 사용 가능) | Object list|
 | commands                          | Aggregate에 속해 있는 commands 정보 (하단 commands 변수 사용 가능) | Object list|
 | policyList                          | Aggregate에 속해 있는 policy 정보 (하단 policy 변수 사용 가능)  | Object List |
 | aggregateRules                    | Aggregate에 해당하는 rule 정보 (하단 Rule 변수 사용 가능) | Object List |
 
-### · Rules 변수
+### · Rules 객체
 
-| 변수명            | 변수 역할                     | 변수 타입 |
+| 속성            |  역할                     |  타입 |
 | ---------------- | ---------------------------- | ------ |
 | givenAtt         | 외부 BC에서 들어오는 event (하단 event 변수 사용 가능) | Object |
 | WhenAtt          | givenAtt event와 연결되어 있는 policy (하단 policy 변수 사용 가능) | Object |
@@ -169,18 +170,18 @@ print("policy: {{name}}");
 | attributes.thenAtt.attKey| rule의 example에 해당하는 given attribute에 mapping 되는 변수 값 | String | 
 
 
-### · Event 변수
+### · Event 객체
 
-| 변수명           | 변수 역할                       | 변수 타입 | 
+| 속성           |  역할                       |  타입 | 
 | ---------------- | ----------------------          | ---- |
 | aggregate        | 자신이 속해있는 Aggregate 정보  | Object | 
 | fieldDescriptors | Event Entity 목록               | Object |
 | trigger          | Event 전달방식에 관한 Trigger   | String |
 | relaionCommandInfo | 동기 통신으로 연결되어 있는 외부 command 객체 정보 | Object |
 
-### · Command 변수
+### · Command 객체
 
-| 변수명         | 변수 역할                 | 변수 타입 |
+| 속성         |  역할                 |  타입 |
 | ----------- | --------------------- | ------- |
 | aggregate   | 자신이 속해있는 Aggregate 정보 | Ojbect | 
 | isRestRepository | RestAPI 중 어떠한 방식인지.   | boolean | 
@@ -189,18 +190,18 @@ print("policy: {{name}}");
 | relationEventInfo | 동기 통신으로 연결되어 있는 외부 event 객체 정보 | Object |
 | triggerByCommand | 해당 command가 triggering 하는 내부 event 객체 정보 | Object List | 
 
-### · Policy 변수
+### · Policy 객체
 
-| 변수명               | 변수 역할                  | 변수 타입 | 
+| 속성               |  역할                  |  타입 | 
 | ----------------- | ---------------------- | ---------- |
 | aggregateList         | 자신이 속해있는 Aggregate 정보  | Object List | 
 | relationAggregateInfo | 연결된 외부 Aggregate 정보 | Object List | 
 | relationEventInfo | 연결된 Event에 대한 정보       | Object List | 
 | relationExampleInfo | policy와 연결된 내부 event 정보 | Object List | 
 
-### · View 변수
+### · View 객체
 
-| 변수명               | 변수 역할                  |
+| 속성               |  역할                  |
 | ----------------- | ---------------------- |
 | aggregate         | 자신이 속해있는 Aggregate 정보  |
 | dataProjection    | view의 데이터 구조 방식 변수 |
@@ -208,11 +209,11 @@ print("policy: {{name}}");
 | aggregateEvents   | 자신이 속해있는 Aggregate의 Events 정보 |
 
 ### · fieldDescriptors
-| 변수명               | 변수 역할                  |
+| 속성               |  역할                  |
 | ----------------- | ---------------------- |
-| name         |  변수 명 |
-| className    | 변수의 데이터 타입 |
-| isKey | 테이블에 대한 Key 값 (Defalut: false) |
+| name         |  필드 명 |
+| className    | 필드의 데이터 타입 |
+| isKey | Key 필드 여부 (Defalut: false) |
 
 
 ### · viewFieldDescriptors
@@ -220,7 +221,7 @@ print("policy: {{name}}");
 **CQRS**
 
 
-| 변수명               | 변수 역할                  |
+| 속성               | 역할                  |
 | ----------------- | ---------------------- |
 | isKey         | Key 값 (default: false)  |
 | className   | 변수의 데이터 타입 |
@@ -233,7 +234,7 @@ print("policy: {{name}}");
 **UI Mashup**
 
 
-| 변수명               | 변수 역할                  |
+| 속성               |  역할                  |
 | ----------------- | ---------------------- |
 | isKey         | Key 값 (default: false)  |
 | className   | 변수의 데이터 타입 |
