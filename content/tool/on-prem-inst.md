@@ -2,22 +2,22 @@
 description: ''
 sidebar: 'started'
 ---
-# on-prem instruction 
+# on-prem 사용 설명서
 
 # Using GCP Cluster
 
-### 1. Download helm Charts 
+### 1. 아래 링크에서 helm Charts 를 다운로드 받는다.
   - [msa-ez/on-prem-helm](https://github.com/msa-ez/on-prem-helm/blob/main/README.md)
 ---
-### 2. Create & Connect GCP Cluster
+### 2. GCP Cluster 를 생성하고 연결한다.
 ---
 ### 3. on-prem 설치 
-  - Cluseter ip: ```kubeclt cluseter-info```
+  - Cluseter ip: ```kubectl cluster-info```
   - Domain: Route53 도메인 중 사용할 도메인 
   - token: ```kubectl describe secret default```
     #### 1. yaml 파일 별 수정 필요 내용 
-    - <b>deployment.yaml</b>: Cluseter ip, Domain, token
-    - <b>values.yaml</b>: Cluseter ip, Domain
+    - <b>deployment.yaml</b>: Cluster ip, Domain, token
+    - <b>values.yaml</b>: Cluster ip, Domain
     - <b>2q</b>: Domain  
     - <b>ingress.yaml</b>: Domain 
     - <b>issuer.yaml</b> Domain

@@ -38,7 +38,9 @@ module.exports = {
               '/tool/event-storming-tool/',
               '/tool/cloud-ide-tool/',
               '/tool/infrastructure-modeling/',
-              '/tool/development-practice/'
+              '/tool/development-practice/',
+              '/tool/on-prem-inst/',
+              '/tool/google-drive-examples/',
             ]
           },
           {
