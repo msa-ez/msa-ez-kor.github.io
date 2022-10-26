@@ -35,12 +35,12 @@ module.exports = {
           {
             title: '도구 사용법',
             items: [
+              '/tool/google-drive-examples/',
               '/tool/event-storming-tool/',
               '/tool/cloud-ide-tool/',
               '/tool/infrastructure-modeling/',
               '/tool/development-practice/',
               '/tool/on-prem-inst/',
-              '/tool/google-drive-examples/',
             ]
           },
           {

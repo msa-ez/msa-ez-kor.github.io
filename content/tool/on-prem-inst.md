@@ -2,17 +2,17 @@
 description: ''
 sidebar: 'started'
 ---
-# on-prem 사용 설명서
+# on-prem 설치 설명서
 
-# Using GCP Cluster
+# Installing on-premise MSA-Easy
 
-### 1. 아래 링크에서 helm Charts 를 다운로드 받는다.
-  - [msa-ez/on-prem-helm](https://github.com/msa-ez/on-prem-helm/blob/main/README.md)
+### 1. Clone helm Charts 
+    git clone https://github.com/msa-ez/on-prem-helm.git
 ---
-### 2. GCP Cluster 를 생성하고 연결한다.
+### 2. Create & Connect GCP Cluster
 ---
 ### 3. on-prem 설치 
-  - Cluseter ip: ```kubectl cluster-info```
+  - Cluster ip: ```kubeclt cluster-info```
   - Domain: Route53 도메인 중 사용할 도메인 
   - token: ```kubectl describe secret default```
     #### 1. yaml 파일 별 수정 필요 내용 
