@@ -46,7 +46,7 @@
 
           <div class=".clearfix" style="width:250px;">
             <div style = "width:50px; height:50px; text-align:center; line-height:50px; font-weight:700; float:left;">
-              <a href = "https://intro.msaez.io">English</a>
+              <a @click="languageExchange()">English</a>
             </div>
 
             <div style = "width:150px; height:50px; text-align:center; line-height:50px; font-weight:700;  float:left;">
@@ -106,6 +106,11 @@ export default {
     GithubIcon,
     TwitterIcon
   },
+  data: {
+    currentUrl: null,
+    currentPath: null,
+    currentPathTwo: null
+  },
 
   computed: {
     meta() {
@@ -113,6 +118,22 @@ export default {
     },
     settings() {
       return this.meta.settings;
+    },
+  },
+
+  methods: {
+    languageExchange() {
+      var me = this
+      
+      me.currentUrl = window.location.pathname;
+      me.currentPath = me.currentUrl.split("/")[1];
+      me.currentPathTwo = me.currentUrl.split("/")[2];
+      
+      if(me.currentPath != null && me.currentPathTwo != null) {
+        window.location.replace("https://intro.msaez.io/" + me.currentPath + "/" + me.currentPathTwo);
+      }else {
+        window.location.replace("https://intro.msaez.io/");
+      }
     }
   }
 };
