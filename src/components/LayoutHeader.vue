@@ -44,16 +44,25 @@
             <GithubIcon size="1.5x" />
           </a>
 
-          <div style = "width:50px; height:50px; text-aling:center; line-height:50px; font-weight:700;">
-            <a href = "https://intro.msaez.io">English</a>
+          <div class=".clearfix" style="width:250px;">
+            <div style = "width:50px; height:50px; text-align:center; line-height:50px; font-weight:700; float:left;">
+              <a @click="languageExchange()" style="cursor:pointer;">English</a>
+            </div>
+
+            <div style = "width:150px; height:50px; text-align:center; line-height:50px; font-weight:700;  float:left;">
+              <a target="_blank" href = "https://github.com/msa-ez/msa-ez.github.io/issues">Q&A Board</a>
+            </div>
+
+            <div style="width:50px; float:left; margin-top:10px;">
+              <ToggleDarkMode>
+                <template slot="default" slot-scope="{ dark }">
+                  <MoonIcon v-if="dark" size="1.5x" />
+                  <SunIcon v-else size="1.5x" />
+                </template>
+              </ToggleDarkMode>
+            </div>
           </div>
 
-          <ToggleDarkMode class="ml-2 sm:ml-8">
-            <template slot="default" slot-scope="{ dark }">
-              <MoonIcon v-if="dark" size="1.5x" />
-              <SunIcon v-else size="1.5x" />
-            </template>
-          </ToggleDarkMode>
         </div>
       </div>
     </div>
@@ -97,6 +106,11 @@ export default {
     GithubIcon,
     TwitterIcon
   },
+  data: {
+    currentUrl: null,
+    currentPath: null,
+    currentPathTwo: null
+  },
 
   computed: {
     meta() {
@@ -104,6 +118,22 @@ export default {
     },
     settings() {
       return this.meta.settings;
+    },
+  },
+
+  methods: {
+    languageExchange() {
+      var me = this
+      
+      me.currentUrl = window.location.pathname;
+      me.currentPath = me.currentUrl.split("/")[1];
+      me.currentPathTwo = me.currentUrl.split("/")[2];
+      
+      if(me.currentPath != null && me.currentPathTwo != null) {
+        window.location.href="https://intro.msaez.io/" + me.currentPath + "/" + me.currentPathTwo;
+      }else {
+        window.location.href="https://intro.msaez.io/";
+      }
     }
   }
 };
@@ -117,6 +147,8 @@ header {
     }
   }
 }
+
+.clearfix::after{content:""; display:block; clear:both;}
 
 .nav-link {
   &.active {
