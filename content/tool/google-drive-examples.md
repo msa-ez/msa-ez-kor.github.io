@@ -110,13 +110,38 @@ indexer와 video processing 측에 위치한 어그리거트의 이름은 비교
 
 > ![](../../src/img/gd-inst/ggd-9.gif)
 
-가장 먼저 File의 속성을 정의해보겠습니다. 
+가장 먼저 File의 속성을 정의해보겠습니다. 평소에 로컬이나 서버에 파일을 업로드할 때 표기되는 값들을 생각하면 작업이 편합니다.
 
-평소에 로컬이나 서버에 파일을 업로드할 때 표기되는 값들을 생각하면 작업이 편합니다. 파일의 이름(name), 크기(size), 생성일(createdTime), 형식(type), 소유자(userId)를 적절한 데이터 타입과 함께 추가해줍니다.
+<h4>File</h4>
+
+| Type  | Name  |
+|---|---|
+| Long  | id  |
+| String  | name  |
+| Long  | size  |
+| Date  | createdTime  |
+| String  | type  |
+| String  | userId  |
 
 String은 문자열, Integer는 4바이트의 기본 숫자열, Long은 Integer보다 큰 8바이트 용량의 숫자열, Date는 날짜를 표시해주는 데이터 타입입니다. 
 
 업로드된 파일의 속성을 모두 정의해준 후에는 인덱싱 및 비디오 스트리밍 작업의 결과에 대한 속성까지 추가해주면 이번 스텝이 마무리됩니다.
+
+<h4>Index</h4> 
+
+| Type  | Name  |
+|---|---|
+| Long  | id  |
+| Long  | fileId  |
+| List<String\>  | keywords  |
+
+<h4>Video</h4>
+
+| Type  | Name  |
+|---|---|
+| Long  | id  |
+| Long  | fileId  |
+| String  | url  |
 
 두 결과물 모두 업로드한 파일을 기반으로 생성되므로 고유의 키값인 id 외에 파일을 식별하기 위한 'fileId'가 들어가야 하고, Index의 경우에는 파일의 이름으로 인덱싱된 'keyword', Video는 스트리밍 서비스로 접속 가능한 'url'을 추가로 설정해줍니다. 여기서 keyword의 경우 여러 개가 나올 수 있으므로, List 타입의 String으로 설정해줍니다.
 
@@ -156,6 +181,17 @@ String은 문자열, Integer는 4바이트의 기본 숫자열, Long은 Integer�
 
 그리고 여기서도 속성 정보를 추가해야 하는데, 시나리오에서 제시된 대시보드 상에서 나타내야 할 요소들(파일사이즈, 파일명, 인덱싱여부, 업로드여부, 비디오url)을 추가해줍니다.
 
+<h4>Dashboard</h4>
+
+| Type  | Name  |
+|---|---|
+| Long  | id  |
+| String  | fileName  |
+| Long  | fileSize  |
+| Boolean  | isCreated  |
+| Boolean  | isIndexed  |
+| String  | videoUrl  |
+
 <h4>9. ReadModel CREATE WHEN 추가</h4>
 
 > ![](../../src/img/gd-inst/9.png)
@@ -170,7 +206,17 @@ Create, Update, Delete의 3가지로 크게 구분되며, 어떤 상황에 내�
 
 우리가 제작하고 있는 구글 드라이브의 경우 파일이 업로드 되었을 때 모든 액션이 시작되므로, Create 절에는 FileUploaded를 선언해줍니다.
 
-그리고 예시화면과 같이 대시보드와 이벤트의 속성정보를 매칭시켜주는 작업을 진행합니다.
+그리고 아래 표와 같이 대시보드와 이벤트의 속성정보를 매칭시켜주는 작업을 진행합니다.
+
+<h4>CREATE WHEN FileUploaded</h4>
+
+| SET  |   |
+|---|---|
+| readModelField  | eventField  |
+| Dashboard.id  | FileUploaded.id  |
+| Dashboard.fileSize  | FileUploaded.size  |
+| Dashboard.fileName  | FileUploaded.name  |
+| Dashboard.isUploaded  | true  |
 
 여기서 업로드 여부를 파악하는 isUploaded의 경우, 이벤트와의 매칭이 아닌 '직접입력' 옵션을 활용해 true 값을 넣어주면 됩니다.
 
@@ -186,9 +232,21 @@ Create 절 선언 및 속성 매칭을 완료한 후에는 Update 절로 이동�
 
 파일이 드라이브에 최초로 업로드된 후 그 값이 Update되는 경우는 파일이 인덱싱되고 비디오스트리밍 되는 파트입니다.
 
-그러므로 우리에겐 2개의 Update 절이 필요합니다. FileIndexed와 VideoStreamed를 모두 선언해줍니다.
+그러므로 우리에겐 2개의 Update 절이 필요합니다. FileIndexed와 VideoProcessed를 모두 선언해줍니다.
 
 그리고 Create 절과 동일하게 대시보드와 이벤트 간의 속성 정보 매칭 작업을 해주면 됩니다.
+
+<h4>Update WHEN FileIndexed &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Update WHEN VideoProcessed</h4>
+
+| SET  |   | SET  |   |
+|---|---|---|---|
+| readModelField  | eventField  | readModelField  | eventField  |
+| Dashboard.isIndexed  | true  | Dashboard.videoUrl  | VideoProcessed.url  |
+
+| WHERE  |   | WHERE  |   |
+|---|---|---|---|
+| readModelField  | eventField  | readModelField  | eventField  |
+| Dashboard.id  | FileIndexed.fileId  | Dashboard.id  | VideoProcessed.fileId  |
 
 인덱싱 여부를 파악하는 isIndexed의 경우, 앞서 isUploaded와 같이 '직접입력' 옵션을 활용해 true 값을 넣어주면 됩니다.
 
@@ -234,7 +292,13 @@ Code Preview 창 좌측 상단의 git 아이콘을 클릭하고 CREATE 버튼을
 
 나타나는 다양한 옵션 중 Open In Integrated Terminal을 선택해 drive를 다루는 터미널을 하나 열어줍니다. 
 
-그리고 스프링부트 기반의 마이크로서비스 실행을 위해 오픈된 터미널 창에 ```mvn spring-boot:run``` 명령어를 입력해줍니다.
+그리고 스프링부트 기반의 마이크로서비스 실행을 위해 오픈된 터미널 창에 
+
+```
+mvn clean spring-boot:run
+``` 
+
+명령어를 입력해줍니다.
 
 <h4>14. kafka 실행</h4>
 
@@ -244,7 +308,11 @@ drive 서비스가 실행되는 동안, 우리가 생성한 마이크로서비�
 
 동일하게 IDE 좌측에 위치한 'Explorer' 창에서 kafka 폴더를 우클릭하고 터미널을 하나 더 열어줍니다.
 
-```docker compose-up``` 명령어를 입력해 kafka를 실행해줍니다.
+```
+docker compose-up
+``` 
+
+명령어를 입력해 kafka를 실행해줍니다.
 
 <h4>15. httpie 설치 및 테스트</h4>
 
@@ -254,25 +322,74 @@ drive 서비스가 실행되는 동안, 우리가 생성한 마이크로서비�
 
 이번에 설치할 툴은 'httpie'입니다. 프론트엔드 웹을 활용하기 전 이 툴을 기반으로 서비스가 정상적으로 작동하는지 테스트하기 위함으로 생각하면 되겠습니다.
 
-터미널 영역 우측 상단의 + 버튼을 클릭해 새 터미널을 하나 열어주고, ```pip install httpie``` 명령어를 입력해 httpie 툴을 설치해줍니다.
+터미널 영역 우측 상단의 + 버튼을 클릭해 새 터미널을 하나 열어주고, 
 
-여기까지 설치가 끝나면 앞서 실행한 drive 서비스가 가동되었을 것입니다. 이를 확인하기 위해 httpie 툴을 설치한 터미널에 ```http :8082``` 명령어를 입력해 drive 서비스가 실행되고 있는 8082 포트를 실행해줍니다.
+```
+pip install httpie
+``` 
 
-예시 화면과 같이 터미널에 ```localhost:8082/files``` 가 보이면 서비스가 정상적으로 실행되고 있다는 뜻입니다.
+명령어를 입력해 httpie 툴을 설치해줍니다.
+
+여기까지 설치가 끝나면 앞서 실행한 drive 서비스가 가동되었을 것입니다. 이를 확인하기 위해 httpie 툴을 설치한 터미널에 
+
+```
+http :8082
+``` 
+
+명령어를 입력해 drive 서비스가 실행되고 있는 8082 포트를 실행해줍니다.
+
+```
+{
+    "_links": {
+        "files": {
+            "href": "http://localhost:8082/files{?page,size,sort}",
+            "templated": true
+        },
+        "profile": {
+            "href": "http://localhost:8082/profile"
+        }
+    }
+}
+``` 
+
+터미널에 위와 같은 결과가 나타나면 서비스가 정상적으로 실행되고 있다는 뜻입니다.
 
 <h4>16. index 코드 수정 및 서비스 실행</h4>
 
-> ![](../../src/img/gd-inst/19.png)
+> ![](../../src/img/gd-inst/19-1.png)
+
+> ![](../../src/img/gd-inst/19-2.png)
 
 지금부터는 시나리오에서 언급된 기능들을 본 서비스에 추가하는 작업을 진행해보겠습니다. 
 
-본인의 pc가 맥 환경이라면 ```command + p``` , 윈도우 환경이라면 ```ctrl + p``` 단축키를 활용해 컴포넌트 검색창을 열고 Index.java를 검색해 열어줍니다.
+컴포넌트 검색창을 열고 Index.java를 검색해 열어줍니다.
 
-Index.java 파일 내 ```makeIndex``` 메소드 내부의 코드를 예시 화면과 같이 변경해줍니다.
+```
+// 컴포넌트 검색창 여는 단축키
+// 맥 환경이라면 command + p
+// 윈도우 환경이라면 ctrl + p
+``` 
+
+Index.java 파일 내 makeIndex 메소드를 아래와 같이 변경해줍니다.
+
+```
+public static void makeIndex(FileUploaded fileUploaded){
+    Index index = new Index();
+    index.setFileId(fileUploaded.getId());
+    index.setKeywords(Arrays.asList(fileUploaded.getName().split(" ")));
+    repository().save(index);
+}
+```
 
 코드의 내용을 살펴보면, 인덱스의 fileId 에는 업로드된 파일의 id를 담아주고, keywords에는 업로드한 파일의 이름을 빈칸(스페이스)로 나누어 각각의 단어로 저장해주는 코드입니다.
 
-코드 수정 작업이 끝나면 앞서 진행한 것과 같이 indexer 폴더에서 터미널을 열어 스프링부트를 실행하는 ```mvn spring-boot:run``` 명령어를 입력해 줍니다.
+코드 수정 작업이 끝나면 앞서 진행한 것과 같이 indexer 폴더에서 터미널을 열어 스프링부트를 실행하는 
+
+```
+mvn clean spring-boot:run
+``` 
+
+명령어를 입력해 줍니다.
 
 <h4>17. 테스트용 파일 업로드</h4>
 
@@ -280,11 +397,35 @@ Index.java 파일 내 ```makeIndex``` 메소드 내부의 코드를 예시 화�
 
 index 기능까지 활성화가 된 것을 확인했다면, 본격적으로 파일을 하나 업로드해 우리가 지금까지 작업한 내용이 시나리오를 충족하는지 확인해 보겠습니다.
 
-앞서 httpie 툴을 설치했던 기본 터미널에 ```http :8082/files name="my favorite video" type="movie"``` 명령어를 입력해줍니다.
+앞서 httpie 툴을 설치했던 기본 터미널에 
 
-이 명령어는 ```my favorite video``` 라는 이름의 ```movie``` 타입, 즉 동영상 파일을 업로드하는 명령어입니다.
+```
+http :8082/files name="my favorite video" type="movie"
+``` 
 
-예시 화면과 같이 결과물이 나왔다면, 정상적으로 파일이 업로드된 것입니다.
+명령어를 입력해줍니다.
+
+이 명령어는 "my favorite video" 라는 이름의 movie 타입, 즉 동영상 파일을 업로드하는 명령어입니다.
+
+```
+{
+    "_links": {
+        "file": {
+            "href": "http://localhost:8082/files/1"
+        },
+        "self": {
+            "href": "http://localhost:8082/files/1"
+        }
+    },
+    "createdTime": null,
+    "name": "my favorite video",
+    "size": null,
+    "type": "movie",
+    "userId": null
+}
+``` 
+
+터미널 상에 위와 같이 결과물이 나왔다면, 정상적으로 파일이 업로드된 것입니다.
 
 <h4>18. 업로드된 파일에 대한 indexer 작동 확인</h4>
 
@@ -292,9 +433,34 @@ index 기능까지 활성화가 된 것을 확인했다면, 본격적으로 파�
 
 파일이 정상 업로드된 것을 확인했다면, indexer 마이크로서비스의 작동 여부를 확인해 보겠습니다.
 
-동일하게 기본 터미널에 ```http :8083/indices``` 명령어를 입력해줍니다. 
+동일하게 기본 터미널에 
 
-앞서 업로드한 파일의 이름인 my favorite video를 빈칸으로 나눈 ```my, favorite, video``` 3개의 키워드가 ```keywords``` 라는 리스트에 담겨있는 것이 확인되면 indexer의 기능도 정상적으로 작동함을 의미합니다.
+```
+http :8083/indices
+``` 
+
+명령어를 입력해줍니다. 
+
+```
+{
+    "_links": {
+        "index": {
+            "href": "http://localhost:8083/indices/1"
+        },
+        "self": {
+            "href": "http://localhost:8083/indices/1"
+        }
+    },
+    "fileId": 1,
+    "keywords": [
+        "my",
+        "favorite",
+        "video"
+    ]
+}
+``` 
+
+앞서 업로드한 파일의 이름인 my favorite video를 빈칸으로 나눈 3개의 키워드가 위와 같이 리스트에 담겨있는 것이 확인되면 indexer의 기능도 정상적으로 작동함을 의미합니다.
 
 <h4>19. video 코드 수정 및 서비스 실행</h4>
 
@@ -302,23 +468,63 @@ index 기능까지 활성화가 된 것을 확인했다면, 본격적으로 파�
 
 이번엔 Video.java 파일 내부 코드를 수정해 업로드된 동영상 파일에 대한 스트리밍 url을 도출하는 작업을 진행해보겠습니다.
 
-이전과 동일하게 본인의 pc가 맥 환경이라면 ```command + p``` , 윈도우 환경이라면 ```ctrl + p``` 단축키를 활용해 컴포넌트 검색창을 열고 Video.java를 검색해 열어줍니다.
+이전과 동일하게 컴포넌트 검색창을 열고 Video.java를 검색해 열어줍니다.
 
-해당 파일에서 ```processVideo``` 메소드 내부의 코드를 예시 화면과 같이 변경해줍니다. 
+해당 파일에서 processVideo 메소드 내부의 코드를 아래와 같이 변경해줍니다. 
+
+```
+public static void processVideo(FileUploaded fileUploaded){
+    if("movie".equals(fileUploaded.getType())) {
+        Video video = new Video();
+        video.setFileId(fileUploaded.getId());
+        video.setUrl("http://youtube.com/" + fileUploaded.getName());
+        repository().save(video);
+    }
+}
+```
 
 코드의 내용은, 비디오의 fileId에는 업로드된 파일의 id를 담아주고, url에는 유튜브 링크 방식으로 http://youtube.com/ 뒤에 등록된 파일명을 붙여주는 식으로 담아주는 코드입니다.
 
-그 후 video processing 폴더에서 터미널을 열고 ```mvn spring-boot:run``` 명령어를 입력해 스프링부트를 실행해 줍니다.
+그 후 video processing 폴더에서 터미널을 열고 
+
+```
+mvn clean spring-boot:run
+``` 
+
+명령어를 입력해 스프링부트를 실행해 줍니다.
 
 <h4>20. 업로드된 파일에 대한 video processing 작동 확인</h4>
 
-> ![](../../src/img/gd-inst/23.png)
+> ![](../../src/img/gd-inst/23-1.png)
+
+> ![](../../src/img/gd-inst/23-2.png)
 
 8084 포트에서 실행되고 있는 video processing 마이크로서비스의 작동 여부를 확인해보겠습니다.
 
-동일하게 기본 터미널에서 ```http :8084/videos``` 명령어를 입력해줍니다.
+동일하게 기본 터미널에서 
 
-앞서 업로드한 파일의 이름이 유튜브 링크로 변환된 ```http://youtube.com/my favorite video``` 가 표시되면 video processing 서비스도 정상적으로 작동하는 것입니다.
+```
+http :8084/videos
+``` 
+
+명령어를 입력해줍니다.
+
+```
+{
+    "_links": {
+        "self": {
+            "href": "http://localhost:8084/videos/1"
+        },
+        "video": {
+            "href": "http://localhost:8084/videos/1"
+        }
+    },
+    "fileId": 1,
+    "url": "http://youtube.com/my favorite video"
+}
+``` 
+
+앞서 업로드한 파일의 이름이 유튜브 링크로 변환된 결과가 위와 같이 표시되면 video processing 서비스도 정상적으로 작동하는 것입니다.
 
 <h4>21. dashboard 서비스 실행 및 내역 조회</h4>
 
@@ -326,23 +532,73 @@ index 기능까지 활성화가 된 것을 확인했다면, 본격적으로 파�
 
 마지막으로 dashboard 마이크로서비스를 실행해 저희가 입력한 정보가 잘 출력되는지 확인해보겠습니다.
 
-앞서 진행한 것과 같이 이번엔 dashboard 폴더에서 터미널을 열고 ```mvn spring-boot:run``` 명령어를 입력해 스프링부트를 실행해 줍니다.
+앞서 진행한 것과 같이 이번엔 dashboard 폴더에서 터미널을 열고 
 
-대시보드는 8081 포트에서 열리므로 기본 터미널에서 ```http :8081/dashboards``` 명령어를 입력해 대시보드를 조회해봅니다.
+```
+mvn clean spring-boot:run
+``` 
 
-업로드한 파일이 예시화면과 같이 앞서 CQRS에서 설정해준 규칙에 맞게 대시보드에 표시된 것이 확인되면 완료입니다.
+명령어를 입력해 스프링부트를 실행해 줍니다.
+
+대시보드는 8081 포트에서 열리므로 기본 터미널에서 
+
+```
+http :8081/dashboards
+``` 
+
+명령어를 입력해 대시보드를 조회해봅니다.
+
+```
+{
+    "_links": {
+        "dashboard": {
+            "href": "http://localhost:8081/dashboards/1"
+        },
+        "self": {
+            "href": "http://localhost:8081/dashboards/1"
+        }
+    },
+    "fileName": "my favorite video",
+    "fileSize": null,
+    "isIndexed": true,
+    "isUploaded": true,
+    "videoUrl": "http://youtube.com/my favorite video"
+}
+```
+
+업로드한 파일이 위와 같이 앞서 CQRS에서 설정해준 규칙에 맞게 대시보드에 표시된 것이 확인되면 완료입니다.
 
 <h4>22. 프론트엔드 서버 실행</h4>
 
-> ![](../../src/img/gd-inst/25.png)
+> ![](../../src/img/gd-inst/25-1.png)
+
+> ![](../../src/img/gd-inst/25-2.png)
 
 실제 웹 프로그램을 운용하기 전 httpie 툴을 사용해 테스트를 진행했으니 본격적으로 프론트엔드 서버를 활용해 웹페이지로 이동해봅시다.
 
-우선 frontend 폴더에서 터미널을 열고 ```npm install``` 명령어를 입력해 ```node_modules``` 를 설치해줍니다.
+우선 frontend 폴더에서 터미널을 열고 
 
-설치가 완료된 것을 좌측의 explorer에서 확인한 후 ```npm run serve``` 명령어를 입력해 프론트엔드 서버를 실행해줍니다.
+```
+npm install
+``` 
 
-프론트엔드 서비스는 gateway를 통해 실행되므로, 프론트엔드 서버가 올라가는 동안 gateway 폴더에서 터미널을 열고 ```mvn spring-boot:run``` 명령어를 입력해 게이트웨이까지 실행시켜 줍니다.
+명령어를 입력해 "node_modules" 를 설치해줍니다.
+
+설치가 완료된 것을 좌측의 explorer에서 확인한 후 
+
+```
+npm run serve
+``` 
+
+명령어를 입력해 프론트엔드 서버를 실행해줍니다.
+
+프론트엔드 서비스는 gateway를 통해 실행되므로, 프론트엔드 서버가 올라가는 동안 gateway 폴더에서 터미널을 열고 
+
+```
+mvn clean spring-boot:run
+``` 
+
+명령어를 입력해 게이트웨이까지 실행시켜 줍니다.
 
 게이트웨이 서버는 8088 포트에 열리며, 해당 포트의 오른쪽에 위치한 지구 모양의 아이콘을 클릭해 웹페이지로 이동할 수 있습니다.
 
@@ -400,9 +656,9 @@ index 기능까지 활성화가 된 것을 확인했다면, 본격적으로 파�
 
 이번엔 새로 추가한 파일의 인덱싱 작업이 잘 되었는지 확인해보겠습니다.
 
-터미널에서 명령어를 입력해 추가했던 ```my favorite video``` 가 3개의 단어로 인덱싱 된 것과 같이
+터미널에서 명령어를 입력해 추가했던 my favorite video 가 3개의 단어로 인덱싱 된 것과 같이
 
-웹 상에서 추가한 ```my resume file``` 또한 ```my, resume, file``` 의 3개 키워드로 정상적으로 인덱싱 된 것을 확인할 수 있습니다.
+웹 상에서 추가한 my resume file 또한 my, resume, file 의 3개 키워드로 정상적으로 인덱싱 된 것을 확인할 수 있습니다.
 
 <h4>29. 새로 업로드한 파일 video processing 여부 확인</h4>
 
