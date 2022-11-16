@@ -48,13 +48,13 @@ module.exports = {
             items: [
               '/templates-language/python-template/',
               '/templates-language/springboot-java-template/',
-              '/templates-language/custom-template/',
               '/templates-language/go-template/',
             ]
           },
           {
             title: '커스텀 템플릿',
             items:[
+              '/custom-template/custom-template/',
               '/custom-template/tutorial/',
             ]
           },
