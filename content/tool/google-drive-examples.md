@@ -495,9 +495,7 @@ mvn clean spring-boot:run
 
 <h4>20. 업로드된 파일에 대한 video processing 작동 확인</h4>
 
-> ![](../../src/img/gd-inst/23-1.png)
-
-> ![](../../src/img/gd-inst/23-2.png)
+> ![](../../src/img/gd-inst/23.png)
 
 8084 포트에서 실행되고 있는 video processing 마이크로서비스의 작동 여부를 확인해보겠습니다.
 
@@ -572,8 +570,6 @@ http :8081/dashboards
 
 > ![](../../src/img/gd-inst/25-1.png)
 
-> ![](../../src/img/gd-inst/25-2.png)
-
 실제 웹 프로그램을 운용하기 전 httpie 툴을 사용해 테스트를 진행했으니 본격적으로 프론트엔드 서버를 활용해 웹페이지로 이동해봅시다.
 
 우선 frontend 폴더에서 터미널을 열고 
@@ -591,6 +587,8 @@ npm run serve
 ``` 
 
 명령어를 입력해 프론트엔드 서버를 실행해줍니다.
+
+> ![](../../src/img/gd-inst/25-2.png)
 
 프론트엔드 서비스는 gateway를 통해 실행되므로, 프론트엔드 서버가 올라가는 동안 gateway 폴더에서 터미널을 열고 
 
