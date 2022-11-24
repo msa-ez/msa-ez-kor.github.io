@@ -44,8 +44,6 @@ sidebar: 'started'
 
 <h4>2. Bounded Context 구분</h4>
 
-> ![](../../src/img/gd-inst/2.png)
-
 > ![](../../src/img/gd-inst/ggd-1.gif)
 
 우선 구글 드라이브 서비스가 총 5개의 마이크로서비스로 구성된다고 가정하고, 단위 마이크로서비스의 범위를 설정해주는 바운디드 컨텍스트를 총 5개 만들어줍니다.
@@ -53,8 +51,6 @@ sidebar: 'started'
 각 바운디드 콘텍스트의 명칭은 위에서 언급한대로 dashboard, drive, indexer, video processing, notification으로 설정해줍니다.
 
 <h4>3. Event(오렌지 스티커) 도출</h4>
-
-> ![](../../src/img/gd-inst/3.png)
 
 > ![](../../src/img/gd-inst/ggd-2.gif)
 
@@ -69,8 +65,6 @@ sidebar: 'started'
 유저에게 노티를 주고 업로드한 파일을 조회하는 4, 5번째 시나리오는 이벤트로 나타내기에 적합하지 않으므로, 우선 저희가 만들 구글 드라이브 서비스에서는 크게 위와 같은 3가지의 이벤트가 발생한다고 보겠습니다.
 
 <h4>4. Event 에 대한 Input 추가</h4>
-
-> ![](../../src/img/gd-inst/4.png)
 
 > ![](../../src/img/gd-inst/ggd-3.gif)
 
@@ -89,8 +83,6 @@ sidebar: 'started'
 여기서 pub/sub은 publish/subscribe의 약자로, publish된 이벤트를 폴리시 측에서 subscribe해 그 다음 이벤트가 실행되도록 해주는 것입니다.
 
 <h4>5. Aggregate(노란색 스티커) 속성 추가</h4>
-
-> ![](../../src/img/gd-inst/5.png)
 
 > ![](../../src/img/gd-inst/ggd-4.gif)
 
@@ -147,8 +139,6 @@ String은 문자열, Integer는 4바이트의 기본 숫자열, Long은 Integer�
 
 <h4>6. Event 속성 추가</h4>
 
-> ![](../../src/img/gd-inst/6.png)
-
 > ![](../../src/img/gd-inst/ggd-11.gif)
 
 어그리거트에 필요한 속성 정보를 추가했다면, pub/sub 기능을 활성화해주기 위해 이벤트 쪽에도 동일한 정보를 입력해줘야 합니다. 
@@ -159,8 +149,6 @@ String은 문자열, Integer는 4바이트의 기본 숫자열, Long은 Integer�
 
 <h4>7. notification Policy 추가</h4>
 
-> ![](../../src/img/gd-inst/7.png)
-
 > ![](../../src/img/gd-inst/ggd-5.gif)
 
 유저에게 노티를 주는 기능은 간단하게 폴리시 하나를 선언해줌으로써 구현 가능합니다.
@@ -170,8 +158,6 @@ String은 문자열, Integer는 4바이트의 기본 숫자열, Long은 Integer�
 시나리오에서는 "파일이 업로드 될때와 비디오로 생성되었을 때, 파일을 업로드한 유저에게 노티가 된다." 라고 했으므로, FileUploaded 와 VideoProcessed 이벤트가 퍼블리시 되었을 때 해당 폴리시가 실행되도록 설정해줍니다.
 
 <h4>8. ReadModel(초록색 스티커) 속성 추가</h4>
-
-> ![](../../src/img/gd-inst/8.png)
 
 > ![](../../src/img/gd-inst/ggd-8.gif)
 
@@ -193,8 +179,6 @@ String은 문자열, Integer는 4바이트의 기본 숫자열, Long은 Integer�
 | String  | videoUrl  |
 
 <h4>9. ReadModel CREATE WHEN 추가</h4>
-
-> ![](../../src/img/gd-inst/9.png)
 
 > ![](../../src/img/gd-inst/ggd-10.gif)
 
@@ -221,10 +205,6 @@ Create, Update, Delete의 3가지로 크게 구분되며, 어떤 상황에 내�
 여기서 업로드 여부를 파악하는 isUploaded의 경우, 이벤트와의 매칭이 아닌 '직접입력' 옵션을 활용해 true 값을 넣어주면 됩니다.
 
 <h4>10. ReadModel UPDATE WHEN 추가</h4>
-
-> ![](../../src/img/gd-inst/10.png)
-
-> ![](../../src/img/gd-inst/11.png)
 
 > ![](../../src/img/gd-inst/ggd-7.gif)
 
@@ -261,10 +241,6 @@ Create 절 선언 및 속성 매칭을 완료한 후에는 Update 절로 이동�
 보드 우측 상단에 있는 주황색의 CODE 버튼을 클릭하면 Code Preview 창이 열리게 되고, 여기서 차후 익스플로러에 추가될 모든 파일 목록을 조회할 수 있습니다. 
 
 <h4>12. gitpod IDE 실행</h4>
-
-> ![](../../src/img/gd-inst/13.png)
-
-> ![](../../src/img/gd-inst/14.png)
 
 > ![](../../src/img/gd-inst/ggd-6.gif)
 
