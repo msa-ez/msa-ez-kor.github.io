@@ -2,7 +2,7 @@
 description: ''
 sidebar: 'started'
 ---
-# 커스텀 템플릿 디자인
+# 커스텀 템플릿 만들기
 
 ## 템플릿 파일 생성
 

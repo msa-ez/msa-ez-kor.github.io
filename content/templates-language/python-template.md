@@ -2,7 +2,7 @@
 description: ''
 sidebar: 'started'
 ---
-# Python Template 만들기 
+# Python Template 
 
 ## Python DDD Tutorial 
 

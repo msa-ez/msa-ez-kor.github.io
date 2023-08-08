@@ -54,9 +54,9 @@ module.exports = {
           {
             title: '커스텀 템플릿',
             items:[
-              '/custom-template/custom-template/',
               '/custom-template/tutorial/',
-              '/custom-template/designing-template/'
+              '/custom-template/designing-template/',
+              '/custom-template/custom-template/',
             ]
           },
           {

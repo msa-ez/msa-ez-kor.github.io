@@ -2,4 +2,4 @@
 description: ''
 sidebar: 'started'
 ---
-# Spring Boot/Java(준비중)
+# Spring Boot/Java Template(준비중)
