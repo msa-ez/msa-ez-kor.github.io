@@ -11,7 +11,7 @@ sidebar: 'started'
 
 템플릿 생성은 기본적으로 {{ Mustache }} 엔진을 사용하며, Mustache는 {{ }} 안의 값을 키 값으로 가져오는 엔진입니다.
 
-템플릿이 적용된 속성이 어떻게 생성되는지에 대한 정보는 다음 링크에서 확인할 수 있습니다: https://intro.msaez.io/custom-template/custom-template/#custom-template
+템플릿이 적용된 속성이 어떻게 생성되는지에 대한 정보는 다음 링크에서 확인할 수 있습니다: https://intro-kr.msaez.io/custom-template/custom-template/#custom-template
 
 다음은 Aggregate에 spring-boot 템플릿을 적용한 간단한 예시입니다.
 
