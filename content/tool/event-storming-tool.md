@@ -2,7 +2,7 @@
 description: ''
 sidebar: 'started'
 ---
-# 이벤트 스토밍
+# 이벤트스토밍
 
 <h2>MSA Easy로 MSA 개발하기</h2>
 
