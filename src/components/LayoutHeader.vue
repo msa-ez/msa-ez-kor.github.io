@@ -45,21 +45,30 @@
           </a>
 
           <div class=".clearfix" style="width:250px;">
-            <div style = "width:50px; height:50px; text-align:center; line-height:50px; font-weight:700; float:left;">
-              <a @click="languageExchange()" style="cursor:pointer;">English</a>
+            <div style="width:55px; height:50px; text-align:center; line-height:50px; font-weight:700; float:left;">
+              <a @click="languageExchange()" style="cursor:pointer;">한국어</a>
             </div>
 
-            <div style = "width:150px; height:50px; text-align:center; line-height:50px; font-weight:700;  float:left;">
+            <!-- <div style = "width:150px; height:50px; text-align:center; line-height:50px; font-weight:700;  float:left;border:1px solid blue;">
               <a target="_blank" href = "https://github.com/msa-ez/msa-ez.github.io/issues">Q&A Board</a>
-            </div>
+            </div> -->
 
-            <div style="width:50px; float:left; margin-top:10px;">
+            <div style="width:50px; height:50px; text-align:center; line-height:50px; float:left; padding-top: 5px;">
               <ToggleDarkMode>
                 <template slot="default" slot-scope="{ dark }">
                   <MoonIcon v-if="dark" size="1.5x" />
                   <SunIcon v-else size="1.5x" />
                 </template>
               </ToggleDarkMode>
+            </div>
+
+            <div style="width:130px; height:50px; text-align:center; line-height:50px; float:left;">
+              <g-link
+                to="http://labs.msaez.io/"
+                class="px-4 py-2 ml-auto font-bold leading-none text-white rounded-lg shadow-lg bg-ui-primary"
+              >
+                Try MSA-Ez
+              </g-link>
             </div>
           </div>
 
