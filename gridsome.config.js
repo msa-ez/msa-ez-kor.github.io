@@ -146,10 +146,10 @@ module.exports = {
                   '/development/ops-docker/',
                 ]
               },
-              {
-                secondTitle: 'Guide labs for Ops',
-                thirdItems:
-                [
+              // {
+              //   secondTitle: 'Guide labs for Ops',
+              //   thirdItems:
+              //   [
                   // gcp추가
                   // '/operations/ops-aws-setting/',
                   // '/operations/ops-aws-csi-setting/',
@@ -184,8 +184,8 @@ module.exports = {
                   // '/operations/gitops-argo-cd/',
                   // '/operations/ops-anatomy-kubernetes/',
                   // '/operations/ops-utility/',
-                ]
-              },
+              //   ]
+              // },
             ]
           },
           {
