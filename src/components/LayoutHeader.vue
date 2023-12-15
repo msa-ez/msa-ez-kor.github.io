@@ -62,12 +62,12 @@
               </ToggleDarkMode>
             </div>
 
-            <div style="width:130px; height:50px; text-align:center; line-height:50px; float:left;">
+            <div style="margin-left: -15px; width:130px; height:50px; text-align:center; line-height:50px; float:left;">
               <g-link
                 to="http://labs.msaez.io/"
                 class="px-4 py-2 ml-auto font-bold leading-none text-white rounded-lg shadow-lg bg-ui-primary"
               >
-                Try MSA-Ez
+                실습하기
               </g-link>
             </div>
           </div>
