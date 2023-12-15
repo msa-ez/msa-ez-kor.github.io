@@ -100,26 +100,26 @@ module.exports = {
                 ]
               },
               {
-                secondTitle: 'LMS Management',
+                secondTitle: 'Online lecture platfrom',
                 thirdItems:
                 [
                   '/tool/development-practice/',
-                  '/tool/attending-lectures/'
+                  // '/tool/attending-lectures/'
                 ]
               },
               {
-                secondTitle: 'Guide labs for Biz',
+                secondTitle: 'Guide labs for Analysis/Design',
+                thirdItems:
+                [
+                ]
+              },
+              {
+                secondTitle: 'Guide labs for Implementation',
                 thirdItems:
                 [
                   '/business/',
                   '/business/ddd-google-drive/',
                   '/business/eventstorming-fooddelivery/',
-                ]
-              },
-              {
-                secondTitle: 'Guide labs for Dev',
-                thirdItems:
-                [
                   '/development/understanding-jpa-based-single-microservice/',
                   '/development/cna-start/',
                   '/development/monolith-2-misvc/',
