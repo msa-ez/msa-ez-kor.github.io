@@ -4,37 +4,6 @@ sidebar: 'started'
 ---
 # 커스텀 템플릿 만들기
 
-## 템플릿 파일 생성
-
-이벤트스토밍 모델을 실제 소스 코드로 변환하기 위한 템플릿 파일 생성 방법입니다.
-
-다음 예시는 Spring-boot 템플릿에서 AggregateRoot.java 파일의 소스 코드입니다.
-
-```
-.forEach: Aggregate
-fileName: {{namePascalCase}}.java
----
-package {{options.package}}.domain;
-
-import java.time.LocalDate;
-import java.util.Date;
-import java.util.List;
-import javax.persistence.*;
-import lombok.Data;
-```
-### 기본 속성 추가
-
-```
-.forEach: Aggregate
-fileName: {{namePascalCase}}.java
----
-```
-
-먼저, 이벤트스토밍 스티커의 유형을 .forEach에 선언합니다(Aggregate, Command, Policy 등).
-
-이후 fileName에 스티커별 생성될 파일의 이름을 Mustache 구문 내부{{ }}에 변수명에 맞게 선언합니다.
-
-
 ### 범위 밖에서 상위 속성을 추가
 특정 스티커 기준 상위 속성을 추가할 경우 상위 속성으로 이동하겠다는 의미의 '../'를 Mustache 구문에 추가하여 사용합니다.
 
@@ -144,7 +113,7 @@ window.$HandleBars.registerHelper('checkDateType', function (fieldDescriptors) {
 #### Globar Helper
 Globar helper란 Template에서 스티커에 관계없이 공통적으로 사용할 수 있는 handlebars를 의미합니다.
 
-현재 Msa-EZ내에 정의되어있는 Globar helper에 대하여 예시와 사용방법을 설명하겠습니다.
+현재 Msa-EZ내에 정의되어있는 Globar helper에 대하여 사용방법과 예시를 설명하겠습니다.
 
 1) ifNotNull
 ```
@@ -158,7 +127,7 @@ window.$HandleBars.registerHelper('ifNotNull', function (displayName, name) {
 ```
 ifNotNull은 스티커의 name과 displayName을 구분하여 결과값을 반환합니다.
 
-예시)
+예시) aggregates에 User와 UserInfo가 존재하고 User의 경우 displayName이 사용자로 설정되어있지만 UserInfo의 경우 displayName이 존재하지 않는 경우
 ```
 {{#aggregates}}
     {
@@ -166,7 +135,7 @@ ifNotNull은 스티커의 name과 displayName을 구분하여 결과값을 반�
     },
 {{/aggregates}}
 
-=> aggregate에 대한 데이터 중 displayName이 있을 경우 결과값으로 displayName을 반환, 없을경우 namePascalCase를 반환.
+=> 사용자 UserInfo
 ```
 
 2) checkVo
@@ -187,7 +156,7 @@ checkVo는 parameter로 받아온 className의 문자열이 Vo로 지정된 문�
     <{{className}} offline label="{{namePascalCase}}" v-model="value.{{nameCamelCase}}" :editMode="editMode" @change="change"/>
 {{/checkVO}}
 
-=> <Address offline label="Address" v-model="value.address" :editMode="editMode" @change="change"/>로 반환
+=> <Address offline label="Address" v-model="value.address" :editMode="editMode" @change="change"/>
 ```
 
 2) checkEntityMember
@@ -202,7 +171,7 @@ window.$HandleBars.registerHelper('checkEntityMember', function (className, opti
     }
 })
 ```
-checkEntityMember는 checkVo와 동일하게 parameter로 받아온 className의 문자열이 지정된 문자열과 일치하지 않고 className에 'java.', 'List'가 포함되지 않는 경우 블록을 실행합니다.
+checkEntityMember는 parameter로 받아온 className의 문자열이 지정된 문자열과 일치하지 않고 className에 'java.', 'List'가 포함되지 않는 경우 블록을 실행합니다.
 지정된 VO가 아닌 직접 만든 VO를 사용하는 경우 해당 handlebars를 이용합니다.
 
 예시) className이 Status인 경우
@@ -211,10 +180,203 @@ checkEntityMember는 checkVo와 동일하게 parameter로 받아온 className의
     <{{className}} offline label="{{namePascalCase}}" v-model="value.{{nameCamelCase}}" :editMode="editMode" @change="change"/>
 {{/checkEntityMember}}
 
-=> <Status offline label="Status인" v-model="value.status" :editMode="editMode" @change="change"/> 반환
+=> <Status offline label="Status인" v-model="value.status" :editMode="editMode" @change="change"/>
 ```
 
-3)
+3) url
+```
+window.$HandleBars.registerHelper("url", function(str){
+    return  str ? str.toLowerCase().replaceAll(" ", "-") : str;
+});
+```
+url은 parameter로 받아온 str의 값을 판별합니다. str의 값이 존재하면 소문자로 변환하고 공백에 대시(-)로 대체하여 결과값을 반환합니다.
+
+예시) name이 Custom Template일 경우
+```
+{{#url name}}
+{{/url}}
+=> custom-template
+```
+
+4)camelCase, pascalCase
+```
+window.$HandleBars.registerHelper("camelCase", function(str){
+    return str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
+});
+
+window.$HandleBars.registerHelper("pascalCase", function(str){
+    return (str.match(/[a-zA-Z0-9]+/g) || []).map(w => `${w.charAt(0).toUpperCase()}${w.slice(1)}`).join('');
+});
+```
+camelCase와 pascalCase의 경우 parameter로 받은 문자열을 정규표현식에 맞게 조합하여 각 네이밍컨변션에 맞게 결과값을 반환합니다.
+
+예시) name이 CustomTemplate인 경우
+```
+{{#camelCase name}}
+{{/camelCase}}
+=> customTemplate
+
+{{#pascalCase name}}
+{{/pascalCase}}
+=> CustomTemplate
+```
+
+5) ifEquals
+```
+window.$HandleBars.registerHelper('ifEquals', function (arg1, arg2, options) {
+    return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
+});
+```
+ifEquals는 parameter arg1과 arg2의 값을 비교하여 동일할 경우 블록 실행합니다.
+
+예시) dataProjection이 query-for-aggregate일 경우
+```
+{{#ifEquals dataProjection "query-for-aggregate"}}
+    <!-- 내부 코드 -->
+{{/ifEquals}}
+=> => <!-- 내부 코드 --> 
+```
+6) ifContains
+```
+window.$HandleBars.registerHelper('ifContains', function (jsonPath, value, options) {
+    var evaluatedVal = window.jp.query(this, jsonPath);
+    if(evaluatedVal.length && evaluatedVal.length == 1){
+        evaluatedVal = evaluatedVal[0];
+    }
+    if( evaluatedVal == value || evaluatedVal.includes(value)
+
+    ){
+        return options.fn(this)
+    }else{
+        return options.inverse(this)
+    }
+
+});
+```
+ifContains는 parameter jsonPath에서 특정 경로에 해당하는 값을 추출하여 value와 동일하거나 evaluatedVal값에 value가 포함되는 경우 블록을 실행합니다.
+
+예시) $.target._type에 위치한 값이 View일 경우
+```
+{{#ifContains "$.target._type" "View"}}
+    <!-- 내부 코드 --> 
+{{/ifContains}}
+=> <!-- 내부 코드 --> 
+```
+
+7) jp
+```
+window.$HandleBars.registerHelper('jp', function (jsonPath, options) {
+    try{
+        var evaluatedVal = window.jp.query(this, jsonPath);
+        if(evaluatedVal){
+            return options.fn(evaluatedVal)
+        }else{
+            return options.inverse(this)
+        }
+    }catch(e){
+        return options.inverse(this)
+    }
+});
+```
+jp는 parameter jsonPath의 경로값을 특정 경로에 해당하는 값을 추출하여 evaluatedVal 변수에 담고 해당 변수가 존재할 경우 블록을 실행하며 evaluatedVal를 반환합니다.
+
+예시) $.target._type에 위치한 값이 View일 경우
+```
+{{#jp "$.target._type"}}
+{{/jp}}
+=> View
+```
+
+8) outgoing
+```
+window.$HandleBars.registerHelper('outgoing', function (type, value, options) {
+    if(value==null)
+        value = this;
+    var evaluatedVal = window.jp.query(value, `$.outgoingRelations[?(@.target.type=='${type}')]`);
+    
+    if(evaluatedVal && evaluatedVal.length){
+        let result = "";
+        evaluatedVal.forEach((item, index) => {
+            result += options.fn(item.target);
+        })
+        return result;
+    
+    }else{
+        return options.inverse(value)
+    }
+});
+```
+outgoing은 patameter type을 JSONPath를 이용하여 taget.tyoe와 일치하는 항목을 찾고 존재할 경우 블록을 실행하여 item.target을 반환합니다.
+
+즉, outgoingRelations에 해당되는 특정 스티커와 일치되는 항목이 있을 경우 블록을 실행하고 해당 스티커의 target에 해당하는 정보를 반환합니다.
+
+예시) Aggregate 스티커 UserInfo와 User가 존재하고 User에서 UserInfo로 outgoingRelations가 형성되어 있는 경우
+```
+{{#outgoing 'Aggregate' this}}
+    {{nameCamelCase}}
+{{/outgoing}}
+=> userInfo
+```
+
+9) incoming
+```
+window.$HandleBars.registerHelper('incoming', function (type, value, options) {
+    var evaluatedVal = window.jp.query(value, `$.incomingRelations[?(@.source.type=='${type}')]`);
+    
+    if(evaluatedVal && evaluatedVal.length){
+        let result = "";
+        evaluatedVal.forEach((item, index) => {
+            result += options.fn(item.source);
+        })
+        return result;
+    
+    }else{
+        return options.inverse(this)
+    }
+});
+```
+incoming은 outgoing과 반대로 incomingRelations에 해당되는 스티커의 정보가 일치할 경우 블록이 실행되며 source에 해당하는 정보를 반환합니다.
+예시) Aggregate 스티커 UserInfo와 User가 존재하고 UserInfo와에서 User로 incomingRelations가 형성되어 있는 경우
+```
+{{#incoming 'Aggregate' this}}
+    {{namePascalCase}}
+{{/incoming}}
+=> User
+```
+
+10)attached
+```
+window.$HandleBars.registerHelper('attached', function (type, value, options) {
+    let attachedElementsInTheType
+    
+    if(value.attached)
+        attachedElementsInTheType = value.attached.filter(
+            element => (element._type.endsWith(type) || (type=='ReadModel' && element._type.endsWith('View')))
+        )
+
+    if(attachedElementsInTheType && attachedElementsInTheType.length){
+        let result = "";
+        attachedElementsInTheType.forEach((item, index) => {
+            result += options.fn(item);
+        })
+
+        return result;
+    }else{
+        return options.inverse(this)
+    }
+
+});
+```
+attached는 특정 스티커를 기준으로 parameter로 받아오는 type과 일치한 스티커가 있을 경우 블록이 실행되며 일치한 type에 해당하는 스티커의 정보를 반환합니다.
+
+예시) Aggregate스티커 User기준 부착된 ReadModel스티커 UserQuery의 queryParameters 정보를 불러오는 경우
+```
+{{#attached 'View' this}}
+    {{#queryParameters}}{{nameCamelCase}}{{/queryParameters}}
+    "queryParameters에 name, age가 있다고 가정"
+{{/attached}}
+=> name age
+```
 ### Template Editor
 
 ### Chat GPT (Generated Template)

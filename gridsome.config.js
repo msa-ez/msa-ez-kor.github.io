@@ -30,13 +30,6 @@ module.exports = {
           },
           {
             firstTitle: 'Key features',
-            name: [
-              {
-                thirdItems:
-                [
-                ]
-              },
-            ]
           },
           {
             firstTitle: 'Tutorial',
@@ -50,7 +43,7 @@ module.exports = {
                 ]
               },
               {
-                secondTitle: 'SetUp',
+                secondTitle: 'Setup',
                 thirdItems:
                 [
                   
@@ -73,15 +66,6 @@ module.exports = {
                   '/templates-language/go-template/',
                   '/templates-language/python-template/',
                   '/templates-language/springboot-java-template/',
-                ]
-              },
-              {
-                secondTitle: 'Custom Template',
-                thirdItems:
-                [
-                  '/custom-template/tutorial/',
-                  '/custom-template/custom-template/',
-                  '/custom-template/designing-template/',
                 ]
               },
               {
@@ -186,6 +170,22 @@ module.exports = {
                   // '/operations/ops-utility/',
               //   ]
               // },
+            ]
+          },
+          {
+            firstTitle: 'Custom template',
+            name:[
+              {
+                secondTitle: '',
+                thirdItems:
+                [
+                  '/custom-template/tutorial/',
+                  '/custom-template/custom-template/',
+                  '/custom-template/designing-template-default-option/',
+                  '/custom-template/designing-template/'
+                ]
+              },
+              
             ]
           },
           {

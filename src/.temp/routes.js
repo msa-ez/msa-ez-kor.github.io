@@ -288,6 +288,10 @@ export default [
     component: c1
   },
   {
+    path: "/custom-template/designing-template-default-option/",
+    component: c1
+  },
+  {
     path: "/development/gateway/",
     component: c1
   },

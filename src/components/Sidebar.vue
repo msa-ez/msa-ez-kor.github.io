@@ -7,7 +7,7 @@
     <div
       v-for="(section, index) in sidebar.sections"
       :key="section.title"
-      class="pb-4 mb-4 border-ui-border"
+      class="pt-1 mb-1 border-ui-border"
       :class="{ 'border-b': index < sidebar.sections.length -1 }"
     >
       <h3 v-if="section.firstTitle && !section.firstItem">
@@ -22,55 +22,53 @@
           {{ section.firstTitle }}
         </h3>
       </g-link>
-        <ul class="max-w-full pl-2 mb-0">
-          <li>
+      <ul class="max-w-full pl-2 mb-0">
+        <li
+          v-for="secondSection in section.name"
+          :key="secondSection.secondTitle"
+          style="margin-top: 5px;"
+        >
+          <h4 style="margin-left: 10px;" v-if="secondSection.secondTitle && !secondSection.secondItem">
+            {{ secondSection.secondTitle }}
+          </h4>
+          <g-link
+            v-if="secondSection.secondTitle && secondSection.secondItem"
+            :to="`${secondSection.secondItem}`"
+            class="flex items-center py-1 font-semibold"
+          >
+            <h4 style="margin-left: 10px;">
+              {{ secondSection.secondTitle }}
+            </h4>
+          </g-link>
+          <ul class="max-w-full pl-2 mb-0">
+            
             <li
-              v-for="secondSection in section.name"
-              :key="secondSection.secondTitle"
-              style="margin-top: 15px;"
+              v-for="page in findPages(secondSection.thirdItems)"
+              :id="page.path"
+              :key="page.path"
+              :class="getClassesForAnchor(page)"
+              style="margin-top: -10px;"
+              @mousedown="$emit('navigate')"
             >
-              <h4 style="margin-left: 10px;" v-if="secondSection.secondTitle && !secondSection.secondItem">
-                {{ secondSection.secondTitle }}
-              </h4>
               <g-link
-                v-if="secondSection.secondTitle && secondSection.secondItem"
-                :to="`${secondSection.secondItem}`"
-                class="flex items-center py-1 font-semibold"
+                :to="`${page.path}`"
+                class="flex items-center py-1"
               >
-                <h4 style="margin-left: 10px;">
-                  {{ secondSection.secondTitle }}
-                </h4>
+                <span
+                  class="absolute opacity-0 bg-ui-primary transition transform scale-0 origin-center"
+                  :class="{
+                    'opacity-100 scale-100': currentPage.path === page.path
+                  }"
+                ></span>
+                <span style="margin-top: 5px;" class="triangle"></span>
+                <h6 style="margin-top: 5px;" v-if="page.title">
+                  {{ page.title }}
+                </h6>
               </g-link>
-              <ul class="max-w-full pl-2 mb-0">
-                
-                <li
-                  v-for="page in findPages(secondSection.thirdItems)"
-                  :id="page.path"
-                  :key="page.path"
-                  :class="getClassesForAnchor(page)"
-                  style="margin-top: -5px;"
-                  @mousedown="$emit('navigate')"
-                >
-                  <g-link
-                    :to="`${page.path}`"
-                    class="flex items-center py-1 font-semibold"
-                  >
-                    <span
-                      class="absolute opacity-0 bg-ui-primary transition transform scale-0 origin-center"
-                      :class="{
-                        'opacity-100 scale-100': currentPage.path === page.path
-                      }"
-                    ></span>
-                    <span style="margin-top: 5px;" class="triangle"></span>
-                    <h5 style="margin-top: 5px;" v-if="page.title">
-                      {{ page.title }}
-                    </h5>
-                  </g-link>
-                </li>
-              </ul>
             </li>
-          </li>
-        </ul>
+          </ul>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
