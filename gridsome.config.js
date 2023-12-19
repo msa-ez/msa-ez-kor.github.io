@@ -30,13 +30,7 @@ module.exports = {
           },
           {
             firstTitle: 'Key features',
-            name: [
-              {
-                thirdItems:
-                [
-                ]
-              },
-            ]
+            firstItem: '/started/key-features/',
           },
           {
             firstTitle: 'Tutorial',

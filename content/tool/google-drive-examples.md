@@ -7,8 +7,7 @@ sidebar: 'started'
 <h2>마이크로서비스 기반 구글 드라이브 서비스 개발하기</h2>
 
 ## 실습도구 접속
-[labs.msaez.io](http://labs.msaez.io) 에 접속합니다.
-<br/>(크롬 브라우저 추천)
+[MSAEZ](http://www.msaez.io)에 접속합니다. ****크롬 브라우저 추천****
 
 ## 시나리오
 
@@ -36,15 +35,15 @@ sidebar: 'started'
 
 <h4>1. EventStorming Model 생성</h4>
 
-> ![](../../src/img/gd-inst/1.png)
+![](../../src/img/gd-inst/ggd1.png)
 
-위에서 접속한 labs.msaez.io 에서 아래로 스크롤하면 MODELING TOOLS 종류들이 나옵니다. 
+위에서 접속한 labs.msaez.io 에서 아래로 스크롤하면 모델링 도구 종류들이 나옵니다. 
 
-이 중 EventStorming Model의 CREATE 버튼을 클릭해 새 모델을 하나 생성해줍니다.
+이 중 이벤트스토밍의 생성 버튼을 클릭해 새 모델을 하나 생성해줍니다.
 
 <h4>2. Bounded Context 구분</h4>
 
-> ![](../../src/img/gd-inst/ggd-1.gif)
+![](../../src/img/gd-inst/ggd-1.gif)
 
 우선 구글 드라이브 서비스가 총 5개의 마이크로서비스로 구성된다고 가정하고, 단위 마이크로서비스의 범위를 설정해주는 바운디드 컨텍스트를 총 5개 만들어줍니다.
 
@@ -52,7 +51,7 @@ sidebar: 'started'
 
 <h4>3. Event(오렌지 스티커) 도출</h4>
 
-> ![](../../src/img/gd-inst/ggd-2.gif)
+![](../../src/img/gd-inst/ggd-2.gif)
 
 제시된 시나리오를 바탕으로 각 마이크로서비스에서 산출될 결과물을 오렌지색의 'Event' 스티커로 나타내줍니다.
 
@@ -66,7 +65,7 @@ sidebar: 'started'
 
 <h4>4. Event 에 대한 Input 추가</h4>
 
-> ![](../../src/img/gd-inst/ggd-3.gif)
+![](../../src/img/gd-inst/ggd-3.gif)
 
 이벤트 스티커를 모두 적용했다면 해당 이벤트를 발생시키는 액션, 즉 input을 설정해줘야 합니다. 여기서 사용되는 스티커는 파란색 스티커인 'Command'와 라일락색 스티커인 'Policy'이며, 모든 액션은 이벤트와 연결되도록 배치해줍니다.
 
@@ -84,7 +83,7 @@ sidebar: 'started'
 
 <h4>5. Aggregate(노란색 스티커) 속성 추가</h4>
 
-> ![](../../src/img/gd-inst/ggd-4.gif)
+![](../../src/img/gd-inst/ggd-4.gif)
 
 여기까지 작업을 마쳤다면, 보드 왼쪽에 위치한 스티커 팔레트의 배치 순서대로 본 튜토리얼이 진행되고 있다는 것을 알 수 있습니다. 
 
@@ -100,7 +99,7 @@ indexer와 video processing 측에 위치한 어그리거트의 이름은 비교
 
 어그리거트 스티커를 더블클릭해 'Attributes' 부분을 보면 이미 Long 타입의 id가 기본 속성으로 선언되어 있는 것을 볼 수 있습니다. 여기에 부가적인 속성을 추가하는 작업이 필요합니다.
 
-> ![](../../src/img/gd-inst/ggd-9.gif)
+![](../../src/img/gd-inst/ggd-9.gif)
 
 가장 먼저 File의 속성을 정의해보겠습니다. 평소에 로컬이나 서버에 파일을 업로드할 때 표기되는 값들을 생각하면 작업이 편합니다.
 
@@ -139,7 +138,7 @@ String은 문자열, Integer는 4바이트의 기본 숫자열, Long은 Integer�
 
 <h4>6. Event 속성 추가</h4>
 
-> ![](../../src/img/gd-inst/ggd-11.gif)
+![](../../src/img/gd-inst/ggd-11.gif)
 
 어그리거트에 필요한 속성 정보를 추가했다면, pub/sub 기능을 활성화해주기 위해 이벤트 쪽에도 동일한 정보를 입력해줘야 합니다. 
 
@@ -149,7 +148,7 @@ String은 문자열, Integer는 4바이트의 기본 숫자열, Long은 Integer�
 
 <h4>7. notification Policy 추가</h4>
 
-> ![](../../src/img/gd-inst/ggd-5.gif)
+![](../../src/img/gd-inst/ggd-5.gif)
 
 유저에게 노티를 주는 기능은 간단하게 폴리시 하나를 선언해줌으로써 구현 가능합니다.
 
@@ -159,7 +158,7 @@ String은 문자열, Integer는 4바이트의 기본 숫자열, Long은 Integer�
 
 <h4>8. ReadModel(초록색 스티커) 속성 추가</h4>
 
-> ![](../../src/img/gd-inst/ggd-8.gif)
+![](../../src/img/gd-inst/ggd-8.gif)
 
 마지막 시나리오에 등장하는 파일의 상태를 표시하는 대시보드는 초록색 스티커인 "ReadModel"로 나타내줍니다. 리드모델에서 설정해주는 CQRS는 서비스 운용에 큰 역할을 하게 됩니다.
 
@@ -180,7 +179,7 @@ String은 문자열, Integer는 4바이트의 기본 숫자열, Long은 Integer�
 
 <h4>9. ReadModel CREATE WHEN 추가</h4>
 
-> ![](../../src/img/gd-inst/ggd-10.gif)
+![](../../src/img/gd-inst/ggd-10.gif)
 
 다음 스텝은 우리가 제작한 모델에 대한 CQRS 규칙 선언입니다. 
 
@@ -206,7 +205,7 @@ Create, Update, Delete의 3가지로 크게 구분되며, 어떤 상황에 내�
 
 <h4>10. ReadModel UPDATE WHEN 추가</h4>
 
-> ![](../../src/img/gd-inst/ggd-7.gif)
+![](../../src/img/gd-inst/ggd-7.gif)
 
 Create 절 선언 및 속성 매칭을 완료한 후에는 Update 절로 이동합니다.
 
@@ -232,7 +231,7 @@ Create 절 선언 및 속성 매칭을 완료한 후에는 Update 절로 이동�
 
 <h4>11. 완성된 모델로부터 도출된 코드 확인</h4>
 
-> ![](../../src/img/gd-inst/12.png)
+![](../../src/img/gd-inst/12.png)
 
 이렇게 구글 드라이브 서비스에 대한 이벤트스토밍 모델이 완성되었습니다. 모델링 작업이 끝났다면, 해당 모델로부터 도출되는 코드를 활용해 실제 서비스를 운용할 차례입니다. 
 
@@ -242,7 +241,7 @@ Create 절 선언 및 속성 매칭을 완료한 후에는 Update 절로 이동�
 
 <h4>12. gitpod IDE 실행</h4>
 
-> ![](../../src/img/gd-inst/ggd-6.gif)
+![](../../src/img/gd-inst/ggd-6.gif)
 
 코드를 간단히 확인했다면 이제 본격적으로 IDE 툴을 열어 서비스 운용을 위한 다음 단계로 이동합니다. 우리가 사용할 IDE는 GitHub에서 지원하는 VSCode를 기반으로 한 GitPod라는 툴입니다.
 
@@ -258,7 +257,7 @@ Code Preview 창 좌측 상단의 git 아이콘을 클릭하고 CREATE 버튼을
 
 <h4>13. drive 서비스 실행</h4>
 
-> ![](../../src/img/gd-inst/15.png)
+![](../../src/img/gd-inst/15.png)
 
 깃파드가 실행되고 IDE 툴이 열렸다면 이제 본격적으로 우리가 모델링으로 생성한 프로젝트를 운용해보겠습니다.
 
@@ -278,7 +277,7 @@ mvn clean spring-boot:run
 
 <h4>14. kafka 실행</h4>
 
-> ![](../../src/img/gd-inst/16.png)
+![](../../src/img/gd-inst/16.png)
 
 drive 서비스가 실행되는 동안, 우리가 생성한 마이크로서비스들을 작동시키기 위해 kafka를 실행해주겠습니다.
 
@@ -292,9 +291,9 @@ docker compose-up
 
 <h4>15. httpie 설치 및 테스트</h4>
 
-> ![](../../src/img/gd-inst/17.png)
+![](../../src/img/gd-inst/17.png)
 
-> ![](../../src/img/gd-inst/18.png)
+![](../../src/img/gd-inst/18.png)
 
 이번에 설치할 툴은 'httpie'입니다. 프론트엔드 웹을 활용하기 전 이 툴을 기반으로 서비스가 정상적으로 작동하는지 테스트하기 위함으로 생각하면 되겠습니다.
 
@@ -332,9 +331,9 @@ http :8082
 
 <h4>16. index 코드 수정 및 서비스 실행</h4>
 
-> ![](../../src/img/gd-inst/19-1.png)
+![](../../src/img/gd-inst/19-1.png)
 
-> ![](../../src/img/gd-inst/19-2.png)
+![](../../src/img/gd-inst/19-2.png)
 
 지금부터는 시나리오에서 언급된 기능들을 본 서비스에 추가하는 작업을 진행해보겠습니다. 
 
@@ -369,7 +368,7 @@ mvn clean spring-boot:run
 
 <h4>17. 테스트용 파일 업로드</h4>
 
-> ![](../../src/img/gd-inst/20.png)
+![](../../src/img/gd-inst/20.png)
 
 index 기능까지 활성화가 된 것을 확인했다면, 본격적으로 파일을 하나 업로드해 우리가 지금까지 작업한 내용이 시나리오를 충족하는지 확인해 보겠습니다.
 
@@ -405,7 +404,7 @@ http :8082/files name="my favorite video" type="movie"
 
 <h4>18. 업로드된 파일에 대한 indexer 작동 확인</h4>
 
-> ![](../../src/img/gd-inst/21.png)
+![](../../src/img/gd-inst/21.png)
 
 파일이 정상 업로드된 것을 확인했다면, indexer 마이크로서비스의 작동 여부를 확인해 보겠습니다.
 
@@ -440,7 +439,7 @@ http :8083/indices
 
 <h4>19. video 코드 수정 및 서비스 실행</h4>
 
-> ![](../../src/img/gd-inst/22.png)
+![](../../src/img/gd-inst/22.png)
 
 이번엔 Video.java 파일 내부 코드를 수정해 업로드된 동영상 파일에 대한 스트리밍 url을 도출하는 작업을 진행해보겠습니다.
 
@@ -471,7 +470,7 @@ mvn clean spring-boot:run
 
 <h4>20. 업로드된 파일에 대한 video processing 작동 확인</h4>
 
-> ![](../../src/img/gd-inst/23.png)
+![](../../src/img/gd-inst/23.png)
 
 8084 포트에서 실행되고 있는 video processing 마이크로서비스의 작동 여부를 확인해보겠습니다.
 
@@ -502,7 +501,7 @@ http :8084/videos
 
 <h4>21. dashboard 서비스 실행 및 내역 조회</h4>
 
-> ![](../../src/img/gd-inst/24.png)
+![](../../src/img/gd-inst/24.png)
 
 마지막으로 dashboard 마이크로서비스를 실행해 저희가 입력한 정보가 잘 출력되는지 확인해보겠습니다.
 
@@ -544,7 +543,7 @@ http :8081/dashboards
 
 <h4>22. 프론트엔드 서버 실행</h4>
 
-> ![](../../src/img/gd-inst/25-1.png)
+![](../../src/img/gd-inst/25-1.png)
 
 실제 웹 프로그램을 운용하기 전 httpie 툴을 사용해 테스트를 진행했으니 본격적으로 프론트엔드 서버를 활용해 웹페이지로 이동해봅시다.
 
@@ -564,7 +563,7 @@ npm run serve
 
 명령어를 입력해 프론트엔드 서버를 실행해줍니다.
 
-> ![](../../src/img/gd-inst/25-2.png)
+![](../../src/img/gd-inst/25-2.png)
 
 프론트엔드 서비스는 gateway를 통해 실행되므로, 프론트엔드 서버가 올라가는 동안 gateway 폴더에서 터미널을 열고 
 
@@ -580,7 +579,7 @@ mvn clean spring-boot:run
 
 <h4>23. 홈 화면</h4>
 
-> ![](../../src/img/gd-inst/26.png)
+![](../../src/img/gd-inst/26.png)
 
 처음으로 프론트엔드 웹페이지에 접근하게 되면 보게 되는 홈 화면입니다. 
 
@@ -588,7 +587,7 @@ mvn clean spring-boot:run
 
 <h4>24. 대시보드 조회</h4>
 
-> ![](../../src/img/gd-inst/27.png)
+![](../../src/img/gd-inst/27.png)
 
 가장 먼저 대시보드를 조회해보겠습니다.
 
@@ -598,7 +597,7 @@ mvn clean spring-boot:run
 
 <h4>25. 업로드된 파일 목록 조회 + 파일 추가</h4>
 
-> ![](../../src/img/gd-inst/28.png)
+![](../../src/img/gd-inst/28.png)
 
 이번엔 파일 목록을 조회해보겠습니다.
 
@@ -608,7 +607,7 @@ mvn clean spring-boot:run
 
 <h4>26. 파일 추가 상세</h4>
 
-> ![](../../src/img/gd-inst/29.png)
+![](../../src/img/gd-inst/29.png)
 
 파일 추가 버튼을 클릭하면 위와 같은 화면을 볼 수 있습니다.
 
@@ -618,7 +617,7 @@ mvn clean spring-boot:run
 
 <h4>27. 새로 업로드한 파일 조회</h4>
 
-> ![](../../src/img/gd-inst/30.png)
+![](../../src/img/gd-inst/30.png)
 
 파일을 하나 새로 업로드하면, 앞서 확인했던 파일 목록에 신규 파일이 하나 추가된 것을 확인할 수 있습니다.
 
@@ -626,7 +625,7 @@ mvn clean spring-boot:run
 
 <h4>28. 새로 업로드한 파일 index 여부 확인</h4>
 
-> ![](../../src/img/gd-inst/31.png)
+![](../../src/img/gd-inst/31.png)
 
 이번엔 새로 추가한 파일의 인덱싱 작업이 잘 되었는지 확인해보겠습니다.
 
@@ -636,7 +635,7 @@ mvn clean spring-boot:run
 
 <h4>29. 새로 업로드한 파일 video processing 여부 확인</h4>
 
-> ![](../../src/img/gd-inst/32.png)
+![](../../src/img/gd-inst/32.png)
 
 마지막으로 새로 추가한 파일의 비디오 프로세싱 여부를 확인해보겠습니다.
 
