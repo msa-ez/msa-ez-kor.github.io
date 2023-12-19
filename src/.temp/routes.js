@@ -1,5 +1,5 @@
 const c1 = () => import(/* webpackChunkName: "page--src--templates--markdown-page-vue" */ "/Users/dufwjdrndl/Desktop/uengine/msa-ez-kor.github.io/src/templates/MarkdownPage.vue")
-const c2 = () => import(/* webpackChunkName: "page--src--pages--404-vue" */ "/Users/dufwjdrndl/Desktop/uengine/msa-ez-kor.github.io/src/pages/404.vue")
+const c2 = () => import(/* webpackChunkName: "page--node-modules--gridsome--app--pages--404-vue" */ "/Users/dufwjdrndl/Desktop/uengine/msa-ez-kor.github.io/node_modules/gridsome/app/pages/404.vue")
 const c3 = () => import(/* webpackChunkName: "page--src--pages--index-vue" */ "/Users/dufwjdrndl/Desktop/uengine/msa-ez-kor.github.io/src/pages/Index.vue")
 
 export default [
@@ -289,6 +289,10 @@ export default [
   },
   {
     path: "/example-scenario/food-delivery/",
+    component: c1
+  },
+  {
+    path: "/custom-template/designing-template-default-option/",
     component: c1
   },
   {
