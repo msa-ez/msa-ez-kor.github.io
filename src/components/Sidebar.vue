@@ -7,8 +7,6 @@
     <div
       v-for="(section, index) in sidebar.sections"
       :key="section.title"
-      class="pt-1 mb-1 border-ui-border"
-      :class="{ 'border-b': index < sidebar.sections.length -1 }"
     >
       <h3 v-if="section.firstTitle && !section.firstItem">
         {{ section.firstTitle }}
@@ -36,7 +34,7 @@
             :to="`${secondSection.secondItem}`"
             class="flex items-center py-1 font-semibold"
           >
-            <h4 style="margin-left: 10px;">
+            <h4 style="margin-left: 10px; margin-bottom: 0px;">
               {{ secondSection.secondTitle }}
             </h4>
           </g-link>

@@ -34,74 +34,77 @@ module.exports = {
           },
           {
             firstTitle: 'Tutorial',
+          },
+          {
+            firstTitle: 'Concepts',
             name: [
               {
-                secondTitle: 'Concepts',
-                thirdItems:
-                [
-                  '/started/domain-driven/',
-                  '/started/event-storming-learning/',
-                ]
+                secondTitle:'Domain Driven Design',
+                secondItem:'/started/domain-driven/',
               },
               {
-                secondTitle: 'Setup',
-                secondItem: '/tool/setup-on-prem/',
+                secondTitle:'Eventstorming',
+                secondItem:'/started/event-storming-learning/',
+              },
+            ]
+          },
+          {
+            firstTitle: 'Setup',
+            firstItem: '/tool/setup-on-prem/',
+          },
+          {
+            firstTitle: 'Quick Start',
+            name: [
+              {
+                secondTitle: 'Google Drive example',
+                secondItem: '/tool/google-drive-examples/'
+              }
+            ]
+          },
+          {
+            firstTitle: 'Biz Modeling',
+            name:[
+              {
+                secondTitle:'Eventstorming',
+                secondItem:'/tool/event-storming-tool/',
               },
               {
-                secondTitle: 'Biz Modeling',
-                thirdItems:
-                [
-                  '/tool/event-storming-tool/',
-                  '/tool/google-drive-examples/',
-                  '/tool/chat-gpt/'
-                ]
+                secondTitle:'Utilizing ChatGPT',
+                secondItem:'',
               },
               {
-                secondTitle: 'Code Generation',
-                thirdItems:
-                [
-                  '/tool/marketplace/',
-                  '/templates-language/go-template/',
-                  '/templates-language/python-template/',
-                  '/templates-language/springboot-java-template/',
-                ]
-              },
-              {
-                secondTitle: 'Test Design',
-                thirdItems:
-                [
-                  '/custom-template/unit-test/',
-                  '/custom-template/mock-server/',
-                ]
-              },
-              {
-                secondTitle: 'Infra(K8s) Modeling',
-                thirdItems:
-                [
-                  '/tool/infrastructure-modeling/'
-                ]
-              },
-              {
-                secondTitle: 'Online lecture platfrom',
-                thirdItems:
-                [
-                  '/tool/development-practice/',
-                  // '/tool/attending-lectures/'
-                ]
-              },
-              {
-                secondTitle: 'Guide labs for Analysis/Design',
-                thirdItems:
-                [
-                ]
-              },
-              {
-                secondTitle: 'Guide labs for Implementation',
+                secondTitle:'Guide labs',
                 thirdItems:
                 [
                   '/business/',
                   '/business/ddd-google-drive/',
                   '/business/eventstorming-fooddelivery/',
+                ]
+              },
+            ]
+          },
+          {
+            firstTitle: 'Code Implementation',
+            name:[
+              {
+                secondTitle:'Model Driven Development',
+                secondItem:'',
+              },
+              {
+                secondTitle:'Marketplace',
+                thirdItems:
+                [
+                  '/tool/marketplace/',
+                ]
+              },
+              {
+                secondTitle:'Utilizing ChatGPT',
+                secondItem:'',
+              },
+              {
+                secondTitle:'Guide labs',
+                thirdItems:
+                [
                   '/development/understanding-jpa-based-single-microservice/',
                   '/development/cna-start/',
                   '/development/monolith-2-misvc/',
@@ -128,63 +131,56 @@ module.exports = {
                   '/development/ops-docker/',
                 ]
               },
-              // {
-              //   secondTitle: 'Guide labs for Ops',
-              //   thirdItems:
-              //   [
-                  // gcp추가
-                  // '/operations/ops-aws-setting/',
-                  // '/operations/ops-aws-csi-setting/',
-                  // '/operations/azure/',
-                  // '/operations/ops-kubernetes/',
-                  // '/operations/ops-deploy-my-app/',
-                  // '/operations/end-to-end/',
-                  // '/operations/ops-pod-status/',
-                  // '/operations/ops-label-annotation/',
-                  // '/operations/ops-autoscale/',
-                  // '/operations/service/',
-                  // '/operations/ops-readiness/',
-                  // '/operations/ops-persistence-volume-efs/',
-                  // '/operations/ops-persistence-volume-azure/',
-                  // '/operations/ops-persistence-volume-gcp/',
-                  // '/operations/ops-configmap/',
-                  // '/operations/ops-persistence-volume/',
-                  // '/operations/ops-ingress/',
-                  // '/operations/ops-ingress-virtualhost/',
-                  // '/operations/ops-service-mesh-istio-2/',
-                  // '/operations/istio-traffic/',
-                  // '/operations/istio-resiliency-part1/',
-                  // '/operations/istio-resiliency-part2/',
-                  // '/operations/istio-metric-based-hpa/',
-                  // '/operations/istio-msa-telemetry/',
-                  // '/operations/istio-sre-monitoring/',
-                  // '/operations/microservice-logging/',
-                  // '/operations/microservice-logging2/',
-                  // '/operations/apply-security-to-12st-mall/',
-                  // '/operations/ops-argo-rollout-canary-istio/',
-                  // '/operations/service-mesh-ab-testing/',
-                  // '/operations/gitops-argo-cd/',
-                  // '/operations/ops-anatomy-kubernetes/',
-                  // '/operations/ops-utility/',
-              //   ]
-              // },
             ]
           },
           {
             firstTitle: 'Custom template',
             name:[
               {
-                secondTitle: '',
+                secondTitle: "What's Custom Template",
+                secondItem: '/custom-template/tutorial/'
+              },
+              {
+                secondTitle: 'Custom Template Objects',
+                secondItem: '/custom-template/custom-template/'
+              },
+              {
+                secondTitle: 'Creating Custom Template',
                 thirdItems:
                 [
-                  '/custom-template/tutorial/',
-                  '/custom-template/custom-template/',
                   '/custom-template/designing-template-metadata/',
                   '/custom-template/designing-template-template-code/',
-                  '/custom-template/designing-template/'
                 ]
               },
               
+            ]
+          },
+          {
+            firstTitle: 'Test Design',
+            name:[
+              {
+                secondTitle: 'Uint Test',
+                secondItem: '/custom-template/unit-test/'
+              },
+              {
+                secondTitle: 'API/Service	Test',
+                secondItem: '/custom-template/mock-server/'
+              }
+            ]
+          },
+          {
+            firstTitle: 'Infra(K8s) Modeling',
+            name:[
+              {
+                secondTitle: 'K8s Deployment Design',
+                secondItem: '/tool/infrastructure-modeling/'
+              },
+              {
+                secondTitle: 'Guide labs',
+                thirdItems:
+                [
+                ]
+              }
             ]
           },
           {
