@@ -116,6 +116,10 @@ export default [
     component: c1
   },
   {
+    path: "/started/key-features/",
+    component: c1
+  },
+  {
     path: "/tool/infrastructure-modeling/",
     component: c1
   },

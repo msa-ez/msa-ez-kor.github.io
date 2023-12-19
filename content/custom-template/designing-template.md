@@ -113,7 +113,7 @@ window.$HandleBars.registerHelper('checkDateType', function (fieldDescriptors) {
 #### Globar Helper
 Globar helper란 Template에서 스티커에 관계없이 공통적으로 사용할 수 있는 handlebars를 의미합니다.
 
-현재 Msa-EZ내에 정의되어있는 Globar helper에 대하여 사용방법과 예시를 설명하겠습니다.
+현재 Msa-EZ내에 정의되어있는 Globar helper에 대하여 예시와 사용방법을 설명하겠습니다.
 
 1) ifNotNull
 ```

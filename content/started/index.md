@@ -4,7 +4,7 @@ sidebar: 'started'
 ---
 ## 소개
 
-![](https://github.com/msa-ez/platform/assets/113568664/104b5348-e763-445b-be7e-f7446a28e26c)
+![](../../src/img/started/simage1.jpeg)
 
 MSAEZ는 마이크로서비스 구축에서 운영에 필요한 분석, 설계, 구현 및 모니터링을 지원하는 도구로, 이벤트스토밍 기반 협업을 통해 도메인을 분석/설계하고, 설계된 도메인 모델에서 MSA 소스코드를 자동으로 생성해 줍니다.
 
@@ -16,12 +16,14 @@ MSAEZ는 마이크로서비스 구축에서 운영에 필요한 분석, 설계, 
 
 ![](https://github.com/msa-ez/msaschool-md.github.io/assets/113568664/139c40a1-e104-49f8-b937-a0f5137f3180)
 
-> <p align="center"> MSAEZ 화면 (예시) </p>
+<p align="center"> MSAEZ 화면 (예시) </p>
 
 ---
 
 ## 오픈소스화 실행
-2023년 11월 부로 MSAEZ의 전체 서비스가 오픈소스로 전환되었습니다. 모든 유저들은 아래 주소에서 프로젝트를 받아 사용할 수 있습니다.
+2023년 11월 부로 MSAEZ의 전체 서비스가 오픈소스로 전환되었습니다. 
+
+모든 유저들은 아래 주소에서 프로젝트를 받아 사용할 수 있습니다.
 
 https://github.com/msa-ez/platform
 
