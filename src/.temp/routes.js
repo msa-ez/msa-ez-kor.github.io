@@ -8,6 +8,10 @@ export default [
     component: c1
   },
   {
+    path: "/tool/setup-on-prem/",
+    component: c1
+  },
+  {
     path: "/templates-language/python-template/",
     component: c1
   },
@@ -288,11 +292,15 @@ export default [
     component: c1
   },
   {
-    path: "/custom-template/designing-template-default-option/",
+    path: "/custom-template/designing-template-template-code/",
     component: c1
   },
   {
     path: "/development/gateway/",
+    component: c1
+  },
+  {
+    path: "/custom-template/designing-template-metadata/",
     component: c1
   },
   {

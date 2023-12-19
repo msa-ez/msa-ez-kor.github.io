@@ -44,10 +44,7 @@ module.exports = {
               },
               {
                 secondTitle: 'Setup',
-                thirdItems:
-                [
-                  
-                ]
+                secondItem: '/tool/setup-on-prem/',
               },
               {
                 secondTitle: 'Biz Modeling',
@@ -181,7 +178,8 @@ module.exports = {
                 [
                   '/custom-template/tutorial/',
                   '/custom-template/custom-template/',
-                  '/custom-template/designing-template-default-option/',
+                  '/custom-template/designing-template-metadata/',
+                  '/custom-template/designing-template-template-code/',
                   '/custom-template/designing-template/'
                 ]
               },
