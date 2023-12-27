@@ -7,11 +7,21 @@ next: ''
 
 # Pub/Sub 방식의 연동 
 
-### 이벤트 Publish / Subscribe
-- 마이크로 서비스간의 통신에서 이벤트 메세지를 Pub/Sub 하는 방법을 실습한다.  
-- Order 서비스에서 OrderPlaced 이벤트를 발행하였을때 Inventory 서비스에서 OrderPlaced 이벤트를 수신하여 재고량을 변경(감소)한다.  
+마이크로 서비스간의 통신에서 이벤트 메세지를 Pub/Sub 하는 방법을 실습한다.  
+Order 서비스에서 주문(OrderPlaced) 이벤트가 발행 되였을때, Inventory 서비스에서 OrderPlaced 이벤트를 수신하여 재고량을 변경(감소)한다.  
 
-#### order 서비스의 이벤트 Publish
+### 이벤트스토밍 모델 준비
+
+- 아래 모델을 새 탭에서 로딩한다.
+[모델 링크 : https://www.msaez.io/#/storming/labshoppubsub-2:2023-pubsub2](https://www.msaez.io/#/storming/labshoppubsub-2:2023-pubsub2)
+- 브라우져에 모델이 로딩되지 않으면, 우측 상단의 (사람모양) 아바타 아이콘을 클릭하여 **반드시** 깃헙(Github) 계정으로 로그인 후, 리로드 한다.
+- 아래처럼 렙에 필요한 이벤트스토밍 기본 모델이 출력된다.   
+![image](https://github.com/acmexii/demo/assets/35618409/39ccf71e-3977-4093-9bae-7c2a1254d710)
+
+
+### order 서비스의 이벤트 Publish
+
+메뉴의 CODE > ProjectIDE 를 선택하여, 연결된 브라우져 IDE를 로딩한다.
 
 - order 마이크로 서비스를 실행한다.
 > order 폴더를 선택 > Open In Terminal > 터미널에서 아래 커맨드를 실행한다.
@@ -38,7 +48,7 @@ cd /bin
 ```
 
 
-#### Inventory 서비스의 이벤트 Subscribe
+### Inventory 서비스의 이벤트 Subscribe
 - Inventory PolicyHandler.java Code 확인한다.
 - PolicyHandler.java --> Inventory.java (Aggregate) 의 Port Method (decreaseStock)을 호출하게 된다.
 - decreaseStock 내에 우리가 작성해야 할 로직은 다음과 같다:

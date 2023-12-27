@@ -7,59 +7,27 @@ next: ''
 
 # Req/Res 방식의 MSA 연동 
 
-## Monolith 서비스의 동작 구조 확인
+모노리식 서비스에서 특정 부분을 마이크로서비스로 떼어내고, 모노리스와 마이크로서비스가 Req/Res 방식으로 상호 통신하는 예제를 가이드를 따라 수행한다. 
 
-모노리스 기반 쇼핑몰 서비스에서 inventory 서비스를 분리하고, Feign Client 를 사용해 모노리식 쇼핑몰과 분리된 마이크로서비스 분리하는 Lab 이다.  
-Feign Client 는 기존의 로컬 객체 인터페이스를 준수하면서 실제적으로는 원격 호출(Request/Response) 방식으로 서비스간의 통신을 가능하게 하여 레가시 코드의 변경을 최소화 하여 transform하는 방법이다.
+## 이벤트스토밍 모델 준비
 
-### 먼저, GitPod 환경을 로딩한다. (Code > ProjectIDE 클릭)
-
-- monolith 서비스 기동
-```
-cd monolith
-mvn spring-boot:run
-``` 
-- 주문과 상품서비스 Rest 엔드포인트가 동일한 서버에서 조회되는 모노리스임을 알 수 있다.
-
-- Order.java 에서 inventory 로컬 객체를 통해 재고처리 중임을 확인:
-```
-@PrePersist
-public void checkAvailability(){
-    if(inventoryService().getInventory(Long.valueOf(getProductId())).getStock() < getQty()) throw new RuntimeException("Out of stock");    		
-    inventoryService().decreaseStock(Long.valueOf(getProductId()), new DecreaseStockCommand(getQty()));
-}
-
-public static InventoryService inventoryService(){
-    InventoryService inventoryService = MonolithApplication.applicationContext.getBean(
-        InventoryService.class
-    );
-
-    return inventoryService; // 여기에 breakpoint 설정
-}
-```
-
-- Order.java의 inventoryService() 메서드에 디버그 포인트 설치
-- "return inventoryService;" 라인의 라인번호 앞을 클릭하면, 빨간색의 원(breakpoint)이 나타남
- 
-- 재고등록 및 주문 발송  
-```
-http localhost:8081/inventories id=1 stock=10
-http localhost:8081/orders productId=1 qty=3 customerId="1@uengine.org" amount=30000
-```
-
-- InventoryServiceImpl.java 를 통해서 처리가 되는 Monolith 임을 확인.
+- 아래 모델을 새 탭에서 로딩한다.
+[모델 링크 : https://www.msaez.io/#/storming/labshopmonolith-230822](https://www.msaez.io/#/storming/labshopmonolith-230822)
+- 브라우져에 모델이 로딩되지 않으면, 우측 상단의 (사람모양) 아바타 아이콘을 클릭하여 **반드시** 깃헙(Github) 계정으로 로그인 후, 리로드 한다.
+- 아래처럼 렙에 필요한 이벤트스토밍 기본 모델이 출력된다.
+- 로딩된 모델은 우측 팔레트 영역에 스티커 목록이 나타나지 않는다. 상단 메뉴영역에서 포크 아이콘(FORK)을 클릭해 주어진 모델을 복제한다. 
+![image](https://github.com/acmexii/demo/assets/35618409/7950c0df-eee8-44e3-a79f-7448a4caa30e)
+- 우측 팔레트 영역에 스티커 목록들이 나타나는 것이 확인된다.
 
 ### 기존 Monolith에서 일부 영역을 마이크로서비스로 분리
 
-
 본 랩에 주어진 모델을 활용하여 가이드에 따라 모노리스에서 상품서비스를 분리하는 모델링을 수행한다. 
 
-#### 이벤트스토밍
+### 이벤트스토밍
 
 - monolith 바운디드 컨텍스트를 주문 도메인 스티커에만 한정
 - 새로운 bounded context를 추가하고 이름을 "inventory"로 설정
 - inventory aggregate 객체들을 묶음 선택하여 inventory bounded context 내로 이동
-
 <img width="874" alt="image" src="https://user-images.githubusercontent.com/487999/190896320-72973cf1-c1dc-44f4-a46a-9be87d072284.png">
 
 - 재고량을 감소시키는 Command 의 추가: inventory BC 내에 Command  스티커를 추가하고, 아래 커맨드 이름을 복사하여 사용한다. 
@@ -72,12 +40,19 @@ decrease stock
 <img width="784" alt="image" src="https://user-images.githubusercontent.com/487999/190896393-30889e96-6cbc-4e7f-9631-25c0d004635d.png">
 
 - 원격 호출선 연결:  monolith 내의 OrderPlaced Event 스티커와 inventory 의 decrease stock Command 스티커를 연결. 이때 Req/res 라는 표시가 나타남.
-
 <img width="859" alt="image" src="https://user-images.githubusercontent.com/487999/190896427-f91962cd-f8ab-4113-bd85-5abe1ada3bcd.png">
 
-## 호출측 소스코드의 확인
+## Code 생성 및 내 Git 리파지토리에 푸쉬 
+- 모델링 메뉴의 'CODE' > 'Code Preview'를 클릭한다. 
+- 상단의 'Push to Git' 메뉴를 클릭해 나타나는 다이얼로그 박스에서 'Create New Repository'를 선택하고, 'CREATE'를 누른다.
+> 초기 Github 계정으로 로그인 하였으므로, 나의 Git 정보가 자동으로 표시된다. 
+![image](https://github.com/acmexii/demo/assets/35618409/dcb1966e-e0d1-43f3-9920-457660923259)
+- 모델 기반 코드가 내 Github에 푸쉬된다.
+![image](https://github.com/acmexii/demo/assets/35618409/6581f400-adb8-4963-bf03-511d459c5e32)
+- 좌측 메뉴 'IDE'를 누른다음, Cloud IDE 목록에서 'Open GitPod'를 클릭한다.
 
-- GitPod상에 열려있는 아래 코드를 찾아 본다.
+### 호출측 소스코드의 확인
+- Cloud IDE상에 로딩된 코드 목록에서 아래 리소스를 찾아 본다.
 - monolith/../ Order.java 의 @PostPersist 내에 호출을 위해 생성된 샘플코드를 확인한다:
 
 ```
@@ -152,7 +127,6 @@ public class InventoryController {
     public void decreaseStock(DecreaseStockCommand decreaseStockCommand) {
         setStock(getStock() - decreaseStockCommand.getQty().longValue());  // Copy & Paste this code
     }
-
 ```
 
 ### Proxy 객체를 통한 동기호출 테스트
@@ -164,7 +138,6 @@ public class InventoryController {
 cd inventory
 mvn spring-boot:run
 ```
-
 
 - 인벤토리에 테스트할 상품을 먼저 등록하고 사전 검증한다.
 ```

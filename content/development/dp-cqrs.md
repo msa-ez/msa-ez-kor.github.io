@@ -7,18 +7,24 @@ next: ''
 
 # Data Projection with CQRS
 
+주문서비스와 배송서비스의 상세 모델을 참조하여 Query 모델(Materialized View)을 설계한다.
 
-### CQRS 모델링 Practice
+## 이벤트스토밍 모델 준비
 
+- 아래 모델을 새 탭에서 로딩한다.
+[모델 링크 : https://www.msaez.io/#/storming/labcqrs-231022](https://www.msaez.io/#/storming/labcqrs-231022)
+- 브라우져에 모델이 로딩되지 않으면, 우측 상단의 (사람모양) 아바타 아이콘을 클릭하여 **반드시** 깃헙(Github) 계정으로 로그인 후, 리로드 한다.
+- 아래처럼 렙에 필요한 이벤트스토밍 기본 모델이 출력된다.
+- 로딩된 모델은 우측 팔레트 영역에 스티커 목록이 나타나지 않는다. 상단 메뉴영역에서 포크 아이콘(FORK)을 클릭해 주어진 모델을 복제한다. 
+![image](https://github.com/acmexii/demo/assets/35618409/c9a4575c-d8e2-424b-9587-7ca789dca2e1)
+- 우측 팔레트 영역에 스티커 목록들이 나타나는 것이 확인된다.
+
+## CQRS 모델링 
+
+- 고객센터팀이 신설되어 '마이페이지' 서비스를 런칭한다고 가정한다.
 - 주문서비스와 배송서비스의 상세 모델을 참조하여 Query 모델(Materialized View)을 설계한다.
 
-#### SCENARIO
-- 고객센터팀이 신설되어 '마이페이지' 서비스를 런칭한다.
-
-
-#### MODELING
-- 먼저, 오른쪽 모델을 FORK 후, 편집한다.
-
+### MODELING
 - customercenter BC 를 추가
 - Read Model 녹색 스티커 추가('MyPage')
 - Read Model 속성 Define
@@ -30,16 +36,13 @@ next: ''
 <img width="982" alt="image" src="https://user-images.githubusercontent.com/487999/191055790-5d6a529f-e2f7-49ab-8ee0-74d371f06090.png">
 
 - Read Model CRUD 상세설계
-
 <img width="434" alt="image" src="https://user-images.githubusercontent.com/487999/191056403-fbdec62b-42ea-4261-8e4e-b631c6c6779a.png">
 
-
-#### Code Preview 
+### Code Preview 
 - 상세 설계가 끝난 View Model 코드를 리뷰한다.
 - 내 Github으로 Push 하고, GitPod 환경에 로딩한다.
 
-
-#### Complete Service codes
+### Complete Service codes
 - 배송 마이크로서비스의 도메인 코드를 완성한다.
 - Delivery.java > addToDeliveryList Port method
 ```
@@ -55,14 +58,11 @@ repository().save(delivery);
  @GeneratedValue(strategy=GenerationType.AUTO)  // 주석해제
 ```
 
-#### 마이크로서비스 실행
+### 마이크로서비스 실행
 - 주문, 배송, 고객센터 마이크로서비스를 각각 실행한다.
 ```
 mvn spring-boot:run
 ```
-
-
-#### 실행
 - customer-center 에 오류가 발생한다면 다음 ViewHandler.java 부분의 구현체를 확인: (findByOrderId --> findById)
 ```
     @StreamListener(KafkaProcessor.INPUT)

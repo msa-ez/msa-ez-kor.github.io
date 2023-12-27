@@ -150,7 +150,7 @@ module.exports = {
                 ]
               },
               {
-                secondTitle: 'How to using Template Editor',
+                secondTitle: 'How to use Template Editor',
               },
               // {
               //   secondTitle: 'Utilizing ChatGPT',

@@ -7,21 +7,40 @@ next: ''
 
 # JWT Token 기반 인증 인가
 
-## JWT기반 인증 w/ Keycloak
+마이크로서비스와 OAuth2 구성요소인 Authorization Server/ Client/ Resource Server를 활용해 Single Sign-On 구현 모형을 실습한다. 단일 접점인 Gateway가 Client가 되고, 각 마이크로서비스가 Resource Server에 해당된다. 그리고 Authorization Server로는 Keycloak을 활용한다. 본 랩에서는 Gateway가 Client와 Resource Server역할을 가진다.
 
-### OAuth2 Stackholders
+## JWT기반 인증 w/ Keycloak
 
 - OAuth2.0 기반의 Spring Security와 Resource Owner, Client, Authorization Server, Resource Server간의 인증/인가를 실습한다.
 - JWT기반 Access_Token을 활용한다.
 - 인증/인가 서버로 Keycloak(https://www.keycloak.org/) 서버를 활용한다.
 
-### Keycloak Open Gitpod
+## 이벤트스토밍 모델 준비
 
-- 우측 상단의 "CODE" 버튼을 눌러 "Project IDE"를 클릭한다.
+- 아래 모델을 새 탭에서 로딩한다.
+[모델 링크 : https://www.msaez.io/#/storming/labshopoauthkeycloak-0821](https://www.msaez.io/#/storming/labshopoauthkeycloak-0821)
+- 브라우져에 모델이 로딩되지 않으면, 우측 상단의 (사람모양) 아바타 아이콘을 클릭하여 **반드시** 깃헙(Github) 계정으로 로그인 후, 리로드 한다.
+- 아래처럼 렙에 필요한 이벤트스토밍 기본 모델이 출력된다.
+- 로딩된 모델은 우측 팔레트 영역에 스티커 목록이 나타나지 않는다. 상단 메뉴영역에서 포크 아이콘(FORK)을 클릭해 주어진 모델을 복제한다. 
+![image](https://github.com/acmexii/demo/assets/35618409/08eb03f8-c7e3-42e8-a13c-4d473de56f1a)
+- 우측 팔레트 영역에 스티커 목록들이 나타나는 것이 확인된다.
+
+
+### Keycloak 토핑설정 및 코드 푸쉬
+
+- 우측 상단의 "CODE" 버튼을 눌러 "TOPPINGS"를 클릭한다.
+- 'Oauth by Keycloak'이 체크되어 있어야 한다.
+- 상단의 'Push to Git' 메뉴를 클릭해 나타나는 다이얼로그 박스에서 'Create New Repository'를 선택하고, 'CREATE'를 누른다.
+> 초기 Github 계정으로 로그인 하였으므로, 나의 Git 정보가 자동으로 표시된다. 
+![image](https://github.com/acmexii/demo/assets/35618409/557f256e-9949-4546-bcde-d3d405f448df)
+- 모델 기반 코드가 내 Github에 푸쉬된다.
+![image](https://github.com/acmexii/demo/assets/35618409/6581f400-adb8-4963-bf03-511d459c5e32)
+- 좌측 메뉴 'IDE'를 누른다음, Cloud IDE 목록에서 'Open GitPod'를 클릭한다.
+
  
 ### Keycloak Server 실행
  
-- keycloak 폴더로 이동하여 컨테이너를 생성하고 및 Keycloak 서버를 실행한다.
+- Cloud IDE 터미널에서 keycloak 폴더로 이동하여 컨테이너를 생성하고 및 Keycloak 서버를 실행한다.
 ```sh
 cd keycloak
 docker-compose up -d

@@ -7,12 +7,22 @@ next: ''
 
 # 단위 마이크로 서비스의 실행 
 
-### 마이크로서비스의 실행
+단위 마이크로 서비스를 실행하기 위하여 스프링부트를 컴파일하고 실행하는 방법을 실습한다. 생성된 애프리케이션은 RESTful 서비스를 제공하고 있어서 해당 서비스를 httpie tool 을 통하여 호출해본다. 디버거를 이용하여 동작 구조를 파악하고, 어그리거트 객체에 속성을 추가하여 데이터베이스 속성을 추가하여 서비스를 확장해본다.
+
+## 이벤트스토밍 모델 준비
+
+- 아래 모델을 새 탭에서 로딩한다.
+[모델 링크 : https://www.msaez.io/#/storming/7b59c53f12e372251cc3c83da8b2fd09](https://www.msaez.io/#/storming/7b59c53f12e372251cc3c83da8b2fd09)
+- 브라우져에 모델이 로딩되지 않으면, 우측 상단의 (사람모양) 아바타 아이콘을 클릭하여 **반드시** 깃헙(Github) 계정으로 로그인 후, 리로드 한다.
+- 아래처럼 렙에 필요한 이벤트스토밍 기본 모델이 출력된다.   
+![image](https://github.com/acmexii/demo/assets/35618409/277a434c-c6fa-49aa-a05e-3a7249865ca4)
+
+## 마이크로서비스의 실행
 
 스프링부트로 생성된 마이크로서비스를 컴파일하고 실행한다.
 
-- CODE > Project IDE 를 선택하여 VS Code Online 을 실행한다.
-- 왼편의 explorer 에서 monolith 폴더를 우클릭 선택한 후 "Open In Integrated Terminal" 을 클릭한다.
+- 메뉴의 CODE > ProjectIDE 를 선택하여, 연결된 브라우져 IDE를 실행한다.
+- 브라우져 IDE 왼편의 explorer 에서 monolith 폴더를 우클릭 선택한 후 "Open In Integrated Terminal" 을 클릭한다.
 - Terminal 이 해당 폴더 이하에서 열리는 것을 확인한다.
 
 ### 생성된 서비스의 기동

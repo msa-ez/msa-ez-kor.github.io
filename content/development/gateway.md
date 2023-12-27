@@ -7,12 +7,22 @@ next: ''
 
 # API Gateway
 
+### 이벤트스토밍 모델 준비
+
+- 아래 모델을 새 탭에서 로딩한다.
+[모델 링크 : https://www.msaez.io/#/storming/lab-shop-gateway](https://www.msaez.io/#/storming/lab-shop-gateway)
+- 브라우져에 모델이 로딩되지 않으면, 우측 상단의 (사람모양) 아바타 아이콘을 클릭하여 **반드시** 깃헙(Github) 계정으로 로그인 후, 리로드 한다.
+- 아래처럼 렙에 필요한 이벤트스토밍 기본 모델이 출력된다.   
+![image](https://github.com/acmexii/demo/assets/35618409/39ccf71e-3977-4093-9bae-7c2a1254d710)
+
+
 ### API Gateway를 사용하여 마이크로 서비스들의 엔드포인트 단일화
 
-- http 클라이언트를 설치하고 kafka를 Local에 컨테이너 기반으로 실행한다.
+- 메뉴의 CODE > ProjectIDE 를 선택하여, 연결된 브라우져 IDE를 로딩한다.
+- 터미널에서 http 클라이언트를 설치하고 kafka를 Local에 컨테이너 기반으로 실행한다.
 ```
 pip install httpie
-cd kafka
+cd infra
 docker-compose up
 ```
 
