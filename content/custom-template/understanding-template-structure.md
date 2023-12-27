@@ -2,9 +2,9 @@
 description: ''
 sidebar: 'started'
 ---
-# 커스텀 템플릿 만들기 - Metadata
+# 템플릿 구조의 이해
 
-### Metadata
+### Metadata 선언
 
 템플릿 파일을 생성할 때, 먼저 metadata를 설정해야합니다. 
 
@@ -134,3 +134,17 @@ priority는 낮은 숫자일수록 생성의 우선순위를 나타내며 동일
     priority: 2
     ---
     => Event.java 우선 생성
+
+9) data 
+
+data는 템플릿에 전달되는 데이터를 지정하는데 사용할 수 있으며 전달된 데이터는 mustache구문을 사용하여 템플릿에서 참조할 수 있습니다.
+
+data는 템플릿 내부에서 사용할 데이터를 제공할 때 주로 사용되며, JSON형식으로 나타낼 수 있습니다.
+
+JSON형식이란 데이터 교환을 위해 사용되는 데이터 형식으로 속성-값 쌍 혹은 배열과 같은 데이터구조로 이루어져 있습니다.
+
+    예) data:
+            title: 'Custom Template'
+        ---
+        {{title}}
+        => 'Custom Template'이 출력됩니다.

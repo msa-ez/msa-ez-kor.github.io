@@ -5,7 +5,7 @@ prev: ''
 next: ''
 ---
 
-# Choreography Saga with Axon Framework
+# Choreography Saga
 
 ## Axon Saga Labs
 

@@ -2,75 +2,15 @@
 description: ''
 sidebar: 'started'
 ---
-# 커스텀 템플릿 만들기
+# Built-in Helper functions
 
-### 범위 밖에서 상위 속성을 추가
-특정 스티커 기준 상위 속성을 추가할 경우 상위 속성으로 이동하겠다는 의미의 '../'를 Mustache 구문에 추가하여 사용합니다.
+#### Helper function 생성하기
 
-예시로 Aggregate를 기준으로 상위 속성인 BoundedContext를 추가할 경우에는 다음과 같이 작성합니다.
-
-```
- {{../boundedContext}}
-```
-
-### 속성을 평가하여 처리 (if, Equals)
-
-
-
-### 반복문 조건문
-
-#### #반복문/조건문
-
-#### each
-
-#### if ~else ~
-Mustache 구문 내부에 조건문 if와 else를 사용하여 조건에 맞는 값을 반환할 수 있습니다.
-```
-{{#if 조건 값}}
-    true일 경우 내용 반환
-{{/if}}
-```
-이 경우 위의 조건 값의 속성이 true인 경우 혹은 function 블록의 method에 선언된 내용이 들어올 경우 해당 method의 return값이 true일 경우, 해당 mustache 구문에 감싸진 코드가 동작합니다.
-
-반대로 결과값이 false일 경우에도 mustache 구문이 동작하게 하고 싶다면 else를 사용할 수 있습니다.
-
-```
-{{#if 조건 값}}
-    true일 경우 내용 반환
-{{else}}
-    false일 경우 내용 반환
-{{/if}}
-```
-#### ^
-
-#### unless
-
-#### Object iteration
-
-### 속성 내 값을 치환
-
-#### jpath
-
-#### 네이밍 컨벤션
-mustache 구문 내부에 변수명을 네이밍 컨벤션으로 넣으면 네이밍 컨벤션에 따른 결과값을 반환할 수 있습니다.
-
-예시) Aggregate 스티커의 이름을 'CustomTemplate'으로 정한 경우
-```
-{{name}} => CustomTemplate
-{{nameCamelCase}} => customTemplate
-{{namePascalCase}} => CustomTemplate
-```
-
-
-### Helper
-
-#### Handlebars 생성
-
-특정 조건에만 해당되는 결과값을 반환하기 위해서는 function에 Handlebars 기능을 이용할 수 있습니다.
+특정 조건에만 해당되는 결과값을 반환하기 위해서는 function블록에 helper를 만들어 이를 해결할 수 있습니다.
 
 먼저 script 블록 하단에 function 블록을 생성 합니다.
 
-이후, 특정 조건에 동작할 Handlebars를 작성합니다. Handlebars는 JavaScript 템플릿 엔진으로 데이터를 템플릿에 동적으로 삽입할 때 사용합니다.
+이후, 특정 조건에 동작할 helper를 작성합니다. Handlebars는 JavaScript 템플릿 엔진으로 데이터를 템플릿에 동적으로 삽입할 때 사용합니다.
 
 ```
 </scirpt>
@@ -110,7 +50,7 @@ window.$HandleBars.registerHelper('checkDateType', function (fieldDescriptors) {
 
 결과값에 "import java.util.Date;"가 반환됩니다.
 
-#### Globar Helper
+#### Built in Helper function
 Globar helper란 Template에서 스티커에 관계없이 공통적으로 사용할 수 있는 handlebars를 의미합니다.
 
 현재 Msa-EZ내에 정의되어있는 Globar helper에 대하여 예시와 사용방법을 설명하겠습니다.
@@ -377,6 +317,3 @@ attached는 특정 스티커를 기준으로 parameter로 받아오는 type과 �
 {{/attached}}
 => name age
 ```
-### Template Editor
-
-### Chat GPT (Generated Template)

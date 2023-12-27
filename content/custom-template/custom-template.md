@@ -2,7 +2,7 @@
 description: ''
 sidebar: 'started'
 ---
-# 커스텀 템플릿 객체별 속성
+# Eventstorming Template Objects
 
 ## 템플릿 객체
 

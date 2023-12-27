@@ -16,103 +16,31 @@ export default [
     component: c1
   },
   {
-    path: "/operations/service-mesh-ab-testing/",
-    component: c1
-  },
-  {
     path: "/tool/on-prem-inst/",
     component: c1
   },
   {
-    path: "/operations/ops-argo-rollout-canary-istio/",
+    path: "/operation/ops-deploy-diagramming-advanced-hpa/",
     component: c1
   },
   {
-    path: "/operations/ops-service-mesh-istio-2/",
+    path: "/operation/ops-deploy-diagramming-advanced-ingress/",
     component: c1
   },
   {
-    path: "/operations/service/",
+    path: "/operation/ops-deploy-diagramming-advanced-istio/",
     component: c1
   },
   {
-    path: "/operations/ops-aws-csi-setting/",
+    path: "/operation/ops-deploy-diagramming-advanced-pvc/",
     component: c1
   },
   {
-    path: "/operations/ops-deploy-my-app/",
-    component: c1
-  },
-  {
-    path: "/operations/ops-persistence-volume-azure/",
-    component: c1
-  },
-  {
-    path: "/operations/ops-persistence-volume-efs/",
-    component: c1
-  },
-  {
-    path: "/operations/ops-persistence-volume-gcp/",
-    component: c1
-  },
-  {
-    path: "/operations/ops-service-mesh-istio/",
+    path: "/operation/ops-deploy-diagramming-basic-objects/",
     component: c1
   },
   {
     path: "/tool/marketplace/",
-    component: c1
-  },
-  {
-    path: "/operations/ops-anatomy-kubernetes/",
-    component: c1
-  },
-  {
-    path: "/operations/ops-aws-setting/",
-    component: c1
-  },
-  {
-    path: "/operations/ops-ingress-virtualhost/",
-    component: c1
-  },
-  {
-    path: "/operations/ops-label-annotation/",
-    component: c1
-  },
-  {
-    path: "/operations/ops-persistence-volume/",
-    component: c1
-  },
-  {
-    path: "/operations/ops-pod-status/",
-    component: c1
-  },
-  {
-    path: "/operations/ops-autoscale/",
-    component: c1
-  },
-  {
-    path: "/operations/ops-configmap/",
-    component: c1
-  },
-  {
-    path: "/operations/ops-ingress/",
-    component: c1
-  },
-  {
-    path: "/operations/ops-kubernetes/",
-    component: c1
-  },
-  {
-    path: "/operations/ops-liveness/",
-    component: c1
-  },
-  {
-    path: "/operations/ops-readiness/",
-    component: c1
-  },
-  {
-    path: "/operations/ops-utility/",
     component: c1
   },
   {
@@ -128,14 +56,6 @@ export default [
     component: c1
   },
   {
-    path: "/operations/microservice-logging/",
-    component: c1
-  },
-  {
-    path: "/operations/microservice-logging2/",
-    component: c1
-  },
-  {
     path: "/templates-language/go-template/",
     component: c1
   },
@@ -144,11 +64,7 @@ export default [
     component: c1
   },
   {
-    path: "/operations/istio-metric-based-hpa/",
-    component: c1
-  },
-  {
-    path: "/operations/k8s-monitoring/",
+    path: "/custom-template/understanding-template-structure/",
     component: c1
   },
   {
@@ -164,27 +80,11 @@ export default [
     component: c1
   },
   {
-    path: "/operations/istio-msa-telemetry/",
-    component: c1
-  },
-  {
-    path: "/operations/istio-resiliency-part1/",
-    component: c1
-  },
-  {
-    path: "/operations/istio-resiliency-part2/",
-    component: c1
-  },
-  {
-    path: "/operations/istio-sre-monitoring/",
-    component: c1
-  },
-  {
     path: "/started/event-storming-learning/",
     component: c1
   },
   {
-    path: "/operations/istio-traffic/",
+    path: "/custom-template/template-syntax/",
     component: c1
   },
   {
@@ -200,10 +100,6 @@ export default [
     component: c1
   },
   {
-    path: "/operations/gitops-argo-cd/",
-    component: c1
-  },
-  {
     path: "/started/domain-driven/",
     component: c1
   },
@@ -213,10 +109,6 @@ export default [
   },
   {
     path: "/example-scenario/online-lecture/",
-    component: c1
-  },
-  {
-    path: "/operations/end-to-end/",
     component: c1
   },
   {
@@ -252,10 +144,6 @@ export default [
     component: c1
   },
   {
-    path: "/operations/apply-security-to-12st-mall/",
-    component: c1
-  },
-  {
     path: "/development/monolith-2-misvc/",
     component: c1
   },
@@ -288,15 +176,7 @@ export default [
     component: c1
   },
   {
-    path: "/operations/azure/",
-    component: c1
-  },
-  {
     path: "/example-scenario/food-delivery/",
-    component: c1
-  },
-  {
-    path: "/custom-template/designing-template-template-code/",
     component: c1
   },
   {
@@ -304,11 +184,11 @@ export default [
     component: c1
   },
   {
-    path: "/custom-template/designing-template-metadata/",
+    path: "/custom-template/designing-template-helper/",
     component: c1
   },
   {
-    path: "/custom-template/designing-template/",
+    path: "/custom-template/creating-custom-template/",
     component: c1
   },
   {

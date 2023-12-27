@@ -33,9 +33,6 @@ module.exports = {
             firstItem: '/started/key-features/',
           },
           {
-            firstTitle: 'Tutorial',
-          },
-          {
             firstTitle: 'Concepts',
             name: [
               {
@@ -50,7 +47,7 @@ module.exports = {
           },
           {
             firstTitle: 'Setup',
-            firstItem: '/tool/setup-on-prem/',
+            firstLink: 'https://github.com/msa-ez/platform'
           },
           {
             firstTitle: 'Quick Start',
@@ -70,15 +67,15 @@ module.exports = {
               },
               {
                 secondTitle:'Utilizing ChatGPT',
-                secondItem:'',
+                secondItem:'/tool/chat-gpt/',
               },
               {
                 secondTitle:'Guide labs',
                 thirdItems:
                 [
                   '/business/',
-                  '/business/ddd-google-drive/',
-                  '/business/eventstorming-fooddelivery/',
+                  // '/business/ddd-google-drive/',
+                  // '/business/eventstorming-fooddelivery/',
                 ]
               },
             ]
@@ -105,30 +102,30 @@ module.exports = {
                 secondTitle:'Guide labs',
                 thirdItems:
                 [
-                  '/development/understanding-jpa-based-single-microservice/',
+                  // '/development/understanding-jpa-based-single-microservice/',
                   '/development/cna-start/',
-                  '/development/monolith-2-misvc/',
-                  '/development/circuit-breaker/',
-                  '/development/kafka-basic/',
-                  '/development/pub-sub/',
-                  '/development/compensation-correlation/',
-                  '/development/pubsub-idempotency/',
-                  '/development/pubsub-deadline/',
-                  '/development/kafka-scaling/',
-                  '/development/kafka-scaling-concurrenty-handling/',
-                  '/development/kafka-retry-dlq/',
-                  '/development/kafka-connect/',
-                  '/development/choreography-saga/',
-                  '/development/orchestration-saga/',
                   '/development/gateway/',
-                  '/development/token-based-auth/',
+                  '/development/monolith-2-misvc/',
+                  // '/development/circuit-breaker/',
+                  // '/development/kafka-basic/',
+                  '/development/pub-sub/',
+                  // '/development/compensation-correlation/',
+                  // '/development/pubsub-idempotency/',
+                  // '/development/pubsub-deadline/',
+                  // '/development/kafka-scaling/',
+                  // '/development/kafka-scaling-concurrenty-handling/',
+                  // '/development/kafka-retry-dlq/',
+                  // '/development/kafka-connect/',
+                  '/development/choreography-saga/',
+                  // '/development/orchestration-saga/',
+                  // '/development/token-based-auth/',
                   '/development/oauth2with-keycloak/',
-                  '/development/dp-frontend/',
-                  '/development/dp-graphql/',
+                  // '/development/dp-frontend/',
+                  // '/development/dp-graphql/',
                   '/development/dp-cqrs/',
-                  '/development/contract-test/',
-                  '/development/conteact-messaging/',
-                  '/development/ops-docker/',
+                  // '/development/contract-test/',
+                  // '/development/conteact-messaging/',
+                  // '/development/ops-docker/',
                 ]
               },
             ]
@@ -141,17 +138,19 @@ module.exports = {
                 secondItem: '/custom-template/tutorial/'
               },
               {
-                secondTitle: 'Custom Template Objects',
+                secondTitle: 'Eventstorming Template Objects',
                 secondItem: '/custom-template/custom-template/'
               },
               {
                 secondTitle: 'Creating Custom Template',
-                thirdItems:
-                [
-                  '/custom-template/designing-template-metadata/',
-                  '/custom-template/designing-template-template-code/',
-                ]
+                secondItem: '/custom-template/creating-custom-template/'
               },
+              {
+                secondTitle: 'How to using Template Editor',
+              },
+              // {
+              //   secondTitle: 'Utilizing ChatGPT',
+              // },
               
             ]
           },
@@ -172,13 +171,14 @@ module.exports = {
             firstTitle: 'Infra(K8s) Modeling',
             name:[
               {
-                secondTitle: 'K8s Deployment Design',
-                secondItem: '/tool/infrastructure-modeling/'
-              },
-              {
                 secondTitle: 'Guide labs',
                 thirdItems:
                 [
+                  '/operation/ops-deploy-diagramming-basic-objects/',
+                  '/operation/ops-deploy-diagramming-advanced-ingress/',
+                  '/operation/ops-deploy-diagramming-advanced-hpa/',
+                  '/operation/ops-deploy-diagramming-advanced-pvc/',
+                  '/operation/ops-deploy-diagramming-advanced-istio/',
                 ]
               }
             ]
@@ -209,26 +209,20 @@ module.exports = {
           {
             firstTitle: 'Support',
             name:[
-              {
-                secondTitle: 'FAQ',
-                thirdItems:
-                [
+              // {
+              //   secondTitle: 'FAQ',
+              //   thirdItems:
+              //   [
                  
-                ]
-              },
+              //   ]
+              // },
               {
                 secondTitle: 'Q&A',
-                thirdItems:
-                [
-                 
-                ]
+                secondLink:'https://github.com/msa-ez/platform/issues',
               },
               {
                 secondTitle: 'Contact',
                 secondItem: '/contact/question/',
-                thirdItems:
-                [
-                ]
               }
               
             ]

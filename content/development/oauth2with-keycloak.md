@@ -5,7 +5,7 @@ prev: ''
 next: ''
 ---
 
-# JWT Token 기반 인증 인가 - Advanced
+# JWT Token 기반 인증 인가
 
 ## JWT기반 인증 w/ Keycloak
 

@@ -8,38 +8,54 @@
       v-for="(section, index) in sidebar.sections"
       :key="section.title"
     >
-      <h3 v-if="section.firstTitle && !section.firstItem">
+      <h3 v-if="section.firstTitle && !section.firstItem && !section.firstLink">
         {{ section.firstTitle }}
       </h3>
       <g-link
-        v-if="section.firstTitle && section.firstItem"
+        v-if="section.firstTitle && section.firstItem && !section.firstLink"
         :to="`${section.firstItem}`"
-        class="flex items-center py-1 font-semibold"
+        class="flex items-center py-1"
       >
-        <h3>
+        <h3 style="margin-bottom: 0px;">
           {{ section.firstTitle }}
         </h3>
       </g-link>
-      <ul class="max-w-full pl-2 mb-0">
-        <li
+      <g-link
+        v-if="section.firstTitle && !section.firstItem && section.firstLink"
+        :to="`${section.firstLink}`"
+        class="flex items-center py-1"
+      >
+        <h3 style="margin-bottom: 0px;">
+          {{ section.firstTitle }}
+        </h3>
+      </g-link>
+        <div
           v-for="secondSection in section.name"
           :key="secondSection.secondTitle"
-          style="margin-top: 5px;"
+          style="margin-top: -10px;"
         >
-          <h4 style="margin-left: 10px;" v-if="secondSection.secondTitle && !secondSection.secondItem">
+          <h4 style="margin-left: 10px;" v-if="secondSection.secondTitle && !secondSection.secondItem && !secondSection.secondLink">
             {{ secondSection.secondTitle }}
           </h4>
           <g-link
             v-if="secondSection.secondTitle && secondSection.secondItem"
             :to="`${secondSection.secondItem}`"
-            class="flex items-center py-1 font-semibold"
+            class="flex items-center py-1"
           >
             <h4 style="margin-left: 10px; margin-bottom: 0px;">
               {{ secondSection.secondTitle }}
             </h4>
           </g-link>
-          <ul class="max-w-full pl-2 mb-0">
-            
+          <g-link
+            v-if="secondSection.secondTitle && !secondSection.secondItem && secondSection.secondLink"
+            :to="`${secondSection.secondLink}`"
+            class="flex items-center py-1"
+          >
+            <h4 style="margin-left: 10px; margin-bottom: 0px;">
+              {{ secondSection.secondTitle }}
+            </h4>
+          </g-link>
+          <ul class="max-w-full pl-2 mb-0" style="margin-top: 5px;">
             <li
               v-for="page in findPages(secondSection.thirdItems)"
               :id="page.path"
@@ -58,15 +74,14 @@
                     'opacity-100 scale-100': currentPage.path === page.path
                   }"
                 ></span>
-                <span style="margin-top: 5px;" class="triangle"></span>
-                <h6 style="margin-top: 5px;" v-if="page.title">
+                <span style="margin-top: -5px; margin-bottom: 7px;"  class="triangle"></span>
+                <h6 style="margin-top: -5px; margin-bottom: 7px;"  v-if="page.title">
                   {{ page.title }}
                 </h6>
               </g-link>
             </li>
           </ul>
-        </li>
-      </ul>
+        </div>
     </div>
   </div>
 </template>
@@ -79,9 +94,11 @@ query Sidebar {
         name
         sections {
           firstTitle
+          firstLink
           firstItem
           name {
             secondTitle
+            secondLink
             secondItem
             thirdItems
           }
@@ -134,11 +151,14 @@ export default {
   .triangle {
     width: 0;
     height: 0;
+    margin-left: 5px; 
     margin-right: 7px;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-top: 8px solid white; /* 조절 가능한 높이와 색상 */
-    transform: rotate(270deg); /* 90도 회전 */
-    margin-left: 5px; /* 조절 가능한 여백 */
+    border-top: 8px solid white; 
+    transform: rotate(270deg); 
+  }
+  h3, h4 {
+    font-weight: normal;
   }
 </style>
