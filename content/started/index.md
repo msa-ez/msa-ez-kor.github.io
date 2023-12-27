@@ -4,7 +4,7 @@ sidebar: 'started'
 ---
 ## 소개
 
-![](../../src/img/started/simage1.jpeg)
+![](../../src/img/started/simage.png)
 
 MSAEZ는 마이크로서비스 구축에서 운영에 필요한 분석, 설계, 구현 및 모니터링을 지원하는 도구로, 이벤트스토밍 기반 협업을 통해 도메인을 분석/설계하고, 설계된 도메인 모델에서 MSA 소스코드를 자동으로 생성해 줍니다.
 

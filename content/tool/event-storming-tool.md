@@ -271,7 +271,7 @@ GitPod에 접근하면 위와 같은 시작 페이지가 나오고, Continue 버
 
 별도의 설치 없이 웹 브라우저 기반으로 로컬 IDE를 운용할 수 있는 GitPod Cloud IDE에 이벤트스토밍을 통해 생성된 코드가 잘 넘어온 것을 확인할 수 있습니다.
 
-<h4>선행사항</h4>
+<!-- <h4>선행사항</h4>
 
   - maven 설치
   - local kafka 실행 – localhost:9092
@@ -386,4 +386,4 @@ options :
     ## location/name of GKE cluster (used by all kubectl commands)  
     - CLOUDSDK_COMPUTE_ZONE=asia-northeast1-a  
     - CLOUDSDK_CONTAINER_CLUSTER=standard-cluster-1
-```
+``` -->

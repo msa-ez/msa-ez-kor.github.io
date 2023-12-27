@@ -6,7 +6,7 @@ sidebar: 'started'
 # ChatGPT 기반 모델 생성
 ## Open AI 기술을 활용한 비즈니스 설계 모델 생성
 
-![](../../src/img/gpt11.png)
+![](../../src/img/gpt0.png)
 
 비즈니스 설계 과정의 필수 스텝인 고객 여정맵과 비즈니스 모델 캔버스, 기존 MSAEZ의 핵심 기능인 이벤트스토밍 모델 생성을 ChatGPT를 연동해 자동으로 생성함으로써 설계 과정의 시간을 절약하고 보다 효율적인 비즈니스 경험을 제공합니다.
 
@@ -45,14 +45,14 @@ sidebar: 'started'
 
 ### 이벤트스토밍 모델 선택
 
-![](../../src/img/gpt8.png)
+![](../../src/img/gptgif1.gif)
 
 5-1. 이벤트스토밍 모델을 선택하면 입력한 서비스에 대한 유저스토리가 생성된다. 
 
-![](../../src/img/gpt9.png)
+![](../../src/img/gptgif2.gif)
 
 5-2. CREATE MODEL 버튼을 클릭하면 해당 비즈니스를 구성하는 도메인 이벤트를 ChatGPT가 자동으로 생성한다.
 
-![](../../src/img/gpt10.png)
+![](../../src/img/gptgif3.gif)
 
 5-3. Generate Aggregate 버튼을 클릭하면 앞서 생성된 도메인 이벤트를 기반으로 전체 이벤트스토밍 모델이 생성된다.
