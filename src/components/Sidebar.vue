@@ -8,7 +8,7 @@
       v-for="(section, index) in sidebar.sections"
       :key="section.title"
     >
-      <h3 v-if="section.firstTitle && !section.firstItem && !section.firstLink">
+      <h3 style="margin-top: 3px;" v-if="section.firstTitle && !section.firstItem && !section.firstLink">
         {{ section.firstTitle }}
       </h3>
       <g-link
@@ -34,7 +34,7 @@
           :key="secondSection.secondTitle"
           style="margin-top: -10px;"
         >
-          <h4 style="margin-left: 10px;" v-if="secondSection.secondTitle && !secondSection.secondItem && !secondSection.secondLink">
+          <h4 style="margin-left: 10px; margin-top: 10px;" v-if="secondSection.secondTitle && !secondSection.secondItem && !secondSection.secondLink">
             {{ secondSection.secondTitle }}
           </h4>
           <g-link
@@ -74,8 +74,8 @@
                     'opacity-100 scale-100': currentPage.path === page.path
                   }"
                 ></span>
-                <span style="margin-top: -5px; margin-bottom: 7px;"  class="triangle"></span>
-                <h6 style="margin-top: -5px; margin-bottom: 7px;"  v-if="page.title">
+                <span style="margin-top: 0px; margin-bottom: 7px;"  class="triangle"></span>
+                <h6 style="margin-top: 0px; margin-bottom: 7px;"  v-if="page.title">
                   {{ page.title }}
                 </h6>
               </g-link>
