@@ -143,7 +143,11 @@ module.exports = {
               },
               {
                 secondTitle: 'Creating Custom Template',
-                secondItem: '/custom-template/creating-custom-template/'
+                thirdItems:
+                [
+                  '/custom-template/creating-custom-template-1/',
+                  // '/custom-template/creating-custom-template-2/'
+                ]
               },
               {
                 secondTitle: 'How to using Template Editor',

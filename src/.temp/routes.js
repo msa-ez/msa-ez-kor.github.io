@@ -184,11 +184,15 @@ export default [
     component: c1
   },
   {
-    path: "/custom-template/designing-template-helper/",
+    path: "/custom-template/creating-custom-template-1/",
     component: c1
   },
   {
-    path: "/custom-template/creating-custom-template/",
+    path: "/custom-template/creating-custom-template-2/",
+    component: c1
+  },
+  {
+    path: "/custom-template/designing-template-helper/",
     component: c1
   },
   {
