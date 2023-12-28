@@ -4,33 +4,17 @@ sidebar: 'started'
 ---
 # Helper
 
-## 1. Helper
-
-### 1.1 Helper 정의
+### 1.1 Helper 란?
 
 이번에는 helper를 통해 template에서 결과값을 반환하는 방법에 대해 설명하겠습니다.
 
-helper란 특정 조건을 구성하는 로직을 통해 필요한 결과값을 반환하는 template 문법을 의미합니다.
+helper란 특정 조건을 구성하는 로직을 통해 필요한 결과값을 반환하는 미리 정의된 일종의 function을 의미하며 'helper function'이라고도 불립니다.
 
 
-### 1.2 Helper를 활용한 어노테이션 정의
-Template
-```
-public class {{namePascalCase}} {
-
-    {{#aggregateRoot.fieldDescriptors}}
-        {{^isVO}}
-        {{#isKey}}
-        @Id
-        {{/isKey}}
-        {{/isVO}}
-        private {{className}} {{nameCamelCase}};
-    {{/aggregateRoot.fieldDescriptors}}
-}
-```
+### 1.2 Helper를 활용한 데이터 필터링
 이전단계에서 Company.java의 각 필드중 iskey가 true인 id 필드에 @Id를 생성하는 방법에 대해 설명하였습니다.
 
-이번에는 Helper를 통해 어노테이션을 설정하는 방법에 대해 설명하겠습니다.
+이번에는 Helper를 통해 데이터(어노테이션)를 설정하는 방법에 대해 설명하겠습니다.
 
 먼저 Helper는 {{#HelperName 인자값}}{{/HelperName}}의 형태로 사용되고 있습니다. 
 
@@ -70,22 +54,19 @@ public class Company {
 
 각각의 필드중 className이 'Long'을 가지고 있더라도 조건에 의해 id필드에만 'checkClassType' helper가 적용되며, 조건에 성립하여 Long타입의 id필드 위에 결과값이 반환된 것을 확인할 수 있습니다.
 
-## 2. Global Helper
+## 2. Global Helper 란?
 
-Helper는 각 템플릿 파일에 내장되어 원하는 결과값을 출력할 때 사용합니다.
-
-Global Helper는 Helper처럼 각 템플릿 파일에 내장되어있는 것이 아닌, MSAEZ에 내장되어 있으며,
-
-템플릿 파일에 관계없이 공통적으로 사용가능합니다.
-
-현재 MSAEZ에 존재하는 Global Helper를 예시를 통해 설명드리겠습니다.
+Global Helper란 MSAEZ가 사전 정의하여 내장하고 있는 helper function으로 템플릿 전역에서 사용가능합니다.
 
 ### 2.1 ifNotNull
+'ifNotNull'은  displayName을 출력해야할 때 사용합니다.
+
+스티커의 displayName을 설정한 경우 아래와 같이 사용할 수 있습니다.
+
 ![](https://github.com/msa-ez/platform/assets/123912988/9a6ee441-4177-4d1e-ac04-8e8ab1f0ae53)
 
 현재 Company Aggregate스티커에는 name과 displayName이 존재하고 있습니다.
 
-상황에 따라 displayName이 출력되어야할 때, ifNotNull을 사용할 수 있습니다.
 
 Template
 ```
@@ -105,11 +86,11 @@ ifNotNull의 인자값으로 displayName과 name을 보내 displayName의 존재
 
 ### 2.2 checkVO
 
+'checkVO'는 VO의 존재여부를 파악하여 VO에 한해서만 특정 결과값을 반환할 때 사용합니다.
+
 ![](https://github.com/msa-ez/platform/assets/123912988/1cb0079c-1bd3-43c3-8967-a597b2f7d22d)
 
 User Aggregate의 필드에 VO Address가 존재하고 있습니다.
-
-VO는 ValueObject의 약자로, 값 객체를 의미하며 불변하지 않는다는 특징이 있습니다.
 
 필드를 정의할 때 VO만 한정해서 코드를 생성할 때 checkVO 사용할 수 있습니다.
 

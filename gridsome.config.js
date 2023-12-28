@@ -25,127 +25,33 @@ module.exports = {
         name: 'started',
         sections: [
           {
-            firstTitle: 'Getting Started',
+            firstTitle: '소개',
             firstItem: '/started/',
           },
           {
-            firstTitle: 'Key features',
-            firstItem: '/started/key-features/',
-          },
-          {
-            firstTitle: 'Concepts',
-            name: [
-              {
-                secondTitle:'Domain Driven Design',
-                secondItem:'/started/domain-driven/',
-              },
-              {
-                secondTitle:'Eventstorming',
-                secondItem:'/started/event-storming-learning/',
-              },
-            ]
-          },
-          {
-            firstTitle: 'Setup',
-            firstLink: 'https://github.com/msa-ez/platform'
-          },
-          {
-            firstTitle: 'Quick Start',
+            firstTitle: '빠른 시작',
             firstItem: '/tool/google-drive-examples/',
           },
           {
-            firstTitle: 'Biz Modeling',
-            name:[
-              {
-                secondTitle:'Eventstorming',
-                secondItem:'/tool/event-storming-tool/',
-              },
-              {
-                secondTitle:'Utilizing ChatGPT',
-                secondItem:'/tool/chat-gpt/',
-              },
-              {
-                secondTitle:'Guide labs',
-                thirdItems:
-                [
-                  '/business/',
-                  // '/business/ddd-google-drive/',
-                  // '/business/eventstorming-fooddelivery/',
-                ]
-              },
-            ]
+            firstTitle: '비즈니스 모델링',
+            firstItem: '/business/',
           },
           {
-            firstTitle: 'Code Implementation',
-            name:[
-              {
-                secondTitle:'Model Driven Development',
-                secondItem:'',
-              },
-              {
-                secondTitle:'Marketplace',
-                thirdItems:
-                [
-                  '/tool/marketplace/',
-                ]
-              },
-              {
-                secondTitle:'Utilizing ChatGPT',
-                secondItem:'',
-              },
-              {
-                secondTitle:'Guide labs',
-                thirdItems:
-                [
-                  // '/development/understanding-jpa-based-single-microservice/',
-                  '/development/cna-start/',
-                  '/development/gateway/',
-                  '/development/monolith-2-misvc/',
-                  // '/development/circuit-breaker/',
-                  // '/development/kafka-basic/',
-                  '/development/pub-sub/',
-                  // '/development/compensation-correlation/',
-                  // '/development/pubsub-idempotency/',
-                  // '/development/pubsub-deadline/',
-                  // '/development/kafka-scaling/',
-                  // '/development/kafka-scaling-concurrenty-handling/',
-                  // '/development/kafka-retry-dlq/',
-                  // '/development/kafka-connect/',
-                  '/development/choreography-saga/',
-                  // '/development/orchestration-saga/',
-                  // '/development/token-based-auth/',
-                  '/development/oauth2with-keycloak/',
-                  // '/development/dp-frontend/',
-                  // '/development/dp-graphql/',
-                  '/development/dp-cqrs/',
-                  // '/development/contract-test/',
-                  // '/development/conteact-messaging/',
-                  // '/development/ops-docker/',
-                ]
-              },
-            ]
+            firstTitle: '코드 생성',
+            firstItem:'/tool/model-driven/',
           },
           {
-            firstTitle: 'Infra(K8s) Modeling',
-            name:[
-              {
-                secondTitle: 'Guide labs',
-                thirdItems:
-                [
-                  '/operation/ops-deploy-diagramming-basic-objects/',
-                  '/operation/ops-deploy-diagramming-advanced-ingress/',
-                  '/operation/ops-deploy-diagramming-advanced-hpa/',
-                  '/operation/ops-deploy-diagramming-advanced-pvc/',
-                  '/operation/ops-deploy-diagramming-advanced-istio/',
-                ]
-              }
-            ]
+            firstTitle: '인프라 모델링',
           },
           {
-            firstTitle: 'Custom template',
+            firstTitle: '마켓플레이스',
+            firstItem: '/tool/marketplace/'
+          },
+          {
+            firstTitle: '커스텀 템플릿',
             name:[
               {
-                secondTitle: 'Creating Custom Template',
+                secondTitle: '커스텀 템플릿 생성',
                 thirdItems:
                 [
                   '/custom-template/template-structure/',
@@ -155,54 +61,95 @@ module.exports = {
                 ]
               },
               {
-                secondTitle: 'Eventstorming Template Objects',
-                secondItem: '/custom-template/custom-template/'
+                secondTitle: 'Template Editor 사용법',
               },
-              {
-                secondTitle: 'How to use Template Editor',
-              },
-              // {
-              //   secondTitle: 'Utilizing ChatGPT',
-              // },
-              
             ]
           },
           {
-            firstTitle: 'Test Design',
+            firstTitle: '테스트',
             name:[
               {
-                secondTitle: 'Uint Test',
+                secondTitle: 'Unit 테스트',
                 secondItem: '/custom-template/unit-test/'
               },
               {
-                secondTitle: 'API/Service	Test',
+                secondTitle: 'API 서비스 테스트',
                 secondItem: '/custom-template/mock-server/'
               }
             ]
           },
+
           {
-            firstTitle: 'Case Studies',
+            firstTitle: '예제 시나리오',
             name:[
               {
-                secondTitle: 'Example Scenario',
-                thirdItems:
-                [
-                  '/example-scenario/accommodation-reservation/',
-                  '/example-scenario/food-delivery/',
-                  '/example-scenario/library-system/',
-                  '/example-scenario/animal-hospital/',
-                  '/example-scenario/online-lecture/',
-                ]
+                secondTitle: '숙소 예약',
+                secondItem: '/example-scenario/accommodation-reservation/'
               },
-              // {
-              //   secondTitle: 'Customers',
-              //   thirdItems:
-              //   [
-                 
-              //   ]
-              // }
+              {
+                secondTitle: '음식 배달',
+                secondItem: '/example-scenario/food-delivery/'
+              },
+              {
+                secondTitle: '도서관 시스템',
+                secondItem: '/example-scenario/library-system/'
+              },
+              {
+                secondTitle: '동물병원 진료 시스템',
+                secondItem: '/example-scenario/animal-hospital/'
+              },
+              {
+                secondTitle: '인터넷 강의수강 시스템',
+                secondItem: '/example-scenario/online-lecture/'
+              },
             ]
           },
+          // {
+          //   firstTitle: 'Guide labs',
+          //   name:[
+          //     {
+          //       secondTitle: 'Dev',
+          //       thirdItems:
+          //       [
+          //         // '/development/understanding-jpa-based-single-microservice/',
+          //         '/development/cna-start/',
+          //         '/development/gateway/',
+          //         '/development/monolith-2-misvc/',
+          //         // '/development/circuit-breaker/',
+          //         // '/development/kafka-basic/',
+          //         '/development/pub-sub/',
+          //         // '/development/compensation-correlation/',
+          //         // '/development/pubsub-idempotency/',
+          //         // '/development/pubsub-deadline/',
+          //         // '/development/kafka-scaling/',
+          //         // '/development/kafka-scaling-concurrenty-handling/',
+          //         // '/development/kafka-retry-dlq/',
+          //         // '/development/kafka-connect/',
+          //         '/development/choreography-saga/',
+          //         // '/development/orchestration-saga/',
+          //         // '/development/token-based-auth/',
+          //         '/development/oauth2with-keycloak/',
+          //         // '/development/dp-frontend/',
+          //         // '/development/dp-graphql/',
+          //         '/development/dp-cqrs/',
+          //         // '/development/contract-test/',
+          //         // '/development/conteact-messaging/',
+          //         // '/development/ops-docker/',
+          //       ]
+          //     },
+          //     {
+          //       secondTitle: 'Ops',
+          //       thirdItems:
+          //       [
+          //         '/operation/ops-deploy-diagramming-basic-objects/',
+          //         '/operation/ops-deploy-diagramming-advanced-ingress/',
+          //         '/operation/ops-deploy-diagramming-advanced-hpa/',
+          //         '/operation/ops-deploy-diagramming-advanced-pvc/',
+          //         '/operation/ops-deploy-diagramming-advanced-istio/',
+          //       ]
+          //     },
+          //   ]
+          // },
           {
             firstTitle: 'Support',
             name:[

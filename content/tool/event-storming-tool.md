@@ -4,6 +4,63 @@ sidebar: 'started'
 ---
 # 이벤트스토밍
 
+아래 문서에서 자세한 이벤트스토밍 수행 예제를 확인해보실 수 있습니다.
+
+[기본 예제](https://intro-kor.msaez.io/tool/event-storming-tool/) 
+
+[심화 예제](https://intro-kor.msaez.io/tool/google-drive-examples/)
+
+#### UI 레이아웃
+
+![](../../src/img/features/fimage1.png)
+
+|  | 이름                | 기능 설명                                                              |
+|------|---------------------|----------------------------------------------------------------------- |
+| 1    &nbsp;| Sticker Palette     | EventStorming을 위한 Sticky note를 선택할 수 있는 Palette        |
+| 2    &nbsp;| Zoom Panel          | 캔버스에 작성된 화면을 확대, 축소, undo, redo 하는 기능                         |
+| 3    &nbsp;| Project Name        | 프로젝트 명 입력 (Java의 경우 Package명)                         |
+| 4    &nbsp;| Menu Panel             | 모델링 결과물을 다루는 다양한 옵션을 선택할 수 있는 도구들                            |
+| 5    &nbsp;| Eventstorming Canvas     | Sticky note를 활용해 모델링하는 공간        |
+
+#### 메뉴별 상세
+
+1. Sticker Palette
+
+![](../../src/img/features/fimage2.png)
+
+|  | 이름                | 기능 설명                                                              |
+|------|---------------------|----------------------------------------------------------------------- |
+| 1    &nbsp;| Draggable Screen     | 캔버스를 드래그할 수 있도록 하는 on/off 기능 |
+| 2    &nbsp;| Auto Guidance          | 모델링 시 자동 정렬 기능을 on/off 하는 기능 |
+| 3    &nbsp;| Event        | 발생한 사실과 결과, 즉 Domain Event를 정의하는 스티커 |
+| 4    &nbsp;| Command             | 의사결정 및 API를 의미하는 Command를 정의하는 스티커 |
+| 5    &nbsp;| Policy     | 이벤트에 대한 반응으로 Policy를 정의하는 스티커 |
+| 6    &nbsp;| Aggregate     | 구현체와 데이터의 집합체인 Aggregate를 정의하는 스티커 |
+| 7    &nbsp;| External          | 외부 시스템 호출 정보를 정의하는 스티커 |
+| 8    &nbsp;| ReadModel        | 유저 참고용 데이터인 ReadModel을 정의하는 스티커 |
+| 9    &nbsp;| Issues             | 작성된 모델에 대한 수정 및 요청사항을 작성하는 스티커 |
+| 10    &nbsp;| UI     | UI 정보를 정의하는 스티커 |
+| 11   &nbsp;| BoundedContext     | 각 마이크로서비스의 단위를 구분하는 틀 |
+| 12    &nbsp;| PBC          | 서버에 저장된 기존의 모델을 불러와 사용할 수 있는 기능 |
+| 13    &nbsp;| Actor        | 본 서비스의 사용자, 페르소나, 스테이크홀더 |
+| 14    &nbsp;| Line             |  |
+| 15    &nbsp;| Text     |  |
+
+2. Menu Panel
+
+![](../../src/img/features/fimage3.png)
+
+|  | 이름                | 기능 설명                                                              |
+|------|---------------------|----------------------------------------------------------------------- |
+| 1    &nbsp;| Deploy | 모델링 결과를 쿠버네티스 배포 모델로 전환 |
+| 2    &nbsp;| Versions | 모델의 버전 정보를 조회하고 Replay 기능 사용 가능 |
+| 3    &nbsp;| Save | 모델링 결과를 서버에 저장하거나 로컬 json 파일, 파워포인트 문서로 저장 |
+| 4    &nbsp;| Share | 모델링 결과를 다른 사용자와 공유 |
+| 5    &nbsp;| View | 모델링 UI를 헥사고날 혹은 BPMN으로 변경하여 조회 |
+| 6    &nbsp;| Code | 모델을 기반으로 생성된 소스코드를 Git에 커밋하거나 로컬 파일로 다운로드 |
+
+---
+
 <h2>MSAEZ로 마이크로서비스 개발하기</h2>
 
 ## 서비스 접속
@@ -211,65 +268,6 @@ Code Preview를 선택하면 EventStorming 모델을 기반으로 생성된 소�
 | 5    &nbsp;| Search | 파일명 검색 기능 활성화 |
 | 6    &nbsp;| Diff Mode | 사용자가 원본 코드를 수정하면 수정본의 변경사항을 표시 |
 | 7    &nbsp;| Explain Project | 프로젝트에 대한 설명 제시 |
-
-## 빌드
-
-### ·	파일 구조 설명
-
-  - Bounded Context 에 설정한 이름별(Order, Delivery)로 프로젝트가 생성되고, 아래와 같은 구조를 가집니다.
-
-  - ![](../../src/img/image44.png)
-
-  - gateway 는 기본 제공되는 템플릿으로 spring-cloud-gateway를 설정하는 방법을 나타내고 있습니다.
-    정상적으로 사용시에는 gateway/src/main/resource 의 application.yaml
-    파일에서 routes 부분을 수정하여 사용하여야 합니다.
-
-  - 파일 구조는 아래와 같이 스티커별로 기본 템플릿에 의하여 생성됩니다. spring-boot 기반의 프로젝트 이며, maven 으로 리소스 관리를 합니다. 파일 생성 위치나, 파일 안의 기본 내용을 생성시마다 변경을 하려면 다음 장의 커스텀 템플릿을 활용하면 됩니다.
-
-![](../../src/img/image45.png)
-
-  - application.yaml
-    
-      - spring-boot 의 설정 파일이며, local 환경 변수와 Docker용 환경변수를 profile 설정으로
-        분리했습니다.
-    
-      - 이벤트 기반이기 때문에 메시지 처리를 위하여 spring-cloud-stream 라이브러리를 사용합니다. 그 중에서
-        브로커를 kafka 를 사용하여 설정되어 있습니다.
-
-  - Dockerfile
-    
-      - Docker image 를 생성할 때 필요한 파일입니다.
-    
-      - Docker 로 build 시 "--spring.profiles.active=docker" 로 설정되어 있어서
-        application.yaml 파일에서 설정한 프로파일을 읽게 됩니다.
-
-### ·	GitPod Cloud IDE 연동
-
-![](../../src/img/image46.png)
-
-Code Preview의 Menu Panel에서 Push to Git 버튼을 클릭하면 나오는 다이얼로그의 Create 버튼을 클릭해 본인 GitHub 계정에 New Repository를 생성합니다.
-
-![](../../src/img/image47.png)
-
-![](../../src/img/image48.png)
-
-Repository 생성이 완료되면 초록색 success 알림창이 뜨고, Repo 주소 옆에 있는 버튼을 클릭하면 해당 레포지토리로 이동해 프로젝트가 생성된 것을 확인할 수 있습니다.
-
-![](../../src/img/image49.png)
-
-<p align="center">생성된 Git Repository 화면</p>
-
-![](../../src/img/image52.png)
-
-Repository 생성 완료가 확인되면 IDE 탭으로 이동해 Open GitPod 버튼을 클릭해 GitPod Cloud IDE를 실행시킵니다.
-
-![](../../src/img/image51.png)
-
-GitPod에 접근하면 위와 같은 시작 페이지가 나오고, Continue 버튼을 클릭해 작업을 이어가줍니다.
-
-![](../../src/img/image50.png)
-
-별도의 설치 없이 웹 브라우저 기반으로 로컬 IDE를 운용할 수 있는 GitPod Cloud IDE에 이벤트스토밍을 통해 생성된 코드가 잘 넘어온 것을 확인할 수 있습니다.
 
 <!-- <h4>선행사항</h4>
 
