@@ -55,49 +55,6 @@ Globar helper란 Template에서 스티커에 관계없이 공통적으로 사용
 
 현재 Msa-EZ내에 정의되어있는 Globar helper에 대하여 예시와 사용방법을 설명하겠습니다.
 
-1) ifNotNull
-```
-window.$HandleBars.registerHelper('ifNotNull', function (displayName, name) {
-    if(displayName){
-        return displayName;
-    }else{
-        return name;
-    }
-})
-```
-ifNotNull은 스티커의 name과 displayName을 구분하여 결과값을 반환합니다.
-
-예시) aggregates에 User와 UserInfo가 존재하고 User의 경우 displayName이 사용자로 설정되어있지만 UserInfo의 경우 displayName이 존재하지 않는 경우
-```
-{{#aggregates}}
-    {
-        "{{#ifNotNull displayName namePascalCase}}{{/ifNotNull}}",
-    },
-{{/aggregates}}
-
-=> 사용자 UserInfo
-```
-
-2) checkVo
-```
-window.$HandleBars.registerHelper('checkVO', function (className, options) {
-    if(className.endsWith("Address") || className.endsWith("Photo") || className.endsWith("User") || className.endsWith("Email") 
-            || className.endsWith("Payment") || className.endsWith("Money") || className.endsWith("Weather") || className.endsWith("Rating") 
-            || className.endsWith("Likes")|| className.endsWith("Tags")|| className.endsWith("Comment") ){
-        return options.fn(this);
-    }
-})
-```
-checkVo는 parameter로 받아온 className의 문자열이 Vo로 지정된 문자열과 일치하는경우 해당 블록을 실행합니다.
-
-예시) className이 Address인 경우
-```
-{{#checkVO className}}
-    <{{className}} offline label="{{namePascalCase}}" v-model="value.{{nameCamelCase}}" :editMode="editMode" @change="change"/>
-{{/checkVO}}
-
-=> <Address offline label="Address" v-model="value.address" :editMode="editMode" @change="change"/>
-```
 
 2) checkEntityMember
 ```
@@ -136,29 +93,6 @@ url은 parameter로 받아온 str의 값을 판별합니다. str의 값이 존�
 {{#url name}}
 {{/url}}
 => custom-template
-```
-
-4)camelCase, pascalCase
-```
-window.$HandleBars.registerHelper("camelCase", function(str){
-    return str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
-});
-
-window.$HandleBars.registerHelper("pascalCase", function(str){
-    return (str.match(/[a-zA-Z0-9]+/g) || []).map(w => `${w.charAt(0).toUpperCase()}${w.slice(1)}`).join('');
-});
-```
-camelCase와 pascalCase의 경우 parameter로 받은 문자열을 정규표현식에 맞게 조합하여 각 네이밍컨변션에 맞게 결과값을 반환합니다.
-
-예시) name이 CustomTemplate인 경우
-```
-{{#camelCase name}}
-{{/camelCase}}
-=> customTemplate
-
-{{#pascalCase name}}
-{{/pascalCase}}
-=> CustomTemplate
 ```
 
 5) ifEquals

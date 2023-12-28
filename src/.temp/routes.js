@@ -84,6 +84,10 @@ export default [
     component: c1
   },
   {
+    path: "/custom-template/template-structure/",
+    component: c1
+  },
+  {
     path: "/custom-template/template-syntax/",
     component: c1
   },
@@ -180,15 +184,19 @@ export default [
     component: c1
   },
   {
+    path: "/custom-template/helper/",
+    component: c1
+  },
+  {
+    path: "/custom-template/for-loop/",
+    component: c1
+  },
+  {
     path: "/development/gateway/",
     component: c1
   },
   {
     path: "/custom-template/creating-custom-template-1/",
-    component: c1
-  },
-  {
-    path: "/custom-template/creating-custom-template-2/",
     component: c1
   },
   {
@@ -213,6 +221,10 @@ export default [
   },
   {
     path: "/business/eventstorming-fooddelivery/",
+    component: c1
+  },
+  {
+    path: "/custom-template/conditional-statement/",
     component: c1
   },
   {

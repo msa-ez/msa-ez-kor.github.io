@@ -2,9 +2,8 @@
 description: ''
 sidebar: 'started'
 ---
-# 커스텀 템플릿 생성 이해하기
-
-spring-boot의 AggregateRoot.java를 예시로 Company.java 템플릿 파일을 생성하는 과정에 대해 설명드리겠습니다.
+# 커스텀 템플릿 생성
+커스텀 템플릿은 원하는 템플릿을 제공된 기본 템플릿에 추가하여 이벤트스토밍 모델의 결과에 따라 원하는 템플릿으로 코드를 생성합니다.
 
 ##  Step 1. 템플릿 구조 정의하기
 
@@ -41,11 +40,11 @@ metadata의 옵션 설정들이 완료되면 하단에 작성할 템플릿코드
 
 ##  Step 2. 패키지 및 임포트 생성하기
 
-### 2.1 내부 데이터 접근을 활용한 패키지 설정
+### 2.1 데이터 접근을 활용한 패키지 설정
 
 일반적으로 기준이 되는 스티커의 데이터에 접근할 때는 {{데이터}}의 형식으로 접근 가능합니다.
 
-하지만 특정 데이터의 내부에 있는 데이터를 접근할 때는 '.'을 이용하며, {{데이터.내부데이터}}로 작성할 수 있습니다.
+하지만 특정 데이터의 내부에 있는 데이터 속성에 접근할 때는 '.'을 이용하며, {{데이터.내부속성}}로 작성할 수 있습니다.
 
 Template
 ```
@@ -55,9 +54,9 @@ Template Result
 ```
 package customtemplate.domain;
 ```
-예시에서는 Aggregate의 데이터중 options의 내부데이터 package에 접근하기 위해 options.package를 이용하여 결과값을 반환하였습니다.
+예시에서는 Aggregate의 데이터중 options의 내부 데이터 속성 package에 접근하기 위해 options.package를 이용하여 결과값을 반환하였습니다.
 
-### 2.2 외부 데이터 접근을 활용한 임포트 설정
+### 2.2 데이터 접근을 활용한 임포트 설정
 
 내부 데이터로 접근하는 것과 반대로 외부 데이터에 접근해야할 때가 있습니다.
 
@@ -166,7 +165,6 @@ Template Result
 public class Company {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     private String name;
