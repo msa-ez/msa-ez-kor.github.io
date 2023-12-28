@@ -12,6 +12,8 @@ sidebar: 'started'
 
 helper란 특정 조건을 구성하는 로직을 통해 필요한 결과값을 반환하는 template 문법을 의미합니다.
 
+
+### 1.2 Helper를 활용한 어노테이션 정의
 Template
 ```
 public class {{namePascalCase}} {
