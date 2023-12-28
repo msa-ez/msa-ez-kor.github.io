@@ -2,7 +2,7 @@
 description: ''
 sidebar: 'started'
 ---
-# 구글 드라이브 예제
+# 빠른 시작 (End-to-End 프로젝트)
 
 <h2>마이크로서비스 기반 구글 드라이브 서비스 개발하기</h2>
 

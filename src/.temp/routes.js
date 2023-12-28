@@ -1,6 +1,6 @@
-const c1 = () => import(/* webpackChunkName: "page--src--templates--markdown-page-vue" */ "/Users/user/Desktop/Intro/msa-ez-kor.github.io/src/templates/MarkdownPage.vue")
-const c2 = () => import(/* webpackChunkName: "page--src--pages--404-vue" */ "/Users/user/Desktop/Intro/msa-ez-kor.github.io/src/pages/404.vue")
-const c3 = () => import(/* webpackChunkName: "page--src--pages--index-vue" */ "/Users/user/Desktop/Intro/msa-ez-kor.github.io/src/pages/Index.vue")
+const c1 = () => import(/* webpackChunkName: "page--src--templates--markdown-page-vue" */ "/Users/dufwjdrndl/Desktop/uengine/msa-ez-kor.github.io/src/templates/MarkdownPage.vue")
+const c2 = () => import(/* webpackChunkName: "page--src--pages--404-vue" */ "/Users/dufwjdrndl/Desktop/uengine/msa-ez-kor.github.io/src/pages/404.vue")
+const c3 = () => import(/* webpackChunkName: "page--src--pages--index-vue" */ "/Users/dufwjdrndl/Desktop/uengine/msa-ez-kor.github.io/src/pages/Index.vue")
 
 export default [
   {
@@ -9,6 +9,10 @@ export default [
   },
   {
     path: "/tool/setup-on-prem/",
+    component: c1
+  },
+  {
+    path: "/tool/si-gpt/",
     component: c1
   },
   {
@@ -37,6 +41,10 @@ export default [
   },
   {
     path: "/operation/ops-deploy-diagramming-basic-objects/",
+    component: c1
+  },
+  {
+    path: "/tool/model-driven/",
     component: c1
   },
   {

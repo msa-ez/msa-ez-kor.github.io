@@ -25,41 +25,19 @@ module.exports = {
         name: 'started',
         sections: [
           {
-            firstTitle: 'Getting Started',
+            firstTitle: '소개',
             firstItem: '/started/',
           },
           {
-            firstTitle: 'Key features',
-            firstItem: '/started/key-features/',
+            firstTitle: '빠른 시작',
+            firstItem: '/tool/google-drive-examples/',
           },
           {
-            firstTitle: 'Concepts',
-            name: [
-              {
-                secondTitle:'Domain Driven Design',
-                secondItem:'/started/domain-driven/',
-              },
-              {
-                secondTitle:'Eventstorming',
-                secondItem:'/started/event-storming-learning/',
-              },
-            ]
-          },
-          {
-            firstTitle: 'Setup',
+            firstTitle: '설치',
             firstLink: 'https://github.com/msa-ez/platform'
           },
           {
-            firstTitle: 'Quick Start',
-            name: [
-              {
-                secondTitle: 'Google Drive example',
-                secondItem: '/tool/google-drive-examples/'
-              }
-            ]
-          },
-          {
-            firstTitle: 'Biz Modeling',
+            firstTitle: '비즈니스 모델링',
             name:[
               {
                 secondTitle:'Eventstorming',
@@ -85,7 +63,7 @@ module.exports = {
             name:[
               {
                 secondTitle:'Model Driven Development',
-                secondItem:'',
+                secondItem:'/tool/model-driven/',
               },
               {
                 secondTitle:'Marketplace',
@@ -96,7 +74,7 @@ module.exports = {
               },
               {
                 secondTitle:'Utilizing ChatGPT',
-                secondItem:'',
+                secondItem:'/tool/si-gpt/',
               },
               {
                 secondTitle:'Guide labs',
