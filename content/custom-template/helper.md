@@ -59,11 +59,14 @@ public class Company {
 Global Helper란 MSAEZ가 사전 정의하여 내장하고 있는 helper function으로 템플릿 전역에서 사용가능합니다.
 
 ### 2.1 ifNotNull
+'ifNotNull'은  displayName을 출력해야할 때 사용합니다.
+
+스티커의 displayName을 설정한 경우 아래와 같이 사용할 수 있습니다.
+
 ![](https://github.com/msa-ez/platform/assets/123912988/9a6ee441-4177-4d1e-ac04-8e8ab1f0ae53)
 
 현재 Company Aggregate스티커에는 name과 displayName이 존재하고 있습니다.
 
-상황에 따라 displayName이 출력되어야할 때, ifNotNull을 사용할 수 있습니다.
 
 Template
 ```
@@ -83,11 +86,11 @@ ifNotNull의 인자값으로 displayName과 name을 보내 displayName의 존재
 
 ### 2.2 checkVO
 
+'checkVO'는 VO의 존재여부를 파악하여 VO에 한해서만 특정 결과값을 반환할 때 사용합니다.
+
 ![](https://github.com/msa-ez/platform/assets/123912988/1cb0079c-1bd3-43c3-8967-a597b2f7d22d)
 
 User Aggregate의 필드에 VO Address가 존재하고 있습니다.
-
-VO는 ValueObject의 약자로, 값 객체를 의미하며 불변하지 않는다는 특징이 있습니다.
 
 필드를 정의할 때 VO만 한정해서 코드를 생성할 때 checkVO 사용할 수 있습니다.
 

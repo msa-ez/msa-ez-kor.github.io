@@ -40,22 +40,9 @@ module.exports = {
             firstTitle: '코드 생성',
             firstItem:'/tool/model-driven/',
           },
-          // {
-          //   firstTitle: 'Infra(K8s) Modeling',
-          //   name:[
-          //     {
-          //       secondTitle: 'Guide labs',
-          //       thirdItems:
-          //       [
-          //         '/operation/ops-deploy-diagramming-basic-objects/',
-          //         '/operation/ops-deploy-diagramming-advanced-ingress/',
-          //         '/operation/ops-deploy-diagramming-advanced-hpa/',
-          //         '/operation/ops-deploy-diagramming-advanced-pvc/',
-          //         '/operation/ops-deploy-diagramming-advanced-istio/',
-          //       ]
-          //     }
-          //   ]
-          // },
+          {
+            firstTitle: '인프라 모델링',
+          },
           {
             firstTitle: '마켓플레이스',
             firstItem: '/tool/marketplace/'
