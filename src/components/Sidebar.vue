@@ -8,7 +8,7 @@
       v-for="(section, index) in sidebar.sections"
       :key="section.title"
     >
-      <h3 style="margin-top: 3px;" v-if="section.firstTitle && !section.firstItem && !section.firstLink">
+      <h3 style="margin-top: 3px; font-size: 17px;" v-if="section.firstTitle && !section.firstItem && !section.firstLink">
         {{ section.firstTitle }}
       </h3>
       <g-link
@@ -16,7 +16,7 @@
         :to="`${section.firstItem}`"
         class="flex items-center py-1"
       >
-        <h3 style="margin-bottom: 0px;">
+        <h3 style="margin-bottom: 0px; font-size: 17px;">
           {{ section.firstTitle }}
         </h3>
       </g-link>
@@ -25,7 +25,7 @@
         :to="`${section.firstLink}`"
         class="flex items-center py-1"
       >
-        <h3 style="margin-bottom: 0px;">
+        <h3 style="margin-bottom: 0px; font-size: 17px;">
           {{ section.firstTitle }}
         </h3>
       </g-link>
@@ -34,7 +34,7 @@
           :key="secondSection.secondTitle"
           style="margin-top: -10px;"
         >
-          <h4 style="margin-left: 10px; margin-top: 10px;" v-if="secondSection.secondTitle && !secondSection.secondItem && !secondSection.secondLink">
+          <h4 style="margin-left: 10px; margin-top: 10px; font-size: 14px;" v-if="secondSection.secondTitle && !secondSection.secondItem && !secondSection.secondLink">
             {{ secondSection.secondTitle }}
           </h4>
           <g-link
@@ -42,7 +42,7 @@
             :to="`${secondSection.secondItem}`"
             class="flex items-center py-1"
           >
-            <h4 style="margin-left: 10px; margin-bottom: 0px;">
+            <h4 style="margin-left: 10px; margin-bottom: 0px; font-size: 14px;">
               {{ secondSection.secondTitle }}
             </h4>
           </g-link>
@@ -51,11 +51,11 @@
             :to="`${secondSection.secondLink}`"
             class="flex items-center py-1"
           >
-            <h4 style="margin-left: 10px; margin-bottom: 0px;">
+            <h4 style="margin-left: 10px; margin-bottom: 0px; font-size: 14px;">
               {{ secondSection.secondTitle }}
             </h4>
           </g-link>
-          <ul class="max-w-full pl-2 mb-0" style="margin-top: 5px;">
+          <ul class="max-w-full pl-2 mb-0 text-sm" style="margin-top: 5px;">
             <li
               v-for="page in findPages(secondSection.thirdItems)"
               :id="page.path"
