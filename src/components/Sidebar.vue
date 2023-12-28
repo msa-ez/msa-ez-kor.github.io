@@ -2,13 +2,13 @@
   <div
     ref="sidebar"
     v-if="showSidebar"
-    class="px-4 pt-8 lg:pt-12"
+    class="pt-8"
   >
     <div
       v-for="(section, index) in sidebar.sections"
       :key="section.title"
     >
-      <h3 style="margin-top: 3px; font-size: 17px;" v-if="section.firstTitle && !section.firstItem && !section.firstLink">
+      <h3 style="margin-top: 3px; font-size: 16px;" v-if="section.firstTitle && !section.firstItem && !section.firstLink">
         {{ section.firstTitle }}
       </h3>
       <g-link
@@ -16,7 +16,7 @@
         :to="`${section.firstItem}`"
         class="flex items-center py-1"
       >
-        <h3 style="margin-bottom: 0px; font-size: 17px;">
+        <h3 style="margin-bottom: 0px; font-size: 16px;">
           {{ section.firstTitle }}
         </h3>
       </g-link>
@@ -25,7 +25,7 @@
         :to="`${section.firstLink}`"
         class="flex items-center py-1"
       >
-        <h3 style="margin-bottom: 0px; font-size: 17px;">
+        <h3 style="margin-bottom: 0px; font-size: 16px;">
           {{ section.firstTitle }}
         </h3>
       </g-link>

@@ -14,7 +14,7 @@
 
         <aside
           v-if="hasSidebar"
-          class="sidebar"
+          class="sidebar flex-1 w-1/5"
           :class="{ 'open': sidebarOpen }"
           :style="sidebarStyle"
         >
@@ -25,7 +25,7 @@
 
         <div
           class="w-full pb-24"
-          :class="{'pl-0 lg:pl-12 lg:w-3/4': hasSidebar}"
+          :class="{'pl-0 lg:pl-12 lg:w-4/5': hasSidebar}"
         >
           <slot />
         </div>
@@ -89,7 +89,7 @@ export default {
     sidebarStyle() {
       return {
         top: this.headerHeight + 'px',
-        height: `calc(100vh - ${this.headerHeight}px)`
+        height: `calc(100vh - ${this.headerHeight}px)`,
       }
     },
     hasSidebar() {
