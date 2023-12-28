@@ -104,52 +104,52 @@ module.exports = {
               },
             ]
           },
-          {
-            firstTitle: 'Guide labs',
-            name:[
-              {
-                secondTitle: 'Dev',
-                thirdItems:
-                [
-                  // '/development/understanding-jpa-based-single-microservice/',
-                  '/development/cna-start/',
-                  '/development/gateway/',
-                  '/development/monolith-2-misvc/',
-                  // '/development/circuit-breaker/',
-                  // '/development/kafka-basic/',
-                  '/development/pub-sub/',
-                  // '/development/compensation-correlation/',
-                  // '/development/pubsub-idempotency/',
-                  // '/development/pubsub-deadline/',
-                  // '/development/kafka-scaling/',
-                  // '/development/kafka-scaling-concurrenty-handling/',
-                  // '/development/kafka-retry-dlq/',
-                  // '/development/kafka-connect/',
-                  '/development/choreography-saga/',
-                  // '/development/orchestration-saga/',
-                  // '/development/token-based-auth/',
-                  '/development/oauth2with-keycloak/',
-                  // '/development/dp-frontend/',
-                  // '/development/dp-graphql/',
-                  '/development/dp-cqrs/',
-                  // '/development/contract-test/',
-                  // '/development/conteact-messaging/',
-                  // '/development/ops-docker/',
-                ]
-              },
-              {
-                secondTitle: 'Ops',
-                thirdItems:
-                [
-                  '/operation/ops-deploy-diagramming-basic-objects/',
-                  '/operation/ops-deploy-diagramming-advanced-ingress/',
-                  '/operation/ops-deploy-diagramming-advanced-hpa/',
-                  '/operation/ops-deploy-diagramming-advanced-pvc/',
-                  '/operation/ops-deploy-diagramming-advanced-istio/',
-                ]
-              },
-            ]
-          },
+          // {
+          //   firstTitle: 'Guide labs',
+          //   name:[
+          //     {
+          //       secondTitle: 'Dev',
+          //       thirdItems:
+          //       [
+          //         // '/development/understanding-jpa-based-single-microservice/',
+          //         '/development/cna-start/',
+          //         '/development/gateway/',
+          //         '/development/monolith-2-misvc/',
+          //         // '/development/circuit-breaker/',
+          //         // '/development/kafka-basic/',
+          //         '/development/pub-sub/',
+          //         // '/development/compensation-correlation/',
+          //         // '/development/pubsub-idempotency/',
+          //         // '/development/pubsub-deadline/',
+          //         // '/development/kafka-scaling/',
+          //         // '/development/kafka-scaling-concurrenty-handling/',
+          //         // '/development/kafka-retry-dlq/',
+          //         // '/development/kafka-connect/',
+          //         '/development/choreography-saga/',
+          //         // '/development/orchestration-saga/',
+          //         // '/development/token-based-auth/',
+          //         '/development/oauth2with-keycloak/',
+          //         // '/development/dp-frontend/',
+          //         // '/development/dp-graphql/',
+          //         '/development/dp-cqrs/',
+          //         // '/development/contract-test/',
+          //         // '/development/conteact-messaging/',
+          //         // '/development/ops-docker/',
+          //       ]
+          //     },
+          //     {
+          //       secondTitle: 'Ops',
+          //       thirdItems:
+          //       [
+          //         '/operation/ops-deploy-diagramming-basic-objects/',
+          //         '/operation/ops-deploy-diagramming-advanced-ingress/',
+          //         '/operation/ops-deploy-diagramming-advanced-hpa/',
+          //         '/operation/ops-deploy-diagramming-advanced-pvc/',
+          //         '/operation/ops-deploy-diagramming-advanced-istio/',
+          //       ]
+          //     },
+          //   ]
+          // },
           {
             firstTitle: 'Support',
             name:[

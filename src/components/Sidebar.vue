@@ -157,7 +157,7 @@ export default {
     border-top: 8px solid white; 
     transform: rotate(270deg); 
   }
-  h3, h4 {
+  h4 {
     font-weight: normal;
   }
 </style>
