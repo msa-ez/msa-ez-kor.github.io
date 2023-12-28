@@ -29,7 +29,7 @@ module.exports = {
             firstItem: '/started/',
           },
           {
-            firstTitle: '빠른 시작',
+            firstTitle: 'Quick Start',
             firstItem: '/tool/google-drive-examples/',
           },
           {
