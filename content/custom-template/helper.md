@@ -65,9 +65,6 @@ Global Helper란 MSAEZ가 사전 정의하여 내장하고 있는 helper functio
 
 ![](https://github.com/msa-ez/platform/assets/123912988/9a6ee441-4177-4d1e-ac04-8e8ab1f0ae53)
 
-현재 Company Aggregate스티커에는 name과 displayName이 존재하고 있습니다.
-
-
 Template
 ```
 {{#aggregates.fieldDescriptors}}
@@ -86,15 +83,11 @@ ifNotNull의 인자값으로 displayName과 name을 보내 displayName의 존재
 
 ### 2.2 checkVO
 
-'checkVO'는 VO의 존재여부를 파악하여 VO에 한해서만 특정 결과값을 반환할 때 사용합니다.
+'checkVO'는 VO의 존재여부를 파악하여 VO에 한해서만 특정 코드블록을 실행할 때 사용할 수 있습니다.
 
 필드에 VO를 설정한 경우 아래와 같이 사용할 수 있습니다.
 
 ![](https://github.com/msa-ez/platform/assets/123912988/1cb0079c-1bd3-43c3-8967-a597b2f7d22d)
-
-현재 User Aggregate의 필드에 VO Address가 존재하고 있습니다.
-
-필드를 정의할 때 VO에 한해서 특정 코드를 생성할 수 있습니다.
 
 Template
 ```
@@ -153,10 +146,6 @@ ifEquals의 인자값으로는 평가할 속성과 평가할 내용을 보내야
 
 ![](https://github.com/msa-ez/msa-ez-kor.github.io/assets/123912988/a2f63204-bd65-4d15-ad36-ef59c6240b51)
 
-현재 Company와 CompanyQuery는 위의 그림처럼 모델링되어있습니다.
-
-Aggregate 스티커를 기준으로 부착된 CompanyQuery ReadModel 스티커의 정보를 필요로 할 때, 'attached'를 통해 부착된 스티커 ReadModel의 정보를 가져올 수 있습니다.
-
 Template
 ```
 {{#attached 'View' this}}
@@ -171,7 +160,9 @@ CompanyQuery
 
 예시처럼 'attached' helper를 사용하기 위해서는 인자값으로 부착된 스티커의 타입을 보내야 합니다.
 
-여기서는 ReadModel스티커의 타입이 View로 설정되어 있어 인자값으로 View를 보내어 ReadModel의 정보를 불러올 수 있게 됩니다.
+여기서는 ReadModel스티커의 타입이 View로 설정되어 있어 인자값으로 View를 보냈습니다. 
+
+이때, Aggregate 스티커 기준 부착된 스티커의 타입을 판별하고, View가 존재함으로써 ReadModel의 정보를 불러올 수 있게 됩니다.
 
 ### 2.5 outgoing
 
@@ -180,11 +171,6 @@ CompanyQuery
 모델링 단계에서 서로 다른 스티커가 outgoingRelation관계가 형성되어있다면 아래와 같이 사용가능합니다.
 
 ![](https://github.com/msa-ez/platform/assets/123912988/bf57b4e0-93f2-4485-9666-21e6627f5444)
-
-현재 Company와 User Aggregate의 관계는 위의 모델링 그림처럼 되어있으며 User기준 Company로 outgoingRelation이 형성되어 있습니다.
-
-이때, User Aggregate에서 Company Aggregate 스티커를 참조해야하는 경우, 'outgoing'을 통해 연결된 스티커의 정보를 가져올 수 있습니다.
-
 
 Template
 ```
@@ -201,19 +187,16 @@ Company
 
 예시처럼 'outgoing' helper를 사용하기 위해서는 인자값으로 연결된 스티커의 타입을 보내야 합니다.
 
-여기서는 참조할 Company의 스티커 타입이 Aggregate로 설정되어 있어 인자값으로 Aggregate로 보내어 Company 정보를 불러올 수 있게 됩니다.
+여기서는 참조할 Company의 스티커 타입이 Aggregate로 설정되어 있어 인자값으로 Aggregate로 보냈습니다.
+
+이때, outgoingRelation관계가 형성 되어 있는지를 판별하고 형성 되어 있다면 형성된 스티커의 정보를 불러오게 되어 Company 정보를 불러올 수 있게 됩니다.
 
 ### 2.6 incoming
-'incoming'은 'outgoing'과 반대로 outgoingRelation 관게가 형성된 스티커 기준 outgoingRelation 관게의 주체가되는 스티커의 정보를 가져올 때 사용합니다.
+'incoming'은 'outgoing'과 반대로 기준이 되는 스티커와 incomingRelation관게가 형성된 스티커의 정보를 가져올 때 사용합니다.
 
-모델링 단계에서 서로 다른 스티커가 outgoingRelation관계가 형성되어있다면 아래와 같이 사용가능합니다.
+모델링 단계에서 서로 다른 스티커가 incomingRelation 형성되어있다면 아래와 같이 사용가능합니다.
 
 ![](https://github.com/msa-ez/platform/assets/123912988/bf57b4e0-93f2-4485-9666-21e6627f5444)
-
-User기준 Company로 outgoingRelation이 형성되어 있다면 Company 기준으로는 User와 incomingRelation이 형성되어있습니다.
-
-이때, Company Aggregate기준 User와 Aggregate 스티커를 참조해야하는 경우, incoming 통해 연결된 스티커의 정보를 가져올 수 있습니다.
-
 
 Template
 ```
@@ -230,7 +213,9 @@ User
 
 예시처럼 'incoming' helper를 사용하기 위해서는 인자값으로 연결된 스티커의 타입을 보내야 합니다.
 
-여기서는 참조할 User의 스티커 타입이 Aggregate로 설정되어 있어 인자값으로 Aggregate로 보내어 User 정보를 불러올 수 있게 됩니다.
+여기서는 참조할 User의 스티커 타입이 Aggregate로 설정되어 있어 인자값으로 Aggregate로 보냈습니다.
+
+이때 incomingRelation관계가 형성된 스티커의 타입을 확인하고 일치하면 형성된 스티커 User의 정보를 불러올 수 있게 됩니다.
 
 ### 2.7 reaching
 
