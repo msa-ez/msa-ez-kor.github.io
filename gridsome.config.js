@@ -109,23 +109,37 @@ module.exports = {
             ]
           },
           {
-            firstTitle: 'Custom template',
+            firstTitle: 'Infra(K8s) Modeling',
             name:[
               {
-                secondTitle: "What's Custom Template",
-                secondItem: '/custom-template/tutorial/'
-              },
-              {
-                secondTitle: 'Eventstorming Template Objects',
-                secondItem: '/custom-template/custom-template/'
-              },
+                secondTitle: 'Guide labs',
+                thirdItems:
+                [
+                  '/operation/ops-deploy-diagramming-basic-objects/',
+                  '/operation/ops-deploy-diagramming-advanced-ingress/',
+                  '/operation/ops-deploy-diagramming-advanced-hpa/',
+                  '/operation/ops-deploy-diagramming-advanced-pvc/',
+                  '/operation/ops-deploy-diagramming-advanced-istio/',
+                ]
+              }
+            ]
+          },
+          {
+            firstTitle: 'Custom template',
+            name:[
               {
                 secondTitle: 'Creating Custom Template',
                 thirdItems:
                 [
-                  '/custom-template/creating-custom-template-1/',
-                  // '/custom-template/creating-custom-template-2/'
+                  '/custom-template/template-structure/',
+                  '/custom-template/for-loop/',
+                  '/custom-template/conditional-statement/',
+                  '/custom-template/helper/',
                 ]
+              },
+              {
+                secondTitle: 'Eventstorming Template Objects',
+                secondItem: '/custom-template/custom-template/'
               },
               {
                 secondTitle: 'How to use Template Editor',
@@ -150,22 +164,6 @@ module.exports = {
             ]
           },
           {
-            firstTitle: 'Infra(K8s) Modeling',
-            name:[
-              {
-                secondTitle: 'Guide labs',
-                thirdItems:
-                [
-                  '/operation/ops-deploy-diagramming-basic-objects/',
-                  '/operation/ops-deploy-diagramming-advanced-ingress/',
-                  '/operation/ops-deploy-diagramming-advanced-hpa/',
-                  '/operation/ops-deploy-diagramming-advanced-pvc/',
-                  '/operation/ops-deploy-diagramming-advanced-istio/',
-                ]
-              }
-            ]
-          },
-          {
             firstTitle: 'Case Studies',
             name:[
               {
@@ -179,13 +177,13 @@ module.exports = {
                   '/example-scenario/online-lecture/',
                 ]
               },
-              {
-                secondTitle: 'Customers',
-                thirdItems:
-                [
+              // {
+              //   secondTitle: 'Customers',
+              //   thirdItems:
+              //   [
                  
-                ]
-              }
+              //   ]
+              // }
             ]
           },
           {
