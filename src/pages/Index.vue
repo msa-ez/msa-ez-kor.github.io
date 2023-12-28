@@ -5,7 +5,7 @@
         <div class="flex flex-col items-center">
           <div class="flex flex-col items-center mb-2 text-ui-primary">
             <h2 class="text-3xl text-6xl font-black tracking-tighter border-none">
-              MSA Easy
+              MSAEZ
             </h2>
           </div>
           <h1 class=" text-center">
@@ -33,9 +33,9 @@
             <g-image style = "width:100%;" src="~/img/img_1.png"  />
             <p class="text-lg text-left">
               <br>
-              MSA Easy는 마이크로서비스 구축에서 운영에 필요한 분석, 설계, 구현 및 모니터링을 지원하는 도구로써,
+              MSAEZ는 마이크로서비스 구축에서 운영에 필요한 분석, 설계, 구현 및 모니터링을 지원하는 도구로써,
               이벤트스토밍 기반 협업을 통해 도메인을 분석/설계하고, 설계된 도메인 모델에서 MSA 소스코드를 자동으로 생성해 줍니다.
-              분석/ 설계단계에서는 MSA Easy를 사용해 대상 도메인의 경계를 식별하고 Contract(계약)을 정의합니다.
+              분석/ 설계단계에서는 MSAEZ를 사용해 대상 도메인의 경계를 식별하고 Contract(계약)을 정의합니다.
             </p>
           </div>
 
@@ -61,7 +61,7 @@
             <p class="text-lg text-left">
               <br>
               MSA의 최대 장점 중 하나는 서비스별 최적의 기술 적용이 가능한 폴리글랏 아키텍처입니다.
-              ES2CD는 이벤트스토밍 결과, 식별된 마이크로서비스별 코드 생성이 가능하며,
+              MSAEZ는 이벤트스토밍 결과, 식별된 마이크로서비스별 코드 생성이 가능하며,
               ‘사용자 정의 템플릿’을 통해, 다양한 언어 및 정보공학 노테이션(Notation)으로의 확장을 지원합니다.
             </p>
           </div>
