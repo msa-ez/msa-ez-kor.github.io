@@ -33,51 +33,95 @@ module.exports = {
             firstItem: '/tool/google-drive-examples/',
           },
           {
-            firstTitle: '설치',
-            firstLink: 'https://github.com/msa-ez/platform'
+            firstTitle: '비즈니스 모델링',
+            firstItem: '/business/',
           },
           {
-            firstTitle: '비즈니스 모델링',
+            firstTitle: '코드 생성',
+            firstItem:'/tool/model-driven/',
+          },
+          // {
+          //   firstTitle: 'Infra(K8s) Modeling',
+          //   name:[
+          //     {
+          //       secondTitle: 'Guide labs',
+          //       thirdItems:
+          //       [
+          //         '/operation/ops-deploy-diagramming-basic-objects/',
+          //         '/operation/ops-deploy-diagramming-advanced-ingress/',
+          //         '/operation/ops-deploy-diagramming-advanced-hpa/',
+          //         '/operation/ops-deploy-diagramming-advanced-pvc/',
+          //         '/operation/ops-deploy-diagramming-advanced-istio/',
+          //       ]
+          //     }
+          //   ]
+          // },
+          {
+            firstTitle: '마켓플레이스',
+            firstItem: '/tool/marketplace/'
+          },
+          {
+            firstTitle: '커스텀 템플릿',
             name:[
               {
-                secondTitle:'Eventstorming',
-                secondItem:'/tool/event-storming-tool/',
-              },
-              {
-                secondTitle:'Utilizing ChatGPT',
-                secondItem:'/tool/chat-gpt/',
-              },
-              {
-                secondTitle:'Guide labs',
+                secondTitle: '커스텀 템플릿 생성',
                 thirdItems:
                 [
-                  '/business/',
-                  // '/business/ddd-google-drive/',
-                  // '/business/eventstorming-fooddelivery/',
+                  '/custom-template/template-structure/',
+                  '/custom-template/for-loop/',
+                  '/custom-template/conditional-statement/',
+                  '/custom-template/helper/',
                 ]
+              },
+              {
+                secondTitle: 'Template Editor 사용법',
               },
             ]
           },
           {
-            firstTitle: 'Code Implementation',
+            firstTitle: '테스트',
             name:[
               {
-                secondTitle:'Model Driven Development',
-                secondItem:'/tool/model-driven/',
+                secondTitle: 'Unit 테스트',
+                secondItem: '/custom-template/unit-test/'
               },
               {
-                secondTitle:'Marketplace',
-                thirdItems:
-                [
-                  '/tool/marketplace/',
-                ]
+                secondTitle: 'API 서비스 테스트',
+                secondItem: '/custom-template/mock-server/'
+              }
+            ]
+          },
+
+          {
+            firstTitle: '예제 시나리오',
+            name:[
+              {
+                secondTitle: '숙소 예약',
+                secondItem: '/example-scenario/accommodation-reservation/'
               },
               {
-                secondTitle:'Utilizing ChatGPT',
-                secondItem:'/tool/si-gpt/',
+                secondTitle: '음식 배달',
+                secondItem: '/example-scenario/food-delivery/'
               },
               {
-                secondTitle:'Guide labs',
+                secondTitle: '도서관 시스템',
+                secondItem: '/example-scenario/library-system/'
+              },
+              {
+                secondTitle: '동물병원 진료 시스템',
+                secondItem: '/example-scenario/animal-hospital/'
+              },
+              {
+                secondTitle: '인터넷 강의수강 시스템',
+                secondItem: '/example-scenario/online-lecture/'
+              },
+            ]
+          },
+          {
+            firstTitle: 'Guide labs',
+            name:[
+              {
+                secondTitle: 'Dev',
                 thirdItems:
                 [
                   // '/development/understanding-jpa-based-single-microservice/',
@@ -106,13 +150,8 @@ module.exports = {
                   // '/development/ops-docker/',
                 ]
               },
-            ]
-          },
-          {
-            firstTitle: 'Infra(K8s) Modeling',
-            name:[
               {
-                secondTitle: 'Guide labs',
+                secondTitle: 'Ops',
                 thirdItems:
                 [
                   '/operation/ops-deploy-diagramming-basic-objects/',
@@ -121,69 +160,7 @@ module.exports = {
                   '/operation/ops-deploy-diagramming-advanced-pvc/',
                   '/operation/ops-deploy-diagramming-advanced-istio/',
                 ]
-              }
-            ]
-          },
-          {
-            firstTitle: 'Custom template',
-            name:[
-              {
-                secondTitle: 'Creating Custom Template',
-                thirdItems:
-                [
-                  '/custom-template/template-structure/',
-                  '/custom-template/for-loop/',
-                  '/custom-template/conditional-statement/',
-                  '/custom-template/helper/',
-                ]
               },
-              {
-                secondTitle: 'Eventstorming Template Objects',
-                secondItem: '/custom-template/custom-template/'
-              },
-              {
-                secondTitle: 'How to use Template Editor',
-              },
-              // {
-              //   secondTitle: 'Utilizing ChatGPT',
-              // },
-              
-            ]
-          },
-          {
-            firstTitle: 'Test Design',
-            name:[
-              {
-                secondTitle: 'Uint Test',
-                secondItem: '/custom-template/unit-test/'
-              },
-              {
-                secondTitle: 'API/Service	Test',
-                secondItem: '/custom-template/mock-server/'
-              }
-            ]
-          },
-          {
-            firstTitle: 'Case Studies',
-            name:[
-              {
-                secondTitle: 'Example Scenario',
-                thirdItems:
-                [
-                  '/example-scenario/accommodation-reservation/',
-                  '/example-scenario/food-delivery/',
-                  '/example-scenario/library-system/',
-                  '/example-scenario/animal-hospital/',
-                  '/example-scenario/online-lecture/',
-                ]
-              },
-              // {
-              //   secondTitle: 'Customers',
-              //   thirdItems:
-              //   [
-                 
-              //   ]
-              // }
             ]
           },
           {

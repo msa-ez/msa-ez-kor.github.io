@@ -94,7 +94,6 @@ query Sidebar {
         name
         sections {
           firstTitle
-          firstLink
           firstItem
           name {
             secondTitle
