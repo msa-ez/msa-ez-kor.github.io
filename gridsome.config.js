@@ -101,6 +101,7 @@ module.exports = {
           },
           {
             firstTitle: 'K8s 배포 모델링',
+            firstItem: '/tool/k8s-modeling'
           },
           {
             firstTitle: '배포 모델링 실습',
