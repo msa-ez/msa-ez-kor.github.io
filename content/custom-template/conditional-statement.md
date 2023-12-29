@@ -76,7 +76,7 @@ public class Company {
 
 현재 aggregateRoot.fieldDescriptors의 isVO에 대한 데이터로 id필드는 값이 존재하지 않으며, name필드는 ""로 나타나고 있습니다.
 
-따라서 {{^isVO}}{{/isVo}}를 통해 필드의 속성중 isVO가 false 조건에 부합하는 id, name필드를 1차로 선별한 후,
+따라서 {{^isVO}}{{/isVO}}를 통해 필드의 속성중 isVO가 false 조건에 부합하는 id, name필드를 1차로 선별한 후,
 
 {{#isKey}}{{/isKey}}를 통해 isKey가 true인 id필드를 2차로 선별하였습니다.
 
