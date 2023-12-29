@@ -82,7 +82,6 @@ GitPod에 접근하면 위와 같은 시작 페이지가 나오고, Continue 버
 </div><br>
 
 위 데모영상에서 자세한 수행 방법을 확인하실 수 있습니다.
- -->
 ### 수행 방법
 
 ![](../../src/img/sigpt1.png)
@@ -190,3 +189,4 @@ UpateInventoryTest.java
 9. 테스트가 통과되면 Test success 메시지와 함께 Runnable한 소스코드가 반영된 GitPod Cloud IDE로 연결되는 버튼이 나타납니다.
 
 해당 버튼을 클릭해 비즈니스 로직 구현 등의 개발 작업을 진행하거나 곧바로 서비스 배포 작업을 시작할 수 있습니다.
+ -->
