@@ -92,6 +92,10 @@ export default [
     component: c1
   },
   {
+    path: "/custom-template/template-editor/",
+    component: c1
+  },
+  {
     path: "/custom-template/template-structure/",
     component: c1
   },
