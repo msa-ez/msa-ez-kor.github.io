@@ -148,7 +148,7 @@ module.exports = {
                 secondItem: '/custom-template/helper/'
               },
               {
-                secondTitle: 'Template Editor 사용법',
+                secondTitle: 'Template Editor',
                 secondItem: '/custom-template/template-editor/'
               },
             ]

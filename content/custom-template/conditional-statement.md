@@ -36,11 +36,9 @@ public class Company {
     private String name;
 }
 ```
-![](https://github.com/msa-ez/platform/assets/123912988/4a47a7a4-cb96-4f7d-944b-4927be573373)
-
 현재 aggregateRoot.fieldDescriptors의 isKey에 대하여 id필드는 true의 값을, name필드는 ""의 값을 가지고 있습니다.
 
-이때, {{#isKey}}{{/isKey}}를 통해 isKey의 데이터인 id필드에만 '@Id'가 생성되도록 설정할 수 있습니다.
+이때, {{#isKey}}{{/isKey}}를 통해 isKey의 데이터가 ture인 id필드에만 '@Id'가 생성되도록 설정할 수 있습니다.
 
 ## 3. 거짓 조건문
 
