@@ -196,8 +196,6 @@ Company
 
 모델링 단계에서 서로 다른 스티커가 incomingRelation 형성되어있다면 아래와 같이 사용가능합니다.
 
-![](https://github.com/msa-ez/platform/assets/123912988/bf57b4e0-93f2-4485-9666-21e6627f5444)
-
 Template
 ```
 // Company.java
