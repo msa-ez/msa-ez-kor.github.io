@@ -14,7 +14,7 @@
 
         <aside
           v-if="hasSidebar"
-          class="sidebar flex-1 w-1/5"
+          class="sidebar flex-1 w-1/6"
           :class="{ 'open': sidebarOpen }"
           :style="sidebarStyle"
         >
@@ -25,7 +25,7 @@
 
         <div
           class="w-full pb-24"
-          :class="{'pl-0 lg:pl-12 lg:w-4/5': hasSidebar}"
+          :class="{'pl-0 lg:pl-12 lg:w-5/6': hasSidebar}"
         >
           <slot />
         </div>

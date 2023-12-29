@@ -45,11 +45,10 @@
           </a>
 
           <div class=".clearfix" style="width:280px;">
-            <a style="display:block; width:30px; height:30px; text-align:center; line-height:50px; float:left; padding-top: 8px; margin-right:5px;"
-              href="https://github.com/msa-ez/platform" target="_blank"
+            <a style="display:block; width:50px; height:50px; line-height:50px; float:left; padding-top: 13px;"
+              href="https://github.com/msa-ez/platform?tab=readme-ov-file#running-on-docker-compose-with-github" target="_blank"
             >
-                <g-image src="https://github.com/msa-ez/cloud-iq/assets/149130268/cb1a2678-578d-4241-8acd-2022ee89fb26"></g-image>
-                <!-- <g-image src="https://github.com/msa-ez/cloud-iq/assets/149130268/85cddff1-0bdd-4183-8eb3-28c092a3dfee"></g-image> -->
+              <GithubIcon size="1.5x" style="margin:0 auto; "/>
             </a>
 
             <div style="width:55px; height:50px; text-align:center; line-height:50px; font-weight:700; float:left;">
