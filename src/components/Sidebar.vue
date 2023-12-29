@@ -55,7 +55,7 @@
               {{ secondSection.secondTitle }}
             </h4>
           </g-link>
-          <ul class="max-w-full pl-2 mb-0 text-sm" style="margin-top: 5px;">
+          <!-- <ul class="max-w-full pl-2 mb-0 text-sm" style="margin-top: 5px;">
             <li
               v-for="page in findPages(secondSection.thirdItems)"
               :id="page.path"
@@ -80,7 +80,7 @@
                 </h6>
               </g-link>
             </li>
-          </ul>
+          </ul> -->
         </div>
     </div>
   </div>
@@ -99,7 +99,6 @@ query Sidebar {
             secondTitle
             secondLink
             secondItem
-            thirdItems
           }
         }
       }

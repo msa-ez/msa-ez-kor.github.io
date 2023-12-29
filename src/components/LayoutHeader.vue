@@ -46,7 +46,7 @@
 
           <div class=".clearfix" style="width:280px;">
             <a style="display:block; width:30px; height:30px; text-align:center; line-height:50px; float:left; padding-top: 8px; margin-right:5px;"
-              href="https://github.com/msa-ez/platform?tab=readme-ov-file#running-on-docker-compose-with-github" target="_blank"
+              href="https://github.com/msa-ez/platform" target="_blank"
             >
                 <g-image src="https://github.com/msa-ez/cloud-iq/assets/149130268/cb1a2678-578d-4241-8acd-2022ee89fb26"></g-image>
                 <!-- <g-image src="https://github.com/msa-ez/cloud-iq/assets/149130268/85cddff1-0bdd-4183-8eb3-28c092a3dfee"></g-image> -->
