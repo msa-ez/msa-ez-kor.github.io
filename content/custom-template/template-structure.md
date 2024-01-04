@@ -2,7 +2,6 @@
 description: ''
 sidebar: 'started'
 ---
-
 ## 템플릿 파일 구조
 템플릿 파일은 필수로 적용해야하는 옵션들을 설정하는 metadata와, 동적으로 변화할 데이터들을 선언하는 템플릿 코드로 구성되어 있습니다.
 
@@ -37,7 +36,9 @@ fileName을 통해 생성될 파일의 이름을 설정할 수 있는데, 파일
 
 마지막으로 path를 통해 Company.java가 생성될 경로를 설정합니다.
 
-현재 {{boundedContext.name}}/{{{options.packagePath}}}/domain로 설정함으로써 해당 Aggregate가 속한 BoundedContext의 하위 폴더 domain에 Company.java 파일이 생성됩니다.
+현재 {{boundedContext.name}}/{{{options.packagePath}}}/domain로 설정하였고,
+
+해당 Aggregate가 속한 BoundedContext의 하위 폴더 domain에 Company.java 파일이 생성됩니다.
 
 metadata의 옵션 설정들이 완료되면 하단에 작성할 템플릿코드와 분리되기 위해 마지막 메타데이터의 하단에 하이푼('---')처리를 입력하면 metadata설정이 완료됩니다.
 

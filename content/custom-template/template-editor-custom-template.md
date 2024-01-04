@@ -2,9 +2,10 @@
 description: ''
 sidebar: 'started'
 ---
-MSAEZ 모델을 기반으로 커스텀 템플릿을 개발하는 과정을 설명드리겠습니다.
 
 ## 1. Repository 생성
+
+MSAEZ 모델을 기반으로 커스텀 템플릿을 개발하는 과정을 설명드리겠습니다.
 
 먼저 커스텀 템플릿 작업을 수행할 repository를 생성하겠습니다.
 
