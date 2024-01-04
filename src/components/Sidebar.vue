@@ -51,7 +51,7 @@
             :to="`${secondSection.secondLink}`"
             class="flex items-center py-1"
           >
-            <h4 style="margin-left: 10px; margin-bottom: 0px; font-size: 14px;">
+            <h4 style="margin-left: 15px; margin-bottom: 0px; font-size: 14px;">
               {{ secondSection.secondTitle }}
             </h4>
           </g-link>

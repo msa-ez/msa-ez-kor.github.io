@@ -34,11 +34,11 @@ fileName을 통해 생성될 파일의 이름을 설정할 수 있는데, 파일
 
 ### 1.3 파일 경로 설정
 
-마지막으로 path를 통해 Company.java가 생성될 경로를 설정합니다.
+마지막으로 path를 통해 Order.java가 생성될 경로를 설정합니다.
 
-현재 {{boundedContext.name}}/{{{options.packagePath}}}/domain로 설정하였고,
+현재 Company.java의 최종 생성되어야 할 경로는 domain의 하위 파일입니다.
 
-해당 Aggregate가 속한 BoundedContext의 하위 폴더 domain에 Company.java 파일이 생성됩니다.
+따라서 'Model Explorer'의 데이터를 참조하여 각 경로를 설정하여 최종적으로 domain 하위에 fileName으로 지정한 파일들이 생성되는 것을 확인할 수 있습니다.
 
 metadata의 옵션 설정들이 완료되면 하단에 작성할 템플릿코드와 분리되기 위해 마지막 메타데이터의 하단에 하이푼('---')처리를 입력하면 metadata설정이 완료됩니다.
 

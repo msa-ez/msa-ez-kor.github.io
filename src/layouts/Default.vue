@@ -243,9 +243,11 @@ blockquote {
 
     li {
       @apply mb-2;
+      overflow-wrap: break-word;
 
       p {
         @apply mb-0;
+        overflow-wrap: break-word;
       }
 
       &:last-child {
@@ -253,6 +255,10 @@ blockquote {
       }
     }
   }
+}
+
+div {
+  overflow-wrap: break-word;
 }
 
 blockquote {
