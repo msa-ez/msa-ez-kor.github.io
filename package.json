@@ -8,10 +8,10 @@
     "deploy": "gridsome build && gh-pages -d dist"
   },
   "dependencies": {
+    "@iconify/vue2": "^1.2.1",
     "gh-pages": "^4.0.0",
     "gridsome": "^0.7.23",
-    "sass-loader": "^10.3.1",
-    "@iconify/vue2": "^1.0.0"
+    "sass-loader": "^10.3.1"
   },
   "devDependencies": {
     "@gridsome/plugin-google-analytics": "^0.1.2",
