@@ -42,7 +42,7 @@
             :to="`${secondSection.secondItem}`"
             class="flex items-center py-1"
           >
-            <div style="padding:2px 0px; margin-left:15px; font-size: 14px;" :class="getClassesForAnchor(secondSection)">
+            <div style="padding:2px 0px; margin-left:15px; font-size: 14px;" :class="getClassesForAnchor(secondSection)" @mousedown="$emit('navigate')">
               {{ secondSection.secondTitle }}
             </div>
           </g-link>
