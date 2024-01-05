@@ -329,16 +329,4 @@ table {
     margin-top:47px;
   }
 }
-
-// @media only screen and (max-width: 600px) {
-//     .code-block {
-//         width: 50%;
-//     }
-// }
-
-// @media only screen and (max-width: 400px) {
-//     .code-block {
-//         width: 47%;
-//     }
-// }
 </style>
