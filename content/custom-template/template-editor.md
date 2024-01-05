@@ -42,13 +42,13 @@ sidebar: 'started'
 
 'EDIT TEMPLATE'에서 코드를 수정하여 변환을 진행하면 아래의 예시처럼 우측 영역에 변환된 결과값이 나타나는 것을 확인할 수 있습니다.
 
-![](https://github.com/msa-ez/platform/assets/123912988/e795b10f-633f-481f-9a8d-14bb10d693a8)
+![](https://github.com/msa-ez/platform/assets/123912988/7ef625b5-511e-41c9-8ab7-2c4172f03edc)
 
 여기서 우측 상단의 'selected file'을 확인할 수 있는데, 'selected file'은 모델링한 스티커별 변환된 파일의 종류를 확인할 수 있습니다.
 
-![](https://github.com/msa-ez/platform/assets/123912988/9a2516f8-166a-4816-a159-eef845cc10ab)
+![](https://github.com/msa-ez/platform/assets/123912988/b327bc57-3d63-49f2-a906-a111b3c73f4d)
 
-예시에서는 모델링 단계에서 생성한 Aggregate 스티커 User와 Company에 대한 파일이 생성되었습니다.
+예시에서는 모델링 단계에서 생성한 Aggregate 스티커 Order와 Delivery에 대한 파일이 생성되었습니다.
 
 여기서 파일을 선택하면 선택한 파일의 변환된 코드를 확인할 수 있어 각 파일별 생성된 결과값에 대해서 확인할 수 있습니다.
 
