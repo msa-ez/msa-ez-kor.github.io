@@ -1,5 +1,5 @@
 <template>
-  <div class="font-sans antialiased text-ui-typo bg-ui-background">
+  <div class="antialiased text-ui-typo bg-ui-background">
     <div class="flex flex-col justify-start min-h-screen">
 
       <header
