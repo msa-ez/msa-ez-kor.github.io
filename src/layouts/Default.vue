@@ -323,4 +323,22 @@ table {
     transform: translateX(0);
   }
 }
+
+@media only screen and (max-width: 640px) {
+    .font-sans {
+        width: fit-content;
+    }
+}
+
+// @media only screen and (max-width: 600px) {
+//     .code-block {
+//         width: 50%;
+//     }
+// }
+
+// @media only screen and (max-width: 400px) {
+//     .code-block {
+//         width: 47%;
+//     }
+// }
 </style>
