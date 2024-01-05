@@ -8,7 +8,7 @@
       v-for="(section, index) in sidebar.sections"
       :key="section.title"
     >
-      <div style="font-weight:700; font-size:16px; margin-bottom:5px;" v-if="section.firstTitle && !section.firstItem && !section.firstLink">
+      <div style="font-weight:700; font-size:14px; margin-bottom:5px;" v-if="section.firstTitle && !section.firstItem && !section.firstLink">
         {{ section.firstTitle }}
       </div>
       <g-link
@@ -16,7 +16,7 @@
         :to="`${section.firstItem}`"
         class="flex items-center py-1"
       >
-        <h3 style="margin-bottom: 0px; font-size: 16px;">
+        <h3 style="margin:-5px 0px 0px 0px; font-size: 16px;" :class="getClassesForAnchor(section)" @mousedown="$emit('navigate')">
           {{ section.firstTitle }}
         </h3>
       </g-link>
@@ -141,7 +141,7 @@ export default {
   methods: {
     getClassesForAnchor(path) {
       return {
-        active: this.currentPath === path.secondItem
+        active: this.currentPath === path.secondItem || this.currentPath === path.firstItem
       }
     },
     findPages(links) {
@@ -153,7 +153,7 @@ export default {
 <style scoped>
 .active {
   color:#5A67D8;
-  font-weight: 700;
+  font-weight: 900;
 }
   /* 삼각형 스타일 */
   .triangle {

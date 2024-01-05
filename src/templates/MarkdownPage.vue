@@ -64,26 +64,44 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' }
     ],
   },
+  mounted() {
+    this.wrapTables();
+  },
   
   watch: {
     "$page.markdownPage.content":function(newvalue){
       this.track()
+    },
+    "$page.markdownPage.content"() {
+      this.track();
+      this.$nextTick(function () {
+        this.wrapTables();
+      });
     }
   },
   methods: {
     track() {
-
-         var getTitle = this.$page.markdownPage && this.$page.markdownPage.title ?
-             this.$page.markdownPage.title : this.$route.path
-         var location = window.location.hostname
-         if (location && location != 'localhost') {
-             getTitle = `${location}_${getTitle}`
-         }
-         this.$ga.page({
-             page: this.$route.path,
-             title: getTitle
-         })
+      var getTitle = this.$page.markdownPage && this.$page.markdownPage.title ?
+          this.$page.markdownPage.title : this.$route.path
+      var location = window.location.hostname
+      if (location && location != 'localhost') {
+          getTitle = `${location}_${getTitle}`
+      }
+      this.$ga.page({
+          page: this.$route.path,
+          title: getTitle
+      })
     },
+    wrapTables() {
+      // 페이지의 모든 테이블을 찾아 각각을 overflow 스타일이 적용된 div로 감쌉니다.
+      const tables = this.$el.querySelectorAll('.content table');
+      tables.forEach((table) => {
+        const wrapper = document.createElement('div');
+        wrapper.style.overflow = 'auto';
+        table.parentNode.insertBefore(wrapper, table);
+        wrapper.appendChild(table);
+      });
+    }
 },
 
 
