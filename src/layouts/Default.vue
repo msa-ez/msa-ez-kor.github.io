@@ -13,7 +13,7 @@
       <main class="container relative flex flex-wrap justify-start flex-1 w-full bg-ui-background">
         <aside
           v-if="hasSidebar"
-          class="sidebar flex-1 w-1/6"
+          class="sidebar flex-1 w-1/6 is-mobile-aside"
           :class="{ 'open': sidebarOpen }"
           :style="sidebarStyle"
         >
@@ -324,10 +324,10 @@ table {
   }
 }
 
-@media only screen and (max-width: 640px) {
-    .font-sans {
-        width: fit-content;
-    }
+@media only screen and (max-width: 607px) {
+  .is-mobile-aside {
+    margin-top:47px;
+  }
 }
 
 // @media only screen and (max-width: 600px) {
