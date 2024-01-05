@@ -13,7 +13,7 @@
       <main class="container relative flex flex-wrap justify-start flex-1 w-full bg-ui-background">
         <aside
           v-if="hasSidebar"
-          class="sidebar flex-1 w-1/6 is-mobile-aside"
+          class="sidebar flex-1 w-1/6"
           :class="{ 'open': sidebarOpen }"
           :style="sidebarStyle"
         >
@@ -72,6 +72,10 @@ export default {
       homeFooterNone: false,
     }
   },
+  mounted() {
+    this.setHeaderHeight();
+    window.addEventListener('resize', this.setHeaderHeight);
+  },
   watch: {
     sidebarOpen: function(isOpen) {
       document.body.classList.toggle('overflow-hidden', isOpen);
@@ -95,8 +99,8 @@ export default {
       return this.$page && this.headerHeight > 0;
     }
   },
-  mounted() {
-    this.setHeaderHeight();
+  beforeDestroy() {
+    window.removeEventListener('resize', this.setHeaderHeight);
   },
   metaInfo() {
     return {
@@ -321,12 +325,6 @@ table {
   @screen lg {
     @apply w-1/4 px-0 bg-transparent top-0 bottom-auto inset-x-auto sticky z-0;
     transform: translateX(0);
-  }
-}
-
-@media only screen and (max-width: 607px) {
-  .is-mobile-aside {
-    margin-top:47px;
   }
 }
 </style>

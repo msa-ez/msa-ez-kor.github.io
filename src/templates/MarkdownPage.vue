@@ -143,27 +143,4 @@ export default {
 
 <style>
 @import 'prism-themes/themes/prism-material-oceanic.css';
-
-@media only screen and (max-width:1600px) {
-    /* .main-card-box {
-        width: 48%;
-    }     */
-}
-
-@media only screen and (max-width:1410px){
-    .is-not-mobile-main-top {
-        display: none;
-    }
-    .is-mobile-main-top {
-        display: block;
-    }
-}
-
-@media only screen and (max-width:1100px) {
-  
-}
-
-@media only screen and (max-width:676px) {
-  
-}
 </style>

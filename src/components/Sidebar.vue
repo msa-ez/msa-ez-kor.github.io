@@ -55,32 +55,6 @@
               {{ secondSection.secondTitle }}
             </h4>
           </g-link>
-          <!-- <ul class="max-w-full pl-2 mb-0 text-sm" style="margin-top: 5px;">
-            <li
-              v-for="page in findPages(secondSection.thirdItems)"
-              :id="page.path"
-              :key="page.path"
-              :class="getClassesForAnchor(page)"
-              style="margin-top: -10px;"
-              @mousedown="$emit('navigate')"
-            >
-              <g-link
-                :to="`${page.path}`"
-                class="flex items-center py-1"
-              >
-                <span
-                  class="absolute opacity-0 bg-ui-primary transition transform scale-0 origin-center"
-                  :class="{
-                    'opacity-100 scale-100': currentPage.path === page.path
-                  }"
-                ></span>
-                <span style="margin-top: 0px; margin-bottom: 7px;"  class="triangle"></span>
-                <h6 style="margin-top: 0px; margin-bottom: 7px;"  v-if="page.title">
-                  {{ page.title }}
-                </h6>
-              </g-link>
-            </li>
-          </ul> -->
         </div>
     </div>
   </div>
