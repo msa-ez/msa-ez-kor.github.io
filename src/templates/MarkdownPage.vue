@@ -1,12 +1,17 @@
 <template>
   <Layout>
       <div class="flex flex-wrap items-start justify-start">
-        <div class="order-2 lg:w-1/4 sm:w-full md:w-1/3 sm:pl-4 md:pl-6 lg:pl-8 sticky" style="top: 4rem;">
+        <div class="order-2 w-full md:w-1/3 sm:pl-4 md:pl-6 lg:pl-8 sticky" style="top: 4rem">
           <OnThisPage />
         </div>
 
+<<<<<<< HEAD
         <div class="order-1 lg:w-3/4 sm:w-full md:w-2/3">
           <div class="content" v-html="$page.markdownPage.content"/>
+=======
+        <div class="order-1 w-full md:w-2/3">
+          <div class="content" v-html="$page.markdownPage.content" />
+>>>>>>> 3214776b786dc12ef3de1bb00c9e2e043d265af9
 
           <div class="mt-8 pt-8 lg:mt-12 lg:pt-12 border-t border-ui-border">
             <NextPrevLinks />

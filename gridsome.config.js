@@ -100,12 +100,12 @@ module.exports = {
             ]
           },
           {
-            firstTitle: 'K8s 배포 모델링',
-            firstItem: '/tool/k8s-modeling'
-          },
-          {
             firstTitle: '배포 모델링 실습',
             name:[
+              {
+                secondTitle: 'K8s 배포 모델링',
+                secondItem: '/tool/k8s-modeling'
+              },
               {
                 secondTitle: '기본 배포 다이어그래밍',
                 secondItem: '/operation/ops-deploy-diagramming-basic-objects/'
@@ -132,25 +132,29 @@ module.exports = {
             firstTitle: '커스텀 템플릿',
             name:[
               {
-                secondTitle: '템플릿 구조',
+                secondTitle: '커스텀 템플릿 생성',
+                secondItem: '/custom-template/template-editor-custom-template/'
+              },
+              {
+                secondTitle: '템플릿 파일 구조',
                 secondItem: '/custom-template/template-structure/'
               },
               {
-                secondTitle: '반복문',
-                secondItem: '/custom-template/for-loop/'
-              },
-              {
-                secondTitle: '조건문',
-                secondItem: '/custom-template/conditional-statement/'
+                secondTitle: '반복문&조건문',
+                secondItem: '/custom-template/loop-conditional-statement/'
               },
               {
                 secondTitle: 'Helper',
                 secondItem: '/custom-template/helper/'
               },
               {
+                secondTitle: 'Global Helper',
+                secondItem: '/custom-template/global-helper/'
+              },
+              {
                 secondTitle: 'Template Editor',
                 secondItem: '/custom-template/template-editor/'
-              },
+              }
             ]
           },
           // {

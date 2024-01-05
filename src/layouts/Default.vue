@@ -11,7 +11,6 @@
       </header>
 
       <main class="container relative flex flex-wrap justify-start flex-1 w-full bg-ui-background">
-
         <aside
           v-if="hasSidebar"
           class="sidebar flex-1 w-1/6"
@@ -19,7 +18,7 @@
           :style="sidebarStyle"
         >
           <div class="w-full pb-16 bg-ui-background">
-            <Sidebar @navigate="sidebarOpen = false" />
+            <Sidebar @navigate="sidebarOpen = false" @closeSidebar="sidebarOpen = false" />
           </div>
         </aside>
 
@@ -243,9 +242,11 @@ blockquote {
 
     li {
       @apply mb-2;
+      overflow-wrap: break-word;
 
       p {
         @apply mb-0;
+        overflow-wrap: break-word;
       }
 
       &:last-child {
@@ -253,6 +254,10 @@ blockquote {
       }
     }
   }
+}
+
+div {
+  overflow-wrap: break-word;
 }
 
 blockquote {

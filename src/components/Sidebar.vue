@@ -4,13 +4,13 @@
     v-if="showSidebar"
     class="pt-8"
   >
-    <div
+    <div style="margin-top:5px;"
       v-for="(section, index) in sidebar.sections"
       :key="section.title"
     >
-      <h3 style="margin-top: 3px; font-size: 16px;" v-if="section.firstTitle && !section.firstItem && !section.firstLink">
+      <div style="font-weight:700; font-size:16px; margin-bottom:5px;" v-if="section.firstTitle && !section.firstItem && !section.firstLink">
         {{ section.firstTitle }}
-      </h3>
+      </div>
       <g-link
         v-if="section.firstTitle && section.firstItem && !section.firstLink"
         :to="`${section.firstItem}`"
@@ -42,16 +42,16 @@
             :to="`${secondSection.secondItem}`"
             class="flex items-center py-1"
           >
-            <h4 style="margin-left: 10px; margin-bottom: 0px; font-size: 14px;">
+            <div style="padding:2px 0px; margin-left:15px; font-size: 14px;" :class="getClassesForAnchor(secondSection)" @mousedown="$emit('navigate')">
               {{ secondSection.secondTitle }}
-            </h4>
+            </div>
           </g-link>
           <g-link
             v-if="secondSection.secondTitle && !secondSection.secondItem && secondSection.secondLink"
             :to="`${secondSection.secondLink}`"
             class="flex items-center py-1"
           >
-            <h4 style="margin-left: 10px; margin-bottom: 0px; font-size: 14px;">
+            <h4 style="margin-left: 15px; margin-bottom: 0px; font-size: 14px;">
               {{ secondSection.secondTitle }}
             </h4>
           </g-link>
@@ -111,8 +111,15 @@ query Sidebar {
 export default {
   data() {
     return {
-      expanded: []
+      expanded: [],
+      currentPath: String
     };
+  },
+  watch: {
+    '$route'(to) {
+      // 라우트가 변경될 때마다 실행될 로직
+      this.currentPath = to.path
+    }
   },
   computed: {
     pages() {
@@ -132,11 +139,10 @@ export default {
     }
   },
   methods: {
-    getClassesForAnchor({ path }) {
+    getClassesForAnchor(path) {
       return {
-        "text-ui-primary": this.currentPage.path === path,
-        "transition transform hover:translate-x-1 hover:text-ui-primary": ! this.currentPage.path === path
-      };
+        active: this.currentPath === path.secondItem
+      }
     },
     findPages(links) {
       return links.map(link => this.pages.find(page => page.path === link));
@@ -145,6 +151,10 @@ export default {
 };
 </script>
 <style scoped>
+.active {
+  color:#5A67D8;
+  font-weight: 700;
+}
   /* 삼각형 스타일 */
   .triangle {
     width: 0;
