@@ -5,23 +5,23 @@ export default {
   "touchicons": [
     {
       "width": 76,
-      "src": "/assets/static/src/assets/favicon.png?width=76&key=da2a65e"
+      "src": "/assets/static/src/img/logo.png?width=76&key=9e906bb"
     },
     {
       "width": 152,
-      "src": "/assets/static/src/assets/favicon.png?width=152&key=da2a65e"
+      "src": "/assets/static/src/img/logo.png?width=152&key=9e906bb"
     },
     {
       "width": 120,
-      "src": "/assets/static/src/assets/favicon.png?width=120&key=da2a65e"
+      "src": "/assets/static/src/img/logo.png?width=120&key=9e906bb"
     },
     {
       "width": 167,
-      "src": "/assets/static/src/assets/favicon.png?width=167&key=da2a65e"
+      "src": "/assets/static/src/img/logo.png?width=167&key=9e906bb"
     },
     {
       "width": 180,
-      "src": "/assets/static/src/assets/favicon.png?width=180&key=da2a65e"
+      "src": "/assets/static/src/img/logo.png?width=180&key=9e906bb"
     }
   ],
   "favicons": [
