@@ -2,6 +2,7 @@
 description: ''
 sidebar: 'started'
 ---
+<div class="code-block">
 
 # ChatGPT 기반 구현 및 디버깅 자동화
 
@@ -41,9 +42,8 @@ sidebar: 'started'
 
 4. 테스트 선택 창을 클릭하면 자동으로 **unit-test** 토핑이 코드에 반영되고, 각 마이크로서비스 파일 내에 test 폴더가 생성됩니다.
 
-```java
-UpateInventoryTest.java
 
+```java
 @Test
     @SuppressWarnings("unchecked")
     public void test0() {
@@ -103,6 +103,7 @@ UpateInventoryTest.java
             assertTrue("exception", false);
         }
     }
+</div>
 ```
 
 5. 해당 폴더 내에 있는 테스트 파일을 확인해보면 앞서 Rule을 적용한 given, when, then에 대한 예시값과 테스트를 위한 로직이 생성되어 있습니다.
@@ -126,3 +127,10 @@ UpateInventoryTest.java
 9. 테스트가 통과되면 Test success 메시지와 함께 Runnable한 소스코드가 반영된 GitPod Cloud IDE로 연결되는 버튼이 나타납니다.
 
 해당 버튼을 클릭해 비즈니스 로직 구현 등의 개발 작업을 진행하거나 곧바로 서비스 배포 작업을 시작할 수 있습니다.
+
+<style>
+    /* 해당 코드 블록의 너비를 조절합니다. */
+    .code-block {
+        overflow-x: auto;
+    }
+</style>

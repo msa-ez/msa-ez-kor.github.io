@@ -6,7 +6,7 @@
         </div>
 
         <div class="order-1 lg:w-3/4 sm:w-full md:w-2/3">
-          <div class="content" v-html="$page.markdownPage.content" />
+          <div class="content" v-html="$page.markdownPage.content"/>
 
           <div class="mt-8 pt-8 lg:mt-12 lg:pt-12 border-t border-ui-border">
             <NextPrevLinks />
@@ -127,4 +127,27 @@ export default {
 
 <style>
 @import 'prism-themes/themes/prism-material-oceanic.css';
+
+@media only screen and (max-width:1600px) {
+    /* .main-card-box {
+        width: 48%;
+    }     */
+}
+
+@media only screen and (max-width:1410px){
+    .is-not-mobile-main-top {
+        display: none;
+    }
+    .is-mobile-main-top {
+        display: block;
+    }
+}
+
+@media only screen and (max-width:1100px) {
+  
+}
+
+@media only screen and (max-width:676px) {
+  
+}
 </style>
