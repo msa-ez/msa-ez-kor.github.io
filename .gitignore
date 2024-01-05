@@ -7,5 +7,5 @@ dist
 !.env.example
 .env
 .env.*
-/src/.temp/.now.js
-.now.js
+/src/.temp/now.js
+now.js
