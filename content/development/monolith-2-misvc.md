@@ -31,13 +31,13 @@ next: ''
 
 <img width="874" alt="image" src="https://user-images.githubusercontent.com/487999/190896320-72973cf1-c1dc-44f4-a46a-9be87d072284.png">
 
-- 재고량을 감소시키는 Command 의 추가: inventory BC 내에 Command  스티커를 추가하고, 아래 커맨드 이름을 복사하여 사용합니다. 
+- 재고량을 감소시키는 Command 추가 : inventory BC 내에 Command  스티커를 추가하고, 아래 커맨드 이름을 복사하여 사용합니다. 
 ```
 decrease stock
 ```
 - 이때 Command 스티커는 Inventory Aggregate 스티커의 왼쪽에 인접하게 부착합니다.
-- Command 의 설정:  "decrease stock" command 를 더블클릭한 후, Method Type을 'Extend Verb URI'를 선택하고 **Attribute로 type: Integer, name: qty를 추가**해 줍니다.
-- 속성 추가후, 반드시 'Add Attribute'를 클릭하거나 엔터키로 설정을 확인합니다. 
+- Command 의 설정:  "decrease stock" command 를 더블클릭한 후, Method Type을 **Extend Verb URI**를 선택하고 **Attribute로 type: Integer, name: qty를 추가**해 줍니다.
+- 속성 추가후, **Add Attribute** 를 클릭하거나 엔터키로 설정을 확인합니다. 
 
 <img width="784" alt="image" src="https://user-images.githubusercontent.com/487999/190896393-30889e96-6cbc-4e7f-9631-25c0d004635d.png">
 
@@ -45,20 +45,20 @@ decrease stock
 
 <img width="859" alt="image" src="https://user-images.githubusercontent.com/487999/190896427-f91962cd-f8ab-4113-bd85-5abe1ada3bcd.png">
 
-## Code 생성 및 내 Git 리파지토리에 푸쉬 
-- 모델링 메뉴의 'CODE' > 'Code Preview'를 클릭합니다. 
-- 상단의 'Push to Git' 메뉴를 클릭해 나타나는 다이얼로그 박스에서 'Create New Repository'를 선택하고, 'CREATE'를 누른다.
-> 초기 Github 계정으로 로그인 하였으므로, 나의 Git 정보가 자동으로 표시됩니다. 
+## Code 생성 및 내 Git Repository에 Push 
+- 모델링 메뉴의 **CODE** > **Code Preview**를 클릭합니다. 
+- 상단의 **Push to Git** 메뉴를 클릭해 나타나는 다이얼로그 박스에서 **Create New Repository**를 선택하고, **CREATE**를 클릭합니다.
+- 초기 Github 계정으로 로그인 하였으므로, 나의 Git 정보가 자동으로 표시됩니다. 
 
 ![image](https://github.com/acmexii/demo/assets/35618409/dcb1966e-e0d1-43f3-9920-457660923259)
-- 모델 기반 코드가 내 Github에 푸쉬됩니다.
+- 모델 기반 코드가 내 Github에 Push됩니다.
 
 ![image](https://github.com/acmexii/demo/assets/35618409/6581f400-adb8-4963-bf03-511d459c5e32)
-- 좌측 메뉴 'IDE'를 누른다음, Cloud IDE 목록에서 'Open GitPod'를 클릭합니다.
+- 좌측 메뉴 **IDE**를 누른다음, Cloud IDE 목록에서 **Open GitPod**를 클릭합니다.
 
-### 호출측 소스코드의 확인
+### 호출 측 소스코드의 확인
 - Cloud IDE상에 로딩된 코드 목록에서 아래 리소스를 찾아 봅니다.
-- monolith/../ Order.java 의 @PostPersist 내에 호출을 위해 생성된 샘플코드를 확인합니다:
+- monolith/../ Order.java 의 **@PostPersist** 내에 호출을 위해 생성된 샘플코드를 확인합니다:
 
 ```
 @PostPersist
@@ -74,7 +74,8 @@ public void onPostPersist() {
         .decreaseStock((Long.valueOf(getProductId())), decreaseStockCommand);
 }
 ```
-> 우리는 decreaseStock stub 메서드를 로컬 객체를 호출하는것처럼 호출하지만 실제적으로는 inventory 원격객체를 호출하는 결과가 될 것이다.
+> 우리는 decreaseStock stub 메서드를 로컬 객체를 호출하는 것처럼 호출하지만 실제적으로는 inventory 원격객체를 호출합니다.
+
 > 재고량 수정을 위하여 qty 값을 전달하는 Command 객체와 해당 제품 id 를 path 로 전달하는 첫번째 아규먼트로 productId를 전달합니다.
 
 
@@ -93,9 +94,11 @@ public interface InventoryService {
 
 }
 ```
-> FeignClient 는 실제로는 inventory 원격객체를 호출하는 proxy 객체를 생성할 것이다. application.yaml 의 api.url.inventory 설정값의 url 로 PUT 메서드를 해당 path 로 호출하는 원격 호출의 구현체가 채워진다. 
+> FeignClient 는 실제로는 inventory 원격객체를 호출하는 proxy 객체를 생성합니다.
 
-## 피호출측 소스코드의 확인과 구현
+> application.yaml 의 api.url.inventory 설정값의 url 로 PUT 메서드를 해당 path 로 호출하는 원격 호출의 구현체가 채워집니다. 
+
+## 피호출 측 소스코드의 확인과 구현
 - inventory/.. /infra/InventoryController.java
 ```
 public class InventoryController {
@@ -124,8 +127,11 @@ public class InventoryController {
     }
 }
 ```
-> decreaseStock 에 대한 원격호출을 받을 수 있는 REST Service Mapping 이다.
-> 호출을 받으면 Inventory 어그리거트의 decreaseStock 으로 전달하는 input adapter 역할을 합니다(hexagonal architecture). 실제 비즈니스 로직 (재고량 감소)은 어그리거트 내부에서만 ubiquitous 언어로 구현되어야 합니다.
+> decreaseStock 에 대한 원격호출을 받을 수 있는 REST Service Mapping 입니다.
+
+> 호출을 받으면 Inventory 어그리거트의 decreaseStock 으로 전달하는 input adapter 역할을 합니다(hexagonal architecture). 
+
+> 실제 비즈니스 로직 (재고량 감소)은 어그리거트 내부에서만 ubiquitous 언어로 구현되어야 합니다.
 
 - inventory/../Inventory.java 의 구현
 ```
@@ -138,7 +144,7 @@ public class InventoryController {
 
 #### inventory 서비스의 테스트
 
-- inventory 서비스를 기동시키고 httpie 툴을 통하여 서비스가 잘 호출되는지 테스트합니다:
+- inventory 서비스를 기동시키고 httpie 툴을 통해 서비스가 잘 호출되는지 테스트합니다:
 ```
 cd inventory
 mvn spring-boot:run
