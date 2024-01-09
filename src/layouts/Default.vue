@@ -21,16 +21,14 @@
             <Sidebar @navigate="sidebarOpen = false" @closeSidebar="sidebarOpen = false" />
           </div>
         </aside>
-
+        
         <div
           class="w-full pb-24"
           :class="{'pl-0 lg:pl-12 lg:w-5/6': hasSidebar}"
         >
           <slot />
         </div>
-
       </main>
-
     </div>
 
     <div v-if="hasSidebar" class="fixed bottom-0 right-0 z-50 p-8 lg:hidden">
