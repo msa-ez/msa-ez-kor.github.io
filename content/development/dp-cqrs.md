@@ -15,6 +15,7 @@ next: ''
 [모델 링크](https://www.msaez.io/#/storming/labcqrs-231022)
 - 브라우져에 모델이 로딩되지 않으면, 우측 상단의 (사람모양) 아바타 아이콘을 클릭하여 **깃헙(Github)** 계정으로 로그인 후 리로드하면 아래처럼 랩에 필요한 이벤트스토밍 기본 모델이 출력됩니다. 
 - 로딩된 모델은 우측 팔레트 영역에 스티커 목록이 나타나지 않습니다. 상단 메뉴영역에서 포크 아이콘(FORK)을 클릭해 주어진 모델을 복제합니다. 
+
 ![image](https://github.com/acmexii/demo/assets/35618409/c9a4575c-d8e2-424b-9587-7ca789dca2e1)
 - 우측 팔레트 영역에 스티커 목록들이 나타나는 것이 확인됩니다.
 
@@ -27,14 +28,19 @@ next: ''
 - customercenter BC 를 추가
 - Read Model 녹색 스티커 추가('MyPage')
 - Read Model 속성 Define
+
 > Long orderId 
+
 > String productId
+
 > String deliveryStatus
+
 > String orderStatus
 
 <img width="982" alt="image" src="https://user-images.githubusercontent.com/487999/191055790-5d6a529f-e2f7-49ab-8ee0-74d371f06090.png">
 
 - Read Model CRUD 상세설계
+
 <img width="434" alt="image" src="https://user-images.githubusercontent.com/487999/191056403-fbdec62b-42ea-4261-8e4e-b631c6c6779a.png">
 
 ### Code Preview 
@@ -62,7 +68,7 @@ repository().save(delivery);
 ```
 mvn spring-boot:run
 ```
-- customer-center 에 오류가 발생합니다면 다음 ViewHandler.java 부분의 구현체를 확인: (findByOrderId --> findById)
+- customer-center 에 오류가 발생합니다면 다음 ViewHandler.java 부분의 구현체를 확인합니다 : (findByOrderId --> findById)
 ```
     @StreamListener(KafkaProcessor.INPUT)
     public void whenDeliveryStarted_then_UPDATE_1(@Payload DeliveryStarted deliveryStarted) {
@@ -75,7 +81,7 @@ mvn spring-boot:run
                  MyPage myPage = myPageOptional.get();
             // view 객체에 이벤트의 eventDirectValue 를 set 함
                 myPage.setDeliveryStatus("Started");    
-                // view 레파지 토리에 save
+                // view Repository에 save
                  myPageRepository.save(myPage);
                 }
 

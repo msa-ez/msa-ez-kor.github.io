@@ -8,7 +8,8 @@ next: ''
 # Pub/Sub 방식의 연동 
 
 마이크로 서비스간의 통신에서 이벤트 메세지를 Pub/Sub 하는 방법을 실습합니다.  
-Order 서비스에서 주문(OrderPlaced) 이벤트가 발행 되였을때, Inventory 서비스에서 OrderPlaced 이벤트를 수신하여 재고량을 변경(감소)합니다.  
+
+Order 서비스에서 주문(OrderPlaced) 이벤트가 발행 되었을 때, Inventory 서비스에서 OrderPlaced 이벤트를 수신하여 재고량을 변경(감소)합니다.  
 
 ## 이벤트스토밍 모델 준비
 
@@ -21,7 +22,7 @@ Order 서비스에서 주문(OrderPlaced) 이벤트가 발행 되였을때, Inve
 
 ## order 서비스의 이벤트 Publish
 
-메뉴의 CODE > ProjectIDE 를 선택하여, 연결된 브라우져 IDE를 로딩합니다.
+메뉴의 **CODE** > **ProjectIDE** 를 선택하여, 연결된 브라우져 IDE를 로딩합니다.
 
 - order 마이크로 서비스를 실행합니다.
 > order 폴더를 선택 > Open In Terminal > 터미널에서 아래 커맨드를 실행합니다.
@@ -31,54 +32,51 @@ mvn spring-boot:run
 ```
 
 - 기동된 order 서비스를 호출하여 주문 1건을 요청합니다.
- ```
+```
 http localhost:8081/orders productId=1 productName=TV qty=3
 ```
 - GitPod에서 새 터미널을 추가합니다.
-- kafka 유틸리티가 포함된 위치에 접속하기 위하여 docker 를 통하여 shell 에 진입합니다:
+- kafka 유틸리티가 포함된 위치에 접속하기 위하여 docker 를 통하여 shell 에 진입합니다.
 ```
 cd kafka
 docker-compose exec -it kafka /bin/bash
 cd /bin
 ```
 
-- kafka Consumer에서 이벤트 확인합니다
+- kafka Consumer에서 이벤트를 확인합니다.
 ``` 
 ./kafka-console-consumer --bootstrap-server localhost:9092 --topic labshoppubsub  --from-beginning
 ```
 
 
 ## Inventory 서비스의 이벤트 Subscribe
-- Inventory PolicyHandler.java Code 확인합니다.
+- Inventory PolicyHandler.java 파일의 코드를 확인합니다.
 - PolicyHandler.java --> Inventory.java (Aggregate) 의 Port Method (decreaseStock)을 호출하게 됩니다.
-- decreaseStock 내에 우리가 작성해야 할 로직은 다음과 같습니다:
+- decreaseStock 내에 작성해야 할 로직은 다음과 같습니다.
 
-```
-        
-               
-        repository().findById(Long.valueOf(orderPlaced.getProductId())).ifPresent(inventory->{
-            
-            inventory.setStock(inventory.getStock() - orderPlaced.getQty()); // do something
-            repository().save(inventory);
+```       
+repository().findById(Long.valueOf(orderPlaced.getProductId())).ifPresent(inventory->{
+    
+    inventory.setStock(inventory.getStock() - orderPlaced.getQty()); // do something
+    repository().save(inventory);
 
 
-         });
-      
+    });
+
 ```
 
 - inventory 서비스를 실행합니다.
 ```
 mvn spring-boot:run
 ```
-- inventory 서비스가 8082 포트로 기동됨을 확인합니다.
-- OrderPlaced 이벤트에 반응하여 재고량이 감소되는 것을 확인합니다:
+- inventory 서비스가 8082 포트로 기동됨을 확인하고 주문을 실행합니다.
 
 ```
 http :8082/inventories id=1 stock=10
 http :8081/orders productId=1 qty=5
 http :8082/inventories/1
 ```
-결과:
+- OrderPlaced 이벤트에 반응하여 재고량이 감소되는 것을 확인합니다.
 ```
 {
     "_links": {

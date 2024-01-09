@@ -14,6 +14,9 @@ Event Sourcing, Domain driven Development 개발 및 CQRS를 지원하는 전문
 - 아래 모델을 새 탭에서 로딩합니다.
 [모델 링크](https://www.msaez.io/#/storming/axon-mallorchestrationsaga:v1.5)
 - 브라우져에 모델이 로딩되지 않으면, 우측 상단의 (사람모양) 아바타 아이콘을 클릭하여 **깃헙(Github)** 계정으로 로그인 후 리로드합니다. 
+
+![image](https://github.com/acmexii/demo/assets/35618409/39ccf71e-3977-4093-9bae-7c2a1254d710)
+
 - 로딩된 모델은 우측 팔레트 영역에 스티커 목록이 나타나지 않습니다. 상단 메뉴영역에서 포크 아이콘(FORK)을 클릭해 주어진 모델을 복제합니다. 
 - 우측 팔레트 영역에 스티커 목록들이 나타나는 것이 확인됩니다.
 
@@ -34,9 +37,13 @@ Event Sourcing, Domain driven Development 개발 및 CQRS를 지원하는 전문
 ## Process Orchestration 
 
 오케스트레이션 Saga 모델링 규칙은 다음과 같습니다.
-> 1. 스티커를 선으로 연결합니다. 'From Sticker' > 'To Sticker'
-> 2. 매핑 릴레이션을 클릭하여, 레이블을 부여합니다. 레이블은 실행 순서를 의미
-> 3. 레이블 중, '가 붙은 프로세스는 보상처리(Compensation Trx) 프로세스 임 
+
+1. 스티커를 선으로 연결합니다.
+
+2. 매핑 릴레이션을 클릭하여, 레이블(실행 순서)을 부여합니다.
+
+3. 레이블 중, '가 붙은 프로세스는 보상처리(Compensation Trx) 프로세스 입니다. 
+
 - OrderPlaced > Order Saga, (1.start)
 - Order Saga > start delivery, (2)
 - DeliveryStarted > Order Saga, (3)
@@ -47,14 +54,14 @@ Event Sourcing, Domain driven Development 개발 및 CQRS를 지원하는 전문
 - Order Saga > order cancel, (2')
 - Order Saga > cancel delivery, (4')
 
-### 오케스트레이션 Saga 모델링 결과는 다음과 같이 보여집니다.
+### 오케스트레이션 Saga 모델링 결과
 
 ![image](https://user-images.githubusercontent.com/35618409/229645326-3a24d5e3-81f3-4ecb-9e6f-2101302eb697.png)
 
 
-## Code 생성 및 내 Git 리파지토리에 푸쉬 
+## Code 생성 및 내 Git Repository에 Push 
 
-- Code Preview > Git 아이콘을 눌러 내 레파지토리에 푸쉬합니다.
+- Code Preview > Git 아이콘을 눌러 내 Repository에 Push합니다.
 
 ![image](https://user-images.githubusercontent.com/35618409/229663138-ec1a8a2c-a50f-4c3c-ba4c-75c1ea9057ad.png)
 
@@ -74,7 +81,7 @@ Event Sourcing, Domain driven Development 개발 및 CQRS를 지원하는 전문
 
 ## Orchestration Saga Code Completion 
 
-## Product Service
+### Product Service
 
 상품 Domain 코드에 Biz 로직을 완성합니다.
 
@@ -94,7 +101,7 @@ Event Sourcing, Domain driven Development 개발 및 CQRS를 지원하는 전문
 ```
 
 
-## Order Service
+### Order Service
 
 주문 Domain 코드에 Biz 로직을 완성합니다.
 
@@ -108,7 +115,7 @@ Event Sourcing, Domain driven Development 개발 및 CQRS를 지원하는 전문
       setStatus("OrderCancelled");		// 코드추가
 ```
 
-## Delivery Service
+### Delivery Service
 
 배송 Domain 코드에 Biz 로직을 완성합니다.
 
@@ -128,7 +135,7 @@ Event Sourcing, Domain driven Development 개발 및 CQRS를 지원하는 전문
 
 - OrderPlaced 이벤트로부터 Correlation key 설정 : 24 라인
 ```
-	@SagaEventHandler(associationProperty = "orderId")
+@SagaEventHandler(associationProperty = "orderId")
 ```
 
 ### 2. 배송시작 Command 생성 및 호출 : 27라인
@@ -145,7 +152,7 @@ orderCancelCommand.setOrderId(event.getOrderId());  	// 코드추가
 ### 3. DeliveryStartedEvent 이벤트로부터 Correlation key 설정
 
 ```
-	@SagaEventHandler(associationProperty = "orderId")
+@SagaEventHandler(associationProperty = "orderId")
 ```
 
 ### 4. 재고차감 Command 생성 및 호출 
@@ -161,7 +168,7 @@ cancelDeliveryCommand.setDeliveryId(event.getDeliveryId());	// 코드추가
 ### 5. StockDecreasedEvent 이벤트로부터 Correlation key 설정
 
 ```
-	@SagaEventHandler(associationProperty = "orderId")
+@SagaEventHandler(associationProperty = "orderId")
 ```
 
 ### 6. 주문완료 Command 생성 및 호출 
@@ -173,7 +180,7 @@ command.setOrderId(event.getOrderId());
 
 - OrderCompletedEvent 이벤트로부터 Correlation key 설정
 ```
-	@SagaEventHandler(associationProperty = "orderId")
+@SagaEventHandler(associationProperty = "orderId")
 ```
 - Saga Process 종료
 
@@ -181,7 +188,7 @@ command.setOrderId(event.getOrderId());
 
 ## 12st Mall 테스트
 
-- Rest API를 활용해 생성된 Axon Saga 기반 몰을 테스트 합니다.
+- Rest API를 활용해 생성된 Axon Saga 기반 쇼핑몰을 테스트 합니다.
 
 - 먼저 Common API를 빌드합니다.
 ```
@@ -204,7 +211,7 @@ cd delivery
 mvn clean spring-boot:run
 ```
 
-- 상품서비스(:8082)에 테스트용 상품을 등록합니다.
+- Product 서비스(:8082)에 테스트용 상품을 등록합니다.
 ```
 # new terminal
 http POST :8082/products productName=TV stock=100
@@ -233,7 +240,7 @@ http POST :8081/orders productId=[상품 Id] productName=TV qty=10 userId=1001
 http POST :8081/orders productId=[상품 Id] productName=TV qty=100 userId=1001
 ```
 
-- 재고 개수(90)보다 많은 주문으로 상품서비스에서 오류를 리턴합니다.
+- 재고 개수(90)보다 많은 주문으로 상품 서비스에서 오류를 리턴합니다.
 
 
 - 주문 번호로 생성된 주문의 최종 상태와 이벤트 이력을 조회해 봅니다.

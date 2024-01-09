@@ -45,7 +45,7 @@ next: ''
 
 #### Code Push & Load on GitPod
 
-- Code Preview > Git 아이콘을 눌러 내 레파지토리에 푸쉬한다.
+- Code Preview > Git 아이콘을 눌러 내 Repository에 Push한다.
 ![image](https://user-images.githubusercontent.com/35618409/229663138-ec1a8a2c-a50f-4c3c-ba4c-75c1ea9057ad.png)
 
 ![image](https://user-images.githubusercontent.com/35618409/229649084-15d388b9-3246-43b2-956c-d1012f47ce12.png)

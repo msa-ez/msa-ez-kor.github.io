@@ -14,7 +14,7 @@ next: ''
 - 아래 모델을 새 탭에서 로딩합니다.
 [모델 링크](https://www.msaez.io/#/storming/mallbasic-for-ops)
 - 브라우져에 모델이 로딩되지 않으면, 우측 상단의 (사람모양) 아바타 아이콘을 클릭하여 **깃헙(Github)** 계정으로 로그인 후 리로드하면 아래처럼 랩에 필요한 이벤트스토밍 기본 모델이 출력됩니다. 
-- 로딩된 모델은 우측 팔레트 영역에 스티커 목록이 나타나지 않는다. 상단 메뉴영역에서 포크 아이콘(FORK)을 클릭해 주어진 모델을 복제합니다. 
+- 로딩된 모델은 우측 팔레트 영역에 스티커 목록이 나타나지 않으므로 상단 메뉴영역에서 포크 아이콘(FORK)을 클릭해 주어진 모델을 복제합니다. 
 
 ![image](https://github.com/acmexii/demo/assets/35618409/1e16e849-7ae9-4b33-b39c-db4ef0939507)
 - 우측 팔레트 영역에 스티커 목록들이 나타나는 것이 확인됩니다.
@@ -23,33 +23,42 @@ next: ''
 ## 배포 모델링 
 
 - Fork된 모델에 Istio 토핑을 추가합니다. 
-- Ingress 토핑 추가는 메뉴에서 'Code' > 'Preview' > 'Toppings' 에서 아래처럼 Service Mesh 하위의 Istio를 체크 하기만 하면 됩니다.
+- Ingress 토핑 추가는 메뉴에서 **Code** > **Preview** > **Toppings** 에서 아래처럼 Service Mesh 하위의 Istio를 체크 하기만 하면 됩니다.
 
 ![image](https://github.com/acmexii/demo/assets/35618409/4dfd204a-39c0-4f34-a2e6-d14802cd5d7b)
 
-- Istio 토핑 추가 후, 코드 목록에서 Kubernetes 폴더를 보면, 'template' > 'istio.yml'이 추가된 것을 확인할 수 있습니다.
+- Istio 토핑 추가 후, 코드 목록에서 Kubernetes 폴더를 보면, **template** > **istio.yml**이 추가된 것을 확인할 수 있습니다.
 
 ![image](https://github.com/acmexii/demo/assets/35618409/5ed07284-52d9-4058-82e4-40c343d41b3f)
 - MSA-Ez가 추가한 Istio CRDs 객체는 다음과 같습니다.
+
 > Gateway : Istio Ingressgateway를 기본으로 하는 Istio Gateway  
+
 > VirtualService : 요청이 어떤 서비스(또는, Subset)에 얼마 만큼의 트래픽을 라우팅할지를 결정하는 객체
+
 > DestinationRule : 서비스별 컨테이너에 대한 Subset(stable, canary) 정의 및 라우팅 정책(로더밸런싱, 컨넥션 풀, etc)을 설정하는 객체 
 
 
 ## Istio 객체 상세 설계
 
-- 모델 상단 메뉴의 'DEPLOY'를 클릭합니다.
+- 모델 상단 메뉴의 **DEPLOY**를 클릭합니다.
 
 ![image](https://github.com/acmexii/demo/assets/35618409/07d45fce-528a-4261-a1e3-c100e068c6b0)
 
 - 아래 그림처럼 Istio 객체 모델이 나타납니다.
 
 ![image](https://github.com/acmexii/demo/assets/35618409/e4ee1273-bf3a-43bb-8b8b-604307c677be)
-> Istio Ingressgateway를 사용하는 'main-gw' Gateway 객체
-> 2개의 Subset(stable, canary)을 가지는 'drule-order' DestinationRule 객체
-> Subset별 가중치 기반으로 'order' Service를 라우팅하는 'vsvc-order' VirtualService 객체
-  > 다양한 조건(uri, method, headers, port, source Labels, gateways, queryParams)의 라우팅 설정 가능
-  > 기본으로 생성된 두 Subset(stable, canary)이 동일하므로 가중치를 수정해도 동일 서비스로 라우팅되나, 향후 Blue Green 및 카나리 배포에 활용 가능
+
+> Istio Ingressgateway를 사용하는 **main-gw** Gateway 객체
+
+> 2개의 Subset(stable, canary)을 가지는 **drule-order** DestinationRule 객체
+
+> Subset별 가중치 기반으로 **order** Service를 라우팅하는 **vsvc-order** VirtualService 객체
+
+> 다양한 조건(uri, method, headers, port, source Labels, gateways, queryParams)의 라우팅 설정 가능
+
+> 기본으로 생성된 두 Subset(stable, canary)이 동일하므로 가중치를 수정해도 동일 서비스로 라우팅되나, 향후 Blue Green 및 카나리 배포에 활용 가능
+
 - 배송, 상품 서비스에 대해서도 동일한 Istio CRDs 객체들이 아래처럼 자동으로 생성됩니다.
 
 ![image](https://github.com/acmexii/demo/assets/35618409/32f67182-ef3e-4773-bfe1-fe7b49bc96b6)
@@ -73,7 +82,7 @@ cd istio-$ISTIO_VERSION
 export PATH=$PWD/bin:$PATH
 ```
 
-- Istio를 'demo' 프로파일로 설치합니다.
+- Istio를 **demo** 프로파일로 설치합니다.
 ```
 istioctl install --set profile=demo --set hub=gcr.io/istio-release
 ```
@@ -84,7 +93,7 @@ istioctl install --set profile=demo --set hub=gcr.io/istio-release
     ✔ Ingress gateways installed
     ✔ Installation complete
 ```
-- 'default' 네임스페이스에 Istio가 적용되도록 설정합니다.
+- **default** 네임스페이스에 Istio가 적용되도록 설정합니다.
 ```
 kubectl label namespace default istio-injection=enabled
 ```

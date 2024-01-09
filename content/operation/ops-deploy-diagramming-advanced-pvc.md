@@ -6,14 +6,14 @@ next: ''
 ---
 # Persistent Volume
 
-주어진 12번가 이벤트스토밍 모델을 기반으로, MSA-Ez가 제공하는 쿠버네티스 오브젝트 생성을 위한 배포 모델링 도구를 활용해 스토리지를 위한 메니페스트를 자동 생성하고 이를 클러스터에 적용해 봅니다.
+주어진 12번가 이벤트스토밍 모델을 기반으로, MSAEZ가 제공하는 쿠버네티스 오브젝트 생성을 위한 배포 모델링 도구를 활용해 스토리지를 위한 메니페스트를 자동 생성하고 이를 클러스터에 적용해 봅니다.
 
 ## 이벤트스토밍 모델 준비
 
 - 아래 모델을 새 탭에서 로딩합니다.
 [모델 링크](https://www.msaez.io/#/storming/mallbasic-for-ops)
 - 브라우져에 모델이 로딩되지 않으면, 우측 상단의 (사람모양) 아바타 아이콘을 클릭하여 **깃헙(Github)** 계정으로 로그인 후 리로드하면 아래처럼 랩에 필요한 이벤트스토밍 기본 모델이 출력됩니다. 
-- 로딩된 모델은 우측 팔레트 영역에 스티커 목록이 나타나지 않는다. 상단 메뉴영역에서 포크 아이콘(FORK)을 클릭해 주어진 모델을 복제합니다. 
+- 로딩된 모델은 우측 팔레트 영역에 스티커 목록이 나타나지 않으므로 상단 메뉴영역에서 포크 아이콘(FORK)을 클릭해 주어진 모델을 복제합니다. 
 
 ![image](https://github.com/acmexii/demo/assets/35618409/1e16e849-7ae9-4b33-b39c-db4ef0939507)
 - 우측 팔레트 영역에 스티커 목록들이 나타나는 것이 확인됩니다.
@@ -22,11 +22,11 @@ next: ''
 ## 배포 모델링
 
 - Fork된 모델에 Ingress 토핑을 추가합니다. 
-- Ingress 토핑 추가는 메뉴에서 'Code' > 'Preview' > 'Toppings' 에서 아래처럼 Service Mesh 하위의 Ingress를 체크 하기만 하면 됩니다.
+- Ingress 토핑 추가는 메뉴에서 **Code** > **Preview** > **Toppings** 에서 아래처럼 Service Mesh 하위의 Ingress를 체크 하기만 하면 됩니다.
 
 ![image](https://github.com/acmexii/demo/assets/35618409/a55fc02b-2c67-492e-a233-10aee09d3cee)
 
-- Ingress가 적용된 상태에서 모델 상단 메뉴의 'DEPLOY'를 클릭합니다.
+- Ingress가 적용된 상태에서 모델 상단 메뉴의 **DEPLOY**를 클릭합니다.
 
 ![image](https://github.com/acmexii/demo/assets/35618409/07d45fce-528a-4261-a1e3-c100e068c6b0)
 
@@ -35,23 +35,27 @@ next: ''
 ![image](https://github.com/acmexii/demo/assets/35618409/9a3ffc7d-4910-4b6f-b3a7-0178f15abb17)
 - 또한, Ingress 게이트웨이에서 각 단위 서비스로 라우팅되는 패스(path) 이름이 자동으로 설정됩니다.
 
-- Cloud IDE를 활용해 각 서비스의 이미지를 생성하고 푸쉬한 다음, 생성한 이미지 이름을 Deployment 객체에 설정합니다. 
+- Cloud IDE를 활용해 각 서비스의 이미지를 생성하고 Push한 다음, 생성한 이미지 이름을 Deployment 객체에 설정합니다. 
 
 ## Persistence 객체 모델링
 
-- 모델링 도구영역에서 'Persistence' > 'PersistentVolumeClaim'을 선택해 PVC 스티커를 생성합니다.
+- 모델링 도구영역에서 **Persistence** > **PersistentVolumeClaim**을 선택해 PVC 스티커를 생성합니다.
 
 ![image](https://github.com/acmexii/demo/assets/35618409/5d4b0cc8-7159-4aab-ab72-9c424efd896f)
 
 - 생성한 PVC 스티커를 더블 클릭하여 주문서비스를 위한 스토리지 정보를 아래와 같이 입력합니다. 
+
 > Name : o-data
+
 > Access Modes : ReadWriteOnce
+
 > Storage : 10 Gi
+
 > Volume Mode : Filesystem
 
 ![image](https://github.com/acmexii/demo/assets/35618409/298d7014-97f7-4eb8-b5e1-c8949989ca51)
 - 이때, YAML 스펙의 14라인(storageClassName 항목)을 삭제하여 대다수 CSP들에 설정된 디폴드 스토리지 클래스(Provisioner)를 사용하도록 합니다.
-- 그런 다음, 'order' Deployment 객체를 클릭하여 화살표 도구를 이용, 'o-data' PVC로 매핑을 설정합니다.
+- 그런 다음, **order** Deployment 객체를 클릭하여 화살표 도구를 이용, **o-data** PVC로 매핑을 설정합니다.
 
 ![image](https://github.com/acmexii/demo/assets/35618409/be3accc4-bda3-473d-8745-3e04eae4c2ac)
 - 매핑이 설정되고 나면, 주문서비스 배포 YAML 스펙에는 o-data 스토리지를 사용하는 volume 마운트 정보가 자동으로 주입됩니다.

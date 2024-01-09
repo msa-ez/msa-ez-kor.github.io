@@ -16,9 +16,9 @@ next: ''
 ![image](https://github.com/acmexii/demo/assets/35618409/39ccf71e-3977-4093-9bae-7c2a1254d710)
 
 
-## API Gateway를 사용하여 마이크로 서비스들의 엔드포인트 단일화
+## API Gateway를 사용하여 마이크로서비스들의 엔드포인트 단일화
 
-- 메뉴의 CODE > ProjectIDE 를 선택하여, 연결된 브라우져 IDE를 로딩합니다.
+- 메뉴의 **CODE** > **ProjectIDE** 를 선택하여, 연결된 브라우져 IDE를 로딩합니다.
 - 터미널에서 http 클라이언트를 설치하고 kafka를 Local에 컨테이너 기반으로 실행합니다.
 ```
 pip install httpie
@@ -26,13 +26,13 @@ cd infra
 docker-compose up
 ```
 
-- monolith 마이크로 서비스를 실행합니다.
+- monolith 마이크로서비스를 실행합니다.
 ```
 cd monolith
 mvn spring-boot:run
 ```
 
-- gateway 마이크로 서비스를 실행합니다.
+- gateway 마이크로서비스를 실행합니다.
 ```
 cd gateway
 mvn spring-boot:run
@@ -51,17 +51,17 @@ mvn spring-boot:run
  http localhost:8088/orders  # can find the order item here also
 ```
   
-- inventory 마이크로 서비스를  실행합니다.
-- 게이트웨이서비스의 application.yaml 의 spring.cloud.gateway.routes 에 아래 설정을 추가하여 inventory 서비스로의 라우팅을 추가합니다. (indent 에 주의해주세요)
+- inventory 마이크로서비스를 실행합니다.
+- 게이트웨이 서비스 내 application.yaml 의 spring.cloud.gateway.routes 에 아래 설정을 추가하여 inventory 서비스로의 라우팅을 추가합니다.
 ```yaml
-      - id: inventory
-        uri: http://localhost:8082
-        predicates:
-          - Path=/inventories/** 
+- id: inventory
+  uri: http://localhost:8082
+  predicates:
+    - Path=/inventories/** 
 ```
 
 - 게이트웨이 서비스를 재기동 합니다.
-- 8082 포트로  서비스를 호출하여 보고, 게이트웨이를 통하여 서비스를 호출합니다.  
+- 8082 포트로 서비스를 호출해보고, 게이트웨이를 통하여 서비스를 호출합니다.  
 ```
 http localhost:8082/inventories
 http localhost:8088/inventories

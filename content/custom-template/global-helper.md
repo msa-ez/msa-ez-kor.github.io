@@ -2,6 +2,8 @@
 description: ''
 sidebar: 'started'
 ---
+# Global Helper
+
 Global Helper란 MSAEZ가 사전 정의하여 내장하고 있는 helper function으로 템플릿 전역에서 사용가능합니다.
 
 ## 1. 속성 평가
