@@ -2,12 +2,13 @@
 description: ''
 sidebar: 'started'
 ---
-
-## 1. Repository 생성
+# 커스텀 템플릿 생성 방법
 
 MSAEZ 모델을 기반으로 커스텀 템플릿을 개발하는 과정을 설명드리겠습니다.
 
-먼저 커스텀 템플릿 작업을 수행할 repository를 생성하겠습니다.
+## 1. Repository 생성
+
+커스텀 템플릿을 개발하기 위해서는 저장소를 생성해야합니다.
 
 https://github.com/ 에 접속 후, 템플릿 파일을 만들 repository를 생성합니다.
 
@@ -17,7 +18,7 @@ https://github.com/ 에 접속 후, 템플릿 파일을 만들 repository를 생
 
 ## 2. 템플릿 선택
 
-생성한 repository의 url을 기반으로 등록해야 합니다.
+생성한 repository의 url을 기반으로 코드 프리뷰 화면에서 템플릿을 등록해야 합니다.
 
 ![](https://github.com/msa-ez/platform/assets/123912988/0d2651bd-2082-413b-8536-2f8f08b9aeb1)
 
@@ -35,7 +36,7 @@ Template Editor란 MSAEZ내에 내장되어 있는 템플릿 편집기능으로 
 
 Template Editor 화면에 진입한 후 좌측 하단의 Template Explorer를 확인하면 폴더와 파일이 아무것도 생성되어있지 않은 것을 확인할 수 있습니다.
 
-따라서 템플릿 생성을 위한 템플릿 파일과, 템플릿 파일을 구성할 폴더를 생성해야합니다.
+템플릿은 각 개발 언어에서 요구하는 폴더 구 및 파일이 있기 때문에 템플릿 파일과, 템플릿 파일을 구성할 폴더를 생성하여 구조를 구성해야합니다.
 
 ![](https://github.com/msa-ez/platform/assets/123912988/1f82fd51-e869-4437-9059-b9615111da36)
 
@@ -53,7 +54,7 @@ Template Editor 화면에 진입한 후 좌측 하단의 Template Explorer를 �
 
 ## 4. 템플릿 데이터 확인
 
-MSAEZ에서 진행한 모델링을 통해 참조할 수 있는 데이터가 생성되었고, 데이터를 통해 템플릿 파일의 코드를 구성하는데 활용할 수 있습니다.
+MSAEZ에서 모델링을 진행하면 그에 따른 참조할 수 있는 데이터가 생성되고, 데이터를 통해 템플릿 파일의 코드를 구성하는데 활용할 수 있습니다.
 
 아래의 예시처럼 Template Editor 좌측 상단 영역의 'MODEL EXPLORER'에서 모델링을 통해 생성된 데이터를 확인할 수 있습니다.
 
