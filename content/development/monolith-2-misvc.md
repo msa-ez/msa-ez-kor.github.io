@@ -7,6 +7,10 @@ next: ''
 
 # Req/Res 방식의 MSA 연동 
 
+<div style = "height:400px; object-fit: cover;">
+<iframe style = "width:100%; height:100%;" src="https://www.youtube.com/embed/jL_i3o0IEbY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div><br>
+
 모노리식 서비스에서 특정 부분을 마이크로서비스로 떼어내고, 모노리스와 마이크로서비스가 Req/Res 방식으로 상호 통신하는 예제를 가이드를 따라 수행합니다. 
 
 ## 이벤트스토밍 모델 준비

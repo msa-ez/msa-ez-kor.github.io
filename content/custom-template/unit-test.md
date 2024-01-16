@@ -7,6 +7,10 @@ sidebar: 'started'
 
 ## Unit Test 생성 토핑
 
+<div style = "height:400px; object-fit: cover;">
+<iframe style = "width:100%; height:100%;" src="https://www.youtube.com/embed/WF1fWdkFun0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div><br>
+
 단위 테스트를 하기 위한 코드를 자동으로 생성하는 토핑이 추가되었습니다.
 
 ![스크린샷 2023-11-06 오후 4 39 33](https://github.com/msa-ez/msa-ez.github.io/assets/113568664/3569acfc-36bd-464e-8944-1bf2a0e589e7)
@@ -38,6 +42,10 @@ test 폴더 내에는 도메인 이벤트에 대한 policy 명으로 테스트 �
 단위 테스트를 진행하고자 하는 폴더에서 터미널을 열어 mvn test 명령어를 입력하면 비즈니스 로직에 대한 검증이 진행됩니다.
 
 ## Open API 3.0 기반 목 서버 생성 토핑
+
+<div style = "height:400px; object-fit: cover;">
+<iframe style = "width:100%; height:100%;" src="https://www.youtube.com/embed/BlqwuMqI3J8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div><br>
 
 마이크로서비스 간의 연동에 있어서 디펜던시 마이크로서비스에 대한 실제 서비스가 올라가있지 않더라도 병렬 개발이 가능하도록 하기 위해 해당 서버의 mock 서버를 만들어 테스트할 수 있는 개발 디펜던시를 자동으로 생성해주고 Open API 3.0 버전을 통해 example까지 만들어주는 토핑이 추가되었습니다.
 

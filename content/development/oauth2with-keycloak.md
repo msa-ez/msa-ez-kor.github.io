@@ -7,6 +7,10 @@ next: ''
 
 # JWT Token 기반 인증 인가
 
+<div style = "height:400px; object-fit: cover;">
+<iframe style = "width:100%; height:100%;" src="https://www.youtube.com/embed/byxWzQIAQTE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div><br>
+
 마이크로서비스와 OAuth2 구성요소인 Authorization Server/ Client/ Resource Server를 활용해 Single Sign-On 구현 모형을 실습합니다. 
 
 단일 접점인 Gateway가 Client가 되고, 각 마이크로서비스가 Resource Server에 해당됩니다. 그리고 Authorization Server로는 Keycloak을 활용합니다. 

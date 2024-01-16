@@ -7,6 +7,10 @@ next: ''
 
 # Pub/Sub 방식의 연동 
 
+<div style = "height:400px; object-fit: cover;">
+<iframe style = "width:100%; height:100%;" src="https://www.youtube.com/embed/QvRiuKCZUmM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div><br>
+
 마이크로 서비스간의 통신에서 이벤트 메세지를 Pub/Sub 하는 방법을 실습합니다.  
 
 Order 서비스에서 주문(OrderPlaced) 이벤트가 발행 되었을 때, Inventory 서비스에서 OrderPlaced 이벤트를 수신하여 재고량을 변경(감소)합니다.  

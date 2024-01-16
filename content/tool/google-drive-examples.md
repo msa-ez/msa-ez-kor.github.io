@@ -4,6 +4,10 @@ sidebar: 'started'
 ---
 # Quick Start
 
+<div style = "height:400px; object-fit: cover;">
+<iframe style = "width:100%; height:100%;" src="https://www.youtube.com/embed/MUN0iS3cJV8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div><br>
+
 '구글드라이브 서비스' 예제 시나리오를 기반으로 MSAEZ를 활용해 분석/설계에서 구현, 배포에 이르는 마이크로서비스의 전 과정을 구현합니다. 이로써, 여러분들은 MSAEZ가 각 단계에서 어떻게 사용되고 활용되어지는 지를 한눈에 파악할 수 있습니다.
 
 구글드라이브 서비스의 예시 시나리오는 다음과 같습니다.
