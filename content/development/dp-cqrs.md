@@ -7,6 +7,10 @@ next: ''
 
 # Data Projection with CQRS
 
+<div style = "height:400px; object-fit: cover;">
+<iframe style = "width:100%; height:100%;" src="https://www.youtube.com/embed/ZJpTEeKsbF4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div><br>
+
 주문서비스와 배송서비스의 상세 모델을 참조하여 Query 모델(Materialized View)을 설계합니다.
 
 ## 이벤트스토밍 모델 준비

@@ -7,6 +7,10 @@ next: ''
 
 # 단위 마이크로 서비스의 실행 
 
+<div style = "height:400px; object-fit: cover;">
+<iframe style = "width:100%; height:100%;" src="https://www.youtube.com/embed/x0hYVpwcl_A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div><br>
+
 단위 마이크로 서비스를 실행하기 위하여 스프링부트를 컴파일하고 실행하는 방법을 실습합니다. 
 
 생성된 애플리케이션은 RESTful 서비스를 제공하고 있으므로 해당 서비스를 httpie tool 을 통하여 호출합니다. 
