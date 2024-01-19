@@ -6,6 +6,11 @@
 
 module.exports = {
   siteName: 'msaez',
+  configureServer(app) {
+    app.get('/', (req, res) => {
+      res.redirect(301, '/started/'); // 홈페이지로 접근 시 '/new-home'으로 리다이렉트
+    });
+  },
   icon: {
     favicon: './src/img/favicon.png',
     touchicon: './src/img/favicon.png',
@@ -194,6 +199,23 @@ module.exports = {
                 secondTitle: '인터넷 강의수강 시스템',
                 secondItem: '/example-scenario/online-lecture/'
               },
+            ]
+          },
+          {
+            firstTitle: '사업 정보',
+            name:[
+              {
+                secondTitle: '기업 사례',
+                secondItem: '/info/company/'
+              },
+              {
+                secondTitle: '가격 정책',
+                secondItem: '/info/pricing/'
+              },
+              {
+                secondTitle: '파트너십',
+                secondItem: '/info/partnership/'
+              }
             ]
           },
           {
