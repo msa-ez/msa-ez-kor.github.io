@@ -11,7 +11,14 @@ module.exports = function (api) {
     addMetadata('settings', require('./gridsome.config').settings);
   });
 
-  api.createPages(({ createPage }) => {
-    // Use the Pages API here: https://gridsome.org/docs/pages-api/
+  api.createPages(async ({ createPage }) => {
+    // Index.vue 페이지 리다이렉션 설정
+    // createPage({
+    //   path: '/',
+    //   component: './src/templates/MarkdownPage.vue', // MarkdownPage.vue 경로로 변경
+    //   context: {
+    //     id: '/started/index/', // 이 부분은 해당 페이지의 고유한 ID로 변경해야 합니다.
+    //   },
+    // });
   });
 }

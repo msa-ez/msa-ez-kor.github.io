@@ -6,11 +6,11 @@
 
 module.exports = {
   siteName: 'msaez',
-  configureServer(app) {
-    app.get('/', (req, res) => {
-      res.redirect(301, '/started/'); // 홈페이지로 접근 시 '/new-home'으로 리다이렉트
-    });
-  },
+  // configureServer(app) {
+  //   app.get('/', (req, res) => {
+  //     res.redirect(301, '/started/'); // 홈페이지로 접근 시 '/new-home'으로 리다이렉트
+  //   });
+  // },
   icon: {
     favicon: './src/img/favicon.png',
     touchicon: './src/img/favicon.png',
@@ -286,5 +286,5 @@ module.exports = {
       }
     }
 
-  ]
+  ],
 }

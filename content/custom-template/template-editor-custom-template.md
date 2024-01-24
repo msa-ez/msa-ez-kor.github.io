@@ -20,16 +20,15 @@ https://github.com/ 에 접속 후, 템플릿 파일을 만들 repository를 생
 
 생성한 repository의 url을 기반으로 코드 프리뷰 화면에서 템플릿을 등록하는 방법은 다음과 같습니다.
 
-1. 코드 프리뷰 좌측 상단에 위치한 template chip 클릭
+![](https://github.com/msa-ez/platform/assets/123912988/8c74d617-3af6-495d-aed8-a055f582513c)
 
-2. 템플릿 선택 화면 하단의 Cutsom Template 우측의 select 버튼 클릭
+1. template chip 클릭
 
-3. Template From Git 화면 하단에 git repository url을 입력 후, APPLY 버튼 클릭
+2. 템플릿 목록중 Cutsom Template 우측의 select chip 클릭
 
-![](https://github.com/msa-ez/platform/assets/123912988/0d2651bd-2082-413b-8536-2f8f08b9aeb1)
+3. Git Repo URL 영역에 git repository url을 입력 후, APPLY 클릭
 
-
-적용이 완료되었다면 코드 프리뷰 상단의 메뉴인 'Edit Template' 아이콘을 클릭하여 Template Editor 화면으로 진입합니다.
+적용이 완료되었다면 코드 프리뷰 상단의 메뉴인 'Edit Template' 아이콘({})을 클릭하여 Template Editor 화면으로 진입합니다.
 
 Template Editor란 MSAEZ내에 내장되어 있는 템플릿 편집기능으로 선택한 템플릿 파일의 코드를 변경하였을 때, 변환된 결과값을 즉각적으로 확인할 수 있는 기능을 제공하고 있습니다.
 
@@ -41,17 +40,21 @@ Template Editor 화면에 진입한 후 좌측 하단의 Template Explorer를 �
 
 Spring-boot 폴더 구조를 참고하여 폴더와 domain폴더 하위에 생성될 파일 Aggregate.java를 github에서 생성하는 방법은 다음과 같습니다.
 
-먼저 상단의 + 버튼을 클릭하여 Create New File을 선택합니다.
+![](https://github.com/msa-ez/platform/assets/123912988/2c01c3b4-27d8-45bc-bb2e-0ac601c0034c)
 
-이후, Spring-boot의 폴더 구조인 '/src/main/java/com/example/domain을 'Name your file'입력창에 입력한 후, Aggregate.java를 입력합니다.
+1. Add File 클릭 > Create New File 선택.
 
-마지막으로 우측 상단의 'Commit Changes...'를 클릭하면 입력한 폴더구조와 domain하위의 Aggregate.java가 생성된 것을 확인할 수 있습니다.
+2. 'Name your file' 입력창에 Spring-boot의 폴더 구조인 '/src/main/java/com/example/domain'을 입력 > domain하위에 생성할 파일 이름 Aggregate.java 입력.
+
+3. 'Commit Changes...' 클릭하여 폴더 및 파일 저장.
+
+위의 단계를 진행하면 입력한 폴더구조와 domain하위의 Aggregate.java가 생성된 것을 확인할 수 있습니다.
 
 
-## 4. 템플릿 데이터 확인
+## 4. 템플릿 객체 속성 확인
 
-MSAEZ에서 모델링을 진행하면 그에 따른 참조할 수 있는 데이터가 생성되고, 데이터를 통해 템플릿 파일의 코드를 구성하는데 활용할 수 있습니다.
+MSAEZ에서 모델링을 진행하면 그에 따른 참조할 수 있는 속성들이 생성되고, 이를 통해 템플릿 파일의 코드를 구성하는데 활용할 수 있습니다.
 
-아래의 예시처럼 Template Editor 좌측 상단 영역의 'MODEL EXPLORER'에서 모델링을 통해 생성된 데이터를 확인할 수 있습니다.
+아래의 예시처럼 Template Editor 좌측 상단 영역의 'MODEL EXPLORER'에서 모델링을 통해 스티커별 생성된 속성에 대해 확인할 수 있습니다.
 
-![](https://github.com/msa-ez/platform/assets/123912988/1181c8a3-636f-4777-9552-ce7d9670ea30)
+![](https://github.com/msa-ez/platform/assets/123912988/8ab41ce8-7ee0-4d25-ab1b-c2d4021ff19a)
