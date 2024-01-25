@@ -156,10 +156,10 @@ module.exports = {
                 secondTitle: 'Global Helper',
                 secondItem: '/custom-template/global-helper/'
               },
-              {
-                secondTitle: 'Template Editor',
-                secondItem: '/custom-template/template-editor/'
-              }
+              // {
+              //   secondTitle: 'Template Editor',
+              //   secondItem: '/custom-template/template-editor/'
+              // }
             ]
           },
           // {
