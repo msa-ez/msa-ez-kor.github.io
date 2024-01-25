@@ -4,11 +4,22 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+const express = require('express');
+const enforce = require('express-sslify');
+
 module.exports = {
   siteName: 'msaez',
   // configureServer(app) {
+  //   const isProduction = process.env.NODE_ENV === 'production';
+
+  //   if (isProduction) {
+  //     // HTTPS 강제 적용
+  //     app.use(enforce.HTTPS({ trustProtoHeader: true }));
+  //   }
+
+  //   // 리다이렉션 설정
   //   app.get('/', (req, res) => {
-  //     res.redirect(301, '/started/'); // 홈페이지로 접근 시 '/new-home'으로 리다이렉트
+  //     res.redirect(301, '/started/');
   //   });
   // },
   icon: {
