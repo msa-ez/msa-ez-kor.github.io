@@ -28,9 +28,9 @@ forEach의 값으로는 모델링한 스티커들을 가져올 수 있으며 여
 
 ### 1.2 파일 이름 정의 
 
-forEach를 Aggregate로 설정한 템플릿파일은 Aggregate의 갯수만큼 생성되기 때문에 각각의 고유한 이름으로 생성될 수 있도록 설정해야합니다. 
+forEach를 Aggregate로 설정한 템플릿파일은 Aggregate 스티커의 수만큼 생성되기 때문에 각각의 고유한 이름으로 생성될 수 있도록 설정해야합니다. 
 
-이때, fileName을 통해 생성될 파일의 이름을 구분지을 수 있습니다.
+이때, fileName을 통해 생성될 각각의 Aggregate파일의 이름을 구분지을 수 있습니다.
 
 예시에서는 {{#namePascalCase name}}.java로 지정하였습니다. 이를 통해 각 Aggregate의 namePascalCase에 해당하는 결과값이 대체되어 파일이 생성됩니다. 
 

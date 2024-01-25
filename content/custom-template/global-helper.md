@@ -113,7 +113,7 @@ deliveryStarted
 
 ## 2. 속성 평가
 
-MSAEZ에서 사전 정의한 Global Helper중 속성에 대하여 평가하여 상황에 맞게 결과값을 반환할 수 있는 Global Helper에 대하여 소개드리겠습니다.
+속성에 대하여 평가하여 상황에 맞게 결과값을 반환할 수 있는 Global Helper에 대하여 소개드리겠습니다.
 
 ### 2.1 ifNotNull
 
