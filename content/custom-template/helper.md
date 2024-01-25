@@ -37,11 +37,11 @@ Helper를 통해 데이터(어노테이션)를 설정하는 방법은 다음과 
 
 Template
 ```
-public class {{namePascalCase}} {
+public class {{#pascalCase name}} {
 
     @Id
     {{#addGeneratedValue aggregateRoot.fieldDescriptors}}{{/addGeneratedValue}}
-    private {{className}} {{nameCamelCase}};
+    private {{className}} {{#camelCase name}};
 }
 
 <function>

@@ -142,18 +142,26 @@ ifEquals는 필드내에 속한 속성을 평가하여 조건에 부합되는 �
 
 Template
 ```
+public class {{#pascalCase name}} {
+
 {{#aggregates.fieldDescriptors}}
 {{#ifEquals isKey "true"}}
     @Id
-    private {{className}} {{nameCamelCase}}
+    private {{className}} {{#camelCase name}}
 {{/ifEquals}}
 {{/aggregates.fieldDescriptors}}
 
+}
 ```
 Template Result
 ```
+public class Order {
+
 @Id
 private Long id;
+
+}
+
 ```
 ifEquals의 인자값으로는 평가할 속성과 평가할 내용을 보내야 합니다.
 
@@ -165,21 +173,27 @@ ifEquals의 인자값으로는 평가할 속성과 평가할 내용을 보내야
 
 VO란 ValueObject의 약자를 의미합니다.
 
-필드에 사전에 지정한 VO가 존재할 경우 사용할 수 있으며, VO중 하나인 Address가 있다고 가정하였을 때, 아래와 같이 사용할 수 있습니다.
+필드에 사전에 지정한 VO가 존재할 경우 사용할 수 있으며, VO중 하나인 Address가 있다고 가정하였을 때, 다음과 같이 사용할 수 있습니다. 
 
 Template
 ```
-{{#aggregates.fieldDescriptors}}
-    {{#checkVO className}}
-    @embedded
-    private {{className}} {{nameCamelCase}};
-    {{/checkVO}}
-{{/aggregates.fieldDescriptors}}
+public class {{#pascalCase name}} {
+
+    {{#aggregates.fieldDescriptors}}
+        {{#checkVO className}}
+        @embedded
+        private {{className}} {{#camelCase name}};
+        {{/checkVO}}
+    {{/aggregates.fieldDescriptors}}
+}
 ```
 Template Result
 ```
-@embedded
-private Address address;
+public class Order {
+    @embedded
+    private Address address;
+
+}
 ```
 checkVO의 인자값으로 className을 보내고 있습니다.
 
