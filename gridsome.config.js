@@ -210,6 +210,10 @@ module.exports = {
               {
                 secondTitle: '파트너십',
                 secondItem: '/info/partnership/'
+              },
+              {
+                secondTitle: '컨설팅',
+                secondItem: '/info/consulting/'
               }
             ]
           },
