@@ -7,165 +7,140 @@ sidebar: 'started'
 
 MSA? CNA? 고민이신가요? 여러분의 고민을 해결해드립니다.
 
-<div class="pricing-box">
-    <div class="w33">
+<h2>MSA 무상 컨설팅</h2>
+<div class="box-wrap">
+    <div>
         <p class="box-title">1.5 Hour ver.</p>
-        <div class="box-style">
-            <h3>SaaS 기반 서비스</h3>
-            <p class="txt-desc">신청 기관 -> NDA 체결 -> 산출물 인도</p>
             <div class="list-box">
-                <span>✓</span> 코드 자동 생성 : 건당 1만 원<br>
-                <span>✓</span> 애자일 모델링 : 건당 1만 원<br>
-                <span>✓</span> 월별 사용량에 따른 과금
+                <div class="round-box" style="font-weight:600;">신청<br>기관</div>
+                <div class="arrow">→</div>
+                <div class="round-box" style="font-weight:600;">NDA<br>체결</div>
+                <div class="arrow">→</div>
+                <div class="round-box last"><p class="line">산출물 인도</p>이벤트 스토밍<br>생성 코드</div>
             </div>
-            <div class="font-bold text-white bg-ui-primary btn-pricing">
-                <a href="http://labs.msaez.io/">구매하기</a>
-            </div>
-        </div>
     </div>
-    <div class="w66">
+    <div>
         <p class="box-title">1 Day ver.</p>
-        <div class="download-shape">
-            <div class="box-style">
-                <h3>오픈소스 라이센스</h3>
-                <p class="txt-desc">신청 기관 -> NDA 체결 -> 산출물 인도 -> Youtube 제공 + 내용 동의 하에 제공</p>
                 <div class="list-box">
-                    <span>✓</span> 무료 사용<br>
-                    <span>✓</span> 커뮤니티 기반 지원<br>
-                    <span>✓</span> 자체 문제 해결 필요
+                    <div class="round-box" style="font-weight:600;">신청<br>기관</div>
+                    <div class="arrow">→</div>
+                    <div class="round-box" style="font-weight:600;">NDA<br>체결</div>
+                    <div class="arrow">→</div>
+                    <div class="round-box last"><p class="line">산출물 인도</p>이벤트 스토밍<br>생성 코드</div>
+                    <div class="arrow">→</div>
+                    <div class="round-box last"><p>Youtube 제공</p>(내용 동의 하에 제공)</div>
                 </div>
-                <div class="font-bold text-white bg-ui-primary btn-pricing">
-                    <a href="https://github.com/msa-ez/platform">시작하기</a>
-                </div>  
-            </div>
-        </div>
     </div>
-</div>
-
-<div class="qna-box">
-    <h2>추가적인 질문이 있다면 MSAEZ의 담당자에게 언제든 문의주세요.</h2>
-    <p>
-        MSAEZ 제품, 가격, 구현 또는 기타 사항에 관한 질문이 있으시면 언제든지 문의해 주십시오. <br>
-        풍부한 지식을 갖춘 지원 담당자가 도움을 드리기 위해 대기하고 있습니다.
-    </p>
-    <p class="lh20">
-        <span style="width: 65px;">문의하기</span>
-        <strong>T.</strong> <a href="tel:02-567-8301">02.567.8301</a><br>
-        <strong>E.</strong> <a href="mailto:help@uengine.org">help@uengine.org</a>
-    </p>
-    <p class="lh20">
-        <span style="width: 108px;">이용 정보 확인</span>
-        <a href="https://labs.msaez.io/#/provision" target="_blank">개인정보처리, 취소 및 환불약관</a>
-    </p>
 </div>
 
 <style type='text/css'>
-.pricing-box { 
-    display: flex; 
+.box-wrap { 
     width: 100%; 
     margin-top: 20px;
 }
-.w33 {
-    width: 33%;
-}
-.w66 {
-    width: 66%;
-}
-.download-shape {
-    display: flex;
-}
 .box-title {
-    width: 80%;
+    width: 150px;
     line-height: 20px;
     border-bottom: 5px solid #5c6ac4;
     padding: 10px;
     color: #5c6ac4;
     font-size: 18px;
     font-weight: 600;
-    text-align: center;
-    margin: 20px auto;
-}
-.box-style {
-    border: 1px solid #e6e9f9;
-    border-radius: 5px;
-    margin: 0 10px;
-    padding: 0 15px;
-}
-.pricing-box h3 {
-    font-size: 23px;
-    text-align: center;
-}
-.pricing-box p.txt-desc {
-    height: 120px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-.btn-pricing {
-    width:100%; 
-    text-align:center; 
-    line-height: 50px; 
-    margin-bottom: 20px; 
-    border-radius: 5px;
-}
-.pricing-box a {
-    font-size: 18px;
-    font-weight: bold;
-    color: #fff !important;
-    text-decoration: none;
-}
+    margin-top: 50px;
+ }
 .list-box {
-    border-top: 1px solid #e6e9f9;
+    display: flex;
     padding-top: 20px;
     font-size: 14px;
-    font-weight: 600;
-    line-height: 2.5;
     margin-bottom: 30px;
+    text-align: center;
 }
-.list-box > span {
-    color: #5c6ac4;
+.list-box > .round-box {
+    width: 150px;
+    padding: 50px 0;
+    border: 2px solid #5c6ac4;
+    border-radius: 15%;
 }
-.qna-box {
-    margin-top: 30px;
+.list-box > .round-box.last {
+    padding: 25px 0;
 }
-.qna-box h2 {
-    margin-bottom: 20px;
-}
-.qna-box p {
-    line-height: 1.6;
-    margin-bottom: 30px;
-}
-.qna-box p.lh20 {
-    line-height: 2;
-}
-.qna-box span {
-    display: block;
-    border-bottom: 3px solid #5c6ac4;
-    margin-bottom: 10px;
-    color: #5c6ac4;
+.list-box > .round-box > p {
+    width: 90%;
+    margin: 10px auto;
     font-weight: 600;
 }
-.qna-box a {
-    text-decoration: none;
+.list-box > .round-box > p.line {
+    border-bottom: 1px dashed #5c6ac4;
 }
+.list-box > .arrow {
+    width: 70px;
+    line-height: 125px;
+    font-size: 50px;
+    font-weight: bold;
+}
+@media only screen and (max-width:1400px){
+    .list-box > .round-box {
+        width: 125px;
+        padding: 45px 0;
+    }
+    .list-box > .round-box.last {
+        padding: 20px 0;
+    }
+    .list-box > .arrow {
+        width: 50px;
+        font-size: 40px;
+    }
+}
+@media only screen and (max-width:1280px){
+    .list-box > .round-box {
+        width: 125px;
+        padding: 40px 0;
+        /* font-size: 13px; */
+    }
+    .list-box > .round-box.last {
+        padding: 18px 0;
+    }
+    .list-box > .round-box > p {
+        font-size: 15px;
+    }
+    .list-box > .arrow {
+        width: 40px;
+        font-size: 30px;
+    }
+}   
 
 @media only screen and (max-width:607px){
-    .pricing-box, .download-shape {
-        display: block;
+    .list-box, .list-box > .round-box > p {
+        font-size: 13px;
     }
-    .w33, .w66 {
-        width: 100%;
+    .list-box > .round-box {
+        width: 100px;
+        padding: 25px 0;
     }
-    .box-title {
-        margin-top: 50px;
+    .list-box > .round-box.last {
+        padding: 10px 0;
     }
-    .box-style {
-        margin-top: 12px;
-    }
-    .pricing-box p.txt-desc {
-        height: auto;
-    }
-    .qna-box h2 {
-        line-height: 1.6;
+    .list-box > .arrow {
+        width: 20px;
+        font-size: 20px;
+        line-height: 100px;
     }
 }        
+
+@media only screen and (max-width:480px){
+    .list-box, .list-box > .round-box > p {
+        font-size: 11px;
+    }
+    .list-box > .round-box {
+        width: 100px;
+    }
+    .list-box > .round-box.last {
+        padding: 5px 0;
+        font-size: 10px;
+    }
+    .list-box > .arrow {
+        width: 14px;
+        font-size: 12px;
+    }
+}     
 </style>
