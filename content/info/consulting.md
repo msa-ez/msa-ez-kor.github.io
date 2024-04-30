@@ -8,6 +8,10 @@ sidebar: 'started'
 MSA? CNA? 고민이신가요? 여러분의 고민을 해결해드립니다.
 
 <h2>MSA 무상 컨설팅</h2>
+<a href="https://forms.gle/2j4ZoDdkRjjnyXARA" target="_blank"
+    style="margin-top:50px; font-weight:700; font-size:20px; color:#5a67d8;">
+    신청하기
+</a>
 <div class="box-wrap">
     <div>
         <p class="box-title">1.5 Hour ver.</p>
