@@ -7,24 +7,30 @@ sidebar: 'started'
 
 MSA? CNA? 고민이신가요? 여러분의 고민을 해결해드립니다.
 
-<h2>MSA 무상 컨설팅</h2>
-<a href="https://forms.gle/2j4ZoDdkRjjnyXARA" target="_blank"
-    style="margin-top:50px; font-weight:700; font-size:20px; color:#5a67d8;">
-    신청하기
-</a>
+<h2>MSA 무상 컨설팅 Test-Drive 이벤트(선착순)</h2>
 <div class="box-wrap">
     <div>
         <p class="box-title">1.5 Hour ver.</p>
+        <p style="line-height: 20px;
+            padding-left: 10px;
+            color: #5c6ac4;
+            font-size: 18px;
+            font-weight: 600;">컨설팅 과정 비공개</p>
             <div class="list-box">
                 <div class="round-box" style="font-weight:600;">신청<br>기관</div>
                 <div class="arrow">→</div>
                 <div class="round-box" style="font-weight:600;">NDA<br>체결</div>
                 <div class="arrow">→</div>
-                <div class="round-box last"><p class="line">산출물 인도</p>이벤트 스토밍<br>생성 코드</div>
+                <div class="round-box last"><p class="line">산출물 인도</p>이벤트 스토밍</div>
             </div>
     </div>
     <div>
         <p class="box-title">1 Day ver.</p>
+        <p style="line-height: 20px;
+            padding-left: 10px;
+            color: #5c6ac4;
+            font-size: 18px;
+            font-weight: 600;">컨설팅 과정 유튜브 공개</p>
                 <div class="list-box">
                     <div class="round-box" style="font-weight:600;">신청<br>기관</div>
                     <div class="arrow">→</div>
@@ -34,6 +40,19 @@ MSA? CNA? 고민이신가요? 여러분의 고민을 해결해드립니다.
                     <div class="arrow">→</div>
                     <div class="round-box last"><p>Youtube 제공</p>(내용 동의 하에 제공)</div>
                 </div>
+    </div>
+</div>
+<div style="display: flex;
+    text-align: center;
+    padding-top: 30px;">
+    <div style="width: 150px;
+        padding: 10px 0;
+        background-color: #5c6ac4;"
+        href="https://forms.gle/2j4ZoDdkRjjnyXARA" target="_blank">
+        <a href="https://forms.gle/2j4ZoDdkRjjnyXARA" target="_blank"
+            style="margin-top:50px; font-weight:700; font-size:20px; color: white;">
+            신청하기
+        </a>
     </div>
 </div>
 
