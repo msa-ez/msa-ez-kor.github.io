@@ -10,11 +10,11 @@ MSAEZ는 전 라이프사이클에 걸쳐 ChatGPT를 활용한 자동화 및 가
 
 ![](../../src/img/started/simage.png)
 
-MSAEZ는 Biz-Dev-Ops 풀 라이프사이클을 지원합니다. 설치가 필요없이 100% 브라우저 기반에서 동작하며 협업기반의 팀워크를 지원하는 최신의 OpenAI 엔진들이 탑재되어 비즈니스 기획자, 데브옵스 개발자, 클라우드 운영자를 위애 비즈니스 기획에서 구현, 테스트, 배포를 아우르는 클라우드 네이티브한 task들을 자동화하며 다양한 에자일한 경험들을 제공합니다.  
+MSAEZ는 Biz-Dev-Ops 풀 라이프사이클을 지원합니다. 설치가 필요없이 100% 브라우저 기반에서 동작하며 협업기반의 팀워크를 지원하는 최신의 OpenAI 엔진들이 탑재되어 비즈니스 기획자, 데브옵스 개발자, 클라우드 운영자를 위애 비즈니스 기획에서 구현, 테스트, 배포를 아우르는 클라우드 네이티브한 task들을 자동화하며 다양한 애자일한 경험들을 제공합니다.  
 
-![](../../src/img/started/pdfqr.png)
-
-MSAEZ에 대한 더 자세한 내용은 위 QR 코드를 통해 pdf 문서로 확인하실 수 있습니다.
+<div class="font-bold text-white bg-ui-primary btn-pdf">
+    <a href="https://cdn2.me-qr.com/pdf/22445352.pdf" target="_blank">MSAEZ 소개서 바로가기</a>
+</div>
 
 ## MSAEZ 주요 기능
 
@@ -43,3 +43,24 @@ MSAEZ에는 기본 내장하고 있는 DSL 템플릿(Java, Python, Go, NodeJS, S
 MSAEZ는 모델기반으로 생성된 코드를 GIT 기반 Repository와 연계하여 저장할 수 있도록 지원합니다. MSAEZ 사용자가 GitHub 계정으로 로그인하게 되면 이벤트스토밍 모델로부터 자동 생성된 코드는 MSAEZ가 제공하는 저장소 연계 UI를 통해 실시간 내 Git Repository에 Commit/Push되어 형상 관리됩니다. 또한 Repository의 코드들을 클라우드 IDE(GitPod, CODESPACE) 상에 즉시 로딩해 데브옵스 개발자가 비즈니스 로직을 구현하고 테스트가 가능하도록 에자일한 환경을 연동하여 지원하고 있습니다. 
 
 데브옵스 개발자가 초기 버전 모델을 활용하여 비즈니스 로직을 구현하는 중에 이벤트스토밍 설계 정보가 바뀌더라도 형상서버의 브랜치 머지(Merge) 기능을 활용하여 설계와 구현간의 변경으로 인한 충돌을 Seamless하게 융합합니다.
+<style type='text/css'>
+.btn-pdf {
+    width: 25%; 
+    text-align:center; 
+    line-height: 45px; 
+    border-radius: 8px;
+    margin: 30px auto;
+}
+.btn-pdf a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff !important;
+    text-decoration: none;
+}
+    
+@media only screen and (max-width:607px){
+    .btn-pdf {
+        width: 90%;
+    }
+}  
+</style>
