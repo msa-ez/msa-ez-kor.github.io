@@ -21,7 +21,7 @@ Order 서비스에서 주문(OrderPlaced) 이벤트가 발행 되었을 때, Inv
 [모델 링크](https://www.msaez.io/#/storming/labshoppubsub-2:2023-pubsub2)
 - 브라우져에 모델이 로딩되지 않으면, 우측 상단의 (사람모양) 아바타 아이콘을 클릭하여 **깃헙(Github)** 계정으로 로그인 후 리로드하면 아래처럼 랩에 필요한 이벤트스토밍 기본 모델이 출력됩니다.  
 
-![image](https://github.com/acmexii/demo/assets/35618409/39ccf71e-3977-4093-9bae-7c2a1254d710)
+![image](https://github.com/kykim97/shop-sigpt/assets/113568664/4608619d-005f-4164-9be7-5730fce17f85)
 
 
 ## order 서비스의 이벤트 Publish
@@ -35,12 +35,11 @@ Order 서비스에서 주문(OrderPlaced) 이벤트가 발행 되었을 때, Inv
 mvn spring-boot:run
 ```
 
-- 기동된 order 서비스를 호출하여 주문 1건을 요청합니다.
+- 새 터미널을 추가하고 기동된 order 서비스를 호출하여 주문 1건을 요청합니다.
 ```
 http localhost:8081/orders productId=1 productName=TV qty=3
 ```
-- GitPod에서 새 터미널을 추가합니다.
-- kafka 유틸리티가 포함된 위치에 접속하기 위하여 docker 를 통하여 shell 에 진입합니다.
+- 새 터미널을 추가하고 kafka 유틸리티가 포함된 위치에 접속하기 위하여 docker 를 통하여 shell 에 진입합니다.
 ```
 cd kafka
 docker-compose exec -it kafka /bin/bash
@@ -52,11 +51,15 @@ cd /bin
 ./kafka-console-consumer --bootstrap-server localhost:9092 --topic labshoppubsub  --from-beginning
 ```
 
+- 확인된 이벤트 결과 :
+``` 
+{"eventType":"OrderPlaced","timestamp":1717047846007,"id":1,"productId":"1","qty":3,"customerId":null}
+```
 
 ## Inventory 서비스의 이벤트 Subscribe
-- Inventory PolicyHandler.java 파일의 코드를 확인합니다.
+- Inventory 폴더 내  PolicyHandler.java 파일의 코드를 확인합니다.
 - PolicyHandler.java --> Inventory.java (Aggregate) 의 Port Method (decreaseStock)을 호출하게 됩니다.
-- decreaseStock 내에 작성해야 할 로직은 다음과 같습니다.
+- Inventoy.java의 decreaseStock 내에 작성해야 할 로직은 다음과 같습니다.
 
 ```       
 repository().findById(Long.valueOf(orderPlaced.getProductId())).ifPresent(inventory->{
@@ -69,7 +72,7 @@ repository().findById(Long.valueOf(orderPlaced.getProductId())).ifPresent(invent
 
 ```
 
-- inventory 서비스를 실행합니다.
+- 새 터미널을 추가하고 inventory 서비스를 실행합니다.
 ```
 mvn spring-boot:run
 ```
