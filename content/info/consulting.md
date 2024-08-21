@@ -21,7 +21,7 @@ MSA? CNA? 고민이신가요? 여러분의 고민을 해결해드립니다.
 | 일반 도제식 교육 | 전영역 | 1시간 | 40만원 | BizDevOps 전반에 걸쳐 지정된 교육장에서 전문 강사가 진행하는 수업으로 강사의 경험과 교육생들의 실시간 피드백이 융합된 실무 중심의 학습이 이루어져 실전에서 바로 활용할 수 있는 클라우드 네이티브 기술을 습득할 수 있습니다. |
 | 플립 러닝 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 전영역 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 1시간 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 20만원 | 사전 제공된 영상과 자료를 통해 미리 집에서 학습하고, 대면 교육장에서는 전문 실습 강사 주도로 해당 내용을 바탕으로 한 실습 위주의 심화 학습이 제공됩니다. 이는 교육생 개개인의 학습 속도에 맞춰 학습을 진행할 수 있어, 이해도가 낮은 부분에 대해 추가적인 학습이 가능하며 교육비에 대한 경제적 부담도 덜 수 있다는 장점이 있습니다. |
 
-<h2>MSA 무상 컨설팅 Test-Drive 이벤트(선착순)</h2>
+<h2>MSA 컨설팅 프로세스</h2>
 <div class="box-wrap">
     <div>
         <p class="box-title">1.5 Hour ver.</p>
