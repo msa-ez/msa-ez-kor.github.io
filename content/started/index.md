@@ -46,6 +46,16 @@ MSAEZ에는 기본 내장하고 있는 DSL 템플릿(Java, Python, Go, NodeJS, S
 MSAEZ는 모델기반으로 생성된 코드를 GIT 기반 Repository와 연계하여 저장할 수 있도록 지원합니다. MSAEZ 사용자가 GitHub 계정으로 로그인하게 되면 이벤트스토밍 모델로부터 자동 생성된 코드는 MSAEZ가 제공하는 저장소 연계 UI를 통해 실시간 내 Git Repository에 Commit/Push되어 형상 관리됩니다. 또한 Repository의 코드들을 클라우드 IDE(GitPod, CODESPACE) 상에 즉시 로딩해 데브옵스 개발자가 비즈니스 로직을 구현하고 테스트가 가능하도록 에자일한 환경을 연동하여 지원하고 있습니다. 
 
 데브옵스 개발자가 초기 버전 모델을 활용하여 비즈니스 로직을 구현하는 중에 이벤트스토밍 설계 정보가 바뀌더라도 형상서버의 브랜치 머지(Merge) 기능을 활용하여 설계와 구현간의 변경으로 인한 충돌을 Seamless하게 융합합니다.
+
+## 마이크로서비스 아키텍처 도구 비교
+
+| 제품명 | 오픈소스 | 코드생성기능 | AI기능 | 모델링 도구 | 국내지원여부 | 프레임워크 종속성 |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| [**MSAEZ**](https://www.msaez.io/) | O | O | O | O | O | X |
+| ContextMapper | O | O | X | X | X | X |
+| QLERIFY | X | ▵ | O | O | X | X |
+| vLINGO | O | O | X | O | X | O |
+
 <style type='text/css'>
 .btn-pdf {
     width: 25%; 
