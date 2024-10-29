@@ -84,8 +84,8 @@ sidebar: 'started'
 ### Step 7. Set Property
 
 - 주문(Order) 어그리거트를 더블 클릭합니다.
-- 이후, 패널의 'Attributes' 항목에 주문정보에 필요한 프로퍼티를 적절한 타입과 이름으로 추가합니다.
-- 동일한 방식으로 프로퍼티를 필요로하는 스티커에 프로퍼티를 추가하면 다음과 같습니다.
+- 이후, 패널의 'Attributes' 항목에 주문정보에 필요한 속성을 속성에 맞는 타입과 이름으로 추가합니다. ex) String userId, Integer qty..
+- 각 어그리거트에 속성설정을 진행한 후, 이벤트 스티커에도 어그리거트에 선언한 속성 기준 필요한 속성을 정의합니다.
 
 ![image](https://github.com/user-attachments/assets/313e2fa9-3532-4983-bfcc-b30d54a9ef02)
 
