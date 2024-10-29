@@ -27,27 +27,21 @@ module.exports = {
           {
             firstTitle: '소개',
             firstItem: '/started/',
+            name: [
+              {
+                secondTitle: '퀵스타트',
+                secondItem: '/tool/google-drive-examples/',
+              }
+
+            ]
           },
           {
-            firstTitle: 'Quick Start',
-            firstItem: '/tool/google-drive-examples/',
-          },
-          {
-            firstTitle: '비즈니스 모델링',
+            firstTitle: '비즈니스 모델링 및 구현',
             name:[
               {
                 secondTitle: '이벤트스토밍',
                 secondItem: '/business/'
               },
-              {
-                secondTitle: 'ChatGPT 기반 모델 생성',
-                secondItem: '/tool/chat-gpt/'
-              }
-            ]
-          },
-          {
-            firstTitle: 'MSA 코드 구현',
-            name:[
               {
                 secondTitle: '모델 기반 코드 자동 생성',
                 secondItem: '/tool/model-driven/'
@@ -59,6 +53,15 @@ module.exports = {
               {
                 secondTitle: '테스트 자동화',
                 secondItem: '/custom-template/unit-test/'
+              },
+            ]
+          },
+          {
+            firstTitle: 'ChatGPT 지원 모델링 및 구현',
+            name:[
+              {
+                secondTitle: 'ChatGPT 기반 모델 생성',
+                secondItem: '/tool/chat-gpt/'
               },
               {
                 secondTitle: 'ChatGPT 기반 코드 구현',
