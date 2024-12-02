@@ -6,7 +6,7 @@ sidebar: 'started'
 
 [커스텀 템플릿 생성](/custom-template/template-editor-custom-template/)을 통해 Template Editor를 활용하는 방법에 대해서 설명하였습니다.
 
-이번에는 MSAEZ에 내장된 템플릿을 활용하여 Template Editor 기능을 사용하는 방법에 대해 설명드리겠습니다.
+이번에는 MSAEZ에 내장된 템플릿을 활용하여 Template Editor 기능을 사용하는 방법입니다.
 
 
 ![](https://github.com/msa-ez/platform/assets/123912988/cc4af1ed-58eb-4829-b571-8fd11fbe1dc0)
@@ -33,7 +33,7 @@ sidebar: 'started'
 
 이전 템플릿 파일 선택 단계에서 선택한 Aggregate.java의 템플릿 코드가 'EDIT TEMPLATE' 영역에 노출된 것을 확인할 수 있습니다.
 
-이제 해당 영역에서 템플릿 코드를 원하는 대로 수정이 가능합니다.
+이제 해당 영역에서 템플릿 코드를 원하는 대로 수정 가능합니다.
 
 이제 좌측의 'Model Explorer'를 참조하여 클래스 내부에 {{keyFieldDescriptor.name}} 데이터가 생성되도록 추가해보겠습니다.
 

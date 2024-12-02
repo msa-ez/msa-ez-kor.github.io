@@ -27,27 +27,21 @@ module.exports = {
           {
             firstTitle: '소개',
             firstItem: '/started/',
+            name: [
+              {
+                secondTitle: '퀵스타트',
+                secondItem: '/tool/google-drive-examples/',
+              }
+
+            ]
           },
           {
-            firstTitle: 'Quick Start',
-            firstItem: '/tool/google-drive-examples/',
-          },
-          {
-            firstTitle: '비즈니스 모델링',
+            firstTitle: '비즈니스 모델링 및 구현',
             name:[
               {
                 secondTitle: '이벤트스토밍',
                 secondItem: '/business/'
               },
-              {
-                secondTitle: 'ChatGPT 기반 모델 생성',
-                secondItem: '/tool/chat-gpt/'
-              }
-            ]
-          },
-          {
-            firstTitle: 'MSA 코드 구현',
-            name:[
               {
                 secondTitle: '모델 기반 코드 자동 생성',
                 secondItem: '/tool/model-driven/'
@@ -59,6 +53,15 @@ module.exports = {
               {
                 secondTitle: '테스트 자동화',
                 secondItem: '/custom-template/unit-test/'
+              },
+            ]
+          },
+          {
+            firstTitle: 'ChatGPT 지원 모델링 및 구현',
+            name:[
+              {
+                secondTitle: 'ChatGPT 기반 모델 생성',
+                secondItem: '/tool/chat-gpt/'
               },
               {
                 secondTitle: 'ChatGPT 기반 코드 구현',
@@ -151,12 +154,45 @@ module.exports = {
                 secondTitle: 'Global Helper',
                 secondItem: '/custom-template/global-helper/'
               },
-              {
-                secondTitle: 'Template Editor',
-                secondItem: '/custom-template/template-editor/'
-              }
+              // {
+              //   secondTitle: 'Template Editor',
+              //   secondItem: '/custom-template/template-editor/'
+              // }
             ]
           },
+          // {
+          //   firstTitle: '토핑',
+          //   name:[
+          //     {
+          //       secondTitle: 'Unit-Test',
+          //       secondItem: '/toppings/test-unit/'
+          //     },
+          //     {
+          //       secondTitle: 'API Mocking',
+          //       secondItem: '/toppings/test-microcks/'
+          //     },
+          //     {
+          //       secondTitle: 'Contract Test - 동기 호출',
+          //       secondItem: '/toppings/test-contract/'
+          //     },
+          //     {
+          //       secondTitle: 'Contract Test - 비동기 호출',
+          //       secondItem: '/toppings/test-messaging/'
+          //     },
+          //     {
+          //       secondTitle: 'CI - Github Action',
+          //       secondItem: '/toppings/cicd-git-action/'
+          //     },
+          //     {
+          //       secondTitle: 'CD - Argo',
+          //       secondItem: '/toppings/cicd-argo/'
+          //     },
+          //     {
+          //       secondTitle: 'Kubernetes',
+          //       secondItem: '/toppings/k8s-kubernetes/'
+          //     },
+          //   ]
+          // },
           // {
           //   firstTitle: '테스트',
           //   name:[
@@ -210,6 +246,10 @@ module.exports = {
               {
                 secondTitle: '파트너십',
                 secondItem: '/info/partnership/'
+              },
+              {
+                secondTitle: '컨설팅',
+                secondItem: '/info/consulting/'
               }
             ]
           },
@@ -281,5 +321,5 @@ module.exports = {
       }
     }
 
-  ]
+  ],
 }

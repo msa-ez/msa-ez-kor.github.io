@@ -11,7 +11,6 @@ module.exports = function (api) {
     addMetadata('settings', require('./gridsome.config').settings);
   });
 
-  api.createPages(({ createPage }) => {
-    // Use the Pages API here: https://gridsome.org/docs/pages-api/
+  api.createPages(async ({ createPage }) => {
   });
 }
