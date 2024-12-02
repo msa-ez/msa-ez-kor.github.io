@@ -9,7 +9,7 @@
             </h2>
           </div>
           <h1 class=" text-center">
-            The fastest way to build event-driven microservices
+            이벤트 기반 마이크로서비스를 구축하는 가장 빠른 방법
           </h1>
 
           <div class="flex justify-center mt-8">
