@@ -14,9 +14,10 @@ MSAEZ는 전 라이프사이클에 걸쳐 ChatGPT를 활용한 자동화 및 가
 ![](../../src/img/started/simage.png)
 
 MSAEZ는 Biz-Dev-Ops 풀 라이프사이클을 지원합니다. 설치가 필요없이 100% 브라우저 기반에서 동작하며 협업기반의 팀워크를 지원하는 최신의 OpenAI 엔진들이 탑재되어 비즈니스 기획자, 데브옵스 개발자, 클라우드 운영자를 위애 비즈니스 기획에서 구현, 테스트, 배포를 아우르는 클라우드 네이티브한 task들을 자동화하며 다양한 애자일한 경험들을 제공합니다.  
-
-<div class="font-bold text-white bg-ui-primary btn-pdf" style="width:240px;">
-    <a target="_blank" href="https://cdn2.me-qr.com/pdf/5eff277d-ec9d-448f-9d44-50397de259bb.pdf">MSAEZ 브로슈어 다운로드</a>
+<div style="text-align: center;">
+    <div class="font-bold text-white bg-ui-primary btn-pdf">
+        <a target="_blank" href="https://cdn2.me-qr.com/pdf/5eff277d-ec9d-448f-9d44-50397de259bb.pdf">MSAEZ 브로슈어 다운로드</a>
+    </div>
 </div>
 
 ## MSAEZ 주요 기능
@@ -82,11 +83,13 @@ MSAEZ는 모델기반으로 생성된 코드를 GIT 기반 Repository와 연계�
 사용 목적|복잡하고 확장 가능한 엔터프라이즈 애플리케이션|간단한 비즈니스 애플리케이션, 내부 도구
 <style type='text/css'>
 .btn-pdf {
-    width: 25%; 
     text-align:center; 
     line-height: 45px; 
     border-radius: 8px;
-    margin: 30px auto;
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    padding: 8px 16px;
 }
 .btn-pdf a {
     font-size: 16px;
@@ -94,10 +97,4 @@ MSAEZ는 모델기반으로 생성된 코드를 GIT 기반 Repository와 연계�
     color: #fff !important;
     text-decoration: none;
 }
-    
-@media only screen and (max-width:607px){
-    .btn-pdf {
-        width: 90%;
-    }
-}  
 </style>
