@@ -13,6 +13,6 @@ next: ''
 - MSA 페이스북 그룹 : https://www.facebook.com/groups/cloudswmoding
 
 **MSA 교육 신청서**
-- 교육신청 : https://www.msaschool.io/operation/education/curriculum/
+- 교육신청 : https://www.msaschool.io/operation/introduction/schedule/
 
 

@@ -24,13 +24,53 @@ MSAEZ의 메인 화면에 있는 입력창에 만들고자 하는 서비스 유�
 
 ![](../../src/img/features/fimage9.png)
 
-|  | 이름                | 기능 설명                                                              |
-|------|---------------------|----------------------------------------------------------------------- |
-| 1  | Customer Journey Map | 페르소나를 분석해 서비스와 맞닿는 지점을 분석하는 마케팅 기법 |
-| 2 | Business Model Canvas | 비즈니스 운영 시에 필요한 요소들을 다이어그램으로 정리한 도표 |
-| 3 | EventStorming Model | 도메인 이벤트를 중심으로 비즈니스 모델을 구현 |
-| 4 | Brands & UIs | 전체 소스코드를 로컬 파일로 다운로드 |
- 
+<table class="responsive-table">
+    <thead>
+        <tr>
+            <th>번호</th>
+            <th>이름</th>
+            <th>기능 설명</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Customer Journey Map</td>
+            <td>페르소나를 분석해 서비스와 맞닿는 지점을 분석하는 마케팅 기법</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Business Model Canvas</td>
+            <td>비즈니스 운영 시에 필요한 요소들을 다이어그램으로 정리한 도표</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>EventStorming Model</td>
+            <td>도메인 이벤트를 중심으로 비즈니스 모델을 구현</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Brands & UIs</td>
+            <td>전체 소스코드를 로컬 파일로 다운로드</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="mobile-view">
+<div>1. Customer Journey Map</div>
+<span>페르소나를 분석해 서비스와 맞닿는 지점을 분석하는 마케팅 기법</span>
+
+<div>2. Business Model Canvas</div>
+<span>비즈니스 운영 시에 필요한 요소들을 다이어그램으로 정리한 도표</span>
+
+<div>3. EventStorming Model</div>
+<span>도메인 이벤트를 중심으로 비즈니스 모델을 구현</span>
+
+<div>4. Brands & UIs</div>
+<span>전체 소스코드를 로컬 파일로 다운로드</span>
+</div>
+<br><br>
+
 2. 고객 여정맵, 비즈니스 모델 캔버스, 이벤트스토밍 모델, 브랜드&UI 중 생성하고자 하는 옵션을 선택합니다.
 
 ### 고객 여정맵
@@ -70,3 +110,25 @@ MSAEZ의 메인 화면에 있는 입력창에 만들고자 하는 서비스 유�
 ![](../../src/img/gptgif3.gif)
 
 5-3. Generate Aggregate 버튼을 클릭하면 앞서 생성된 도메인 이벤트를 기반으로 전체 이벤트스토밍 모델이 생성됩니다.
+
+<style>
+.mobile-view {
+    display: none;
+}
+
+@media screen and (max-width: 499px) {
+    .responsive-table {
+        display: none;
+    }
+
+    .mobile-view {
+        display: block;
+    }
+
+    .mobile-view div {
+        font-size: 16px;
+        font-weight: bold;
+        margin-top:20px;
+    }
+}
+</style>
