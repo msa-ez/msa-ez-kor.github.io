@@ -9,9 +9,10 @@ sidebar: 'started'
 ## MSAEZ 모델링 도구 접속
 - 크롬 브라우저를 실행하고 https://www.msaez.io에 접속합니다.
 - 우측 상단의 아바타 아이콘을 클릭하여 **깃헙(Github)** 계정으로 로그인 합니다.
-- **NEW** > **EventStorming** 을 클릭합니다.
+- **만들기** > **이벤트스토밍** 을 클릭합니다.
 
-![image](https://github.com/acmexii/demo/assets/35618409/d35919e8-3ff6-4a13-bccc-6935f4d87dbf)
+![image](../../src/img/event-storming/event-storming2.png)
+![image](../../src/img/event-storming/event-storming1.png)
 
 ## 기본 시나리오 - 주문 및 주문취소
 - 고객(Customer)이 상품을 선택하여 주문한다(Place an Order).
