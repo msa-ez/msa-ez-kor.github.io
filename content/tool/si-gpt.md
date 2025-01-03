@@ -4,7 +4,7 @@ sidebar: 'started'
 ---
 <div class="code-block">
 
-# ChatGPT 기반 구현 및 디버깅 자동화
+# AI 기반 구현 및 디버깅 자동화
 
 <div style = "height:400px; object-fit: cover;">
 <iframe style = "width:100%; height:100%;" src="https://www.youtube.com/embed/JuCN-bD7Jkk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -54,19 +54,31 @@ module.exports = {
                 secondTitle: '테스트 자동화',
                 secondItem: '/custom-template/unit-test/'
               },
+              {
+                secondTitle: '이벤트 모니터링',
+                secondItem: '/tool/event-monitoring/'
+              },
             ]
           },
           {
-            firstTitle: 'ChatGPT 지원 모델링 및 구현',
+            firstTitle: 'AI 지원 모델링 및 구현',
             name:[
               {
-                secondTitle: 'ChatGPT 기반 모델 생성',
+                secondTitle: 'AI 기반 모델 생성',
                 secondItem: '/tool/chat-gpt/'
               },
               {
-                secondTitle: 'ChatGPT 기반 코드 구현',
+                secondTitle: 'AI 기반 코드 구현',
                 secondItem: '/tool/si-gpt/'
-              }
+              },
+              {
+                secondTitle: 'BC & 도메인 설계 AI',
+                secondItem: '/tool/bc-domain-gen/'
+              },
+              {
+                secondTitle: 'PLSQL 2 JAVA',
+                secondItem: '/tool/plsql-2-java/'
+              },
             ]
           },
           {
