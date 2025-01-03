@@ -3,10 +3,10 @@ description: ''
 sidebar: 'started'
 ---
 
-# AI 기반 모델 생성
+# 자연어 기반 Bounded context & 도메인 설계 AI
 
 <div style = "height:400px; object-fit: cover;">
-<iframe style = "width:100%; height:100%;" src="https://www.youtube.com/embed/HSMEgOJj3Co" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe style = "width:100%; height:100%;" src="https://www.youtube.com/embed/M6vK9WtyLwQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div><br>
 
 ## Open AI 기술을 활용한 비즈니스 설계 모델 생성
