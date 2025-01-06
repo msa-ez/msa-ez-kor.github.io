@@ -19,7 +19,7 @@ sidebar: 'started'
                 <span>✓</span> 월별 사용량에 따른 과금
             </div>
             <div class="font-bold text-white bg-ui-primary btn-pricing">
-                <a href="http://labs.msaez.io/">구매하기</a>
+                <a href="http://www.msaez.io/">구매하기</a>
             </div>
         </div>
     </div>
@@ -67,7 +67,7 @@ sidebar: 'started'
     </p>
     <p class="lh20">
         <span style="width: 108px;">이용 정보 확인</span>
-        <a href="https://labs.msaez.io/#/provision" target="_blank">개인정보처리, 취소 및 환불약관</a>
+        <a href="https://www.msaez.io/#/provision" target="_blank">개인정보처리, 취소 및 환불약관</a>
     </p>
 </div>
 
