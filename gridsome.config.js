@@ -75,10 +75,6 @@ module.exports = {
                 secondTitle: 'BC & 도메인 설계 AI',
                 secondItem: '/tool/bc-domain-gen/'
               },
-              {
-                secondTitle: 'PLSQL 2 JAVA',
-                secondItem: '/tool/plsql-2-java/'
-              },
             ]
           },
           {
