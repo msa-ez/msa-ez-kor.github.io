@@ -32,7 +32,6 @@ module.exports = {
                 secondTitle: '퀵스타트',
                 secondItem: '/tool/google-drive-examples/',
               }
-
             ]
           },
           {

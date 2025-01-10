@@ -13,7 +13,7 @@ sidebar: 'started'
 구글드라이브 서비스의 예시 시나리오는 다음과 같습니다.
 
 ## 실습도구 접속
-[MSAEZ](http://www.msaez.io)에 접속합니다. ****크롬 브라우저 추천****
+[크롬 브라우저를 통해 MSAEZ](http://www.msaez.io)에 접속합니다.
 
 ## 시나리오
 
