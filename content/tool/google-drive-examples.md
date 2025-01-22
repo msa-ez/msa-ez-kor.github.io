@@ -290,7 +290,7 @@ drive 서비스가 실행되는 동안, 우리가 생성한 마이크로서비�
 동일하게 IDE 좌측에 위치한 'Explorer' 창에서 kafka 폴더를 우클릭하고 터미널을 하나 더 열어줍니다.
 
 ```
-docker compose-up
+docker-compose up
 ``` 
 
 명령어를 입력해 kafka를 실행해줍니다.
