@@ -9,22 +9,33 @@ sidebar: 'started'
 <iframe style = "width:100%; height:100%;" src="https://www.youtube.com/embed/M6vK9WtyLwQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div><br>
 
-## Open AI 기술을 활용한 비즈니스 설계 모델 생성
+## 1. LLM 기술을 활용한 도메인 분석
+- 기존의 단순 텍스트 분석이 아닌, LLM을 활용한 심층적 도메인 컨텍스트 이해
+- 도메인 전문가의 암묵지(Tacit Knowledge)를 LLM이 분석하여 명시적 지식으로 변환
+- 유비쿼터스 언어(Ubiquitous Language) 도출 및 정제
 
-**자연어 기반 Bounded Context 설계 AI**는 사용자가 일상적인 언어로 업무를 설명하면 다음과 같은 방식으로 문제를 해결합니다.
+## 2. 이벤트스토밍 기반 마이크로서비스 도출
+- 도메인 이벤트 중심의 비즈니스 프로세스 분석
+- 애그리게잇(Aggregate) 식별 기준:
+  - 트랜잭션 일관성 경계
+  - 불변식(Invariants) 보장 범위
+  - 동시성 제어 단위
+- 컨텍스트 맵(Context Map)을 통한 바운디드 컨텍스트 간 관계 정의:
+  - Conformist
+  - Anti-corruption Layer
+  - Open Host Service
+  - Published Language
 
-- AI가 각 부서의 고유한 업무 영역을 파악하여 시스템 분할
-- 분할된 각 영역에 특화된 LLM이 해당 도메인의 요구사항을 정확하게 분석
-- 부서간 중복되는 개념과 데이터의 연결점을 명확히 정의해, 효율적인 데이터 교환 설계 지원
-
-**자연어 기반 도메인 설계 AI**는 자연어 입력을 기반으로 도메인 설계를 자동화합니다.
-
-- 자연어 요구사항을 즉시 실행 가능한 코드로 자동 변환
-    - "고객이 주문을 취소하면 포인트를 환급한다" → 주문취소, 포인트환급 도메인 모델 및 테스트 자동 생성
-- 표준화된 코드 자동 생성
-    - 데이터 모델 : 주문, 재고, 포인트와 같은 주요 도메인
-    - 비즈니스 로직 : 재고 증가, 포인트 환급 등 요구사항 구현
-    - 테스트 케이스 : 데이터 정확성과 로직 검증
+## 3. 바운디드 컨텍스트 자동 분리
+- 도메인 모델의 응집도(Cohesion)와 결합도(Coupling) 분석
+- 전략적 설계(Strategic Design) 패턴 적용:
+  - Core Domain
+  - Supporting Domain
+  - Generic Domain
+- 컨텍스트 간 통신 패턴 설계:
+  - 동기식 통신 (Request-Response)
+  - 비동기식 통신 (Event-Driven)
+  - 사가(Saga) 패턴 적용 구간 식별
 
 ## 수행 방법
 
