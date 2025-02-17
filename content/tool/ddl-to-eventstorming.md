@@ -5,10 +5,6 @@ sidebar: 'started'
 
 # DDL To EventStorming
 
-<!-- <div style = "height:400px; object-fit: cover;">
-<iframe style = "width:100%; height:100%;" src="https://www.youtube.com/embed/M6vK9WtyLwQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div><br> -->
-
 **DDL To EventStorming** 기능은 설계에서 도출한 데이터를 DDL 언어로 입력하면, AI가 각 모델을 시각화하고 데이터 구조에 대한 다양한 옵션을 제시합니다. 이를 통해 각 옵션의 장단점을 비교 분석할 수 있으며, 요청한 서비스 영역별로 최적화된 솔루션을 제공하여 애플리케이션을 생성할 수 있습니다. 이 기능을 통해 사용자는 복잡한 대규모 프로젝트를 직접 일일이 설계하지 않고도 간편하게 진행할 수 있습니다.
 
 ## 수행 방법

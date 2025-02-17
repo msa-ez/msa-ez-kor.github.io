@@ -71,6 +71,14 @@ module.exports = {
                 secondItem: '/tool/si-gpt/'
               },
               {
+                secondTitle: '애그리거트 설계',
+                secondItem: '/tool/aggregate-design/'
+              },
+              {
+                secondTitle: 'DDL to 이벤트스토밍',
+                secondItem: '/tool/ddl-to-eventstorming/'
+              },
+              {
                 secondTitle: 'BC & 도메인 설계 AI',
                 secondItem: '/tool/bc-domain-gen/'
               },
