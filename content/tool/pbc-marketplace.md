@@ -17,7 +17,7 @@ sidebar: 'started'
 
 ## 수행 방법
 
-**실제 적용 사례 : 차량호출 서비스에서 운행이 완료되었을 때, 요금을 토대로 결제 처리 및 영수증 조회까지 가능한 결제시스템을 PBC 기능으로 간편하게 구현할 수 있습니다.**
+**결제 PBC 적용을 통한 차량호출 서비스에서 운행이 완료되었을 때 사용자가 요금을 토대로 결제를 진행할 수 있도록 하는 분석/설계, 구현파트의 구현방법은 다음과 같습니다.**
 
 ### 분석/설계
 <img src="https://github.com/user-attachments/assets/ca1c696d-5966-4e0f-96e7-b01290aa9580">
@@ -35,17 +35,17 @@ sidebar: 'started'
 <br><br>
 <img src="https://github.com/user-attachments/assets/afa80621-332a-4091-83a5-db6a8e6c941f">
 <br>
-3. 옵션으로 읽기, 커맨드, 이벤트 등 사용할 기능에 대한 요소를 선택할 수 있는데, 각각의 옵션들은 이벤트스토밍에서 ReadModel, Command, Event을 뜻합니다.
+3. PBC 패널에서 PBC 모델에 구현된 기능과 관련된 ReadModel, Command, Event 스티커를 선택할 수 있는데, 이 중 해당 서비스에 사용될 기능과 관련된 스티커를 선택합니다.
 
 <br><br>
 <img src="https://github.com/user-attachments/assets/a73d5064-99ac-42fa-9bde-a3985128ed8a">
 <br>
-4. 옵션 창을 닫으면 선택한 옵션들에 대한 모델들이 나오는 것을 확인할 수 있고, 위와같이 기존 PaymentSystem에 생성한 모델중 선택된 스티커만 가져온 것을 확인할 수 있습니다.
+4. PBC 패널 창을 닫으면 선택된 스티커만 가져온 것을 확인할 수 있고, 위 화면과 같이 PaymentSystem에 대한 PBC모델 생성이 완료되는 것을 확인할 수 있습니다.
 
 <br><br>
 <img src="https://github.com/user-attachments/assets/21b45119-386c-4abe-9632-9a1106fb395c">
 <br>
-5. 그리고 결제가 진행되었을 때 결제성공됨 Event에서 생성된 정보를 토대로 운행정보의 paymentId와 paymentStatus를 업데이트하기 위한 Pub/Sub연결을 진행합니다.
+5. 이후, 기존 마이크로서비스와 PBC간의 통신이 가능하도록 relation을 연결하여 결제가 완료되면 운행정보에서 결제상태와 결제 ID에 대한 정보를 업데이트하고 추후 영수증 조회가 가능하도록 처리합니다.
 
 <br><br>
 <img src="https://github.com/user-attachments/assets/17a1fdce-2bd4-4162-914c-5c1c6b2b1fed">
@@ -53,9 +53,7 @@ sidebar: 'started'
 <차량호출 서비스에 결제시스템 PBC를 적용한 전체 모델 화면>
 
 ### 구현
-<img src="https://github.com/user-attachments/assets/2ec2ed5b-f205-4870-9250-8e6f8690e3c1">
-<br>
-<img src="https://github.com/user-attachments/assets/b9d08542-041a-4d33-97c9-288a73c45324">
+<img src="https://github.com/user-attachments/assets/30785661-a184-429f-97a9-a07b6afbe6a7">
 <br>
 1. 코드뷰어를 열면 PaymentSystem이라는 폴더가 생성되고, 생성된 폴더에 있는 ReadMe파일의 instruction대로 따라하시면 구현레벨까지 생성이 됩니다. 
 
