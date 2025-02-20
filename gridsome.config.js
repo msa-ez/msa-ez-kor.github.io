@@ -57,6 +57,10 @@ module.exports = {
                 secondTitle: '이벤트 모니터링',
                 secondItem: '/tool/event-monitoring/'
               },
+              {
+                secondTitle: 'PBC',
+                secondItem: '/tool/pbc-marketplace/'
+              },
             ]
           },
           {
