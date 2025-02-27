@@ -91,7 +91,7 @@ module.exports = {
                 secondItem: '/tool/plsql-2-java/'
               },
               {
-                secondTitle: '설치형 MSAEZ + DeepSeek AI',
+                secondTitle: '설치형 MSAEZ+딥시크 AI',
                 secondItem: '/tool/deepseek-ai/'
               },
             ]

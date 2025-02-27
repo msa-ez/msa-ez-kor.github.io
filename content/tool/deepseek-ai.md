@@ -74,10 +74,10 @@ python3 -m sglang.launch_server --model-path deepseek-ai/DeepSeek-R1-Distill-Qwe
 <img src="https://github.com/user-attachments/assets/73b97cce-9619-4739-80c5-039cf2d7ed23">
 <br>
 
-<img src="https://github.com/user-attachments/assets/ac1758a3-82f4-4589-b825-9c29564c2c8c">
+<img src="https://github.com/user-attachments/assets/7d25d7fa-0b86-4159-b2ad-dbb23c1e2719">
 
 - `Log > Container`로 로그를 확인합니다.
-- `The server is fined and ready to roll`: 실제로 쓸 수 있게 되는 시점
+- `The server is fired up and ready to roll`: 실제로 쓸 수 있게 되는 시점
 <br><br>
    
 #### 접속하기
