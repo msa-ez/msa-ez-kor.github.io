@@ -90,6 +90,10 @@ module.exports = {
                 secondTitle: 'PL/SQL to Java',
                 secondItem: '/tool/plsql-2-java/'
               },
+              {
+                secondTitle: '설치형 MSAEZ + DeepSeek AI',
+                secondItem: '/tool/deepseek-ai/'
+              },
             ]
           },
           {
