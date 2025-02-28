@@ -11,8 +11,11 @@ sidebar: 'started'
 <iframe style = "width:100%; height:100%;" src="https://www.youtube.com/embed/WF1fWdkFun0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div> -->
 
-<div class="video-container">
-	<iframe src="https://www.youtube.com/embed/WF1fWdkFun0" frameborder="0" crolling="no" frameborder="none" allowfullscreen=""></iframe>
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 0px; height: 0; overflow: hidden;">
+	<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+        src="https://www.youtube.com/embed/WF1fWdkFun0" 
+        frameborder="0" crolling="no" frameborder="none" allowfullscreen="">
+    </iframe>
 </div>
 <br>
 
@@ -48,8 +51,11 @@ test 폴더 내에는 도메인 이벤트에 대한 policy 명으로 테스트 �
 
 ## Open API 3.0 기반 목 서버 생성 토핑
 
-<div class="video-container">
-	<iframe src="https://www.youtube.com/embed/BlqwuMqI3J8" frameborder="0" crolling="no" allowfullscreen></iframe>
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 0px; height: 0; overflow: hidden;">
+	<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+        src="https://www.youtube.com/embed/BlqwuMqI3J8" 
+        frameborder="0" crolling="no" frameborder="none" allowfullscreen="">
+    </iframe>
 </div>
 <br>
 

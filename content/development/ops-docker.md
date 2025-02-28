@@ -250,6 +250,10 @@ Account > Your Repositories > Packages 에서 확인가능
 권한을 설정하기 위해서는 Setting package 를 클릭한 후, Set Visibility 를 클릭하고 팝업에서 Public 설정 후, 이름을 확인해주고 설정완료.
 
 #### 상세설명
-<div class="video-container">
-	<iframe src="https://www.youtube.com/embed/RO3Mw8Gks9Q" frameborder="0" crolling="no" frameborder="none" allowfullscreen=""></iframe>
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 0px; height: 0; overflow: hidden;">
+	<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+        src="https://www.youtube.com/embed/RO3Mw8Gks9Q" 
+        frameborder="0" crolling="no" frameborder="none" allowfullscreen="">
+    </iframe>
 </div>
+<br>

@@ -6,10 +6,14 @@ sidebar: 'started'
 
 # AI 기반 구현 및 디버깅 자동화
 
-<div class="video-container">
-	<iframe src="https://www.youtube.com/embed/JuCN-bD7Jkk" frameborder="0" crolling="no" frameborder="none" allowfullscreen=""></iframe>
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 0px; height: 0; overflow: hidden;">
+	<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+        src="https://www.youtube.com/embed/JuCN-bD7Jkk" 
+        frameborder="0" crolling="no" frameborder="none" allowfullscreen="">
+    </iframe>
 </div>
 <br>
+
 <h2>Open AI 기술을 활용한 단위테스트 및 디버깅</h2>
 
 ![](../../src/img/sigptimg.png)

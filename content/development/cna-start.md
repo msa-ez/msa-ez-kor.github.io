@@ -7,8 +7,11 @@ next: ''
 
 # 단위 마이크로 서비스의 실행 
 
-<div class="video-container">
-	<iframe src="https://www.youtube.com/embed/x0hYVpwcl_A" frameborder="0" crolling="no" frameborder="none" allowfullscreen=""></iframe>
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 0px; height: 0; overflow: hidden;">
+	<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+        src="https://www.youtube.com/embed/x0hYVpwcl_A" 
+        frameborder="0" crolling="no" frameborder="none" allowfullscreen="">
+    </iframe>
 </div>
 <br>
 
@@ -137,7 +140,10 @@ fuser -k 8081/tcp
 
 #### 상세설명
 
-<div class="video-container">
-	<iframe src="https://www.youtube.com/embed/J6yqEJrQUyk" frameborder="0" crolling="no" frameborder="none" allowfullscreen=""></iframe>
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 0px; height: 0; overflow: hidden;">
+	<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+        src="https://www.youtube.com/embed/J6yqEJrQUyk" 
+        frameborder="0" crolling="no" frameborder="none" allowfullscreen="">
+    </iframe>
 </div>
-
+<br>

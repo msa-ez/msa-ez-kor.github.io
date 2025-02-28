@@ -205,9 +205,13 @@ sidebar: 'started'
 
 ## 클라우드 IDE 실습 예제
 
-<div class="video-container">
-	<iframe src="https://www.youtube.com/embed/h_2dgG7-2kk" frameborder="0" crolling="no" frameborder="none" allowfullscreen=""></iframe>
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 0px; height: 0; overflow: hidden;">
+	<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+        src="https://www.youtube.com/embed/h_2dgG7-2kk" 
+        frameborder="0" crolling="no" frameborder="none" allowfullscreen="">
+    </iframe>
 </div>
+<br>
 ---
 
 <br>

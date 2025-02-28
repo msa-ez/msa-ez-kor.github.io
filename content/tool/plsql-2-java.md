@@ -5,8 +5,11 @@ sidebar: 'started'
 
 # PL/SQL to Java 자동 테스팅
 
-<div class="video-container">
-	<iframe src="https://www.youtube.com/embed/-cMP4bCkiFc" frameborder="0" crolling="no" frameborder="none" allowfullscreen=""></iframe>
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 0px; height: 0; overflow: hidden;">
+	<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+        src="https://www.youtube.com/embed/-cMP4bCkiFc" 
+        frameborder="0" crolling="no" frameborder="none" allowfullscreen="">
+    </iframe>
 </div>
 <br>
 
