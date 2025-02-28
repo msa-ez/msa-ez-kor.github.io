@@ -7,9 +7,10 @@ next: ''
 
 # Pub/Sub 방식의 연동 
 
-<div style = "height:400px; object-fit: cover;">
-<iframe style = "width:100%; height:100%;" src="https://www.youtube.com/embed/QvRiuKCZUmM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div><br>
+<div class="video-container">
+	<iframe src="https://www.youtube.com/embed/QvRiuKCZUmM" frameborder="0" crolling="no" frameborder="none" allowfullscreen=""></iframe>
+</div>
+<br>
 
 마이크로 서비스간의 통신에서 이벤트 메세지를 Pub/Sub 하는 방법을 실습합니다.  
 

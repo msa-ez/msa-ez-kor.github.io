@@ -5,11 +5,8 @@ sidebar: 'started'
 
 <h1>구내 설치형 AI기반 분석설계 및 구현, 배포<br>(MSA Easy + DeepSeek)</h1>
 
-<div class="video-container" style="position: relative; padding-bottom: 56.25%; padding-top: 0px; height: 0; overflow: hidden;">
-	<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-        src="https://www.youtube.com/embed/4PX4CWrdGCg?si=oD969pF_VGUpSf4Q&amp;start=3652" 
-        frameborder="0" crolling="no" frameborder="none" allowfullscreen="">
-    </iframe>
+<div class="video-container">
+	<iframe src="https://www.youtube.com/embed/4PX4CWrdGCg?si=oD969pF_VGUpSf4Q&amp;start=3652" frameborder="0" crolling="no" frameborder="none" allowfullscreen=""></iframe>
 </div>
 <p style="margin: 10px 0 40px 0;"><&quot;DeepSeek-R1-Distill-Qwen-32B&quot; 모델을 적용한 &quot;데모 애플리케이션 - 민원신청&quot; 시연 영상></p>
 

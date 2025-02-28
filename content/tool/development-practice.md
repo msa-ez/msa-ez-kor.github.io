@@ -4,10 +4,9 @@ sidebar: 'started'
 ---
 # 강의 개발 및 실습 환경
 
-<div style = "height:400px; object-fit: cover;">
-<iframe style = "width:100%; height:100%;" src="https://www.youtube.com/embed/Le0a-NH6xwQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-container">
+	<iframe src="https://www.youtube.com/embed/Le0a-NH6xwQ" frameborder="0" crolling="no" frameborder="none" allowfullscreen=""></iframe>
 </div>
-
 
 ## 강의 개발
 

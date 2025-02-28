@@ -5,9 +5,11 @@ sidebar: 'started'
 
 # 이벤트 모니터링
 
-<div style = "height:400px; object-fit: cover;">
-<iframe style = "width:100%; height:100%;" src="https://www.youtube.com/embed/Y3Si5eMNgTM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div><br>
+<div class="video-container">
+	<iframe src="https://www.youtube.com/embed/Y3Si5eMNgTM" frameborder="0" crolling="no" frameborder="none" allowfullscreen=""></iframe>
+</div>
+<br>
+
 이벤트 모니터링 기능은 사용자가 이벤트스토밍 모델을 기반으로 만든 애플리케이션의 이벤트 로그를 수집하여 현재 이벤트들의 진행 상황을 모니터링 할 수 있는 기능입니다.
 
 ## 이벤트 모니터링 기능의 주요 특징

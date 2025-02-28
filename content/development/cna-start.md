@@ -7,9 +7,10 @@ next: ''
 
 # 단위 마이크로 서비스의 실행 
 
-<div style = "height:400px; object-fit: cover;">
-<iframe style = "width:100%; height:100%;" src="https://www.youtube.com/embed/x0hYVpwcl_A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div><br>
+<div class="video-container">
+	<iframe src="https://www.youtube.com/embed/x0hYVpwcl_A" frameborder="0" crolling="no" frameborder="none" allowfullscreen=""></iframe>
+</div>
+<br>
 
 단위 마이크로 서비스를 실행하기 위하여 스프링부트를 컴파일하고 실행하는 방법을 실습합니다. 
 
@@ -136,6 +137,7 @@ fuser -k 8081/tcp
 
 #### 상세설명
 
-<div style = "height:400px; object-fit: cover;">
-<iframe style = "width:100%; height:100%;" src="https://www.youtube.com/embed/J6yqEJrQUyk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-container">
+	<iframe src="https://www.youtube.com/embed/J6yqEJrQUyk" frameborder="0" crolling="no" frameborder="none" allowfullscreen=""></iframe>
 </div>
+

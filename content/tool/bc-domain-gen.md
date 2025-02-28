@@ -5,9 +5,10 @@ sidebar: 'started'
 
 # 자연어 기반 Bounded Context & 도메인 설계 AI
 
-<div style = "height:400px; object-fit: cover;">
-<iframe style = "width:100%; height:100%;" src="https://www.youtube.com/embed/M6vK9WtyLwQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div><br>
+<div class="video-container">
+	<iframe src="https://www.youtube.com/embed/M6vK9WtyLwQ" frameborder="0" crolling="no" frameborder="none" allowfullscreen=""></iframe>
+</div>
+<br>
 
 ## 1. LLM 기술을 활용한 도메인 분석
 - 기존의 단순 텍스트 분석이 아닌, LLM을 활용한 심층적 도메인 컨텍스트 이해

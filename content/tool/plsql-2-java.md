@@ -5,9 +5,10 @@ sidebar: 'started'
 
 # PL/SQL to Java 자동 테스팅
 
-<div style = "height:400px; object-fit: cover;">
-<iframe style = "width:100%; height:100%;" src="https://www.youtube.com/embed/-cMP4bCkiFc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div><br>
+<div class="video-container">
+	<iframe src="https://www.youtube.com/embed/-cMP4bCkiFc" frameborder="0" crolling="no" frameborder="none" allowfullscreen=""></iframe>
+</div>
+<br>
 
 AI 기반 레거시 모더나이저 도구는 기존의 복잡한 스토어드 프로시저를 현대적이고 클린한 자바 아키텍처로 변환하도록 설계되었습니다. 이 도구는 단순한 표면적 변환을 넘어, 구조적이고 문법적인 변화를 포함하여 공유 데이터베이스 절차 방식에서 견고한 객체 지향 모델로의 전환을 지원합니다.
 

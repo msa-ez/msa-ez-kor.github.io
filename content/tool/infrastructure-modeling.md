@@ -4,9 +4,10 @@ sidebar: 'started'
 ---
 # 인프라 모델링 (쿠버네티스)
 
-<div style = "height:400px; object-fit: cover;">
-<iframe style = "width:100%; height:100%;" src="https://www.youtube.com/embed/vtPtymnmo6M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-container">
+	<iframe src="https://www.youtube.com/embed/vtPtymnmo6M" frameborder="0" crolling="no" frameborder="none" allowfullscreen=""></iframe>
 </div>
+<br>
 
 ## Getting started
 Kuber-Ez는 Yaml 및 CLI에 대한 최소한의 이해만으로도 kubernetes 매니페스트 및 배포 모형을<br>

@@ -160,4 +160,6 @@ fuser -k 8088/tcp
 ```
 
 #### 상세설명
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/dsUW_JTvqIA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-container">
+	<iframe src="https://www.youtube.com/embed/dsUW_JTvqIA" frameborder="0" crolling="no" frameborder="none" allowfullscreen=""></iframe>
+</div>
