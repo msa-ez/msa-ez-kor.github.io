@@ -3,7 +3,7 @@ description: ''
 sidebar: 'started'
 ---
 
-# 구내설치형 AI 기반 분석설계 환경 MSA Easy + DeepSeek
+<h1>구내 설치형 AI기반 분석설계 및 구현, 배포<br>(MSA Easy + DeepSeek)</h1>
 
 <div class="video-container" style="position: relative; padding-bottom: 56.25%; padding-top: 0px; height: 0; overflow: hidden;">
 	<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
@@ -11,28 +11,35 @@ sidebar: 'started'
         frameborder="0" crolling="no" frameborder="none" allowfullscreen="">
     </iframe>
 </div>
-<p style="margin: 10px 0 40px 0;"><`DeepSeek-R1-Distill-Qwen-32B` 모델을 적용한 `데모 애플리케이션 - 민원신청` 시연 영상></p>
+<p style="margin: 10px 0 40px 0;"><&quot;DeepSeek-R1-Distill-Qwen-32B&quot; 모델을 적용한 &quot;데모 애플리케이션 - 민원신청&quot; 시연 영상></p>
 
 
 **MSA Easy**가 **DeepSeek AI** 추론 모델을 로컬 환경에서 직접 활용할 수 있도록 지원합니다.
 
-Ollama 도구를 활용하여 DeepSeek AI 모델을 로컬 환경에 직접 설치하고 이를 활용함으로써, 클라우드 기반 AI 서비스의 비용과 의존성을 줄이고 온프레미스 환경에서도 AI 기능을 자유롭게 사용할 수 있습니다.
+**DeepSeek 모델**은 7B, 67B 등 다양한 매개변수 크기로 제공되며, 2조 토큰 이상의 방대한 데이터로 훈련되었습니다. 이 데이터에는 코드, 수학 문제, 일반 텍스트 등이 포함되어 있어 다양한 분야에서 활용할 수 있습니다. 특히 주목할 만한 점은 대부분의 모델이 MIT나 Apache 2.0 라이선스 하에 오픈소스로 공개되어 있다는 것입니다.
+
+**Ollama** 도구를 활용하여 DeepSeek AI 모델을 로컬 환경에 직접 설치하고 이를 활용함으로써, 클라우드 기반 AI 서비스의 비용과 의존성을 줄이고 온프레미스 환경에서도 AI 기능을 자유롭게 사용할 수 있습니다.
 
 특히, DeepSeek AI를 활용해 요구사항을 분석하고, 도메인 주도 설계(DDD) 기반의 클라우드 네이티브 모델링을 설계자와 소통(Human-in-the-loop)하며 최적화할 수 있어, 더욱 정교한 마이크로서비스 아키텍처를 구축할 수 있으며, 데이터 일관성을 확보하면서도 유연한 설계가 가능해졌습니다.
 <br><br>
 
-## MSA-Easy Dev Process
+## MSA-Easy MSA 개발 프로세스
 
 <img src="https://github.com/user-attachments/assets/5fe9e0c5-064f-4969-ad9e-5389196f08f6">
+<br>
+MSA Easy는 도메인 분석을 통해 마이크로서비스를 도출하고, 헥사고날 및 이벤트 드리븐 아키텍처 기반으로 설계한 후, 자동화된 테스트와 CI/CD 배포를 통해 안정적인 MSA 개발을 지원하는 전 주기에 걸친 프로세스를 제공합니다. 
 <br><br>
 
-## On-prem 구축 예시
+## 온프레미스 AI를 활용한 마이크로서비스 설계/구현/배포
 
 <img src="https://github.com/user-attachments/assets/b2851b91-543c-47a4-82d7-335ea0b1baa7">
+<br>
+MSA-Easy는 온프레미스 DeepSeek AI 모델을 활용하여 마이크로서비스를 자동 생성하고, 프로덕션 환경과 연동하여 마이크로서비스 설계를 자동화하고, AI를 활용한 자동화된 마이크로서비스 아키텍처 구축을 지원하여, 보다 효율적인 MSA 환경 도입을 가능하게 합니다. 
 <br><br>
 
-## RunPod를 통해서 DeepSeek 모델 올리기
-### 새로운 Pod 생성
+
+## 클라우드 GPU 서비스를 활용한 DeepSeek 환경 구성
+### RunPod(https://runpod.io/)를 활용한 DeepSeek 모델 환경 설정
 
 **1. RunPod의 Pods 메뉴를 통해서 새로운 Pod를 만들어서 요청할 수 있습니다.**
 
@@ -68,7 +75,7 @@ python3 -m sglang.launch_server --model-path deepseek-ai/DeepSeek-R1-Distill-Qwe
 - On-Demand로 설정하는게 안정적입니다.
 <br><br>
 
-### 배포한 Pod를 확인
+### DeepSeek모델 설정 확인
 #### 로그 확인하기
 
 <img src="https://github.com/user-attachments/assets/73b97cce-9619-4739-80c5-039cf2d7ed23">
@@ -98,7 +105,7 @@ https -v POST https://dkkzpbvvh17k7v-8000.proxy.runpod.net/v1/chat/completions \
 ```
 <br><br>
 
-## Msaez에서 `deepseek-ai/DeepSeek-R1-Distill-Qwen-32B` 사용법
+## MSA Easy에서 RunPod기반 DeepSeek 모델을 사용하기 위한 설정
 **1. 관련 Proxy 서버를 실행합니다.**
 ```bash
 node ./server.js
