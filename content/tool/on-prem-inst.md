@@ -4,14 +4,14 @@ sidebar: 'started'
 ---
 # on-prem 설치 설명서
 
-# Installing on-premise MSA-Easy
+# Installing on-premise MSAEZ
 
 ### 1. Clone helm Charts 
     git clone https://github.com/msa-ez/on-prem-helm.git
 ---
 ### 2. Create & Connect Kubernetes Cluster
 ---
-### 3. helm chart 기반 MSA-Easy 설치 
+### 3. helm chart 기반 MSAEZ 설치 
   - Cluster ip: ```kubectl cluster-info```
   - Domain: DNS 서비스에서 보유한 도메인 주소 
   - token: ```kubectl describe secret default```

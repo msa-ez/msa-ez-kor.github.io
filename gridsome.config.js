@@ -30,7 +30,11 @@ module.exports = {
             name: [
               {
                 secondTitle: '퀵스타트',
-                secondItem: '/tool/google-drive-examples/',
+                secondItem: '/tool/google-drive-examples/'
+              },
+              {
+                secondTitle: 'MSAEZ 온프렘 설치',
+                secondItem: '/tool/on-prem-inst-gitea/'
               }
             ]
           },
@@ -58,9 +62,9 @@ module.exports = {
                 secondItem: '/tool/event-monitoring/'
               },
               {
-                secondTitle: 'PBC',
+                secondTitle: '컴포저블 엔터프라이즈',
                 secondItem: '/tool/pbc-marketplace/'
-              },
+              }
             ]
           },
           {
@@ -93,7 +97,7 @@ module.exports = {
               {
                 secondTitle: '설치형 MSAEZ+딥시크 AI',
                 secondItem: '/tool/deepseek-ai/'
-              },
+              }
             ]
           },
           {
@@ -126,7 +130,7 @@ module.exports = {
               {
                 secondTitle: 'CQRS 데이터프로젝션',
                 secondItem: '/development/dp-cqrs/'
-              },
+              }
             ]
           },
           {
@@ -155,7 +159,7 @@ module.exports = {
               {
                 secondTitle: 'Istio - Service Mesh',
                 secondItem: '/operation/ops-deploy-diagramming-advanced-istio/'
-              },
+              }
             ]
           },
           {
@@ -180,7 +184,7 @@ module.exports = {
               {
                 secondTitle: 'Global Helper',
                 secondItem: '/custom-template/global-helper/'
-              },
+              }
               // {
               //   secondTitle: 'Template Editor',
               //   secondItem: '/custom-template/template-editor/'
@@ -256,7 +260,7 @@ module.exports = {
               {
                 secondTitle: '인터넷 강의수강 시스템',
                 secondItem: '/example-scenario/online-lecture/'
-              },
+              }
             ]
           },
           {
@@ -298,7 +302,6 @@ module.exports = {
                 secondTitle: 'Contact',
                 secondItem: '/contact/question/',
               }
-              
             ]
           },
         ]

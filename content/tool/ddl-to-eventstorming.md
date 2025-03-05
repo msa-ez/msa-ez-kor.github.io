@@ -11,7 +11,7 @@ sidebar: 'started'
 
 <!-- ![](../../src/img/ai-gen-0.png)
 
-[**MSA Easy**](https://www.msaez.io/) 에 접속해 AI 생성 버튼을 클릭합니다. -->
+[**MSAEZ**](https://www.msaez.io/) 에 접속해 AI 생성 버튼을 클릭합니다. -->
 
 ![](../../src/img/ddl-01.png)
 
