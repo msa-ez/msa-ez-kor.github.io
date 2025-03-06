@@ -3,7 +3,7 @@ description: ''
 sidebar: 'started'
 ---
 
-# 컴포저블 엔터프라이즈 구현을 위한 PBC(Packaged Business Capability)
+# 컴포저블 엔터프라이즈 구현을 위한 PBCs(Packaged Business Capabilities)
 
 ## 개요
 
