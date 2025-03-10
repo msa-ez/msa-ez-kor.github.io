@@ -37,4 +37,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-        # GitHub Pages에 배포
+        if: env.DEPLOY == 'false'
+        # GitHub Pages에 배포 (조건에 따라 실행)
