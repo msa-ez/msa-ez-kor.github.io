@@ -18,8 +18,8 @@ docker compose up -d
 
 1. http://127.0.0.1:3000/ 에 접속합니다.
 2. Gitea 초기 구성(Initial Configuration)을 설정합니다.
-3. **Administrator Account Setting**
-4. Install Gitea
+3. **Administrator Account Setting.**
+4. Install Gitea.
 
 ![alt text](https://github.com/user-attachments/assets/3851af2f-2964-4372-9001-319ab3a2b6de)
 
