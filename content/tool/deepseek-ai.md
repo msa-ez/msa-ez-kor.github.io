@@ -39,7 +39,7 @@ MSAEZ는 온프레미스 DeepSeek AI 모델을 활용하여 마이크로서비�
 
 <img style="margin-top: -20px;" src="https://github.com/user-attachments/assets/8c1c8845-c031-4cb4-8cbb-596acc79fe47">
 
-- 설정 가능한 VM은 80GB가 최소이며, 이정도도 충분합니다.
+- 현재 사용하려고 하는 `deepseek-ai/DeepSeek-R1-Distill-Qwen-32B` 모델에는 최소 80GB 이상의 VM을 세팅해야 합니다.
 - 커뮤니티 클라우드, 시큐어 클라우드가 있으며, 현재 시큐어 클라우드는 불안정한 부분이 있기 때문에 **커뮤니티 클라우드** 사용을 권장합니다.
 - 아키텍쳐는 `4x RTX 4000 Ada` 를 권장하며, 선택이 불가능할 경우 유사한 성능의 인스턴스를 선택합니다.
 <br><br>
@@ -64,8 +64,8 @@ python3 -m sglang.launch_server --model-path deepseek-ai/DeepSeek-R1-Distill-Qwe
 
 <img src="https://github.com/user-attachments/assets/93c4499b-51a6-4ba5-9248-d7e3a9ccd1f0">
 
-- Volume Disk는 90GB정도면 충분합니다.
-- On-Demand로 설정하는게 안정적입니다.
+- Volume Disk는 현재 사용 할 모델인 Qwen 2.5 Coder 32B에 대한 모델 캐싱 및 여러 설정 파일을 고려해서 90GB 정도를 시작 용량으로 할당할 수 있습니다.
+- 서비스 중단 없는 안정적인 운영을 위해서 On-Demand로 설정합니다.
 <br><br>
 
 ### DeepSeek모델 설정 확인
@@ -89,8 +89,8 @@ python3 -m sglang.launch_server --model-path deepseek-ai/DeepSeek-R1-Distill-Qwe
 - 접속 URL은 올려진 Pod에 들어가는 경로입니다.
 
 ```bash
-https -v POST https://dkkzpbvvh17k7v-8000.proxy.runpod.net/v1/chat/completions \
-  Authorization:"Bearer dream-flow" \
+https -v POST <요청 Pod URL>/v1/chat/completions \
+  Authorization:"Bearer <LLM 요청시 사용 할 API 키>" \
   model="deepseek-ai/DeepSeek-R1-Distill-Qwen-32B" \
   messages:='[{"role": "user", "content": "프랑스의 수도는 어디야?"}]'
 ```
@@ -102,9 +102,13 @@ MSAEZ는 DeepSeek 모델을 다양한 용도로 활용하기 위해 complexModel
 
 - `complexModel`: 정책 생성과 같이 복잡하고 높은 성능을 요구하는 작업에 사용됩니다.
 - `standardModel`: 대부분의 일반적인 AI 기능 (예: 텍스트 생성, 질의 응답 등)에 사용됩니다. MSAEZ의 핵심 AI 기능은 `standardModel`을 통해 제공됩니다.
-- `simpleModel`: JSON 객체 오류 수정과 같이 비교적 간단하고 빠른 처리가 필요한 작업에 사용됩니다. `server.js` Proxy 서버는 MSAEZ와 RunPod 간의 원활한 통신을 중계하며, MSAEZ는 위에서 설명된 모델 설정을 통해 다양한 AI 기능을 효율적으로 제공합니다.
+- `simpleModel`: JSON 객체 오류 수정과 같이 비교적 간단하고 빠른 처리가 필요한 작업에 사용됩니다. 
+<br><br>
 
 **1. 관련 Proxy 서버를 실행합니다.**
+
+- `server.js` Proxy 서버는 MSAEZ와 RunPod 간의 원활한 통신을 중계하며, MSAEZ는 위에서 설명된 모델 설정을 통해 다양한 AI 기능을 효율적으로 제공합니다.
+
 ```bash
 node ./server.js
 ```
