@@ -33,9 +33,16 @@ next: ''
 
 스프링부트로 생성된 마이크로서비스를 컴파일하고 실행합니다.
 
-- 메뉴의 CODE > ProjectIDE 를 선택하여, 연결된 브라우져 IDE를 실행합니다.
+1. 메뉴의 CODE > ProjectIDE 를 선택하여, 연결된 브라우져 IDE를 실행합니다.
+2. Continue with gitpod 클릭
+3. Continue 클릭
+![](../../src/img/cna2.png)
+
 - 브라우져 IDE 왼편의 explorer 에서 monolith 폴더를 우클릭 선택한 후 "Open In Integrated Terminal" 을 클릭합니다.
+![](../../src/img/cna3.png)
+
 - Terminal 이 해당 폴더 이하에서 열리는 것을 확인합니다.
+![](../../src/img/cna4.png)
 
 ### 생성된 서비스의 기동
 터미널에서 mvn 으로 마이크로서비스 실행하는 방법

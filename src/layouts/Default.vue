@@ -73,13 +73,51 @@ export default {
   mounted() {
     this.setHeaderHeight();
     window.addEventListener('resize', this.setHeaderHeight);
+    
+    // DOM이 준비된 후에 복사 버튼 추가
+    this.addCopyButtons();
   },
   watch: {
     sidebarOpen: function(isOpen) {
       document.body.classList.toggle('overflow-hidden', isOpen);
+    },
+    '$route.path': function(newPath, oldPath) {
+      console.log(`Path changed from ${oldPath} to ${newPath}`);
+      this.addCopyButtons();
     }
   },
   methods: {
+    addCopyButtons() {
+      this.$nextTick(() => {
+        // 기존 복사 버튼 제거
+        const existingButtons = document.querySelectorAll('.copy-button');
+        existingButtons.forEach(button => button.remove());
+
+        // 모든 코드 블록 감지
+        const codeBlocks = document.querySelectorAll('pre code');
+        codeBlocks.forEach((block, index) => {
+          // 복사 버튼 생성
+          const button = document.createElement('button');
+          button.innerHTML = '<img style="width:22px; height:22px;" src="https://github.com/user-attachments/assets/13d31ea7-d3a6-48ef-86a6-5aacfdd801aa" alt="Copy" />'; // 이미지 사용
+          button.className = 'copy-button';
+          button.style.position = 'absolute';
+          button.style.top = '8px';
+          button.style.right = '8px';
+          button.style.zIndex = '10';
+          button.style.background = 'none'; // 배경 제거
+          button.style.border = 'none'; // 테두리 제거
+          button.addEventListener('click', () => this.copyCode(block));
+          block.parentElement.style.position = 'relative'; // 부모 요소에 상대 위치 설정
+          block.parentElement.insertBefore(button, block);
+        });
+      });
+    },
+    copyCode(block) {
+      const text = block.innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert('복사되었습니다. ctrl + v 붙여넣기');
+      });
+    },
     setHeaderHeight() {
       this.$nextTick(() => {
         this.headerHeight = this.$refs.header.offsetHeight;
@@ -325,6 +363,5 @@ table {
     transform: translateX(0);
   }
 }
-
 
 </style>

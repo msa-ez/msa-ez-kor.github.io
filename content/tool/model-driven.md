@@ -13,7 +13,8 @@ sidebar: 'started'
 ## 파일 구조
 
 Bounded Context 에 설정한 이름별(Order, Delivery)로 프로젝트가 생성되고, 아래와 같은 구조를 가집니다.
-
+- Event Storming modeling tool에서 아래 이미지에 보이는 Code Preview에서 확인 가능합니다.
+![](../../src/img/mp0.png)
 ![](../../src/img/code2.png)
 
 gateway 는 기본 제공되는 템플릿으로 spring-cloud-gateway를 설정하는 방법을 나타내고 있습니다.
