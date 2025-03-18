@@ -6,19 +6,19 @@ next: ''
 ---
 # 도서관 시스템
 
-출처 원본: https://github.com/msa-ez/example-library
+출처 원본: <a href="https://github.com/msa-ez/example-library" target="_blank" class="link-open-text">https://github.com/msa-ez/example-library</a>
 
 도서관의 책 대여 및 예약, 관리 시스템입니다.
-- 체크포인트 : https://workflowy.com/s/assessment-check-po/T5YrzcMewfo4J6LW
+- 체크포인트 : <a href="https://workflowy.com/s/assessment-check-po/T5YrzcMewfo4J6LW" target="_blank" class="link-open-text">https://workflowy.com/s/assessment-check-po/T5YrzcMewfo4J6LW</a>
 
 ## 구현 Repository
 
 총 5개<br>
-1. https://github.com/Juyounglee95/bookRental<br>
-2. https://github.com/Juyounglee95/gateway<br>
-3. https://github.com/Juyounglee95/bookManagement<br>
-4. https://github.com/Juyounglee95/point<br>
-5. https://github.com/Juyounglee95/view
+1. <a href="https://github.com/Juyounglee95/bookRental" target="_blank" class="link-open-text">https://github.com/Juyounglee95/bookRental</a><br>
+2. <a href="https://github.com/Juyounglee95/gateway" target="_blank" class="link-open-text">https://github.com/Juyounglee95/gateway</a><br>
+3. <a href="https://github.com/Juyounglee95/bookManagement" target="_blank" class="link-open-text">https://github.com/Juyounglee95/bookManagement</a><br>
+4. <a href="https://github.com/Juyounglee95/point" target="_blank" class="link-open-text">https://github.com/Juyounglee95/point</a><br>
+5. <a href="https://github.com/Juyounglee95/view" target="_blank" class="link-open-text">https://github.com/Juyounglee95/view</a>
 
 
 ## 서비스 시나리오
@@ -164,7 +164,7 @@ next: ''
 
 <h3>헥사고날 아키텍처 다이어그램 도출</h3>  
     
-![image](https://user-images.githubusercontent.com/18453570/80059618-5f95cd00-8567-11ea-9855-6fdc2e51bfd0.png)
+<img src="https://user-images.githubusercontent.com/18453570/80059618-5f95cd00-8567-11ea-9855-6fdc2e51bfd0.png" alt="image">
 
 - Chris Richardson, MSA Patterns 참고하여 Inbound adaptor와 Outbound adaptor를 구분함
 - 호출관계에서 PubSub 과 Req/Resp 를 구분함
@@ -245,13 +245,7 @@ public class PointSystem {
     public void setPointQty(Long pointQty) {
         this.pointQty = pointQty;
     }
-
-
-
-
 }
-
-
 ```
 - Entity Pattern 과 Repository Pattern 을 적용하여 JPA 를 통하여 다양한 데이터소스 유형 (RDB or NoSQL) 에 대한 별도의 처리가 없도록 데이터 접근 어댑터를 자동 생성하기 위하여 Spring Data REST 의 RestRepository 를 적용하였다
 ```

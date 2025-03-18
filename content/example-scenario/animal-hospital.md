@@ -6,7 +6,7 @@ next: ''
 ---
 # 동물병원 진료시스템
 
-출처 원본: https://github.com/msa-ez/example-animal-hospital
+출처 원본: <a href="https://github.com/msa-ez/example-animal-hospital" target="_blank" class="link-open-text">https://github.com/msa-ez/example-animal-hospital</a>
 
 <h3>2조 과제 - 동물병원 진료시스템 구축</h3>
 
@@ -37,9 +37,6 @@ next: ''
 
 
 ## 분석/설계
-
-**[MSAEz 로 모델링한 이벤트스토밍 결과](http://msaez.io/#/storming/0vtSW2vBLoZTFiAsgdwS6H7ODs33/2dac041f4e652d598a042694dfa26b20)**
-
 - Core Domain : 예약 (Reservation) 및 진료 (Diagnosis) 도메인
 - Supporting Domain : Lookup(CQRS) 도메인
 - General Domain : 알림(notice) 시스템.
@@ -55,12 +52,12 @@ next: ''
 
 동물병원 예약/진료 시스템은 아래의 7가지 마이크로 서비스로 구성되어 있다.
 
-1. 게이트 웨이: [https://github.com/AnimalHospital2/gateway.git](https://github.com/AnimalHospital2/gateway.git)
-1. Oauth 시스템: [https://github.com/AnimalHospital2/ouath.git](https://github.com/AnimalHospital2/ouath.git)
-1. 예약 시스템: [https://github.com/AnimalHospital2/reservation.git](https://github.com/AnimalHospital2/reservation.git)
-1. 진료 시스템: [https://github.com/AnimalHospital2/diagnosis.git](https://github.com/AnimalHospital2/diagnosis.git)
-1. 수납 시스템: [https://github.com/AnimalHospital2/acceptance.git](https://github.com/AnimalHospital2/acceptance.git)
-1. 알림 시스템: [https://github.com/AnimalHospital2/notice.git](https://github.com/AnimalHospital2/notice.git)
+1. 게이트 웨이: <a href="https://github.com/AnimalHospital2/gateway.git" target="_blank" class="link-open-text">https://github.com/AnimalHospital2/gateway.git</a>
+1. Oauth 시스템: <a href="https://github.com/AnimalHospital2/ouath.git" target="_blank" class="link-open-text">https://github.com/AnimalHospital2/ouath.git</a>
+1. 예약 시스템: <a href="https://github.com/AnimalHospital2/reservation.git" target="_blank" class="link-open-text">https://github.com/AnimalHospital2/reservation.git</a>
+1. 진료 시스템: <a href="https://github.com/AnimalHospital2/diagnosis.git" target="_blank" class="link-open-text">https://github.com/AnimalHospital2/diagnosis.git</a>
+1. 수납 시스템: <a href="https://github.com/AnimalHospital2/acceptance.git" target="_blank" class="link-open-text">https://github.com/AnimalHospital2/acceptance.git</a>
+1. 알림 시스템: <a href="https://github.com/AnimalHospital2/notice.git" target="_blank" class="link-open-text">https://github.com/AnimalHospital2/notice.git</a>
 
 - 게이트웨이 시스템은 수업시간에 이용한 예제를 프로젝트에 맞게 설정을 변경하였다. 
 - Oauth 시스템은 수업시간에 이용한 예제를 그대로 활용하였다.
@@ -344,13 +341,14 @@ http post localhost:8081/reservations reservatorName="Jackson" reservationDate="
 ```
 
 ### · 클러스터 적용 후 REST API 의 테스트
+```
 - http://52.231.118.148:8080/medicalRecords/     		//diagnosis 조회
 - http://52.231.118.148:8080/reservations/       		//reservation 조회 
 - http://52.231.118.148:8080/reservations reservatorName="pdc" reservationDate="202002" phoneNumber="0103701" //reservation 요청 
 - Delete http://52.231.118.148:8080/reservations/1 	//reservation Cancel  Sample
 - http://52.231.118.148:8080/reservationStats/   	  //lookup  조회
 - http://52.231.118.148:8080/financialManagements/ 	//acceptance 조회
-
+```
 
 - 또한 과도한 예약 요청시에 서비스 장애가 도미노 처럼 벌어질 수 있다. (서킷브레이커, 폴백 처리는 운영단계에서 설명한다.)
 
@@ -449,7 +447,7 @@ http localhost:8085/financialManagements     # 모든 예약-진료에 대해서
 ```
 ### · API 게이트웨이
 - Local 테스트 환경에서는 localhost:8080에서 Gateway API 가 작동.
-- Cloud 환경에서는 http://52.231.118.148:8080 에서 Gateway API가 작동.
+- Cloud 환경에서는 `http://52.231.118.148:8080` 에서 Gateway API가 작동.
 - application.yml 파일에 프로파일 별로 Gateway 설정.
 
 <h3> Gateway 설정 파일</h3>

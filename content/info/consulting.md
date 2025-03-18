@@ -127,9 +127,11 @@ MSA? CNA? 고민이신가요? 여러분의 고민을 해결해드립니다.
                 </div>
     </div>
 </div> -->
-<div class="font-bold text-white bg-ui-primary btn-partners">
-    <a href="https://forms.gle/VadgQzj3vK3Z7ZQt8" target="_blank">신청하기</a>
-</div>
+<a href="https://forms.gle/VadgQzj3vK3Z7ZQt8" target="_blank">
+    <div class="font-bold text-white bg-ui-primary btn-partners">
+        신청하기
+    </div>
+</a>
 
 <style type='text/css'>
 .btn-partners {

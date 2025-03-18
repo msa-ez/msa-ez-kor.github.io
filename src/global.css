@@ -37,11 +37,26 @@ pre[class*="language-"] ::selection {
     height: 100%;
 }
 
+.link-open-text {
+    color: #5a67d8 !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+}
+
 .copy-button {
     @apply bg-ui-primary text-white p-2 rounded;
     cursor: pointer;
     display: inline-block;
     border: none;
+    display: none;
+}
+
+.copy-button {
+    display: none;
+}
+
+.pre-wrapper:hover .copy-button {
+    display: block;
 }
 
 li a, 

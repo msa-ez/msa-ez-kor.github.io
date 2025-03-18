@@ -18,9 +18,11 @@ sidebar: 'started'
                 <span>✓</span> 애자일 모델링 : 건당 1만 원<br>
                 <span>✓</span> 월별 사용량에 따른 과금
             </div>
-            <div class="font-bold text-white bg-ui-primary btn-pricing">
-                <a href="http://www.msaez.io/">구매하기</a>
-            </div>
+            <a href="http://www.msaez.io/">
+                <div class="font-bold text-white bg-ui-primary btn-pricing">
+                    구매하기
+                </div>
+            </a>
         </div>
     </div>
     <div class="w66">
@@ -34,9 +36,11 @@ sidebar: 'started'
                     <span>✓</span> 커뮤니티 기반 지원<br>
                     <span>✓</span> 자체 문제 해결 필요
                 </div>
-                <div class="font-bold text-white bg-ui-primary btn-pricing">
-                    <a href="https://github.com/msa-ez/platform">시작하기</a>
-                </div>  
+                <a href="https://github.com/msa-ez/platform">
+                    <div class="font-bold text-white bg-ui-primary btn-pricing">
+                        시작하기
+                    </div>
+                </a>
             </div>
             <div class="box-style">
                 <h3>워런티 구매</h3>
@@ -46,9 +50,11 @@ sidebar: 'started'
                     <span>✓</span> 신속한 문제 해결<br>
                     <span>✓</span> 안정성 및 보안성 향상
                 </div>
-                <div class="font-bold text-white bg-ui-primary btn-pricing">
-                    <a href="mailto:help@uengine.org">문의하기</a>
-                </div>
+                <a href="mailto:help@uengine.org">
+                    <div class="font-bold text-white bg-ui-primary btn-pricing">
+                        문의하기
+                    </div>
+                </a>
             </div>
         </div>
     </div>
