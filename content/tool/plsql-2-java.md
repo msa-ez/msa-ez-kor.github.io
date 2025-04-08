@@ -52,7 +52,10 @@ PL/SQL을 Java로 전환하는 과정에서 그래프 데이터베이스를 활�
 
 ## 수행 방법
 #### 데모 : 근태 관리 시스템 자바 코드 전환
-<br>
+
+<div class="font-bold text-white bg-ui-primary btn-pdf">
+    <a href="https://www.uengine.org/images/sample_stored_procedure_file.zip" download>샘플 스토어드 프로시져 파일</a>
+</div>
 
 **1. PL/SQL 코드를 자바로 변환하기 위해 먼저 변환할 파일을 Legacy-modernizer에 업로드하고, 분석 과정을 통해 데이터를 처리하게 됩니다.**
 
@@ -121,6 +124,21 @@ PL/SQL을 Java로 전환하는 과정에서 그래프 데이터베이스를 활�
 <style>
 .mobile-view {
     display: none;
+}
+.btn-pdf {
+    text-align: center; 
+    line-height: 35px; 
+    border-radius: 8px;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 8px 16px;
+}
+.btn-pdf a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff !important;
+    text-decoration: none;
 }
 
 @media screen and (max-width: 499px) {
