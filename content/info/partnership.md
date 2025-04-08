@@ -49,11 +49,11 @@ sidebar: 'started'
     <span>✓</span> 공동 마케팅 활동에 참여 가능한 기업<br>
     <span>✓</span> 지속 가능한 비즈니스 모델과 투입 가능한 인력을 보유한 기업
 </div>
-
-<div class="font-bold text-white bg-ui-primary btn-partners">
-    <a href="https://forms.gle/RSqeg4k3LC69EDKZA" target="_blank">파트너 되기</a>
-</div>
-
+<a style="text-decoration:none;" href="https://forms.gle/RSqeg4k3LC69EDKZA" target="_blank">
+    <div class="font-bold text-white bg-ui-primary btn-partners">
+        파트너 되기
+    </div>
+</a>
 <style type='text/css'>
 .txt-box {
     margin: 20px 0;

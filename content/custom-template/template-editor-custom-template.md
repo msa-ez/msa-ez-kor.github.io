@@ -9,8 +9,7 @@ MSAEZ 모델을 기반으로 커스텀 템플릿을 개발하는 과정입니다
 ## 1. Repository 생성
 
 커스텀 템플릿을 개발하기 위해서는 저장소를 생성해야합니다.
-
-https://github.com/ 에 접속 후, 템플릿 파일을 만들 repository를 생성합니다.
+<a href="https://github.com/" target="_blank" class="link-open-text">https://github.com/</a> 에 접속 후, 템플릿 파일을 만들 repository를 생성합니다.
 
 ![](https://github.com/msa-ez/platform/assets/123912988/b6f49e7b-4674-47a5-8ed9-69caf94fac64)
 
