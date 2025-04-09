@@ -3,7 +3,7 @@ description: ''
 sidebar: 'started'
 ---
 
-# PL/SQL to Java 자동 테스팅
+# Legacy Modernizer
 
 <div style="position: relative; padding-bottom: 56.25%; padding-top: 0px; height: 0; overflow: hidden;">
 	<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
@@ -20,7 +20,7 @@ AI 기반 레거시 모더나이저 도구는 기존의 복잡한 스토어드 �
 ## Legacy Modernizer 동작 세부 구조
 <img src="https://www.uengine.org/images/Legacy-Code-2-Clean-Code.jpg">
 
-## legacy-modernizer의 기능 및 흐름
+## Legacy Modernizer의 기능 및 흐름
 ### 1. ANTLR를 활용한 구문 분석
 스토어드 프로시저 파일의 내용 전체를 LLM (Large Language Model)에게 전달하게 되면, 최대 토큰 수를 넘어가기 때문에,  LLM (Large Language Model)에 데이터를 전달할 때, 토큰 제한과 문맥 유지를 고려하여 의미적으로 연결된 덩어리로 쪼개서 전달하는 것이 중요합니다. 
 
@@ -54,7 +54,10 @@ PL/SQL을 Java로 전환하는 과정에서 그래프 데이터베이스를 활�
 #### 데모 : 근태 관리 시스템 자바 코드 전환
 
 <div class="font-bold text-white bg-ui-primary btn-pdf">
-    <a href="https://www.uengine.org/images/sample_stored_procedure_file.zip" download>샘플 스토어드 프로시져 파일</a>
+    <a href="http://modernizer.uengine.io/" target="_blank">무료 체험하기</a>
+</div>
+<div class="font-bold text-white bg-ui-primary btn-pdf">
+    <a href="https://www.uengine.org/images/sample_stored_procedure_file.zip" download>샘플 스토어드 프로시져 파일 다운로드</a>
 </div>
 
 **1. PL/SQL 코드를 자바로 변환하기 위해 먼저 변환할 파일을 Legacy-modernizer에 업로드하고, 분석 과정을 통해 데이터를 처리하게 됩니다.**
@@ -127,7 +130,7 @@ PL/SQL을 Java로 전환하는 과정에서 그래프 데이터베이스를 활�
 }
 .btn-pdf {
     text-align: center; 
-    line-height: 35px; 
+    line-height: 30px; 
     border-radius: 8px;
     display: inline-block;
     text-align: center;

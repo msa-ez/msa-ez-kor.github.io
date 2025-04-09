@@ -91,7 +91,7 @@ module.exports = {
                 secondItem: '/tool/bc-domain-gen/'
               },
               {
-                secondTitle: 'PL/SQL to Java',
+                secondTitle: 'Legacy Modernizer',
                 secondItem: '/tool/plsql-2-java/'
               },
               {
