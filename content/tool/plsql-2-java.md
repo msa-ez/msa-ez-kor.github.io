@@ -51,16 +51,12 @@ PL/SQL을 Java로 전환하는 과정에서 그래프 데이터베이스를 활�
 <img src="https://github.com/user-attachments/assets/881e0570-4030-4c59-a897-c2026879e744">
 
 ## 수행 방법
-#### 데모 : 근태 관리 시스템 자바 코드 전환
+<!-- #### 데모 : 근태 관리 시스템 자바 코드 전환 -->
 
-<div class="font-bold text-white bg-ui-primary btn-pdf">
-    <a href="http://modernizer.uengine.io/" target="_blank">무료 체험하기</a>
-</div>
-<div class="font-bold text-white bg-ui-primary btn-pdf">
-    <a href="https://www.uengine.org/images/sample_stored_procedure_file.zip" download>샘플 스토어드 프로시져 파일 다운로드</a>
-</div>
+**1. 먼저 [Legacy Modernizer](http://modernizer.uengine.io/)에 접속하기 위해 [https://console.anthropic.com/settings/keys](https://console.anthropic.com/settings/keys) 사이트를 통해 API 키를 발급받습니다.**
 
-**1. PL/SQL 코드를 자바로 변환하기 위해 먼저 변환할 파일을 Legacy-modernizer에 업로드하고, 분석 과정을 통해 데이터를 처리하게 됩니다.**
+
+**2. PL/SQL 코드를 자바로 변환하기 위해 변환할 파일([샘플 스토어드 프로시져 파일](https://www.uengine.org/images/sample_stored_procedure_file.zip))을 [Legacy Modernizer](http://modernizer.uengine.io/)에 업로드하고, 분석 과정을 통해 데이터를 처리하게 됩니다.**
 
 <img src="https://www.uengine.org/images/demo-corporate/use-01.jpg">
 
@@ -70,7 +66,7 @@ PL/SQL을 Java로 전환하는 과정에서 그래프 데이터베이스를 활�
 - 이미 존재하는 직원인지 확인하는 함수를 호출하여 존재하지 않다면 인서트문을 실행합니다.
 <br><br>
 
-**2. 해당 파일을 분석해서 그래프 형태로 시각화 합니다.**
+**3. 해당 파일을 분석해서 그래프 형태로 시각화 합니다.**
 
 <img src="https://www.uengine.org/images/demo-corporate/use-02.jpg">
 
@@ -80,7 +76,7 @@ PL/SQL을 Java로 전환하는 과정에서 그래프 데이터베이스를 활�
 - 세부 노드는 각각 summary가 존재하여, 무슨 역할을 하는지 파악할 수 있습니다.
 <br><br>
 
-**3. 그래프 시각화에서 각 노드를 클릭하면, 해당 노드에 관련된 정보를 확인할 수 있습니다.**
+**4. 그래프 시각화에서 각 노드를 클릭하면, 해당 노드에 관련된 정보를 확인할 수 있습니다.**
 
 <img src="https://www.uengine.org/images/demo-corporate/use-03.jpg">
 
@@ -90,17 +86,17 @@ PL/SQL을 Java로 전환하는 과정에서 그래프 데이터베이스를 활�
 - 출퇴근 관리 패키지도 똑같은 구조로 되어있으며, 이러한 그래프 정보들을 활용하여 자바로 변환하게 됩니다.
 <br><br>
 
-**4. CONVERT SPRING-BOOT PROJECT 버튼을 누르면 변환이 시작되며, 그래프 정보를 단계별로 사용하여 필요한 자바 클래스 파일을 생성합니다.**
+**5. CONVERT SPRING-BOOT PROJECT 버튼을 누르면 변환이 시작되며, 그래프 정보를 단계별로 사용하여 필요한 자바 클래스 파일을 생성합니다.**
 
 <img src="https://www.uengine.org/images/demo-corporate/use-04.jpg">
 
 - 각 업로드된 파일에 따라 어떤 패키지 파일과 어떤 프로시저가 컨버팅되는지를 표시합니다.
 - 자바로 전환된 결과는 유저의 특정 경로에 target이라는 폴더로 자동 완성되며, zip 형태로 다운로드를 받을수도 있습니다.
 - 변환된 자바 프로젝트는 커맨드, 컨트롤러, 엔티티, 리포지토리, 서비스로 구분되어 각 메서드가 실제 로직을 실행하는 구조로 되어 있습니다.
-- 예를들어, INS_EMPLOYEE는 직원을 등록하는 프로시저로, '직원키', '직원이름', '부서코드', '정규직 여부' 정보를 받게되어 관련 메서드를 호출하여 해당 직원 정보를 생성하고 저장합니다.
+<!-- - 예를들어, INS_EMPLOYEE는 직원을 등록하는 프로시저로, '직원키', '직원이름', '부서코드', '정규직 여부' 정보를 받게되어 관련 메서드를 호출하여 해당 직원 정보를 생성하고 저장합니다. -->
 <br><br>
 
-**5. 자바로 변환된 결과가 제대로 되었는지 확인하기 위해 특정 프로시저를 실행할 수 있으며, 추가로 파라미터와 필요한 초기 데이터를 입력할 수 있습니다.**
+<!-- **6. 자바로 변환된 결과가 제대로 되었는지 확인하기 위해 특정 프로시저를 실행할 수 있으며, 추가로 파라미터와 필요한 초기 데이터를 입력할 수 있습니다.**
 
 <img src="https://www.uengine.org/images/demo-corporate/use-05.jpg">
 
@@ -109,7 +105,7 @@ PL/SQL을 Java로 전환하는 과정에서 그래프 데이터베이스를 활�
 - 테스트 결과는 화면에 반영되며, 테스트를 수행한 뒤의 데이터와 입력한 프로시저 정보를 통해 검증됩니다.
 <br><br>
 
-**6. 테스트가 성공하면 Given-When-Then 로직이 제대로 실행된 것을 확인할 수 있습니다.**
+**7. 테스트가 성공하면 Given-When-Then 로직이 제대로 실행된 것을 확인할 수 있습니다.**
 
 <img src="https://www.uengine.org/images/demo-corporate/use-06.jpg">
 
@@ -122,7 +118,7 @@ PL/SQL을 Java로 전환하는 과정에서 그래프 데이터베이스를 활�
 
 - CASE 2 도 마찬가지로 입력 값과 정보가 동일하며, 정규직이 아닐 경우 한 번 결근시 20만원 감소하여, 80만원에서 60만원으로 변동된 결과가 나타납니다.
 - CASE 2 에 입력한 데이터를 기반으로 java에서도 초기 데이터를 등록하게 되고 Given-When-Then 로직이 제대로 실행된 것을 확인할 수 있습니다.
-- 만일 테스트가 실패하면, 피드백 루프를 통해 계속 코드를 수정하며 같은 결과를 도출하게 됩니다.
+- 만일 테스트가 실패하면, 피드백 루프를 통해 계속 코드를 수정하며 같은 결과를 도출하게 됩니다. -->
 
 <style>
 .mobile-view {
