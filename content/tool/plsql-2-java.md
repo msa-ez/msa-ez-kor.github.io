@@ -53,10 +53,12 @@ PL/SQL을 Java로 전환하는 과정에서 그래프 데이터베이스를 활�
 ## 수행 방법
 <!-- #### 데모 : 근태 관리 시스템 자바 코드 전환 -->
 
-**1. 먼저 [Legacy Modernizer](http://modernizer.uengine.io/)에 접속하기 위해 [https://console.anthropic.com/settings/keys](https://console.anthropic.com/settings/keys) 사이트를 통해 API 키를 발급받습니다.**
+**1. 먼저 [Legacy Modernizer](http://modernizer.uengine.io/)에 접속하기 위해 [https://console.anthropic.com/settings/keys](https://console.anthropic.com/settings/keys) 사이트를 통해 API 키를 발급받아서 입력합니다.**
 
+<!-- <img src="https://github.com/user-attachments/assets/48fa252e-f599-4e76-a8ea-3a5c12e3cd62">
+<br><br> -->
 
-**2. PL/SQL 코드를 자바로 변환하기 위해 변환할 파일([샘플 스토어드 프로시져 파일](https://www.uengine.org/images/sample_stored_procedure_file.zip))을 [Legacy Modernizer](http://modernizer.uengine.io/)에 업로드하고, 분석 과정을 통해 데이터를 처리하게 됩니다.**
+**2. PL/SQL 코드를 자바로 변환하기 위해 변환할 파일([샘플 스토어드 프로시져 파일](https://www.uengine.org/images/sample_stored_procedure_file_new.zip))을 [Legacy Modernizer](http://modernizer.uengine.io/)에 업로드하고, 분석 과정을 통해 데이터를 처리하게 됩니다.**
 
 <img src="https://www.uengine.org/images/demo-corporate/use-01.jpg">
 
