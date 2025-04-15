@@ -79,7 +79,7 @@ PL/SQL을 Java로 전환하는 과정에서 그래프 데이터베이스를 활�
 - Antlr와 같은 파싱 도구를 활용하여 구문 구조를 파악하고, 의미 있는 문맥을 유지하며 문을 분할하여 분석에 활용합니다.
  - 원본 코드도 확인 가능하며, 직원 존재 여부 확인, 정규직 여부 확인 함수는 전달된 직원키를 사용하여 확인할 수 있습니다.
 - 이미 존재하는 직원인지 확인하는 함수를 호출하여 존재하지 않다면 인서트문을 실행합니다. -->
-- 분석 대상은 **스토어드 프로시저(SP)** 파일이며, 다음과 같은 파일들을 함께 업로드하는 것이 필요합니다:
+- 분석 대상은 **스토어드 프로시저(SP)** 파일이며, 다음과 같은 파일들을 함께 업로드하는 것이 필요합니다.
     - **SP_프로시저명**: 주요 분석 대상
     - **DDL_테이블명**: 테이블 정의
     - **SEQ_시퀀스명**: 시퀀스 정의
@@ -106,12 +106,14 @@ PL/SQL을 Java로 전환하는 과정에서 그래프 데이터베이스를 활�
 
 <img src="https://ju0735.github.io/uengine-new.github.io/images/legacy-modernizer/07.png">
 <br>
-
 <!-- - 셀렉트, DML (Data Manipulation Language) 노드는 테이블과 연관이 되어있으며, 셀렉트는 FROM으로 인서트, 딜리트, 업데이트는 NEXT로 연결되어 있습니다.
 - 테이블을 클릭하면 필드 정보와 NULL 여부를 확인할 수 있고, 같은 테이블이기 때문에 클릭시 하이라이트로 표시가 됩니다.
 - 함수를 클릭할때도 하이라이트가 표시되어 어떤 함수가 호출되는지 쉽게 파악할 수 있으며, 다양한 프로시저와 패키지가 구성되어 있습니다.
 - 출퇴근 관리 패키지도 똑같은 구조로 되어있으며, 이러한 그래프 정보들을 활용하여 자바로 변환하게 됩니다. -->
+
 - 업로드된 스토어드 프로시저는 다음과 같은 구조로 자동 분석됩니다.
+<img src="https://ju0735.github.io/uengine-new.github.io/images/legacy-modernizer/07-1.png" style="margin-top: 10px;">
+
   - `SPEC` 노드: 함수의 **입력 매개변수**
   - `DECLARE` 노드: **지역 변수**
   - `TRY-EXCEPTION` 노드: **예외 처리 흐름**
@@ -134,7 +136,7 @@ PL/SQL을 Java로 전환하는 과정에서 그래프 데이터베이스를 활�
 <img src="https://ju0735.github.io/uengine-new.github.io/images/legacy-modernizer/10.png">
 <br><br>
 
-**9. DELETE GRAPH DATA 버튼을 누르면 저장된 그래프 데이터를 삭제하고 다시 분석이 가능합니다.**
+**9. '데이터 삭제' 버튼을 누르면 저장된 그래프 데이터를 삭제하고 다시 분석이 가능합니다.**
 
 <img src="https://ju0735.github.io/uengine-new.github.io/images/legacy-modernizer/11.png">
 <br>
@@ -142,10 +144,10 @@ PL/SQL을 Java로 전환하는 과정에서 그래프 데이터베이스를 활�
 <img src="https://ju0735.github.io/uengine-new.github.io/images/legacy-modernizer/12.png">
 <br>
 
-- 같은 내용의 그래프 트리가 존재하면 분석을 하지않고 그대로 반환하기 때문에, 분석중 그만두었거나 새로고침으로 인해 끊겼다면 삭제하고 다시 진행해주세요.
+- 같은 내용의 그래프 트리가 존재하면 분석을 하지않고 그대로 반환하기 때문에, **분석중 그만두었거나 새로고침으로 인해 끊겼다면 삭제하고 다시 진행해주세요.**
 <br><br>
 
-**10. CONVERT SPRING-BOOT PROJECT 버튼을 누르면 변환이 시작되며, 그래프 정보를 단계별로 사용하여 필요한 자바 클래스 파일을 생성합니다.**
+**10. CONVERT TARGET PROJECT 버튼을 누르면 변환이 시작되며, 그래프 정보를 단계별로 사용하여 필요한 자바 클래스 파일을 생성합니다.**
 
 <img src="https://ju0735.github.io/uengine-new.github.io/images/legacy-modernizer/13.png">
 <br>
