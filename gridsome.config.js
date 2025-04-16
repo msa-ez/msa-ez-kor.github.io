@@ -92,7 +92,7 @@ module.exports = {
               },
               {
                 secondTitle: 'Legacy Modernizer',
-                secondItem: '/tool/plsql-2-java/'
+                secondLink:'http://modernizer.uengine.io/started/',
               },
               {
                 secondTitle: 'MSAEZ에서 DeepSeek 모델 활용',
