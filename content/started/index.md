@@ -16,7 +16,7 @@ MSAEZ는 전 라이프사이클에 걸쳐 ChatGPT를 활용한 자동화 및 가
 MSAEZ는 Biz-Dev-Ops 풀 라이프사이클을 지원합니다. 설치가 필요없이 100% 브라우저 기반에서 동작하며 협업기반의 팀워크를 지원하는 최신의 OpenAI 엔진들이 탑재되어 비즈니스 기획자, 데브옵스 개발자, 클라우드 운영자를 위애 비즈니스 기획에서 구현, 테스트, 배포를 아우르는 클라우드 네이티브한 task들을 자동화하며 다양한 애자일한 경험들을 제공합니다.  
 <div style="text-align: center;">
     <div class="font-bold text-white bg-ui-primary btn-pdf">
-        <a target="_blank" href="https://cdn2.me-qr.com/pdf/5eff277d-ec9d-448f-9d44-50397de259bb.pdf">MSAEZ 브로슈어 다운로드</a>
+        <a target="_blank" href="https://www.uengine.org//images/intro-msaez-2024_eGov-frame.pdf">MSAEZ 브로슈어 다운로드</a>
     </div>
 </div>
 
