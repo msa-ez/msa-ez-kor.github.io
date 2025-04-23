@@ -92,7 +92,7 @@ module.exports = {
               },
               {
                 secondTitle: 'Legacy Modernizer',
-                secondLink:'http://modernizer.uengine.io/started/',
+                secondLink:'http://modernizer.uengine.io/',
               },
               {
                 secondTitle: 'MSAEZ에서 DeepSeek 모델 활용',
