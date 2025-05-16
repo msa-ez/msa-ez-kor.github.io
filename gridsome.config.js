@@ -30,7 +30,7 @@ module.exports = {
             name: [
               {
                 secondTitle: '퀵스타트',
-                secondItem: '/tool/google-drive-examples/'
+                secondItem: '/started/vibe-coding/'
               },
               {
                 secondTitle: 'MSAEZ 온프렘 설치',
