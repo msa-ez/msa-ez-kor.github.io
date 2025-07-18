@@ -88,7 +88,7 @@ sidebar: 'started'
 ![image](../../src/img/vibe-coding/9.code-preview.png)
 - **Base: template-spring-boot** 를 클릭 후, 'MARKETPLACE'를 클릭합니다.
 
-- 아래와 같이  **'Vibe Coding for Spring boot'** 를 선택한 후, 'APPLY'를 클릭합니다.
+- 아래와 같이  **'Vibe Coding for Spring boot Cline'** 를 선택한 후, 'APPLY'를 클릭합니다.
 
 ![image](../../src/img/vibe-coding/8.마켓플레이스.png)
 
@@ -99,18 +99,7 @@ Vibe Coding Template을 적용한 프로젝트를 다운로드하여 Local에서
 
 - 생성된 프로젝트를 Local IDE(Cursor, VSCode...)를 실행하여 다운로드 받은 파일을 선택하여 프로젝트를 엽니다.
 
-- 생성된 파일 중 ClineREADME 파일을 클릭하여 안내된 단계를 실행합니다.
-
-```
-// directory 영역 우클릭 > 터미널을 생성(Open in Intergrated Terminal)한 후, 아래 커맨드 실행
-// 폴더명 변경
-mv vibe-coding-rules .clinerules
-
-// 파일 확장자 변경
-cd .clinerules
-for file in *.mdc; do mv -- "$file" "${file%.mdc}.md"; done
-```
-완료 후, 파일을 확인해보면 .clinerules 폴더 하위에 md확장자 파일이 생성됩니다.
+파일을 확인해보면 .clinerules 폴더 하위에 md확장자 파일이 생성됩니다.
 해당 md 파일들은 생성 규칙, 패키지 구조, 기술 스택, 테스트 파일 생성 규칙, 이벤트스토밍 스티커 규칙 등이 존재 하며, <br>
 Vibe Coding에서 코드를 구현할 때 Prompt와 함께 전달되어 요구사항을 준수하는 코드를 생성하는데 도움을 줍니다.
 
@@ -123,7 +112,7 @@ Vibe Coding에서 코드를 구현할 때 Prompt와 함께 전달되어 요구�
 
 - 검색창에 **'Cline'** 을 검색하여 선택한 후, **'Install'** 을 클릭하여 Cline Extension을 설치합니다.
 
-- 설치가 완료되면 Cline 아이콘이 생성되며, 클릭하면 아래와 같운 화면이 생성됩니다.
+- 설치가 완료되면 Cline 아이콘이 생성되며, 클릭하면 아래와 같은 화면이 생성됩니다.
 
 ![image](../../src/img/vibe-coding/11.Cline.png)
 
