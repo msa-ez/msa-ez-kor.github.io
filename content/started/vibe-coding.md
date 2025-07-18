@@ -118,9 +118,9 @@ Vibe Coding에서 코드를 구현할 때 Prompt와 함께 전달되어 요구�
 
 - Use your Own API key를 클릭한후 나오는 설정에서 다음과 같이 설정을 진행한 후, 'DONE'을 눌러 저장합니다.
 
-    Base URL: http://ai-server.dream-flow.com:30000/v1
-    API KEY: 테스트용 값 입력(‘12345678’)
-    Model: 설정된 모델의 표시 이름 (‘QWen2.5’)
+    Base URL: http://ai-server.dream-flow.com:30000/v1 <br>
+    API KEY: 테스트용 값 입력(‘12345678’) <br>
+    Model: 설정된 모델의 표시 이름 (‘QWen2.5’) <br>
 
 ### 4) Prompt를 통한 코드 생성
 이전에 생성한 모델의 정보(메타데이터)와 Prompt, Rules 파일을 활용하여 Vibe Coding을 진행합니다. 방법은 다음과 같습니다.
