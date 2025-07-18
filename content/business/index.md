@@ -11,7 +11,7 @@ sidebar: 'started'
 - 우측 상단의 아바타 아이콘을 클릭하여 **깃헙(Github)** 계정으로 로그인 합니다.
 - **만들기** > **이벤트스토밍** 을 클릭합니다.
 
-![image](../../src/img/event-storming/event-storming2.png)
+![image](../../src/img/event-storming/event-storming2.png) <br>
 ![image](../../src/img/event-storming/event-storming1.png)
 
 ## 기본 시나리오 - 주문 및 주문취소

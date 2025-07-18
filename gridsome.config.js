@@ -70,14 +70,14 @@ module.exports = {
           {
             firstTitle: 'AI 지원 모델링 및 구현',
             name:[
-              {
-                secondTitle: 'AI 기반 모델 생성',
-                secondItem: '/tool/chat-gpt/'
-              },
-              {
-                secondTitle: 'AI 기반 코드 구현',
-                secondItem: '/tool/si-gpt/'
-              },
+              // {
+              //   secondTitle: 'AI 기반 모델 생성',
+              //   secondItem: '/tool/chat-gpt/'
+              // },
+              // {
+              //   secondTitle: 'AI 기반 코드 구현',
+              //   secondItem: '/tool/si-gpt/'
+              // },
               // {
               //   secondTitle: '애그리거트 설계',
               //   secondItem: '/tool/aggregate-design/'
