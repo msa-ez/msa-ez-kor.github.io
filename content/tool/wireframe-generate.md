@@ -56,11 +56,11 @@ CODE를 클릭하여 Code Viewer 화면을 생성한 다음, 'Base:'를 클릭 >
     ![](../../src/img/ui-generate/ui-generate-9.png)
 
 2. FrontendPRD.txt <br>
-    Cursor AI 기반 바이브코딩을 진행할 때, Prompt역할을 하며, 동시에 이벤트스토밍 모델 기반 생성된 데이터를 제공하여 이를 통해 이벤트스토밍 모델에 따른 구현이 진행됩니다.<br>
+    Cursor AI 기반 바이브코딩을 진행할 때, Prompt역할을 하며, 동시에 이벤트스토밍 모델 기반 생성된 데이터인 데타데이터를 제공합니다. 이를 통해 이벤트스토밍 모델에 따른 구현이 진행됩니다.<br>
     ![](../../src/img/ui-generate/ui-generate-10.png)
 
 3. wireframe.txt <br>
-    UI스티커를 통해 생성한 와이어프레임에 대한 HTML 코드를 제공하며 이를 통해 바이브코딩이 진행될 때, 요구사항 기반 생성된 와이어프레임의 실제 UI가 구현됩니다.<br>
+    UI스티커를 통해 생성한 와이어프레임에 대한 HTML 코드로 구성된 파일입니다. 이는, 바이브코딩이 진행될 때, 파일 상단에 작성한 요구사항대로 React기반으로 변경되어 구현이 진행됩니다.
     ![](../../src/img/ui-generate/ui-generate-11.png)
 
 4. openapi.yaml <br>
