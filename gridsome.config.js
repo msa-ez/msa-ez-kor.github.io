@@ -91,7 +91,7 @@ module.exports = {
                 secondItem: '/tool/bc-domain-gen/'
               },
               {
-                secondTitle: '바이브코딩을 통한 프론트엔드 구현',
+                secondTitle: 'DDD 기반 UI 설계 및 자동 구현',
                 secondItem: '/tool/wireframe-generate/'
               },
               {
