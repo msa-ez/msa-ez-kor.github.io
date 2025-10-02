@@ -42,6 +42,8 @@ sidebar: 'started'
 생성이 완료되면 아래와 같이 Command, ReadModel스티커 앞에 UI스티커가 생성된것을 확인할 수 있습니다.
 ![](../../src/img/ui-generate/ui-generate-image-4.png)
 
+또한, 하단의 '프론트엔드' BoundedContext가 생성된 것을 확인할 수 있는데, 이는 이전 단계에서 생성한 사이트맵을 확인할 수 있습니다.
+![](../../src/img/ui-generate/ui-generate-image-6.png)
 
 생성된 UI 스티커를 더블 클릭 하여 패널을 생성한 후, 'GEN AI' 탭을 클릭하면 연결된 Command 스티커의 정보를 기반으로 와이어프레임이 생성된 것을 확인할 수 있습니다.
 이때, 해당 와이어프레임을 확인하고 추가 요구사항이 있을 경우 해당 요구사항을 입력하여 새로운 와이어프레임을 생성할 수 있습니다.
