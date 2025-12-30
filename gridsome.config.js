@@ -271,6 +271,10 @@ module.exports = {
             firstTitle: '사업 정보',
             name:[
               {
+                secondTitle: 'Case Study',
+                secondItem: '/info/case-study-gov24/'
+              },
+              {
                 secondTitle: '기업 사례',
                 secondItem: '/info/company/'
               },
